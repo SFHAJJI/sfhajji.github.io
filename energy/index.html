@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energy Copilot: architecture case study</title>
+<meta name="description" content="Architecture case study of the Luxembourg Energy Transition Co-Pilot: an Azure AI, geospatial and data-engineering system for solar-PV prospecting. The live deployment is offline; this page documents the architecture, decisions, controls, evidence and limits.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23176b42'/%3E%3Ctext x='8' y='12' font-size='10' text-anchor='middle' fill='white' font-family='sans-serif'%3EE%3C/text%3E%3C/svg%3E">
+<style>
+  .flow { display: grid; gap: .5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); margin: 1rem 0; }
+  .flow div { background: var(--surface-2); border-radius: 8px; padding: .6rem .75rem; font-size: .92rem; }
+  .flow .num { color: var(--accent); font-weight: 700; font-size: .8rem; }
+  .flow b { display: block; }
+  .tools { display: grid; gap: .5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); }
+  .tools div { border: 1px solid var(--line); border-radius: 8px; padding: .6rem; font-size: .9rem; }
+  .tools code { font-weight: 700; }
+  dl.adr { margin: .5rem 0 0; display: grid; grid-template-columns: max-content 1fr; gap: .2rem .75rem; font-size: .9rem; }
+  dl.adr dt { color: var(--muted); font-weight: 600; } dl.adr dd { margin: 0; }
+  .kicker { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  .metrics { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); }
+  .metrics b { display: block; font-size: 1.6rem; }
+  .metrics span { font-size: .85rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="bar">
+    <a class="brand" href="../">Portfolio</a>
+    <nav aria-label="Pages">
+      <a href="../lex/">Lex</a>
+      <a href="../guide/">Guide demo</a>
+      <a href="./" aria-current="page">Energy Copilot</a>
+      <a href="../cv/">CV</a>
+      <button type="button" class="ghost" data-theme-toggle data-aria="Change theme" data-label-auto="Theme: auto" data-label-dark="Theme: dark" data-label-light="Theme: light">Theme: auto</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <p class="kicker">Architecture case study · Azure AI + geospatial data</p>
+  <h1>Energy Copilot: from public data to a defensible energy prospect</h1>
+  <p class="lead">A map-first product for finding photovoltaic opportunities in Luxembourg, applying public tenders and answering cited questions about tariffs and law. The architecture keeps model reasoning useful while moving consequential calculations, access control and evidence into deterministic services.</p>
+  <p lang="fr" class="small muted">Français : étude d’architecture d’un copilote Azure AI pour la prospection photovoltaïque au Luxembourg (données géospatiales publiques, appels d’offres, tarifs déterministes, RAG, droit cité via Lex). Le déploiement public est hors ligne ; cette page documente l’architecture, les décisions, les contrôles, les preuves et les limites.</p>
+
+  <div class="notice warn">
+    <strong>Status: the live deployment is offline.</strong> energy.soufien.lu, its API and its telemetry are not served at the time of writing (31 October 2026). This page documents the architecture as it was built and measured in July and August 2026; it makes no claim about uptime today. The code, the decision records and the evaluation evidence are public: <a href="https://github.com/SFHAJJI/energy-copilot" rel="external">github.com/SFHAJJI/energy-copilot</a> (Apache-2.0).
+  </div>
+  <p class="small">Repository description: <q>Production Azure AI co-pilot for Luxembourg solar-PV prospecting: geospatial data, tenders, deterministic tariffs, RAG and MCP law.</q> Topics: agentic-ai, azure-openai, luxembourg, maplibre, mcp, postgis, rag, solar-energy, terraform.</p>
+
+  <section aria-labelledby="verdict">
+    <h2 id="verdict">What was built, and what it proves</h2>
+    <div class="grid">
+      <div class="card"><h3>Business problem</h3><p>Solar, tender, price and legal data is public but fragmented and difficult to turn into a prospect a developer can act on.</p></div>
+      <div class="card"><h3>Product answer</h3><p>One map combines roofs and sites, tender applicability, economics and a cited assistant.</p></div>
+      <div class="card"><h3>Engineering answer</h3><p>Scheduled Python producers feed PostGIS/pgvector; a bounded .NET agent composes five tools.</p></div>
+      <div class="card"><h3>Trust answer</h3><p>Numbers come from code, legal evidence from Lex MCP, SQL is read-only and unsupported answers are refused.</p></div>
+    </div>
+    <div class="notice"><strong>Scope of the claim.</strong> "Production" meant publicly deployed, monitored and continuously delivered while it ran. It never meant enterprise traffic, a formal SLA or regulated approval; those gaps are listed below. Today it is offline.</div>
+  </section>
+
+  <section aria-labelledby="system">
+    <h2 id="system">01 · The model plans; bounded services decide</h2>
+    <p>The online path is deliberately small. The model can select tools and explain outputs, but it cannot write data, calculate a tariff or order the interface to display unsupported results.</p>
+    <div class="flow" role="img" aria-label="Browser to agent host to tools to authoritative services">
+      <div><span class="num">01</span><b>React + MapLibre</b>Map, candidate rail, tenders, streamed tool trace, citations and export.</div>
+      <div><span class="num">02</span><b>.NET agent host</b>Azure OpenAI tool calling, three-round cap, validation, refusal and SSE.</div>
+      <div><span class="num">03</span><b>Five bounded tools</b>SQL, law, corpus search, tariff calculation and tender retrieval.</div>
+      <div><span class="num">04</span><b>Authoritative services</b>PostGIS/pgvector, tariff engine, public sources and temporal law through Lex MCP.</div>
+    </div>
+    <p><strong>Safety boundary:</strong> tool output, not model prose, drives map pins and cards. Typed payloads are validated; the AI explains evidence but does not become the evidence.</p>
+    <div class="tools">
+      <div><code>sql</code><p>Read-only analysis and geo candidates; the exact query is provenance.</p></div>
+      <div><code>law</code><p>Dated Luxembourg and reviewed EU text through the public <a href="https://law.soufien.lu/" rel="external">Lex</a> MCP server.</p></div>
+      <div><code>search_corpus</code><p>Hybrid retrieval over current energy documents in PostgreSQL.</p></div>
+      <div><code>compute_tariff</code><p>Typed inputs into deterministic code; the model never calculates.</p></div>
+      <div><code>find_offers</code><p>Current tenders and machine-checkable applicability constraints.</p></div>
+    </div>
+    <div class="grid" style="margin-top:1rem">
+      <div class="card">
+        <h3>Request lifecycle: one question, five visible stages</h3>
+        <ol class="steps">
+          <li><b>Normalize and route.</b> The host supplies schemas and bounded tools.</li>
+          <li><b>Call tools, sometimes in parallel.</b> Geo and dated-law lookups can run together.</li>
+          <li><b>Validate outputs.</b> Database role, bouncer, timeouts, caps and contracts.</li>
+          <li><b>Ground or refuse.</b> No usable evidence produces a refusal.</li>
+          <li><b>Render deterministically.</b> Payload shape produces pins, cards or text.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>Azure delivery plane: small because one engineer operates it</h3>
+        <p>Static Web Apps served the client. Container Apps ran the API. PostgreSQL Flexible Server owned relational, geospatial and vector data. Azure OpenAI handled chat and vision; Content Understanding extracted tender constraints. Terraform defines infrastructure; GitHub Actions deploys through OIDC.</p>
+        <p>A second search store or more agents must earn their operating cost through measured need.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="data">
+    <h2 id="data">02 · Batch producers create reusable facts</h2>
+    <p>Ingestion does expensive interpretation once. Requests read typed, provenance-carrying rows rather than repeatedly asking a model to rediscover structure.</p>
+    <div class="grid">
+      <div class="card"><h3>Official and public sources</h3><ul><li>National INSPIRE buildings + solar cadastre</li><li>TED and Luxembourg tenders</li><li>PVGIS, prices, tariffs and aid</li><li>Grid-operator documents + public Lex MCP</li></ul></div>
+      <div class="card"><h3>Python producers</h3><ul><li>Coordinate transforms + geometric joins</li><li>Three-class existing-PV vision</li><li>Content Understanding extraction</li><li>History, provenance and fail-loud status</li></ul></div>
+      <div class="card"><h3>PostgreSQL consumers</h3><ul><li>PostGIS roofs, parcels and materialized sites</li><li>Offers and typed constraints</li><li>FTS + pgvector document chunks</li><li>Read-only API tools and map endpoints</li></ul></div>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>National buildings became the primary source</h3><p>The first design used the solar cadastre and silently missed large industrial roofs. National building polygons now lead; the cadastre is a nullable suitability signal joined spatially. Unknown remains unknown.</p></div>
+      <div class="card"><h3>Vision with abstention: <code>yes / no / maybe</code></h3><p>Ambiguous roofs stay <code>maybe</code>; an outage leaves the field null. Every downstream surface preserves that distinction.</p></div>
+      <div class="card"><h3>Documents become filterable predicates</h3><p>Content Understanding stores verbatim text plus typed constraints. "Apply tender" is deterministic filtering, not query-time invented eligibility.</p></div>
+      <div class="card"><h3>Two retrieval responsibilities</h3><p>The current energy corpus uses PostgreSQL FTS + pgvector with rank fusion. Legal search is not duplicated: Lex provides dated Luxembourg and EU law, history, comparison and provenance.</p></div>
+    </div>
+    <div class="notice"><strong>Key lesson.</strong> Data-source quality mattered more than model sophistication. Replacing the wrong roof source improved the product more than adding another model or search service would have.</div>
+  </section>
+
+  <section aria-labelledby="controls">
+    <h2 id="controls">03 · Controls sit where the failure happens</h2>
+    <p>Prompt instructions help, but consequential controls are enforced in code, database permissions, typed contracts or deployment gates.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Failure</th><th>Control</th><th>Residual risk</th></tr></thead>
+      <tbody>
+        <tr><td>Fabricated tariff</td><td>Deterministic engine + C#/Python parity; model only extracts and narrates.</td><td>New formulas require code; uncovered questions are refused.</td></tr>
+        <tr><td>Unsafe database access</td><td><code>analyst_ro</code> role, forbidden-column bouncer, timeout and row cap.</td><td>A permitted SELECT may still be slow, wrong or infer data.</td></tr>
+        <tr><td>Confident false absence</td><td>Zero rows trigger witness queries and an explicit diagnosis.</td><td>Main and witness queries can share a wrong assumption.</td></tr>
+        <tr><td>Ungrounded prose</td><td>Session-wide evidence guard; the judge sees actual rows, not citation labels.</td><td>Rendered rows have no separate prose-grounding score.</td></tr>
+        <tr><td>Wrong UI action</td><td>Typed payload shape drives pins and cards; no model render tool.</td><td>Bad aliases and coordinates still need validation.</td></tr>
+        <tr><td>Hidden uncertainty</td><td>Vision abstains to <code>maybe</code>; estimates and unknowns remain labelled.</td><td>A human must confirm ambiguous roofs.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="grid">
+      <div class="card"><h3>AI governance</h3><p>The interface identifies the AI. It provides research support, not automated decisions about people. Legal and monetary answers are cited or refused; inferred labels require confirmation.</p></div>
+      <div class="card"><h3>Privacy</h3><p>No account or profile is required. Conversation turns support bounded continuity and are inaccessible to the analytical role. Inputs are not used for fine-tuning. A formal notice and erasure path remain gaps.</p></div>
+      <div class="card"><h3>Cloud identity</h3><p>GitHub deploys through OIDC. Runtime credentials are Container App secrets; the PostgreSQL bootstrap password remains in protected Terraform state. Managed-identity runtime auth is the next hardening step.</p></div>
+      <div class="card"><h3>Network</h3><p>HTTPS, a restricted CORS allowlist and a PostgreSQL firewall were live. Private endpoints, VNet integration, per-user authorization and retrieval ACLs are not.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="decisions">
+    <h2 id="decisions">04 · One decision surface, not fourteen interruptions</h2>
+    <p>Only the decisions that explain the product's shape stay here. Full alternatives, evidence and reversal history remain in the repository's <a href="https://github.com/SFHAJJI/energy-copilot/tree/main/docs/decisions" rel="external">decision records</a>.</p>
+    <div class="grid">
+      <div class="card"><span class="kicker">ADR-001</span><h3>Models never produce consequential numbers</h3><dl class="adr"><dt>Instead of</dt><dd>Compute with a model, then verify.</dd><dt>Cost</dt><dd>Every formula needs code and tests.</dd><dt>Reverse if</dt><dd>Refusal makes normal economics questions unusable.</dd></dl></div>
+      <div class="card"><span class="kicker">ADR-002</span><h3>One agent over five contract-driven tools</h3><dl class="adr"><dt>Instead of</dt><dd>One routed expert per topic.</dd><dt>Cost</dt><dd>Tool schemas become critical infrastructure.</dd><dt>Reverse if</dt><dd>Ordinary questions repeatedly hit the round cap.</dd></dl></div>
+      <div class="card"><span class="kicker">ADR-003</span><h3>Generic SQL finder under structural controls</h3><dl class="adr"><dt>Instead of</dt><dd>A rigid filter API.</dd><dt>Cost</dt><dd>Role, bouncer and performance need ownership.</dd><dt>Reverse if</dt><dd>Leakage or cost survives those controls.</dd></dl></div>
+      <div class="card"><span class="kicker">ADR-006</span><h3>Content Understanding for tenders</h3><dl class="adr"><dt>Instead of</dt><dd>PDF scraping plus another extractor.</dd><dt>Cost</dt><dd>Managed-service and model compatibility risk.</dd><dt>Reverse if</dt><dd>Constraint errors make Apply unreliable.</dd></dl></div>
+      <div class="card"><span class="kicker">ADR-008</span><h3>Postgres hybrid retrieval before AI Search</h3><dl class="adr"><dt>Instead of</dt><dd>A second search service from day one.</dd><dt>Cost</dt><dd>Retrieval quality is owned in-house.</dd><dt>Reverse if</dt><dd>Golden-set hit@5 falls below 0.80.</dd></dl></div>
+      <div class="card"><span class="kicker">ADR-009</span><h3>OIDC and Terraform delivery</h3><dl class="adr"><dt>Instead of</dt><dd>Stored CI credentials and portal state.</dd><dt>Cost</dt><dd>More identity and IaC setup discipline.</dd><dt>Reverse if</dt><dd>Never; extend managed identity to runtime.</dd></dl></div>
+      <div class="card"><span class="kicker">ADR-012</span><h3>National buildings supersede cadastre</h3><dl class="adr"><dt>Instead of</dt><dd>Patching a source missing valuable roofs.</dd><dt>Cost</dt><dd>Migration, re-derivation and spatial join.</dd><dt>Reverse if</dt><dd>Source noise outweighs regained coverage.</dd></dl></div>
+      <div class="card"><span class="kicker">ADR-014</span><h3>Benchmark model tiers; reject premium</h3><dl class="adr"><dt>Instead of</dt><dd>Assuming a larger model is better.</dd><dt>Cost</dt><dd>Token spend and evaluation work.</dd><dt>Reverse if</dt><dd>A larger independent-judge run reverses it.</dd></dl></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="evidence">
+    <h2 id="evidence">05 · Claims are paired with something inspectable</h2>
+    <p>Deterministic behaviour was tested on every change. Hosted-model evaluations ran before releases; they are not misrepresented as per-commit gates.</p>
+    <div class="metrics">
+      <div class="card"><b>5,374</b><span>large buildings in the measured July 2026 roof snapshot</span></div>
+      <div class="card"><b>99.98%</b><span>measured cadastre-to-building join coverage</span></div>
+      <div class="card"><b>40</b><span>questions per model in the three-tier run</span></div>
+      <div class="card"><b>10/10</b><span>public read-only tools in the linked Lex MCP at the time</span></div>
+    </div>
+    <div class="table-wrap"><table>
+      <caption class="small muted">Model tiers, July 2026, one 40-question run</caption>
+      <thead><tr><th>Model</th><th class="num">Groundedness</th><th class="num">Relevance</th><th class="num">Refusal recall</th><th class="num">Median tokens</th><th class="num">p50</th></tr></thead>
+      <tbody>
+        <tr><td><code>gpt-5-nano</code></td><td class="num">0.79</td><td class="num">0.93</td><td class="num">14 / 16</td><td class="num">10,822</td><td class="num">40.7 s</td></tr>
+        <tr><td><code>gpt-5-mini</code> <span class="tag">production</span></td><td class="num">0.76</td><td class="num"><b>0.94</b></td><td class="num"><b>15 / 16</b></td><td class="num"><b>10,227</b></td><td class="num"><b>17.0 s</b></td></tr>
+        <tr><td><code>gpt-5</code></td><td class="num">0.77</td><td class="num">0.83</td><td class="num">15 / 16</td><td class="num">14,534</td><td class="num">48.3 s</td></tr>
+      </tbody>
+    </table></div>
+    <p class="small muted">Caveats: one 40-question run; <code>gpt-5-mini</code> was the judge; candidate capacity differed, so latency is directional. The evidence rejected the premium tier and retained mini because refusal behaviour matters most here.</p>
+    <div class="grid">
+      <div class="card"><h3>Code gates, every push</h3><p>.NET release build, tariff parity, Python tests, schema coverage and frontend tests and build.</p></div>
+      <div class="card"><h3>Model gates, before release</h3><p>Groundedness, outcome, law retrieval and agent behaviour against hosted models.</p></div>
+      <div class="card"><h3>Delivery evidence, after deployment</h3><p>Immutable image, OIDC login, health smoke, public telemetry and source freshness (while the deployment ran).</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="gaps">
+    <h2 id="gaps">06 · A credible personal production system, not enterprise theatre</h2>
+    <div class="grid">
+      <div class="card"><h3>Real when it ran</h3><ul><li>Public deployment and live telemetry</li><li>Automated pipelines with freshness status</li><li>Read-only and deterministic tool boundaries</li><li>Terraform, OIDC and tested CI/CD</li><li>Measured model and retrieval choices</li><li>Visible abstention, refusal and provenance</li></ul></div>
+      <div class="card"><h3>Enterprise adoption adds</h3><ul><li>Entra runtime identity, private endpoints and VNet</li><li>Per-principal authorization and retrieval ACLs</li><li>Purview-class catalog, retention and lineage governance</li><li>DPIA, model-risk approval and security review</li><li>SLOs, load tests, on-call and disaster recovery</li><li>Segregation of duties and release approvals</li></ul></div>
+    </div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Accepted risk</th><th>Why accepted here</th><th>Trigger / next control</th></tr></thead>
+      <tbody>
+        <tr><td>Runtime secrets remain.</td><td>Public read-only workload; CI credential risk was removed first.</td><td>Managed identity before private or enterprise data.</td></tr>
+        <tr><td>Model-written SELECT may infer or be wrong.</td><td>Generality is useful and visible data is public.</td><td>Templates or per-user views when private data appears.</td></tr>
+        <tr><td>Model evals are pre-release.</td><td>They cost hosted tokens and wall time.</td><td>Automate after higher release frequency or a regression.</td></tr>
+        <tr><td>No permanent UAT environment.</td><td>A personal, public-data product cannot justify duplicate standing resources. Pull requests must pass deterministic gates; main deploys an immutable image, then a live health smoke confirms it.</td><td>An isolated integration stage, approvals and segregation of duties when a team, private data, stateful migrations or an SLA make the blast radius material.</td></tr>
+        <tr><td>Single-region app and database.</td><td>Personal traffic cannot justify redundant standing cost.</td><td>Test regional recovery when an SLA requires it.</td></tr>
+        <tr><td>A global cost guard may stop the app.</td><td>On a personal subscription, solvency outranks uptime.</td><td>Service budgets and chargeback before commercialization.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="small">The last row is not theoretical: the public deployment is offline today, which is exactly what a cost guard on a personal subscription does. <a href="../lex/">Lex</a>, the legal corpus this product consumed, is online and documented separately.</p>
+  </section>
+
+  <section class="card">
+    <h2 style="border:0;margin:0 0 .5rem;padding:0">The signal is judgment, not service count</h2>
+    <p>This demonstrates problem framing, data engineering, bounded agent design, RAG, Azure delivery, evaluation and honest risk ownership. The strongest choices are the capabilities deliberately left out until evidence makes them worth operating.</p>
+    <ul class="plain">
+      <li><a href="https://github.com/SFHAJJI/energy-copilot" rel="external">Review the repository</a></li>
+      <li><a href="https://github.com/SFHAJJI/energy-copilot/tree/main/docs/decisions" rel="external">All decision records</a></li>
+      <li><a href="https://github.com/SFHAJJI/energy-copilot/blob/main/docs/solution-assessment.html" rel="external">Solution assessment (source)</a> · <a href="https://github.com/SFHAJJI/energy-copilot/blob/main/docs/decisions-flagship.html" rel="external">Flagship numerical-safety decision (source)</a></li>
+      <li><a href="../lex/">Compare the Lex architecture</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="bar">
+    <p><a href="../">Portfolio</a> · Luxembourg Energy Transition Co-Pilot · architecture case study adapted from the repository's <code>docs/architecture-page.html</code>; current facts are separated from enterprise target-state gaps. Static site, no tracking, no cookies.</p>
+  </div>
+</footer>
+<script src="../assets/theme.js"></script>
+</body>
+</html>

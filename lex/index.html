@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="fr-LU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lex : un système de recherche juridique construit comme un RAG d’entreprise</title>
+<meta name="description" content="Étude de cas : Lex, site public de recherche juridique (droit luxembourgeois et de l’UE à une date), lu comme un RAG d’entreprise : analyse des documents, de la question, recherche structurelle, réponse typée sans génération ; évaluation, production, et ce qui a cassé.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231f4e79'/%3E%3Ctext x='8' y='12' font-size='10' text-anchor='middle' fill='white' font-family='sans-serif'%3EL%3C/text%3E%3C/svg%3E">
+<style>
+  .brick { border-top: 4px solid var(--accent); }
+  .kv { display: grid; grid-template-columns: max-content 1fr; gap: .25rem 1rem; font-size: .95rem; }
+  .kv dt { color: var(--muted); } .kv dd { margin: 0; }
+  @media (max-width: 480px) { .kv { grid-template-columns: 1fr; } .kv dt { margin-top: .4rem; } }
+  .verdicts li { margin: .35rem 0; }
+  .flow { display: grid; gap: .5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); margin: 1rem 0; }
+  .flow div { background: var(--surface-2); border-radius: 8px; padding: .6rem .75rem; font-size: .92rem; }
+  .flow b { display: block; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="site">
+  <div class="bar">
+    <a class="brand" href="../">Portfolio</a>
+    <nav aria-label="Pages">
+      <a href="./" aria-current="page">Lex</a>
+      <a href="../guide/">Démo guide</a>
+      <a href="../energy/">Energy Copilot</a>
+      <a href="../cv/">CV</a>
+      <button type="button" class="ghost" data-theme-toggle data-aria="Changer de thème" data-label-auto="Thème : auto" data-label-dark="Thème : sombre" data-label-light="Thème : clair">Thème : auto</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <p class="muted small">Étude de cas · écrite le 31 octobre 2026 · chaque lien vers le site a été vérifié ce jour-là par requête HTTP (sans navigateur), chaque chiffre vient d’un fichier du dépôt public ou d’une réponse du site.</p>
+  <h1>Lex : un système de recherche juridique construit comme un RAG d’entreprise</h1>
+  <p class="lead">Lex montre le droit luxembourgeois et le droit de l’UE <em>tels qu’ils se lisaient à une date</em>, article par article, avec l’empreinte du texte, sa source officielle et un permalien. Il ne génère rien : la réponse est une enveloppe typée, et quand il ne sait pas, il le dit avec un refus typé. Cette page lit Lex avec la grille des quatre briques d’un RAG d’entreprise : l’analyse des documents, l’analyse de la question, la recherche, la génération.</p>
+  <p lang="en" class="small muted">English summary: Lex is a public legal-research site for Luxembourg and EU law as it stood on a date. This case study reads it as an enterprise RAG: relational document parsing (Formex and Akoma Ntoso into SQLite), deterministic question parsing, structure-first retrieval with no vector store, and no generation at all: a typed answer envelope with twenty typed refusals. It then covers evaluation gates, reproducible signed releases, what broke, and how the same bricks would answer insurance questions. The assistant is built and switched off today.</p>
+
+  <nav aria-labelledby="toc-h" class="card">
+    <h2 id="toc-h" style="border:0;margin:0 0 .5rem;padding:0;font-size:1.1rem">Sommaire</h2>
+    <ol class="toc small">
+      <li><a href="#ecran">En un écran</a></li>
+      <li><a href="#briques">Les quatre briques, dans Lex</a></li>
+      <li><a href="#assistant">L’assistant : un contrat de réponse typé poussé à sa limite</a></li>
+      <li><a href="#evaluation">Évaluation et production</a></li>
+      <li><a href="#lecons">Ce qui a marché, ce qui a cassé, ce que je ferais autrement</a></li>
+      <li><a href="#assurance">Les mêmes briques sur les sujets d’assurance</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1 -->
+  <section aria-labelledby="ecran">
+    <h2 id="ecran">1. En un écran</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Ce que c’est</h3>
+        <p><a href="https://law.soufien.lu/" rel="external">law.soufien.lu</a>, ouvert au public depuis le 27 octobre 2026. Une recherche, une lecture à une date, le dossier d’un acte, l’historique d’un article, la comparaison de deux dates, les modifications d’une période, l’export avec citations vérifiables. Interface en français et en anglais. API REST et MCP sur la même origine (<code>/api/v3</code>, <code>/mcp</code>). Code source public : <a href="https://github.com/SFHAJJI/lex" rel="external">github.com/SFHAJJI/lex</a> (branche <code>v3/integration</code>).</p>
+      </div>
+      <div class="card">
+        <h3>Ce qu’il tient aujourd’hui</h3>
+        <p>La version servie le 31 octobre (première publication, construite le 26 octobre) : 1 730 actes luxembourgeois en 1 730 versions, 8 854 articles, index construit le 12 octobre 2026 ; un index UE de 1 857 membres (RGPD, règlement IA, CRR, traités…), en anglais et en français. La page <a href="https://law.soufien.lu/fr/coverage.html" rel="external">Ce que ce site détient</a> dit ces chiffres, classe par classe, et ce qui manque. La deuxième publication, construite et signée le 28 octobre, porte 152 031 articles luxembourgeois et 191 670 articles UE ; elle n’était pas encore promue le 31 octobre (<a href="#evaluation">section 4</a>).</p>
+      </div>
+      <div class="card">
+        <h3>Ce qu’il ne fait jamais</h3>
+        <p>Donner un conseil, appliquer le droit à une situation, fabriquer sa propre consolidation, laisser un modèle choisir l’acte ou classer les résultats, substituer une date en silence. Chaque page le dit en une phrase.</p>
+      </div>
+    </div>
+    <h3>Liens réels, vérifiés le 31 octobre 2026 (HTTP 200)</h3>
+    <ul class="links">
+      <li><a href="https://law.soufien.lu/fr/eu-eurlex/32024R1689/fra/050" rel="external">Article 50 du règlement (UE) 2024/1689 (règlement sur l’IA), en français</a> : le libellé consolidé du 27 juillet 2026, l’obligation de transparence, avec son permalien, son empreinte et la mention « © European Union ».</li>
+      <li><a href="https://law.soufien.lu/fr/lu-legilux/loi-2019-12-04-a839/fra/art_1er" rel="external">Art. 1er de la loi du 4 décembre 2019 relative à l’Office du Ducroire</a>, dans sa version applicable au 1er janvier 2020 : le texte, son empreinte SHA-256, la source officielle (ELI) et la citation usuelle à copier.</li>
+      <li><a href="https://law.soufien.lu/fr/lu-legilux/loi-2019-12-04-a839" rel="external">Le dossier de la même loi</a> : une version détenue, et les deux versions consolidées que l’éditeur nomme et que Lex <em>ne détient pas</em>, dites comme telles.</li>
+      <li><a href="https://law.soufien.lu/fr/lu-legilux/loi-2019-12-04-a839/fra?date=2015-01-01" rel="external">La même loi au 1er janvier 2015</a> : un refus typé <code>no_version_for_date</code>, avec <code>history_begins</code> 2020-01-01 et la version la plus proche. Pas de « meilleur effort », pas de page vide.</li>
+      <li><a href="https://law.soufien.lu/fr/compare.html?work=%2Flu-legilux%2Floi-2019-12-04-a839&amp;from=2020-06-01&amp;to=2026-10-28&amp;language=fra" rel="external">Comparer deux dates</a> (2020-06-01 et 2026-10-28) : les identités d’articles des deux versions et les consolidations de l’éditeur entre les dates.</li>
+      <li><a href="https://law.soufien.lu/fr/eu-eurlex/32016R0679" rel="external">Le dossier du RGPD</a> : expressions anglaise et française, libellé original daté, ce que l’index UE ne tient pas (titres, dates d’entrée en vigueur) dit en toutes lettres.</li>
+      <li><a href="https://law.soufien.lu/fr/coverage.html" rel="external">Confiance et couverture</a> : la fiche d’évaluation, servie aussi <a href="https://law.soufien.lu/evaluation-card.json" rel="external">en JSON</a>.</li>
+    </ul>
+  </section>
+
+  <!-- 2 -->
+  <section aria-labelledby="briques">
+    <h2 id="briques">2. Les quatre briques, dans Lex</h2>
+    <div class="flow" role="img" aria-label="Documents vers index relationnel, question vers paramètres typés, recherche structurelle, réponse typée">
+      <div><b>Analyse des documents</b>Formex XML (UE) et Akoma Ntoso (LU) → index SQLite relationnels</div>
+      <div><b>Analyse de la question</b>Analyseurs déterministes : ELI, CELEX, citations, dates, langue</div>
+      <div><b>Recherche</b>La structure d’abord : identifiant, acte, version à une date, article ; puis le lexical plié</div>
+      <div><b>Génération</b>Aucune : une enveloppe typée, 20 refus typés à charge utile obligatoire</div>
+    </div>
+
+    <h3>Brique 1 : l’analyse des documents, relationnelle</h3>
+    <p>Lex lit deux formats officiels : <strong>Formex</strong>, le XML de l’Office des publications de l’UE (<code>src/Lex.V3.Ingest/Europe/EuFormex*.cs</code>), et <strong>Akoma Ntoso</strong>, le XML de Legilux (<code>src/Lex.V3.Ingest/Luxembourg/LuxembourgAkn*.cs</code>). Il ne les découpe pas en morceaux de taille fixe : il en extrait la structure dans deux index SQLite (<code>luxembourg-index.sqlite3</code>, <code>europe-index.sqlite3</code>), tables <code>STRICT</code>, construits deux fois et comparés octet pour octet.</p>
+    <div class="table-wrap"><table>
+      <caption class="small muted">Les tables de l’index luxembourgeois (schéma 9), <code>LuxembourgIndexBuilder.cs</code></caption>
+      <thead><tr><th>Table</th><th>Ce qu’elle tient</th></tr></thead>
+      <tbody>
+        <tr><td><code>members</code></td><td>Chaque fichier acquis : son empreinte, son issue (<code>outcome</code>), sa disposition de droits (<code>rights_disposition</code>).</td></tr>
+        <tr><td><code>articles</code></td><td>Un article d’une expression : <code>article_identity_sha256</code>, <code>publisher_id</code>, <code>applicability_date</code>, <code>language</code>, <code>rule_profile_sha256</code> (la règle de lecture qui l’a produit), <code>searchable_text</code>, <code>tokens_json</code>, <code>document_position</code>.</td></tr>
+        <tr><td><code>states</code></td><td>Une version d’un acte : <code>work_key</code>, <code>applicability_date</code>, <code>state_sha256</code>, <code>state_kind</code> (<code>as_published</code>, <code>consolidation</code>, <code>code</code>), <code>date_role</code>, <code>applicable_to</code>, <code>boundary</code>, <code>text_status</code> (<code>held</code>, <code>withheld_rights</code>, <code>not_available_pdf</code>…), <code>article_identities_json</code>.</td></tr>
+        <tr><td><code>intervals</code></td><td>Les intervalles de validité entre versions successives, typés : <code>contiguous</code>, <code>same_date</code>, <code>hole</code>, <code>overlap</code>, <code>inclusive_suspected</code>, <code>invalid</code>. Un trou n’est jamais comblé en silence.</td></tr>
+        <tr><td><code>work_titles</code>, <code>work_facts</code></td><td>Les intitulés (avec leur forme normalisée) et les faits de l’éditeur (dates, licences), chacun avec l’empreinte de sa preuve.</td></tr>
+        <tr><td><code>relations</code></td><td>Les citations d’article à article (<code>edge_type</code> <code>cites</code>), affirmées par le texte de l’éditeur, jamais inférées.</td></tr>
+        <tr><td><code>events</code>, <code>observations</code></td><td>Le journal : première apparition d’une version, fichier remplacé, intervalle fermé, validité révisée ; chaque construction d’index comme une observation datée.</td></tr>
+        <tr><td><code>stamp</code></td><td>L’identité du schéma, l’empreinte du corpus, l’empreinte des lignes logiques, la version de SQLite et ses options : ce qui rend la construction reproductible.</td></tr>
+      </tbody>
+    </table></div>
+    <p>Côté UE (<code>EuropeIndexBuilder.cs</code>) : <code>members</code>, <code>articles</code> (avec <code>heading</code>, <code>wording_date</code>, <code>publisher_work_celex</code>), <code>article_sources</code> (le paquet et l’URI officielle de chaque article), <code>article_digests</code>, <code>states</code> (chaque libellé consolidé avec la date de consolidation de l’éditeur), <code>force_dates</code> (entrée en vigueur, application, fin de validité, avec leur prédicat source) et <code>corrigendum_lines</code>. Le texte est lu une fois, à l’ingestion ; une requête lit des lignes typées, pas un PDF.</p>
+
+    <div class="card">
+      <h3>Le « dossier » d’un acte : analyser le classeur, pas seulement les PDF</h3>
+      <p>Un acte n’est pas un document : c’est une famille. Le <a href="https://law.soufien.lu/fr/lu-legilux/loi-2019-12-04-a839" rel="external">dossier</a> de Lex liste, pour un acte, ses intitulés, ses versions détenues avec leurs intervalles, les versions consolidées que l’éditeur nomme et que Lex ne détient pas (avec leurs dates), les relations, la phrase d’authenticité qui s’applique, et une liste <code>not_held</code> qui dit ce que le dossier ne contient pas et pourquoi (pas de date de publication, pas de type de document, pas de drapeau « en vigueur »). C’est l’équivalent juridique d’une cohérence inter-documents : la version, l’acte publié, ses consolidations et son journal officiel sont joints par des identifiants, et l’absence d’un membre est une donnée.</p>
+    </div>
+
+    <h3>Brique 2 : l’analyse de la question, déterministe</h3>
+    <p>Avant de chercher un mot, Lex lit la question comme une référence exacte (<code>src/Lex.V3.Api/ExactReference.cs</code>, <code>CitationDates.cs</code>, <code>ArticleNumbers.cs</code>) : un ELI, un CELEX (formes consolidées comprises), une citation au Mémorial ou au Journal officiel, une adresse du site, un acte par son type et sa date, ou la citation d’un article d’un acte à une date. Vérifié le 28 octobre : la recherche « Art. 1er de la loi du 4 décembre 2019 relative à l’Office du Ducroire Luxembourg » n’est pas cherchée mot à mot ; elle est reconnue (<code>outcome: opens</code>, <code>kind: citation</code>) et ouvre l’article ; « 32024R1689 » ouvre le dossier du règlement IA. Les numéros d’article sont lus à une clé (<code>1er</code>, <code>premier</code> et <code>1</code> sont la même ; <code>42</code> et <code>42bis</code> sont deux numéros ; jamais un numéro voisin). La langue est un paramètre, pas une devinette. Aucun modèle ne reformule la question.</p>
+
+    <h3>Brique 3 : la recherche, la structure d’abord</h3>
+    <ol class="steps">
+      <li><b>L’identifiant.</b> <code>resolve</code>, <code>dossier</code> : l’acte ou la version qu’un identifiant exact nomme, ou <code>identifier_unknown</code>.</li>
+      <li><b>La version à une date.</b> <code>as_of</code>, <code>in_force_on</code>, <code>timeline</code> : la version qu’une date sélectionne dans les intervalles typés ; <code>no_version_for_date</code> ou <code>ambiguous_version</code> plutôt qu’un choix silencieux.</li>
+      <li><b>L’article.</b> <code>evidence_bundle</code>, <code>article_history</code>, <code>diff</code> : l’article nommé dans cette version, ou <code>anchor_not_in_version</code> avec les ancres voisines et <code>do_not_fall_back_to_full_text_search: true</code>.</li>
+      <li><b>Les mots, en dernier.</b> <code>search</code> : une correspondance lexicale sur le texte des articles, dans deux voies (stricte : la phrase telle que tapée ; relâchée : chaque mot), <strong>pliée</strong> depuis le 27 octobre : accents, casse, apostrophes typographiques, espaces insécables (<code>src/Lex.V3.Contracts/Index/TextFolding.cs</code>), avec un extrait de 80 caractères avant et 200 après la première correspondance, dont les parties <code>matched</code> sont marquées sur les caractères d’origine. Il n’y a <strong>pas de base vectorielle</strong>, et la réponse le dit elle-même : <code>modes_not_held: ["bm25", "semantic"]</code>, <code>ranking: "none"</code>, <code>page_is: "the first hits in the stated order, not the best hits"</code>.</li>
+    </ol>
+    <p>Pourquoi pas de vecteurs ? Parce que la question d’un juriste porte presque toujours sur un objet identifié (cet acte, cet article, cette date), et qu’un rang par similarité y est un bruit : la fiche d’évaluation enregistre d’ailleurs un <em>résultat négatif</em> explicite (la recherche hybride n’est pas activée tant qu’un jeu d’or étiqueté par des personnes ne montre pas son gain ; <a href="#evaluation">section 4</a>).</p>
+
+    <h3>Brique 4 : la génération : aucune</h3>
+    <p>Chaque réponse est une enveloppe (<code>lex-v3-envelope/1</code>) liée par empreinte au registre des opérations (<code>registry_sha256</code>), avec un <code>verdict</code>, un <code>result</code> typé ou un <code>refusal</code> typé, et un contexte qui nomme le corpus (<code>snapshot_sha256</code>), le code qui sert (<code>serving_runtime_source_commit</code>) et la fraîcheur par éditeur (<code>age_days</code>, <code>maximum_data_age_days: 30</code>). Le registre (<code>src/Lex.V3.Contracts/Platform/V3OperationRegistry.cs</code>) ferme l’ensemble des 27 opérations et des <strong>20 codes de refus</strong>, chacun avec les champs que sa charge utile doit porter :</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Refus</th><th>Charge utile obligatoire</th></tr></thead>
+      <tbody>
+        <tr><td><code>advice_boundary</code></td><td><code>descriptive_maximum</code>, <code>handoff</code></td></tr>
+        <tr><td><code>ambiguous_identifier</code></td><td><code>requested_identifier</code>, <code>candidates</code></td></tr>
+        <tr><td><code>ambiguous_version</code></td><td><code>requested_date</code>, <code>candidates</code></td></tr>
+        <tr><td><code>anchor_not_in_version</code></td><td><code>requested_anchor</code>, <code>nearest_anchors</code>, <code>do_not_fall_back_to_full_text_search</code></td></tr>
+        <tr><td><code>derivation_refused</code></td><td><code>derivation</code>, <code>reason</code></td></tr>
+        <tr><td><code>format_not_available</code></td><td><code>requested_format</code>, <code>available_formats</code></td></tr>
+        <tr><td><code>identifier_unknown</code></td><td><code>requested_identifier</code>, <code>official_search_actions</code>, <code>what_would_answer</code></td></tr>
+        <tr><td><code>language_not_available</code></td><td><code>requested_language</code>, <code>available_languages</code></td></tr>
+        <tr><td><code>no_corpus_mounted</code></td><td><code>required_corpus</code></td></tr>
+        <tr><td><code>no_version_for_date</code></td><td><code>requested_date</code>, <code>history_begins</code>, <code>nearest_earlier</code>, <code>nearest_later</code></td></tr>
+        <tr><td><code>not_transposable</code></td><td><code>instrument_type</code>, <code>explanation</code></td></tr>
+        <tr><td><code>out_of_corpus_scope</code></td><td><code>requested_identifier</code>, <code>official_source</code>, <code>reason</code>, <code>who_to_ask</code></td></tr>
+        <tr><td><code>pinned_digest_mismatch</code></td><td><code>requested_digest</code>, <code>current_digest</code>, <code>stable_coordinate</code>, <code>current_hash_pinned_url</code></td></tr>
+        <tr><td><code>profiles_differ</code></td><td><code>left_profile</code>, <code>right_profile</code></td></tr>
+        <tr><td><code>rate_limited</code></td><td><code>retry_after</code>, <code>retryable</code></td></tr>
+        <tr><td><code>retrieval_mode_unavailable</code></td><td><code>requested_mode</code>, <code>available_modes</code></td></tr>
+        <tr><td><code>snapshot_unknown</code></td><td><code>snapshot_id</code>, <code>what_would_answer</code></td></tr>
+        <tr><td><code>text_not_available</code></td><td><code>official_identity</code>, <code>official_source</code>, <code>retained_transport_evidence</code></td></tr>
+        <tr><td><code>text_withheld</code></td><td><code>official_identity</code>, <code>official_link</code>, <code>content_sha256</code></td></tr>
+        <tr><td><code>upstream_unreachable</code></td><td><code>upstream</code>, <code>retryable</code></td></tr>
+      </tbody>
+    </table></div>
+    <p>Un refus porte toujours <code>asserts_absence_of_law: false</code> : un trou dans Lex n’est jamais une affirmation sur le monde. Un article cité porte <code>text_sha256</code>, <code>body_sha256</code>, l’ELI officiel et un permalien qui fige la date et l’empreinte de la version ; l’opération <code>verify</code> rejoue ce permalien. Les champs sont vérifiés contre l’entrée : il n’y a nulle part où inventer.</p>
+  </section>
+
+  <!-- 3 -->
+  <section aria-labelledby="assistant">
+    <h2 id="assistant">3. L’assistant : un contrat de réponse typé poussé à sa limite</h2>
+    <div class="notice warn"><strong>État au 31 octobre 2026 : construit et éteint.</strong> L’opération <code>ask</code> du site public répond une carte <code>assistant_v3_unavailable</code> (vérifié par requête POST ce jour-là) et renvoie aux quatre opérations déterministes. Le code de l’assistant existe sur une branche du dépôt, revu mais pas encore fusionné ; l’interrupteur est éteint par défaut, l’interrupteur d’arrêt de l’opérateur l’emporte toujours, et en production aucun planificateur n’est câblé. Il ne s’allumera que quand ses contrôles passeront (ci-dessous).</div>
+    <p>Le principe (spécification de référence, règles R30 à R45) : <strong>le modèle ne fait que proposer un plan</strong>. Il reçoit la question masquée (adresses électroniques, téléphones, IBAN et numéros nationaux remplacés par des points de même longueur, pour que les offsets tiennent) et des références opaques produites par les analyseurs déterministes (<code>i1</code> un identifiant, <code>d1</code> une date, <code>r1</code> une période, <code>a1</code> un article). Il rend un plan JSON d’une grammaire fermée : une ou deux parties de la question (par offsets), un verdict proposé, une à quatre étapes sur une liste blanche d’opérations (<code>resolve</code>, <code>search</code>, <code>dossier</code>, <code>as_of</code>, <code>timeline</code>, <code>article_history</code>, <code>diff</code>, <code>evidence_bundle</code>, <code>changes_in_period</code>), chaque argument étant un <em>span</em> de la question, une référence, le résultat d’une étape, un choix dans un ensemble fermé ou « aujourd’hui ». <strong>Il n’y a aucun champ de texte libre dans le plan</strong> : il ne peut pas porter de prose.</p>
+    <p>Le code valide (taille, JSON, champs connus, énumérations, liste blanche, sources admises par paramètre, spans dans les bornes et hors des masques, plafonds : au plus 6 opérations, 10 ans de comparaison, 366 jours de modifications, 5 citations de 8 000 caractères) puis exécute à travers la même dispatch que REST et MCP, de sorte que les garde-fous de périmètre et de droits s’appliquent. Puis le code, et non le modèle, calcule le verdict, biaisé vers le refus. Chaque phrase visible du dossier de réponse est l’une de trois choses :</p>
+    <ul>
+      <li>un <strong>gabarit relu</strong> (79 gabarits, français et anglais), rempli par du code avec des faits typés ;</li>
+      <li>une <strong>citation textuelle</strong> avec son empreinte, son intervalle de validité, son permalien et sa source officielle ;</li>
+      <li>un <strong>span des mots de l’utilisateur</strong>, cité tel quel.</li>
+    </ul>
+    <p>Les verdicts, avec leurs libellés français :</p>
+    <ul class="verdicts">
+      <li><span class="pill ok">D’après le texte officiel</span> une citation détenue et servie ;</li>
+      <li><span class="pill warn">Non détenu par Lex : source officielle</span> ce que Lex ne tient pas, avec le lien vers l’éditeur ; jamais une affirmation d’inexistence ;</li>
+      <li><span class="pill two">Il manque une précision</span> un identifiant ou une version ambigus : une question, avec les candidats ;</li>
+      <li><span class="pill two">Deux questions</span> la question se partage en deux parties de classes différentes ;</li>
+      <li><span class="pill no">Hors de ce que fait ce service</span> la question demande d’appliquer le droit à une situation : la limite, en une phrase, puis le droit cité, puis vers qui se tourner.</li>
+    </ul>
+    <p>Trois contrôles machine sont dans le chemin du code et ont chacun un contrôle d’échec délibéré : la <strong>fidélité des citations</strong> (un vérificateur indépendant relit chaque article et recalcule l’empreinte : la citation doit être la sous-chaîne exacte à son offset, seuil 1,0) ; <strong>zéro phrase hors gabarit</strong> (chaque texte visible est re-rendu depuis son gabarit, ou égal au span, ou une citation vérifiée) ; le <strong>rejeu octet pour octet</strong> de la trace sur le même instantané. Rien n’est stocké côté serveur : la trace part chez le lecteur, qui peut la rejouer. Avant l’allumage restent des choses que seules des personnes peuvent faire : une lecture juridique écrite (RGPD, règlement IA art. 50), un modèle hébergé dans l’UE sans rétention, la relecture des gabarits et du jeu d’or par un avocat luxembourgeois, un jeu de 320 questions écrites par des personnes avec un second annotateur, et la signature du propriétaire. Jusque-là : éteint, et dit comme tel.</p>
+    <p class="small muted">La <a href="../guide/">démonstration du guide nouveaux arrivants</a> sur ce site applique ce même contrat sans aucun modèle : verdict calculé, passage cité, lien, et rien d’inventé.</p>
+  </section>
+
+  <!-- 4 -->
+  <section aria-labelledby="evaluation">
+    <h2 id="evaluation">4. Évaluation et production</h2>
+    <p>Deux publications existent. <strong>La première</strong> (<code>v3-20261026T180319Z-8958ec5fa63f</code>, construite le 26 octobre) est celle que le site sert le 31 octobre. <strong>La deuxième</strong> (<code>v3-20261028T142935Z-7583e4d0032d</code>, construite le 28 octobre à partir du commit <code>7583e4d0</code>) a passé ses contrôles, a été construite deux fois à l’identique et signée ; sa promotion n’était pas enregistrée le 31 octobre. Les chiffres ci-dessous disent de laquelle ils parlent.</p>
+
+    <h3>Les contrôles machine (fiche d’évaluation, <code>lex-v3-evaluation-card/1</code>)</h3>
+    <p>Les cas sont dérivés de l’index monté lui-même et posés au vrai gestionnaire de requêtes, pas à une maquette. Chaque jeu est accompagné d’un <strong>contrôle par permutation</strong> : les dates sont décalées de la médiane des écarts entre dates détenues (129 jours pour le Luxembourg, 252 pour l’UE), les verdicts ou les jugements de pertinence sont mélangés avec une graine fixe ; le contrôle doit faire échouer la porte, sinon la porte ne mesure rien.</p>
+    <div class="table-wrap"><table>
+      <caption class="small muted">Deuxième publication (28 octobre, <code>evaluation-card.json</code>) ; entre parenthèses, la fiche servie aujourd’hui par la première</caption>
+      <thead><tr><th>Jeu</th><th>Porte</th><th class="num">Cas</th><th class="num">Valeur</th><th>Wilson 95 %</th><th>Permutation</th></tr></thead>
+      <tbody>
+        <tr><td>Temporel LU, <code>as_of</code> fra</td><td>exactitude temporelle</td><td class="num">1 228 (120)</td><td class="num">1,0</td><td>0,9969 à 1</td><td>609 cas, détectée</td></tr>
+        <tr><td>Temporel LU, <code>in_force_on</code> fra</td><td>exactitude temporelle</td><td class="num">1 228 (120)</td><td class="num">1,0</td><td>0,9969 à 1</td><td>802 cas, détectée</td></tr>
+        <tr><td>Temporel LU, sans langue (2 arms)</td><td>exactitude temporelle</td><td class="num">1 231 (120)</td><td class="num">1,0</td><td>0,9969 à 1</td><td>détectée</td></tr>
+        <tr><td>Temporel UE, <code>as_of</code> eng / fra / sans langue</td><td>exactitude temporelle</td><td class="num">498 (562)</td><td class="num">1,0</td><td>0,9923 à 1</td><td>302 / 296 / 295 cas, détectée</td></tr>
+        <tr><td>Refus</td><td>verdict exact</td><td class="num">26 (21)</td><td class="num">1,0</td><td>0,8713 à 1</td><td>exact tombé à 0, détectée</td></tr>
+        <tr><td>Recherche</td><td>nDCG@10 de l’ancre</td><td class="num">53</td><td class="num">1,0</td><td>règle de trois : < 0,0566</td><td>nDCG tombé à 0, détectée</td></tr>
+        <tr><td>Recherche</td><td>exactitude des non-réponses</td><td class="num">24</td><td class="num">1,0</td><td>0,862 à 1</td><td>détectée</td></tr>
+        <tr><td>Recherche</td><td>exactitude du résolveur</td><td class="num">21</td><td class="num">1,0</td><td>0,8454 à 1</td><td>détectée</td></tr>
+      </tbody>
+    </table></div>
+    <p>La fiche dit aussi ce qu’elle <em>ne</em> mesure pas : huit jeux étiquetés par des personnes (D1 à D8 : pertinence, fidélité de dérivation, refus, verdicts de l’assistant, support par span, pont lexical, temporel, accord du juge) sont <code>not_yet_labelled</code> et gouvernent une étape ultérieure ; et un résultat négatif est consigné : la recherche hybride « n’est pas livrée », faute de mesure sur D6, avec la condition chiffrée qui renverserait la décision (recall@10 ≥ 0,7 en anglais et en allemand, ≥ 0,5 en luxembourgeois).</p>
+
+    <h3>Les contrôles d’une publication à l’autre : rien de perdu sans explication</h3>
+    <p>Avant qu’une image soit construite, <code>release-checks</code> (<code>src/Lex.V3.Ingest/Releases/</code>) compare le montage candidat à celui de la publication qui sert, éditeur par éditeur, classe par classe (<code>release-comparison.json</code>). Une version perdue, une empreinte de permalien changée, une empreinte de texte d’article changée, un article perdu d’une version servie des deux côtés ou une annexe UE perdue exige une raison typée (<code>derivation_rule_changed</code>, <code>rights_withdrawn</code>, <code>withdrawn_by_publisher</code>, <code>defect_corrected</code>), chacune vérifiée contre les deux montages ; toute perte inexpliquée refuse la publication. Pour la deuxième publication : <strong>1 730 éléments listés, 0 inexpliqué</strong>, tous du même type (<code>version_identity_changed</code> : la règle de lecture du contenu est passée de /2 à /3, chaque version garde son texte et prend une nouvelle empreinte), <strong>0 article perdu</strong>, aucune baisse au-delà de dix pour cent. Le contrôle R86(2) liste les fichiers consolidés admis sans texte : 6 (4 UE sans corps XML principal, 2 LU typés), 0 inexpliqué.</p>
+    <div class="table-wrap"><table>
+      <caption class="small muted">Deuxième publication contre la première, <code>release-comparison.json</code> (articles servis)</caption>
+      <thead><tr><th>Classe</th><th class="num">Gardés</th><th class="num">Ajoutés</th><th class="num">Perdus</th><th class="num">Servis avant → après</th></tr></thead>
+      <tbody>
+        <tr><td>UE, consolidations</td><td class="num">171 664</td><td class="num">9 912</td><td class="num">0</td><td class="num">171 664 → 181 576</td></tr>
+        <tr><td>UE, textes originaux</td><td class="num">2 156</td><td class="num">7 938</td><td class="num">0</td><td class="num">2 156 → 10 094</td></tr>
+        <tr><td>LU, codes</td><td class="num">0</td><td class="num">121 119</td><td class="num">0</td><td class="num">0 → 121 119</td></tr>
+        <tr><td>LU, lois publiées</td><td class="num">2 828</td><td class="num">6 267</td><td class="num">0</td><td class="num">2 828 → 9 095</td></tr>
+        <tr><td>LU, lois consolidées</td><td class="num">0</td><td class="num">6 454</td><td class="num">0</td><td class="num">0 → 6 454</td></tr>
+        <tr><td>LU, règlements publiés</td><td class="num">5 049</td><td class="num">7 068</td><td class="num">0</td><td class="num">5 049 → 12 117</td></tr>
+        <tr><td>LU, règlements consolidés</td><td class="num">0</td><td class="num">3 246</td><td class="num">0</td><td class="num">0 → 3 246</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Des images reproductibles et signées</h3>
+    <p>Le rapport de montage (<code>mount-report.json</code>, deuxième publication) : 262 092 membres de corpus, <code>builtTwiceAndEqual: true</code>, le commit de l’outil qui a construit l’index, la liste des cinq fichiers du montage avec leur taille et leur SHA-256, et la déclaration que le chemin de dérivation « ne tient aucune session éditeur et refuse de finir avec une activité réseau ». L’image OCI (3 369 974 784 octets) et le manifeste de publication sont signés par le signataire <code>lex-v3-release</code> (clé P-256 dans un coffre Azure ; seule la moitié publique est sur disque) ; la page de couverture, un <code>manifest-diff.md</code> et les signatures sont publiés avec les actifs. Une sonde de promotion refuse une publication dont une porte ne passe pas, dont un contrôle a manqué sa permutation, ou dont les données dépassent 30 jours.</p>
+
+    <h3>Les noms de personnes privées, retenus</h3>
+    <p>Un détecteur (<code>src/Lex.V3.Ingest/Names/</code>) lit les intitulés et le texte des actes : sur la deuxième publication, <strong>974 actes</strong> du catalogue luxembourgeois (954 naturalisations, 8 concessions à une personne nommée, 4 biens d’une personne nommée, 8 intitulés nommant une personne) sont retenus par classe ; 0 acte servi a été signalé ; les signaux faibles (une mention de naissance dans 66 actes, un lieu de naissance dans 2) sont comptés sans retenir. Un acte retenu répond <code>text_withheld</code> avec la raison <code>names_private_individuals</code>, reste hors recherche et hors moteurs de recherche, et renvoie à l’éditeur. La précision sur texte servi n’est pas mesurée : c’est écrit.</p>
+
+    <h3>Les licences, fichier par fichier</h3>
+    <p>Les droits luxembourgeois ont deux canaux : le catalogue de l’éditeur (SPARQL) et le bloc de licence de chaque fichier. La politique A n’admet un texte que lorsque les deux concordent ; tout le reste est retenu avec une raison typée et compté dans le rendement par classe (<code>textYield</code> du rapport de montage) : <code>conflict</code>, <code>sparql_cc_by_in_file_silent</code> (le fichier ne dit rien), <code>…names_other_identity</code> (le bloc nomme un autre fichier), <code>…own_block_empty</code>, <code>catalogue_licence_scl</code> (6 129 lois et 10 201 règlements jamais acquis). Trois décisions du propriétaire (L1, L1b, L2) sont construites et éteintes, chacune mesurée (ensemble : +3 270 fichiers, +85 059 articles) ; elles portent, si elles s’allument, une mention de droits visible par fichier jusque dans les exports.</p>
+  </section>
+
+  <!-- 5 -->
+  <section aria-labelledby="lecons">
+    <h2 id="lecons">5. Ce qui a marché, ce qui a cassé, ce que je ferais autrement</h2>
+    <h3>Ce qui a marché</h3>
+    <ul>
+      <li><strong>Le refus typé comme résultat de premier rang.</strong> Vingt codes à charge utile obligatoire, rendus par une table relue par langue, ont tenu tout le projet : le site n’a jamais eu besoin de « page d’erreur ».</li>
+      <li><strong>Les contrôles par permutation.</strong> Le 13 octobre, sur le premier montage combiné, les portes ont trouvé que la recherche luxembourgeoise <em>ne répondait rien</em> (les cellules de capacité étaient mesurées sur la date de chaque article, et aucun des 8 854 articles n’en portait : l’éditeur date le document). Une porte à 1,0 ne vaut que si son contrôle casse ; le troisième dérivé (<code>derive-c</code>) a passé toutes les portes et a été publié.</li>
+      <li><strong>Les contrôles d’une publication à l’autre.</strong> Mesurés sur le deuxième dérivé contre le premier : 1 730 permaliens changés, 0 texte changé, 0 perdu, mais 50 fichiers UE admis <em>sans texte</em> (48 <code>formex_main_body_missing</code>, 2 <code>formex_main_body_package_rejected</code>) que rien ne listait. Le contrôle a refusé la publication jusqu’à ce que les 48 soient corrigés et les 2 expliqués ; les 2 restent un défaut de lecteur, écrit dans <code>release-explanations.json</code>.</li>
+      <li><strong>Construire deux fois.</strong> Le dérivé, l’index et l’image sont construits deux fois et comparés. Le 28 octobre, la deuxième image est née identique à la première.</li>
+    </ul>
+    <h3>Ce qui a cassé</h3>
+    <ul>
+      <li><strong>Un lecteur de droits a refusé à tort 451 consolidations.</strong> La lecture /1 n’admettait un fichier que s’il portait exactement un bloc de licence ; les consolidations en portent deux (le jumeau PDF). Résultat : la première publication sert <em>zéro</em> consolidation luxembourgeoise, alors que 451 étaient admises par les deux canaux. Trouvé par la mesure du rendement par classe (R86(2)), corrigé par une lecture /2 qui lie le bloc dont l’<code>uriThis</code> est le fichier lu (la lecture /1 reste figée pour le rejeu octet pour octet) : +9 700 articles de consolidations, +14 399 au total avec 250 actes et un état de code. Leçon : compter ce qui sort de chaque étape, par classe, dès le premier jour.</li>
+      <li><strong>Le disque.</strong> Le 12 octobre, la dérivation du montage combiné s’est arrêtée à 398 Mo libres (le fichier d’échange avait grandi dans l’espace libre) ; le 28, une sonde d’index a été arrêtée à 2,25 Go ; cinq tests UE échouaient à 1,6 Go et passaient à 7,5 Go ; l’outil de hachage refusait les couches d’image de plus de 2 Gio. Réponses : un garde-fou de ressources qui arrête proprement, un fichier à la fois sur le disque, les constructions lourdes déplacées sur une machine Azure (environ 29,5 Gio en pic), le hachage par morceaux de 1 Gio.</li>
+      <li><strong>La recherche insensible aux accents est arrivée tard</strong> (le 27 octobre, la veille de la deuxième publication). Avant, « conge » trouvait 0 passage et « Congé » 11, là où « congé » en trouve 2 399 ; « reglement grand-ducal » 0 au lieu de 5 099. Le pliage (NFD sans marques, casse invariante, œ → oe, apostrophes et insécables unifiés) se fait à la requête sur une copie pliée en mémoire (26,9 Mo pour 137 614 articles), 5 à 11 ms contre 3,9 à 6,3 s pour le balayage SQL qu’il remplace. Sa revue a trouvé un défaut grave latent : une recherche UE par coordonnée de disposition servait le texte d’un acte retenu ; corrigé avant fusion.</li>
+      <li><strong>L’oracle des portes temporelles</strong> avait tort, pas le lecteur : il lisait l’index 9 avec la règle de l’index 8. Réécrit depuis les faits du catalogue (le 28 octobre), il ne lit plus aucune colonne dérivée que le lecteur produit.</li>
+      <li><strong>Des tests de parcours en Chrome sans tête</strong> ont provoqué 263 échecs de connexion Windows et un verrouillage de compte le 16 octobre. Depuis : les parcours ne tournent qu’en intégration continue, et un mode sans navigateur avec un piège qui échoue si un navigateur démarre.</li>
+      <li><strong>La version 2 du site est tombée avec son abonnement</strong> ; la zone DNS avait suivi. La V3 porte le risque en connaissance de cause, écrit dans le fichier d’état, avec les deux enregistrements à recréer ailleurs.</li>
+    </ul>
+    <h3>Ce que je ferais autrement</h3>
+    <ul>
+      <li>Mesurer le <strong>rendement par classe</strong> (fichiers acquis → admis → avec texte → articles) comme première porte, avant toute porte de qualité : c’est elle qui a trouvé le plus gros défaut, et elle est arrivée après.</li>
+      <li>Plier le texte <strong>à l’ingestion</strong> dès le premier index, avec une colonne pliée, plutôt qu’à la requête trois semaines plus tard.</li>
+      <li>Écrire l’<strong>oracle d’évaluation depuis les faits de l’éditeur</strong>, jamais depuis une colonne que le système évalué produit.</li>
+      <li>Dimensionner le disque et la mémoire de la machine de construction avant la première dérivation, et refuser de lancer une étape lourde sans la marge écrite.</li>
+      <li>Allumer la recherche par mots plus tard et les identifiants plus tôt : les lecteurs arrivent avec une référence, et c’est là que le système est exact.</li>
+    </ul>
+  </section>
+
+  <!-- 6 -->
+  <section aria-labelledby="assurance">
+    <h2 id="assurance">6. Les mêmes briques sur les sujets d’assurance</h2>
+    <div class="card brick">
+      <h3>Un sinistre habitation est-il couvert par les conditions générales en ligne ?</h3>
+      <p><strong>Analyse des documents :</strong> les conditions générales sont un texte structuré comme une loi : titres, chapitres, articles numérotés, définitions, exclusions, franchises, plafonds, et des éditions datées. On les lit comme Lex lit un acte : un index relationnel par clause (<code>clauses</code> : édition, chapitre, numéro, intitulé, texte, empreinte), des tables de définitions et d’exclusions liées à la clause qui les porte, un « dossier » par produit joignant les éditions aux conditions particulières. <strong>Analyse de la question :</strong> la déclaration de sinistre devient des faits typés (type d’événement, bien, date, lieu, montant) par des dictionnaires d’abord (dégât des eaux, vol, bris de glace…), un modèle ne servant au plus qu’à proposer ces champs, que le code vérifie contre le texte. <strong>Recherche :</strong> la structure d’abord : l’édition en vigueur à la date du sinistre, puis les clauses de garantie, d’exclusion, de condition et de plafond pour ce type d’événement, par leur numéro ; le lexical plié en dernier. <strong>Réponse :</strong> un verdict typé <em>couvert</em> / <em>non couvert</em> / <em>ambigu</em>, avec, pour chacun, les clauses citées mot pour mot (plusieurs spans, chacun avec son empreinte et sa page), les conditions non vérifiables listées comme <em>absentes du dossier</em> (une franchise dont le montant est dans les conditions particulières non fournies est une absence enregistrée, pas une supposition), et <em>ambigu</em> quand deux clauses se croisent, en disant lesquelles. Le gestionnaire reste l’autorité ; le système traite le volume et trouve les passages.</p>
+    </div>
+    <div class="card brick">
+      <h3>Un assistant pour les nouveaux arrivants, à partir d’un site statique</h3>
+      <p>C’est la <a href="../guide/">démonstration qui tourne sur ce site</a> : le guide est lu dans le navigateur et découpé par ses titres (<code>h1</code> à <code>h3</code>) en sections portant leur page, leur ancre et leur chemin de titres ; la question est pliée et étendue par un dictionnaire FR/EN du domaine (logement, véhicule, responsabilité civile, immatriculation, assurance…) ; BM25 cherche, la page où se trouve le lecteur (<code>?page=</code>) est favorisée ; et une carte typée répond : <em>Trouvé dans le guide</em> avec la marge, <em>Deux pages possibles</em> quand les deux premières sont proches, <em>Précisez</em>, ou <em>Pas dans ce guide</em> en disant ce qui a été cherché. Le passage est cité et surligné sur ses caractères d’origine, avec le lien qui ouvre la page à son ancre. Rien n’est inventé : les phrases sont celles du guide. Pour aller plus loin, la brique de génération de Lex s’ajouterait telle quelle : un modèle qui ne fait que proposer un plan sur des références opaques, et des gabarits relus.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>Excel, ligne par ligne</h3><p>Une feuille est un document structuré : on l’analyse relationnellement (feuille, en-têtes typés, ligne, cellule, formule) et chaque réponse cite la cellule par sa coordonnée et sa valeur telle quelle, une ligne vide ou une colonne manquante étant une absence enregistrée plutôt qu’une valeur devinée.</p></div>
+      <div class="card"><h3>Extraction SQL</h3><p>Comme le plan de l’assistant de Lex : le modèle propose une requête sur un schéma fermé, le code la valide (lecture seule, tables et colonnes autorisées, délai, plafond de lignes), l’exécute, et c’est la requête exacte et ses lignes qui sont la réponse et la provenance, jamais la prose.</p></div>
+    </div>
+  </section>
+
+  <p class="small muted">Sources de cette page : le dépôt public <a href="https://github.com/SFHAJJI/lex" rel="external">SFHAJJI/lex</a> (schémas d’index, registre des opérations, lecteurs, contrôles de publication, fichiers d’état), les actifs de la publication du 28 octobre 2026 (<code>evaluation-card.json</code>, <code>release-comparison.json</code>, <code>mount-report.json</code>, <code>manifest-diff.md</code>, <code>names-measurement.json</code>) et les réponses du site le 28 et le 31 octobre 2026. Les textes de loi affichés par Lex restent ceux de leurs éditeurs officiels ; cette page n’en reproduit aucun.</p>
+</main>
+
+<footer class="site">
+  <div class="bar">
+    <p><a href="../">Portfolio</a> · <a href="./">Lex</a> · <a href="../guide/">Démo guide</a> · <a href="../energy/">Energy Copilot</a> · <a href="../cv/">CV</a>. Site statique, sans suivi, sans cookie. Code sous licence MIT.</p>
+  </div>
+</footer>
+<script src="../assets/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr-LU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soufien Hajji · AI &amp; Data Architecture, Luxembourg</title>
+<meta name="description" content="Portfolio : Lex, un système public de recherche juridique construit comme un RAG d’entreprise ; une démo d’assistant déterministe pour nouveaux arrivants ; Energy Copilot, un copilote Azure AI pour le photovoltaïque au Luxembourg ; le CV.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231f4e79'/%3E%3Ctext x='8' y='12' font-size='10' text-anchor='middle' fill='white' font-family='sans-serif'%3ES%3C/text%3E%3C/svg%3E">
+<style>
+  .hero { padding: 1.5rem 0 .5rem; }
+  .hero h1 { margin-bottom: .1rem; }
+  .hero .title { font-size: 1.15rem; color: var(--muted); margin: 0 0 1rem; }
+  .entry { display: grid; gap: .35rem; }
+  .entry h2 { border: 0; margin: 0; padding: 0; font-size: 1.25rem; }
+  .entry .state { font-size: .85rem; }
+  .entry .go { margin-top: .4rem; }
+  .entry .go a { display: inline-block; margin-right: 1rem; min-height: 44px; line-height: 44px; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="site">
+  <div class="bar">
+    <a class="brand" href="./" aria-current="page">Soufien Hajji</a>
+    <nav aria-label="Pages">
+      <a href="lex/">Lex</a>
+      <a href="guide/">Démo guide</a>
+      <a href="energy/">Energy Copilot</a>
+      <a href="cv/">CV</a>
+      <button type="button" class="ghost" data-theme-toggle data-aria="Changer de thème" data-label-auto="Thème : auto" data-label-dark="Thème : sombre" data-label-light="Thème : clair">Thème : auto</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero">
+    <h1>Soufien Hajji</h1>
+    <p class="title">AI &amp; Data Architecture, Luxembourg</p>
+    <p class="lead">Des systèmes d’IA qui citent leurs sources, disent ce qu’ils ne savent pas et laissent la décision à la personne compétente. Trois pièces, toutes publiques et vérifiables.</p>
+    <p lang="en" class="small muted">English: AI systems that cite their sources, say what they do not know and leave the decision to the expert. Three public, checkable pieces below; the CV is available in English and French.</p>
+  </div>
+
+  <div class="grid">
+    <article class="card entry">
+      <h2><a href="lex/">Lex : la recherche juridique comme un RAG d’entreprise</a></h2>
+      <p class="state"><span class="pill ok">En ligne</span> <a href="https://law.soufien.lu/" rel="external">law.soufien.lu</a> · <a href="https://github.com/SFHAJJI/lex" rel="external">code public</a></p>
+      <p>Le droit luxembourgeois et de l’UE tel qu’il se lisait à une date, article par article, avec empreinte, source officielle et permalien. Analyse relationnelle de Formex et d’Akoma Ntoso, recherche structurelle sans base vectorielle, aucune génération : une enveloppe typée et vingt refus typés. L’étude de cas détaille l’évaluation, les publications signées, ce qui a cassé et ce que je ferais autrement.</p>
+      <p class="go"><a href="lex/">Lire l’étude de cas</a><a href="https://law.soufien.lu/fr/eu-eurlex/32024R1689/fra/050" rel="external">Un article du règlement IA, à une date</a></p>
+    </article>
+
+    <article class="card entry">
+      <h2><a href="guide/">Assistant du guide nouveaux arrivants (démo)</a></h2>
+      <p class="state"><span class="pill ok">Fonctionne dans votre navigateur</span> sans modèle, sans serveur</p>
+      <p>Un lecteur d’un guide public pour nouveaux arrivants au Luxembourg pose une question (logement, véhicule, responsabilité civile…). La démo lit le guide à l’instant, le découpe par titres, cherche en BM25 avec un dictionnaire écrit à la main, reconnaît la page où il se trouve, et répond par une carte typée qui ne cite que le guide, passage surligné et lien vers la bonne page.</p>
+      <p class="go"><a href="guide/">Essayer la démo</a><a href="guide/?q=Faut-il+immatriculer+une+voiture+import%C3%A9e+%3F">Un exemple</a></p>
+    </article>
+
+    <article class="card entry">
+      <h2><a href="energy/">Energy Copilot : copilote Azure AI pour le photovoltaïque</a></h2>
+      <p class="state"><span class="pill warn">Déploiement hors ligne</span> architecture documentée · <a href="https://github.com/SFHAJJI/energy-copilot" rel="external">code public</a></p>
+      <p>Un espace de prospection cartographique pour le solaire au Luxembourg : données géospatiales publiques, appels d’offres, tarifs déterministes, RAG sur documents, et le droit cité via le serveur MCP de Lex. Un agent .NET borné sur cinq outils ; le modèle planifie, les services décident.</p>
+      <p class="go"><a href="energy/">Lire l’architecture</a></p>
+    </article>
+
+    <article class="card entry">
+      <h2><a href="cv/">CV</a></h2>
+      <p class="state">PDF, deux pages, en anglais et en français</p>
+      <p class="go"><a href="cv/Soufien-Hajji-CV.pdf">CV (EN)</a><a href="cv/Soufien-Hajji-CV-FR.pdf">CV (FR)</a><a href="cv/">La page CV</a></p>
+    </article>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="bar">
+    <p>soufien.lu · site statique, sans suivi, sans cookie · <a href="https://github.com/SFHAJJI" rel="external">github.com/SFHAJJI</a> · code sous licence MIT.</p>
+  </div>
+</footer>
+<script src="assets/theme.js"></script>
+</body>
+</html>
