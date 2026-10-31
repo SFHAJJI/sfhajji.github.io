@@ -26,7 +26,7 @@
     <a class="brand" href="./" aria-current="page">Soufien Hajji</a>
     <nav aria-label="Pages">
       <a href="lex/">Lex</a>
-      <a href="guide/">Démo guide</a>
+      <a href="guide-rag/">guide-rag</a>
       <a href="energy/">Energy Copilot</a>
       <a href="cv/">CV</a>
       <button type="button" class="ghost" data-theme-toggle data-aria="Changer de thème" data-label-auto="Thème : auto" data-label-dark="Thème : sombre" data-label-light="Thème : clair">Thème : auto</button>
@@ -51,10 +51,10 @@
     </article>
 
     <article class="card entry">
-      <h2><a href="guide/">Assistant du guide nouveaux arrivants (démo)</a></h2>
-      <p class="state"><span class="pill ok">Fonctionne dans votre navigateur</span> sans modèle, sans serveur</p>
-      <p>Un lecteur d’un guide public pour nouveaux arrivants au Luxembourg pose une question (logement, véhicule, responsabilité civile…). La démo lit le guide à l’instant, le découpe par titres, cherche en BM25 avec un dictionnaire écrit à la main, reconnaît la page où il se trouve, et répond par une carte typée qui ne cite que le guide, passage surligné et lien vers la bonne page.</p>
-      <p class="go"><a href="guide/">Essayer la démo</a><a href="guide/?q=Faut-il+immatriculer+une+voiture+import%C3%A9e+%3F">Un exemple</a></p>
+      <h2><a href="guide-rag/">guide-rag : un chatbot documentaire pour les nouveaux arrivants</a></h2>
+      <p class="state"><span class="pill ok">Fonctionne dans votre navigateur</span> sans modèle ; un modèle optionnel sous le même contrat</p>
+      <p>Un lecteur d’un guide public pour nouveaux arrivants au Luxembourg pose une question (logement, véhicule, responsabilité civile…). Construit brique par brique : le guide est modélisé en tables relationnelles (lignes, sections, une ligne de routage par page) ; la question est analysée avant toute recherche (orthographe corrigée contre le corpus, dictionnaire expert de 83 concepts FR/EN/DE) ; la recherche filtre les tables, ancre petite et contexte large, un arbitre donne un rôle et une raison à chaque candidat ; la réponse est un objet typé dont chaque citation est vérifiée contre l’index, avec son chemin (page › section › lignes) et sa trace. 46 questions étiquetées par type : 100 % justes, citations fidèles à 100 %.</p>
+      <p class="go"><a href="guide-rag/">Poser une question</a><a href="guide-rag/#ask?q=Comment+immatriculer+ma+voiture+%3F">Un exemple</a><a href="guide-rag/#methode">Comment c’est construit</a></p>
     </article>
 
     <article class="card entry">
