@@ -1,0 +1,2287 @@
+{
+  "answer": {
+    "kind": "absence",
+    "answer": null,
+    "reason": "concept_found_but_off_topic",
+    "searched_concepts": [
+      {
+        "concept": "meilleur",
+        "variants": [
+          "meilleur"
+        ],
+        "pages_with_hits": [
+          "choisir_commune",
+          "luxtrust"
+        ],
+        "line_hits": 2
+      },
+      {
+        "concept": "restaurant",
+        "variants": [
+          "restaurant"
+        ],
+        "pages_with_hits": [
+          "avantages"
+        ],
+        "line_hits": 1
+      },
+      {
+        "concept": "luxembourg",
+        "variants": [
+          "luxembourg"
+        ],
+        "pages_with_hits": [
+          "accueil",
+          "allocations",
+          "assurance_auto",
+          "avantages",
+          "banque",
+          "cartes",
+          "comparateur",
+          "conseil_fiscal",
+          "cout_vie",
+          "faq",
+          "fiches",
+          "frontalier",
+          "impatries",
+          "impots_classes",
+          "logement_abordable",
+          "nationalite",
+          "permis",
+          "prevoyance",
+          "recherche_logement",
+          "simulateur",
+          "telecom",
+          "vehicule"
+        ],
+        "line_hits": 64
+      }
+    ],
+    "closest_mentions": [
+      {
+        "doc_id": "accueil",
+        "line_num": 1,
+        "snippet": "Une question sur la vie au Luxembourg ?",
+        "why_not_an_answer": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: supporting."
+      },
+      {
+        "doc_id": "accueil",
+        "line_num": 5,
+        "snippet": "Les démarches, le salaire net, le choix d'une commune, les transports : tout est expliqué ici avec sa source officielle, que vous arriviez ou que vous viviez a…",
+        "why_not_an_answer": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: supporting."
+      },
+      {
+        "doc_id": "faq",
+        "line_num": 13,
+        "snippet": "Faut-il repasser le contrôle technique en arrivant au Luxembourg ?",
+        "why_not_an_answer": "names luxembourg in the 'Faut-il repasser le contrôle technique en arrivant au Luxembourg ?' section, which is about controle technique"
+      },
+      {
+        "doc_id": "faq",
+        "line_num": 30,
+        "snippet": "Oui, et près d'un salarié sur deux le fait. Le salaire reste imposé au Luxembourg, là où le travail est exercé, mais il doit aussi être déclaré dans le pays de…",
+        "why_not_an_answer": "names luxembourg in the 'Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?' section, which is about logement"
+      },
+      {
+        "doc_id": "faq",
+        "line_num": 4,
+        "snippet": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+        "why_not_an_answer": "names luxembourg in the 'Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?' section, which is about voiture"
+      }
+    ],
+    "parse_coverage": {
+      "pages_total": 50,
+      "pages_with_text": 49,
+      "lines_total": 1615,
+      "sections_total": 426,
+      "tables_total": 6,
+      "cross_refs": 158,
+      "fetched_at": "2026-10-31T10:23:00Z",
+      "index_version": "1d1bbf848338f32798d0c92366bd740f0513f72b56bd4745e85a507a1645d9ca",
+      "pipeline_version": "guide-rag/0.1.0",
+      "data_scripts": [
+        "/app/avantages.js: AVANTAGES with 28 cards in 5 moments",
+        "/app/fiches/vehicule.js: guided fiche(s) vehicule",
+        "/app/kb.js: window.KB with 36 fiches, 55 faq, 5 timeline phases",
+        "/prevoyance/app/prevoyance.js: TABLE with 6 deductible items",
+        "/prevoyance/app/questions.js: ENTREES with 29 questions in 8 themes"
+      ],
+      "documents": {
+        "fiche": 36,
+        "page": 1,
+        "panel": 13
+      },
+      "parsing_methods": [
+        "html_blocks/1",
+        "js_data+html_blocks/1"
+      ],
+      "raw_drift": {},
+      "summary_lines_reviewed": 12,
+      "table_rows_total": 30
+    },
+    "suggestion": "The terms appear on accueil, faq but in sections about something else; ask about those sections directly.",
+    "suggested_clarification": null,
+    "answer_found": false,
+    "complete_answer_found": false
+  },
+  "meta": {
+    "question_id": "e539c001f2a4970f",
+    "index_version": "1d1bbf848338f32798d0c92366bd740f0513f72b56bd4745e85a507a1645d9ca",
+    "pipeline_version": "guide-rag/0.1",
+    "methods_used": [
+      "keyword_lines",
+      "title_match",
+      "arbiter_rules",
+      "sweep"
+    ],
+    "methods_skipped": {
+      "anchor_regex": "answer type text asks for no typed anchor",
+      "row_match": "answer_type=text and no table column named",
+      "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+      "llm_arbiter": "no model key configured",
+      "current_page_boost": "no pages_hint: no page to boost"
+    },
+    "activations": {
+      "use_keywords": {
+        "on": true,
+        "reason": "always: keyword detectors are deterministic and prove absence"
+      },
+      "use_toc": {
+        "on": true,
+        "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+      },
+      "use_row_level": {
+        "on": false,
+        "reason": "answer_type=text and no table column named"
+      },
+      "use_embeddings": {
+        "on": false,
+        "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+      },
+      "use_llm_arbiter": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "use_llm_generation": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "sweep_for_absence": {
+        "on": true,
+        "reason": "always: the exhaustive sweep is the evidence of absence"
+      },
+      "current_page_boost": {
+        "on": false,
+        "reason": "no pages_hint: no page to boost"
+      }
+    },
+    "chunk_strategy": "line as the unit; anchor = hit lines grouped by runs; context = ±3 lines within the section (answer_context=paragraph)",
+    "model_used": "no model",
+    "prompt_version": null,
+    "fragments_applied": [],
+    "iterations": 1,
+    "validator_report": {
+      "iteration_1": []
+    },
+    "replay": null
+  },
+  "trace": {
+    "parsed": {
+      "question_id": "e539c001f2a4970f",
+      "original_question": "quel est le meilleur restaurant de Luxembourg",
+      "corrected_question": "quel est le meilleur restaurant de luxembourg",
+      "language": "fr",
+      "keywords": [
+        {
+          "text": "meilleur",
+          "weight": 0.3,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": true,
+          "in_corpus": true
+        },
+        {
+          "text": "restaurant",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "luxembourg",
+          "weight": 0.3,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": true,
+          "in_corpus": true
+        }
+      ],
+      "answer_shape": "single",
+      "answer_type": "text",
+      "structural_hints": {
+        "pages_hint": null,
+        "toc_section_hint": null,
+        "answer_context": "paragraph"
+      },
+      "decomposition": {
+        "pattern": "single",
+        "sub_questions": []
+      },
+      "suggested_clarification": null,
+      "ambiguity_reason": null,
+      "candidate_values": [],
+      "proposed_default": null,
+      "scope_filters": {
+        "topic": null
+      },
+      "parsing_notes": [
+        "language=fr: stop-word vote",
+        "answer_shape=single: no listing cue",
+        "answer_type=text: no typed cue",
+        "weak words (weight 0.3): meilleur, luxembourg",
+        "scope topic=None: no dictionary concept matched",
+        "decomposition=single: no 'et / and' between two clauses"
+      ]
+    },
+    "plan": {
+      "activations": {
+        "use_keywords": {
+          "on": true,
+          "reason": "always: keyword detectors are deterministic and prove absence"
+        },
+        "use_toc": {
+          "on": true,
+          "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+        },
+        "use_row_level": {
+          "on": false,
+          "reason": "answer_type=text and no table column named"
+        },
+        "use_embeddings": {
+          "on": false,
+          "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+        },
+        "use_llm_arbiter": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "use_llm_generation": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "sweep_for_absence": {
+          "on": true,
+          "reason": "always: the exhaustive sweep is the evidence of absence"
+        },
+        "current_page_boost": {
+          "on": false,
+          "reason": "no pages_hint: no page to boost"
+        }
+      }
+    },
+    "retrieval": {
+      "question_id": "e539c001f2a4970f",
+      "question": "quel est le meilleur restaurant de Luxembourg",
+      "candidates": [
+        {
+          "candidate_id": "accueil#l1-l1",
+          "anchor": {
+            "doc_id": "accueil",
+            "line_start": 1,
+            "line_end": 1,
+            "section_id": "accueil#s1"
+          },
+          "context": {
+            "doc_id": "accueil",
+            "line_start": 1,
+            "line_end": 3,
+            "section_id": "accueil#s1"
+          },
+          "snippet": "Une question sur la vie au Luxembourg ?",
+          "text": "Une question sur la vie au Luxembourg ?\nDémarches, salaire, logement, transports : cherchez une fiche ou posez votre question. L'assistant répond depuis le guide, sources à l'appui.\nVérifié en août 2026",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "luxembourg"
+          ],
+          "matched_concepts": [
+            "luxembourg"
+          ],
+          "section_title": "Une question sur la vie au Luxembourg ?",
+          "breadcrumb": "Une question sur la vie au Luxembourg ?",
+          "url_anchor": "https://lux-guide.github.io/#accueil#panel-accueil",
+          "role": "supporting",
+          "reason": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 0.187,
+          "coverage": 0.187,
+          "covered_words": [
+            "luxembourg"
+          ],
+          "uncovered_words": [
+            "meilleur",
+            "restaurant"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "accueil#l5-l5",
+          "anchor": {
+            "doc_id": "accueil",
+            "line_start": 5,
+            "line_end": 5,
+            "section_id": "accueil#s2"
+          },
+          "context": {
+            "doc_id": "accueil",
+            "line_start": 4,
+            "line_end": 8,
+            "section_id": "accueil#s2"
+          },
+          "snippet": "Les démarches, le salaire net, le choix d'une commune, les transports : tout est expliqué ici avec sa source officielle, que vous arriviez ou que vous viviez a…",
+          "text": "Vivre au Luxembourg, chaque réponse avec sa source\nLes démarches, le salaire net, le choix d'une commune, les transports : tout est expliqué ici avec sa source officielle, que vous arriviez ou que vous viviez au Luxembourg depuis longtemps.\n—\nfiches pratiques\n1 006",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "luxembourg"
+          ],
+          "matched_concepts": [
+            "luxembourg"
+          ],
+          "section_title": "Vivre au Luxembourg, chaque réponse avec sa source",
+          "breadcrumb": "Vivre au Luxembourg, chaque réponse avec sa source",
+          "url_anchor": "https://lux-guide.github.io/#accueil#accueil-resultats",
+          "role": "supporting",
+          "reason": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 0.187,
+          "coverage": 0.187,
+          "covered_words": [
+            "luxembourg"
+          ],
+          "uncovered_words": [
+            "meilleur",
+            "restaurant"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l13-l13",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 13,
+            "line_end": 13,
+            "section_id": "faq#s6"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 13,
+            "line_end": 15,
+            "section_id": "faq#s6"
+          },
+          "snippet": "Faut-il repasser le contrôle technique en arrivant au Luxembourg ?",
+          "text": "Faut-il repasser le contrôle technique en arrivant au Luxembourg ?\nPas si le contrôle étranger est encore valable. Un certificat passé dans un autre État membre ou en Suisse reste valable, mais sa durée devient celle du droit luxembourgeois : premier contrôle quatre ans après la première mise en circulation, deuxième deux ans après, puis chaque année.\nVoir la fiche : Immatriculer son véhicule",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "luxembourg"
+          ],
+          "matched_concepts": [
+            "luxembourg"
+          ],
+          "section_title": "Faut-il repasser le contrôle technique en arrivant au Luxembourg ?",
+          "breadcrumb": "Questions et réponses › Mobilite › Faut-il repasser le contrôle technique en arrivant au Luxembourg ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 0.187,
+          "coverage": 0.187,
+          "covered_words": [
+            "luxembourg"
+          ],
+          "uncovered_words": [
+            "meilleur",
+            "restaurant"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l30-l30",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 30,
+            "line_end": 30,
+            "section_id": "faq#s12"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 29,
+            "line_end": 31,
+            "section_id": "faq#s12"
+          },
+          "snippet": "Oui, et près d'un salarié sur deux le fait. Le salaire reste imposé au Luxembourg, là où le travail est exercé, mais il doit aussi être déclaré dans le pays de…",
+          "text": "Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?\nOui, et près d'un salarié sur deux le fait. Le salaire reste imposé au Luxembourg, là où le travail est exercé, mais il doit aussi être déclaré dans le pays de résidence, où il sert à calculer le taux appliqué à vos autres revenus. La santé, les allocations et l'école suivent des règles de coordination entre les deux pays.\nVoir la fiche : Habiter en France, en Belgique ou en Allemagne",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "luxembourg"
+          ],
+          "matched_concepts": [
+            "luxembourg"
+          ],
+          "section_title": "Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?",
+          "breadcrumb": "Questions et réponses › Logement › Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 0.187,
+          "coverage": 0.187,
+          "covered_words": [
+            "luxembourg"
+          ],
+          "uncovered_words": [
+            "meilleur",
+            "restaurant"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l4-l4",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 4,
+            "line_end": 4,
+            "section_id": "faq#s3"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 4,
+            "line_end": 6,
+            "section_id": "faq#s3"
+          },
+          "snippet": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "text": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?\nIl n'est pas exigé, ni pour assurer ni pour immatriculer : il ne joue que sur le prix. Si vous avez eu un contrat à votre nom, réclamez-le, c'est un droit : votre assureur doit le fournir dans les quinze jours et il couvre au moins cinq ans. Sans contrat à votre nom, il n'y a rien à demander, et vous entrez au degré neutre de l'échelle luxembourgeoise, le degré 11 sur une échelle qui va de -3 à 22.\nVoir la fiche : Assurer son véhicule",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "luxembourg"
+          ],
+          "matched_concepts": [
+            "luxembourg"
+          ],
+          "section_title": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "breadcrumb": "Questions et réponses › Mobilite › Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 0.187,
+          "coverage": 0.187,
+          "covered_words": [
+            "luxembourg"
+          ],
+          "uncovered_words": [
+            "meilleur",
+            "restaurant"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l47-l47",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 47,
+            "line_end": 47,
+            "section_id": "faq#s18"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 47,
+            "line_end": 49,
+            "section_id": "faq#s18"
+          },
+          "snippet": "Comment se cherche un logement au Luxembourg ?",
+          "text": "Comment se cherche un logement au Luxembourg ?\nEn préparant le dossier complet avant la première visite, et surtout en ayant déjà la capacité d'émettre une garantie bancaire. C'est ce point, plus que le loyer proposé, qui départage les candidats.\nVoir la fiche : Trouver un logement",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "luxembourg"
+          ],
+          "matched_concepts": [
+            "luxembourg"
+          ],
+          "section_title": "Comment se cherche un logement au Luxembourg ?",
+          "breadcrumb": "Questions et réponses › Logement › Comment se cherche un logement au Luxembourg ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 0.187,
+          "coverage": 0.187,
+          "covered_words": [
+            "luxembourg"
+          ],
+          "uncovered_words": [
+            "meilleur",
+            "restaurant"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "frontalier#l5-l5",
+          "anchor": {
+            "doc_id": "frontalier",
+            "line_start": 5,
+            "line_end": 5,
+            "section_id": "frontalier#s2"
+          },
+          "context": {
+            "doc_id": "frontalier",
+            "line_start": 4,
+            "line_end": 6,
+            "section_id": "frontalier#s2"
+          },
+          "snippet": "Les conventions fiscales signées par le Luxembourg avec la France, la Belgique et l'Allemagne posent toutes la même règle : un salaire est imposable là où le t…",
+          "text": "Votre salaire reste imposé au Luxembourg\nLes conventions fiscales signées par le Luxembourg avec la France, la Belgique et l'Allemagne posent toutes la même règle : un salaire est imposable là où le travail est exercé. Un frontalier est donc imposé au Luxembourg sur son salaire luxembourgeois, avec la même retenue à la source qu'un résident, et la même fiche de retenue.\nLe pays de résidence n'impose pas ce salaire une seconde fois, mais il le prend en compte pour calculer le taux appliqué à vos autres revenus. C'est ce qu'on appelle le taux effectif : si vous avez un revenu locatif ou un salaire de conjoint dans votre pays de résidence, il sera imposé à un taux calculé comme si le salaire luxembourgeois s'y ajoutait. Vous devez donc déclarer ce salaire chez vous, même s'il n'y est pas imposé. Beaucoup de nouveaux frontaliers l'apprennent l'année suivante.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "luxembourg"
+          ],
+          "matched_concepts": [
+            "luxembourg"
+          ],
+          "section_title": "Votre salaire reste imposé au Luxembourg",
+          "breadcrumb": "Habiter en France, en Belgique ou en Allemagne › Votre salaire reste imposé au Luxembourg",
+          "url_anchor": "https://lux-guide.github.io/#fiche/frontalier#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 0.187,
+          "coverage": 0.187,
+          "covered_words": [
+            "luxembourg"
+          ],
+          "uncovered_words": [
+            "meilleur",
+            "restaurant"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l142-l142",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 142,
+            "line_end": 142,
+            "section_id": "faq#s52"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 141,
+            "line_end": 143,
+            "section_id": "faq#s52"
+          },
+          "snippet": "Oui, le Luxembourg l'admet. La naturalisation suppose une résidence durable, une épreuve de luxembourgeois parlé et des cours d'instruction civique. Anticipez…",
+          "text": "Peut-on avoir la double nationalité ?\nOui, le Luxembourg l'admet. La naturalisation suppose une résidence durable, une épreuve de luxembourgeois parlé et des cours d'instruction civique. Anticipez le volet linguistique.\nVoir la fiche : Nationalité luxembourgeoise",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "luxembourg"
+          ],
+          "matched_concepts": [
+            "luxembourg"
+          ],
+          "section_title": "Peut-on avoir la double nationalité ?",
+          "breadcrumb": "Questions et réponses › Administratif › Peut-on avoir la double nationalité ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "tangential",
+          "reason": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: tangential.",
+          "score": 0.3,
+          "matched_share": 0.187,
+          "coverage": 0.187,
+          "covered_words": [
+            "luxembourg"
+          ],
+          "uncovered_words": [
+            "meilleur",
+            "restaurant"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l36-l36",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 36,
+            "line_end": 36,
+            "section_id": "faq#s14"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 35,
+            "line_end": 37,
+            "section_id": "faq#s14"
+          },
+          "snippet": "D'après les indices de niveau des prix d'Eurostat, l'alimentation, l'habillement et les télécommunications reviennent moins cher chez les trois voisins, tandis…",
+          "text": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?\nD'après les indices de niveau des prix d'Eurostat, l'alimentation, l'habillement et les télécommunications reviennent moins cher chez les trois voisins, tandis que l'énergie, les carburants et le tabac sont moins chers au Luxembourg. L'onglet Les communes publie le détail par catégorie, en passant de l'autre côté de la frontière.\nVoir la fiche : Habiter en France, en Belgique ou en Allemagne",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "luxembourg"
+          ],
+          "matched_concepts": [
+            "luxembourg"
+          ],
+          "section_title": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "breadcrumb": "Questions et réponses › Logement › Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "tangential",
+          "reason": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: tangential.",
+          "score": 0.3,
+          "matched_share": 0.187,
+          "coverage": 0.187,
+          "covered_words": [
+            "luxembourg"
+          ],
+          "uncovered_words": [
+            "meilleur",
+            "restaurant"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l60-l60",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 60,
+            "line_end": 60,
+            "section_id": "faq#s22"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 59,
+            "line_end": 61,
+            "section_id": "faq#s22"
+          },
+          "snippet": "Il faut rester sous un plafond de revenu net du ménage et ne posséder aucun autre logement, au Luxembourg comme à l'étranger, au plus tard neuf mois après l'ac…",
+          "text": "Qui peut prétendre à un logement à coût modéré ?\nIl faut rester sous un plafond de revenu net du ménage et ne posséder aucun autre logement, au Luxembourg comme à l'étranger, au plus tard neuf mois après l'acte. Cette dernière condition vise aussi toutes les personnes vivant avec vous.\nVoir la fiche : Logement abordable et à coût modéré",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "luxembourg"
+          ],
+          "matched_concepts": [
+            "luxembourg"
+          ],
+          "section_title": "Qui peut prétendre à un logement à coût modéré ?",
+          "breadcrumb": "Questions et réponses › Logement › Qui peut prétendre à un logement à coût modéré ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "tangential",
+          "reason": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: tangential.",
+          "score": 0.3,
+          "matched_share": 0.187,
+          "coverage": 0.187,
+          "covered_words": [
+            "luxembourg"
+          ],
+          "uncovered_words": [
+            "meilleur",
+            "restaurant"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "frontalier#l14-l14",
+          "anchor": {
+            "doc_id": "frontalier",
+            "line_start": 14,
+            "line_end": 14,
+            "section_id": "frontalier#s4"
+          },
+          "context": {
+            "doc_id": "frontalier",
+            "line_start": 12,
+            "line_end": 15,
+            "section_id": "frontalier#s4"
+          },
+          "snippet": "Les allocations familiales sont versées par la Caisse pour l'avenir des enfants, au titre de votre activité au Luxembourg. Si votre pays de résidence verse lui…",
+          "text": "Santé, allocations, école : le quotidien suit la résidence\nVous cotisez à la sécurité sociale luxembourgeoise et vous êtes affilié à la Caisse nationale de santé. Pour vous soigner près de chez vous, vous demandez le document S1, qui vous inscrit auprès de la caisse de votre pays de résidence. Vous êtes alors couvert des deux côtés de la frontière, ce qui est utile le jour où un enfant est malade un mercredi.\nLes allocations familiales sont versées par la Caisse pour l'avenir des enfants, au titre de votre activité au Luxembourg. Si votre pays de résidence verse lui aussi une prestation pour le même enfant, les deux ne s'additionnent pas librement : les règles européennes désignent qui paie en premier, l'autre pays complétant la différence s'il est plus généreux.\nL'école relève entièrement du pays de résidence, avec son calendrier, ses langues et ses vacances. Une famille qui hésite entre les deux côtés compare donc deux systèmes scolaires, et pas seulement deux loyers. C'est souvent ce critère, et non le prix, qui tranche.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "luxembourg"
+          ],
+          "matched_concepts": [
+            "luxembourg"
+          ],
+          "section_title": "Santé, allocations, école : le quotidien suit la résidence",
+          "breadcrumb": "Habiter en France, en Belgique ou en Allemagne › Santé, allocations, école : le quotidien suit la résidence",
+          "url_anchor": "https://lux-guide.github.io/#fiche/frontalier#fiche-detail",
+          "role": "tangential",
+          "reason": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: tangential.",
+          "score": 0.3,
+          "matched_share": 0.187,
+          "coverage": 0.187,
+          "covered_words": [
+            "luxembourg"
+          ],
+          "uncovered_words": [
+            "meilleur",
+            "restaurant"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "frontalier#l17-l17",
+          "anchor": {
+            "doc_id": "frontalier",
+            "line_start": 17,
+            "line_end": 17,
+            "section_id": "frontalier#s5"
+          },
+          "context": {
+            "doc_id": "frontalier",
+            "line_start": 16,
+            "line_end": 18,
+            "section_id": "frontalier#s5"
+          },
+          "snippet": "Les niveaux de prix ne sont pas les mêmes des quatre côtés, et l'écart ne va pas toujours dans le même sens. Les indices d'Eurostat, publiés dans l'onglet Les…",
+          "text": "Ce que la frontière change dans le budget\nLes niveaux de prix ne sont pas les mêmes des quatre côtés, et l'écart ne va pas toujours dans le même sens. Les indices d'Eurostat, publiés dans l'onglet Les communes en passant de l'autre côté de la frontière, montrent que l'alimentation, l'habillement et les télécommunications reviennent moins cher chez les voisins, tandis que l'énergie, les carburants et le tabac le sont au Luxembourg. Un ménage frontalier fait donc rarement tout du même côté.\nLe trajet, enfin, se mesure en temps et non en kilomètres. Les axes vers la capitale saturent le matin, et une commune à quarante kilomètres sur une ligne de train directe peut être plus proche, en temps, qu'une commune à vingt kilomètres sur l'autoroute. Les deux autres onglets de la famille Où habiter servent exactement à ce calcul.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "luxembourg"
+          ],
+          "matched_concepts": [
+            "luxembourg"
+          ],
+          "section_title": "Ce que la frontière change dans le budget",
+          "breadcrumb": "Habiter en France, en Belgique ou en Allemagne › Ce que la frontière change dans le budget",
+          "url_anchor": "https://lux-guide.github.io/#fiche/frontalier#fiche-detail",
+          "role": "tangential",
+          "reason": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: tangential.",
+          "score": 0.3,
+          "matched_share": 0.187,
+          "coverage": 0.187,
+          "covered_words": [
+            "luxembourg"
+          ],
+          "uncovered_words": [
+            "meilleur",
+            "restaurant"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "frontalier#l2-l3",
+          "anchor": {
+            "doc_id": "frontalier",
+            "line_start": 2,
+            "line_end": 3,
+            "section_id": "frontalier#s1"
+          },
+          "context": {
+            "doc_id": "frontalier",
+            "line_start": 1,
+            "line_end": 3,
+            "section_id": "frontalier#s1"
+          },
+          "snippet": "Près d'un salarié sur deux habite de l'autre côté. Le salaire reste imposé au Luxembourg, mais le télétravail, les soins et l'école suivent le pays de résidenc…",
+          "text": "Habiter en France, en Belgique ou en Allemagne\nPrès d'un salarié sur deux habite de l'autre côté. Le salaire reste imposé au Luxembourg, mais le télétravail, les soins et l'école suivent le pays de résidence.\nTravailler au Luxembourg n'oblige pas à y habiter, et c'est le choix de près d'un salarié sur deux : plus de deux cent mille personnes franchissent la frontière chaque matin, de France surtout, puis de Belgique et d'Allemagne. Le loyer est la première raison, et l'écart est réel. Mais le choix ne se résume pas à un loyer, parce que passer la frontière déplace une partie de votre vie administrative dans le pays de résidence.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "luxembourg"
+          ],
+          "matched_concepts": [
+            "luxembourg"
+          ],
+          "section_title": "Habiter en France, en Belgique ou en Allemagne",
+          "breadcrumb": "Habiter en France, en Belgique ou en Allemagne",
+          "url_anchor": "https://lux-guide.github.io/#fiche/frontalier#fiche-detail",
+          "role": "tangential",
+          "reason": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: tangential.",
+          "score": 0.3,
+          "matched_share": 0.187,
+          "coverage": 0.187,
+          "covered_words": [
+            "luxembourg"
+          ],
+          "uncovered_words": [
+            "meilleur",
+            "restaurant"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "frontalier#l20-l20",
+          "anchor": {
+            "doc_id": "frontalier",
+            "line_start": 20,
+            "line_end": 20,
+            "section_id": "frontalier#s6"
+          },
+          "context": {
+            "doc_id": "frontalier",
+            "line_start": 19,
+            "line_end": 23,
+            "section_id": "frontalier#s6"
+          },
+          "snippet": "Le salaire reste imposé au Luxembourg, mais il se déclare aussi dans le pays de résidence, pour le taux appliqué au reste.",
+          "text": "À retenir\nLe salaire reste imposé au Luxembourg, mais il se déclare aussi dans le pays de résidence, pour le taux appliqué au reste.\nDeux plafonds de télétravail coexistent, un fiscal en jours et un social en part du temps : ils n'ont ni la même valeur ni les mêmes conséquences.\nLe document S1 ouvre les soins dans le pays de résidence, tout en restant affilié à la caisse luxembourgeoise.\nL'école suit le pays de résidence, les allocations se coordonnent entre les deux.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "luxembourg"
+          ],
+          "matched_concepts": [
+            "luxembourg"
+          ],
+          "section_title": "À retenir",
+          "breadcrumb": "Habiter en France, en Belgique ou en Allemagne › À retenir",
+          "url_anchor": "https://lux-guide.github.io/#fiche/frontalier#fiche-detail",
+          "role": "tangential",
+          "reason": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: tangential.",
+          "score": 0.3,
+          "matched_share": 0.187,
+          "coverage": 0.187,
+          "covered_words": [
+            "luxembourg"
+          ],
+          "uncovered_words": [
+            "meilleur",
+            "restaurant"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "frontalier#l9-l10",
+          "anchor": {
+            "doc_id": "frontalier",
+            "line_start": 9,
+            "line_end": 10,
+            "section_id": "frontalier#s3"
+          },
+          "context": {
+            "doc_id": "frontalier",
+            "line_start": 7,
+            "line_end": 11,
+            "section_id": "frontalier#s3"
+          },
+          "snippet": "Le premier plafond est fiscal. Au-delà d'un certain nombre de jours travaillés hors du Luxembourg dans l'année, la part correspondante du salaire devient impos…",
+          "text": "Le télétravail a deux plafonds, et ce ne sont pas les mêmes\nC'est le point qui surprend le plus, parce que deux règles différentes s'appliquent en même temps à la même journée passée à la maison.\nLe premier plafond est fiscal. Au-delà d'un certain nombre de jours travaillés hors du Luxembourg dans l'année, la part correspondante du salaire devient imposable dans le pays de résidence. Ce seuil est fixé par un accord entre les deux États, il a déjà été relevé plusieurs fois, et il n'est pas identique pour les trois pays voisins.\nLe second plafond est social. Il décide de la caisse à laquelle vous cotisez, et il s'exprime en part du temps de travail, pas en jours. Un accord européen permet de rester affilié au Luxembourg tout en télétravaillant depuis chez soi, à condition de rester sous cette part et d'en faire la demande. La dépasser fait basculer toute votre sécurité sociale vers le pays de résidence : caisse maladie, allocations et retraite changent de pays en même temps.\nRetenez surtout que les deux seuils sont indépendants. On peut respecter l'un et dépasser l'autre, et les conséquences n'ont rien à voir. Les chiffres en vigueur se vérifient auprès de l'Administration des contributions directes pour le fiscal, et du Centre commun de la sécurité sociale pour le social : ce guide ne les recopie pas, parce qu'ils changent plus vite que lui.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "luxembourg"
+          ],
+          "matched_concepts": [
+            "luxembourg"
+          ],
+          "section_title": "Le télétravail a deux plafonds, et ce ne sont pas les mêmes",
+          "breadcrumb": "Habiter en France, en Belgique ou en Allemagne › Le télétravail a deux plafonds, et ce ne sont pas les mêmes",
+          "url_anchor": "https://lux-guide.github.io/#fiche/frontalier#fiche-detail",
+          "role": "tangential",
+          "reason": "Covers only generic words (0.19 of the question's words); 'meilleur' and 'restaurant' not covered: tangential.",
+          "score": 0.3,
+          "matched_share": 0.187,
+          "coverage": 0.187,
+          "covered_words": [
+            "luxembourg"
+          ],
+          "uncovered_words": [
+            "meilleur",
+            "restaurant"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        }
+      ],
+      "methods_used": [
+        "keyword_lines",
+        "title_match",
+        "arbiter_rules",
+        "sweep"
+      ],
+      "methods_skipped": {
+        "anchor_regex": "answer type text asks for no typed anchor",
+        "row_match": "answer_type=text and no table column named",
+        "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+        "llm_arbiter": "no model key configured",
+        "current_page_boost": "no pages_hint: no page to boost"
+      },
+      "not_found": true,
+      "not_found_reason": "words_not_covered: meilleur, restaurant, luxembourg — the best candidate accueil#l1-l1 covers only luxembourg (0.19 of the question's words, below 0.34).",
+      "confidence": 0.0,
+      "per_section_audit": [
+        {
+          "doc_id": "accueil",
+          "section_id": "accueil#s1",
+          "title": "Une question sur la vie au Luxembourg ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "accueil",
+          "section_id": "accueil#s2",
+          "title": "Vivre au Luxembourg, chaque réponse avec sa source",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "accueil",
+          "section_id": "accueil#s3",
+          "title": "Ce que contient le site",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s1",
+          "title": "Questions et réponses",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s2",
+          "title": "Mobilite",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s3",
+          "title": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s4",
+          "title": "J'ai conduit la voiture d'un proche sans être inscrit au contrat, est-ce que ça compte ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s5",
+          "title": "La carte grise n'est pas au nom du vendeur, est-ce bloquant ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s6",
+          "title": "Faut-il repasser le contrôle technique en arrivant au Luxembourg ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s7",
+          "title": "Dans quel délai immatriculer un véhicule qu'on amène avec soi ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s8",
+          "title": "Un permis de conduire européen reste-t-il valable ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s9",
+          "title": "Comment s'immatricule un véhicule importé ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s10",
+          "title": "Les transports publics sont-ils vraiment gratuits ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s11",
+          "title": "Logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s12",
+          "title": "Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s13",
+          "title": "Combien de jours de télétravail un frontalier peut-il faire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s14",
+          "title": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s15",
+          "title": "Sur quels critères choisir sa commune ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s16",
+          "title": "Comment comparer deux contrats d'assurance ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s17",
+          "title": "Quelle garantie locative un bailleur peut-il demander ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s18",
+          "title": "Comment se cherche un logement au Luxembourg ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s19",
+          "title": "À quel moment souscrire l'assurance habitation ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s20",
+          "title": "Quelle part du prix une banque finance-t-elle ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s21",
+          "title": "La TVA sur un logement neuf est-elle toujours de 3 % ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s22",
+          "title": "Qui peut prétendre à un logement à coût modéré ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s23",
+          "title": "Quotidien",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s24",
+          "title": "Vers qui se tourner en cas de litige avec un professionnel ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s25",
+          "title": "Le luxembourgeois est-il nécessaire pour travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s26",
+          "title": "Combien de temps pour avoir internet ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s27",
+          "title": "Faut-il apprendre le luxembourgeois ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s28",
+          "title": "Comment fonctionne le tri des déchets ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s29",
+          "title": "Sante",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s30",
+          "title": "Une complémentaire santé est-elle utile ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s31",
+          "title": "Qui déclare l'entrée à la sécurité sociale ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s32",
+          "title": "Quel numéro d'urgence appeler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s33",
+          "title": "Impots",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s34",
+          "title": "Comment l'impôt est-il prélevé quand on est deux à travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s35",
+          "title": "Pourquoi la déclaration se solde-t-elle souvent par un montant à payer ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s36",
+          "title": "Qu'est-ce que le régime des impatriés ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s37",
+          "title": "Existe-t-il une classe d'impôt 1b ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s38",
+          "title": "Qui relève de la classe 1a ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s39",
+          "title": "Un divorce ou un décès fait-il changer de classe d'impôt immédiatement ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s40",
+          "title": "Le régime des impatriés dépend-il de la classe d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s41",
+          "title": "Quelle différence entre classe 1 et classe 2 ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s42",
+          "title": "Qu'est-ce qui se déduit des impôts ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s43",
+          "title": "Comment faire corriger une classe d'impôt inexacte ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s44",
+          "title": "Comment obtient-on sa fiche de retenue d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s45",
+          "title": "Les intérêts d'un prêt immobilier sont-ils déductibles ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s46",
+          "title": "Administratif",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s47",
+          "title": "Les délais d'arrivée sont-ils les mêmes hors Union européenne ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s48",
+          "title": "La déclaration à la commune suffit-elle ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s49",
+          "title": "Combien de temps faut-il pour obtenir la nationalité ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s50",
+          "title": "Dans quel délai faut-il se déclarer à la commune ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s51",
+          "title": "Comment obtient-on le matricule ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s52",
+          "title": "Peut-on avoir la double nationalité ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s53",
+          "title": "Finances",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s54",
+          "title": "Un compte bancaire étranger peut-il servir à recevoir le salaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s55",
+          "title": "Que faut-il pour ouvrir un compte bancaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s56",
+          "title": "Le salaire luxembourgeois compense-t-il le coût de la vie ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s57",
+          "title": "Un compte bancaire luxembourgeois est-il obligatoire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s58",
+          "title": "Qu'est-ce que l'indexation des salaires ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s59",
+          "title": "Travail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s60",
+          "title": "Peut-on exercer une activité indépendante en plus d'un emploi salarié ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s61",
+          "title": "Combien de jours de congé donne la loi ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s62",
+          "title": "Famille",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s63",
+          "title": "Comment se fait l'inscription à l'école ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s64",
+          "title": "Existe-t-il une aide pour la crèche ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s65",
+          "title": "Quel est le montant des allocations familiales ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "frontalier",
+          "section_id": "frontalier#s1",
+          "title": "Habiter en France, en Belgique ou en Allemagne",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "frontalier",
+          "section_id": "frontalier#s2",
+          "title": "Votre salaire reste imposé au Luxembourg",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "frontalier",
+          "section_id": "frontalier#s3",
+          "title": "Le télétravail a deux plafonds, et ce ne sont pas les mêmes",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "frontalier",
+          "section_id": "frontalier#s4",
+          "title": "Santé, allocations, école : le quotidien suit la résidence",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "frontalier",
+          "section_id": "frontalier#s5",
+          "title": "Ce que la frontière change dans le budget",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "frontalier",
+          "section_id": "frontalier#s6",
+          "title": "À retenir",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "frontalier",
+          "section_id": "frontalier#s7",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        }
+      ],
+      "route_pages": [
+        {
+          "doc_id": "accueil",
+          "score": 0.6,
+          "reason": "kept: 1 term(s) in the summary line (luxembourg); heading title match (Une question sur la vie au Luxembourg ?, Vivre au Luxembourg, chaque réponse avec sa source); tally 0.6"
+        },
+        {
+          "doc_id": "faq",
+          "score": 0.6,
+          "reason": "kept: 1 term(s) in the summary line (luxembourg); heading title match (Comment se cherche un logement au Luxembourg ?, Faut-il repasser le contrôle technique en arrivant au Luxembourg ?, Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?, Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?); tally 0.6"
+        },
+        {
+          "doc_id": "frontalier",
+          "score": 0.6,
+          "reason": "kept: 1 term(s) in the summary line (luxembourg); heading title match (Votre salaire reste imposé au Luxembourg); tally 0.6"
+        }
+      ],
+      "route_sections": [
+        {
+          "doc_id": "accueil",
+          "section_id": "accueil#s1",
+          "title": "Une question sur la vie au Luxembourg ?",
+          "score": 3.0,
+          "reason": "title 'Une question sur la vie au Luxembourg ?' matches luxembourg; 1 term(s) in its lines (luxembourg); a leaf, stop here"
+        },
+        {
+          "doc_id": "accueil",
+          "section_id": "accueil#s2",
+          "title": "Vivre au Luxembourg, chaque réponse avec sa source",
+          "score": 3.0,
+          "reason": "title 'Vivre au Luxembourg, chaque réponse avec sa source' matches luxembourg; 1 term(s) in its lines (luxembourg); no child section carries a term, read whole"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s3",
+          "title": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "score": 3.0,
+          "reason": "title 'Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?' matches luxembourg; 1 term(s) in its lines (luxembourg); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s6",
+          "title": "Faut-il repasser le contrôle technique en arrivant au Luxembourg ?",
+          "score": 3.0,
+          "reason": "title 'Faut-il repasser le contrôle technique en arrivant au Luxembourg ?' matches luxembourg; 1 term(s) in its lines (luxembourg); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s12",
+          "title": "Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?",
+          "score": 3.0,
+          "reason": "title 'Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?' matches luxembourg; 1 term(s) in its lines (luxembourg); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s18",
+          "title": "Comment se cherche un logement au Luxembourg ?",
+          "score": 3.0,
+          "reason": "title 'Comment se cherche un logement au Luxembourg ?' matches luxembourg; 1 term(s) in its lines (luxembourg); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s52",
+          "title": "Peut-on avoir la double nationalité ?",
+          "score": 1.0,
+          "reason": "1 term(s) in its lines (luxembourg); a leaf, stop here"
+        },
+        {
+          "doc_id": "frontalier",
+          "section_id": "frontalier#s2",
+          "title": "Votre salaire reste imposé au Luxembourg",
+          "score": 3.0,
+          "reason": "title 'Votre salaire reste imposé au Luxembourg' matches luxembourg; 1 term(s) in its lines (luxembourg); a leaf, stop here"
+        }
+      ],
+      "route_notes": [
+        "faq: no section of the outline carries a term; the page is read whole",
+        "frontalier: no section of the outline carries a term; the page is read whole"
+      ],
+      "sweep_concepts": [
+        {
+          "concept": "meilleur",
+          "variants": [
+            "meilleur"
+          ],
+          "pages_with_hits": [
+            "choisir_commune",
+            "luxtrust"
+          ],
+          "line_hits": 2
+        },
+        {
+          "concept": "restaurant",
+          "variants": [
+            "restaurant"
+          ],
+          "pages_with_hits": [
+            "avantages"
+          ],
+          "line_hits": 1
+        },
+        {
+          "concept": "luxembourg",
+          "variants": [
+            "luxembourg"
+          ],
+          "pages_with_hits": [
+            "accueil",
+            "allocations",
+            "assurance_auto",
+            "avantages",
+            "banque",
+            "cartes",
+            "comparateur",
+            "conseil_fiscal",
+            "cout_vie",
+            "faq",
+            "fiches",
+            "frontalier",
+            "impatries",
+            "impots_classes",
+            "logement_abordable",
+            "nationalite",
+            "permis",
+            "prevoyance",
+            "recherche_logement",
+            "simulateur",
+            "telecom",
+            "vehicule"
+          ],
+          "line_hits": 64
+        }
+      ],
+      "sweep_rows": [
+        {
+          "concept": "meilleur",
+          "variant": "meilleur",
+          "doc_id": "choisir_commune",
+          "line_num": 3,
+          "snippet": "Beaucoup de nouveaux arrivants choisissent leur commune sur une carte, en traçant un rayon autour du lieu de travail. C'est le meilleur moyen de se tromper : d…"
+        },
+        {
+          "concept": "meilleur",
+          "variant": "meilleur",
+          "doc_id": "luxtrust",
+          "line_num": 4,
+          "snippet": "L'obtenir au meilleur prix"
+        },
+        {
+          "concept": "restaurant",
+          "variant": "restaurant",
+          "doc_id": "avantages",
+          "line_num": 38,
+          "snippet": "Depuis le 1er janvier 2024, la valeur maximale exemptée d'un chèque-repas est de 12,20 euros. Avec la participation du salarié de 2,80 euros, la valeur d'un ch…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "accueil",
+          "line_num": 1,
+          "snippet": "Une question sur la vie au Luxembourg ?"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "accueil",
+          "line_num": 4,
+          "snippet": "Vivre au Luxembourg, chaque réponse avec sa source"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "accueil",
+          "line_num": 5,
+          "snippet": "Les démarches, le salaire net, le choix d'une commune, les transports : tout est expliqué ici avec sa source officielle, que vous arriviez ou que vous viviez a…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "allocations",
+          "line_num": 3,
+          "snippet": "Les prestations familiales sont versées par la Caisse pour l'avenir des enfants, et elles sont dues pour tout enfant résidant au Luxembourg, sans condition de…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "assurance_auto",
+          "line_num": 5,
+          "snippet": "Le point qui pèse le plus sur la prime est votre historique de sinistres, et le document qui le porte s'appelle relevé d'information en France, attestation de…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "avantages",
+          "line_num": 67,
+          "snippet": "Un salarié recruté à l'étranger pour un poste au Luxembourg peut voir la moitié de sa rémunération brute annuelle exonérée d'impôt, dans la limite de 400 000 e…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "avantages",
+          "line_num": 129,
+          "snippet": "Un locataire dont le loyer mensuel hors charges dépasse 25 % du revenu net du ménage peut recevoir une subvention de loyer, entre 10 et 520 euros par mois selo…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "avantages",
+          "line_num": 160,
+          "snippet": "Toute famille dont l'enfant réside au Luxembourg reçoit une allocation de 315,04 euros par mois et par enfant, majorée de 23,81 euros au-delà de six ans et de…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "avantages",
+          "line_num": 243,
+          "snippet": "La première tranche de 1 500 euros par an de revenus de capitaux mobiliers, intérêts et dividendes imposables confondus, est exempte d'impôt, et elle est doubl…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "avantages",
+          "line_num": 287,
+          "snippet": "Il faut avoir résidé au Luxembourg sans interruption pendant les trois mois précédant la demande, et la demande complète doit arriver au fonds au plus tard le…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "banque",
+          "line_num": 11,
+          "snippet": "luxembourg.public.lu, vivre au Luxembourg"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "cartes",
+          "line_num": 2,
+          "snippet": "Le Luxembourg tient dans une heure de route, et pourtant le loyer double d'une commune à l'autre, le salaire médian va du simple au double, et la part de résid…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "comparateur",
+          "line_num": 2,
+          "snippet": "En arrivant au Luxembourg, quatre contrats se signent presque en même temps : l'assurance habitation, l'assurance auto, le forfait mobile et le contrat d'élect…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "conseil_fiscal",
+          "line_num": 5,
+          "snippet": "La retenue mensuelle repose sur la fiche de retenue d'impôt. Pour un salarié qui commence à travailler au Luxembourg, elle est émise automatiquement par l'admi…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "conseil_fiscal",
+          "line_num": 12,
+          "snippet": "Les frais réels au-delà des forfaits, les primes d'assurance et les frais de garde sont détaillés dans la fiche « Ce qui réduit votre impôt ». Les intérêts d'u…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "cout_vie",
+          "line_num": 3,
+          "snippet": "Le Luxembourg applique une indexation automatique des salaires : dès que l'indice des prix progresse de 2,5 %, une tranche indiciaire est déclenchée et l'ensem…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "faq",
+          "line_num": 4,
+          "snippet": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "faq",
+          "line_num": 13,
+          "snippet": "Faut-il repasser le contrôle technique en arrivant au Luxembourg ?"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "faq",
+          "line_num": 29,
+          "snippet": "Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "faq",
+          "line_num": 30,
+          "snippet": "Oui, et près d'un salarié sur deux le fait. Le salaire reste imposé au Luxembourg, là où le travail est exercé, mais il doit aussi être déclaré dans le pays de…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "faq",
+          "line_num": 36,
+          "snippet": "D'après les indices de niveau des prix d'Eurostat, l'alimentation, l'habillement et les télécommunications reviennent moins cher chez les trois voisins, tandis…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "faq",
+          "line_num": 47,
+          "snippet": "Comment se cherche un logement au Luxembourg ?"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "faq",
+          "line_num": 60,
+          "snippet": "Il faut rester sous un plafond de revenu net du ménage et ne posséder aucun autre logement, au Luxembourg comme à l'étranger, au plus tard neuf mois après l'ac…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "faq",
+          "line_num": 142,
+          "snippet": "Oui, le Luxembourg l'admet. La naturalisation suppose une résidence durable, une épreuve de luxembourgeois parlé et des cours d'instruction civique. Anticipez…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "fiches",
+          "line_num": 18,
+          "snippet": "Près d'un salarié sur deux habite de l'autre côté. Le salaire reste imposé au Luxembourg, mais le télétravail, les soins et l'école suivent le pays de résidenc…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "frontalier",
+          "line_num": 2,
+          "snippet": "Près d'un salarié sur deux habite de l'autre côté. Le salaire reste imposé au Luxembourg, mais le télétravail, les soins et l'école suivent le pays de résidenc…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "frontalier",
+          "line_num": 3,
+          "snippet": "Travailler au Luxembourg n'oblige pas à y habiter, et c'est le choix de près d'un salarié sur deux : plus de deux cent mille personnes franchissent la frontièr…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "frontalier",
+          "line_num": 4,
+          "snippet": "Votre salaire reste imposé au Luxembourg"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "frontalier",
+          "line_num": 5,
+          "snippet": "Les conventions fiscales signées par le Luxembourg avec la France, la Belgique et l'Allemagne posent toutes la même règle : un salaire est imposable là où le t…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "frontalier",
+          "line_num": 9,
+          "snippet": "Le premier plafond est fiscal. Au-delà d'un certain nombre de jours travaillés hors du Luxembourg dans l'année, la part correspondante du salaire devient impos…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "frontalier",
+          "line_num": 10,
+          "snippet": "Le second plafond est social. Il décide de la caisse à laquelle vous cotisez, et il s'exprime en part du temps de travail, pas en jours. Un accord européen per…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "frontalier",
+          "line_num": 14,
+          "snippet": "Les allocations familiales sont versées par la Caisse pour l'avenir des enfants, au titre de votre activité au Luxembourg. Si votre pays de résidence verse lui…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "frontalier",
+          "line_num": 17,
+          "snippet": "Les niveaux de prix ne sont pas les mêmes des quatre côtés, et l'écart ne va pas toujours dans le même sens. Les indices d'Eurostat, publiés dans l'onglet Les…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "frontalier",
+          "line_num": 20,
+          "snippet": "Le salaire reste imposé au Luxembourg, mais il se déclare aussi dans le pays de résidence, pour le taux appliqué au reste."
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "impatries",
+          "line_num": 5,
+          "snippet": "Le régime s'adresse aux personnes réellement venues de l'étranger pour occuper le poste. Il faut n'avoir été ni résident fiscal luxembourgeois, ni avoir exercé…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "impatries",
+          "line_num": 9,
+          "snippet": "Second effet, plus structurant : le régime s'éteint. Il court sur l'année du début d'activité au Luxembourg, plus les huit suivantes, soit neuf années d'imposi…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "impots_classes",
+          "line_num": 17,
+          "snippet": "À l'impôt calculé s'ajoute une contribution au fonds pour l'emploi de 7 %, portée à 9 % au-delà de 150 000 euros de revenu imposable en classe 1 et 1a, ou 300…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "logement_abordable",
+          "line_num": 5,
+          "snippet": "Ni vous, ni aucune personne vivant sous votre toit, ne devez être propriétaire, usufruitier, emphytéote ou titulaire d'un droit d'habitation portant sur plus d…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "logement_abordable",
+          "line_num": 7,
+          "snippet": "Le revenu retenu est celui de l'ensemble de la communauté domestique, c'est-à-dire de toutes les personnes vivant dans le logement. Seuls les revenus des enfan…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "nationalite",
+          "line_num": 3,
+          "snippet": "Le Luxembourg admet la double nationalité : devenir luxembourgeois n'oblige pas à renoncer à sa nationalité d'origine. C'est une différence notable avec plusie…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "nationalite",
+          "line_num": 4,
+          "snippet": "La voie principale est la naturalisation. Elle suppose une résidence régulière d'une durée minimale, la réussite d'une épreuve de luxembourgeois parlé, et la p…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "permis",
+          "line_num": 3,
+          "snippet": "Un permis délivré par un État de l'Espace économique européen reste valable au Luxembourg, sans limitation de durée. Ni l'échange ni l'enregistrement ne sont o…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "prevoyance",
+          "line_num": 3,
+          "snippet": "Le Luxembourg laisse déduire de votre revenu imposable ce que vous versez sur un contrat de prévoyance-vieillesse, et sur quelques autres postes. Cette page ch…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "prevoyance",
+          "line_num": 5,
+          "snippet": "Ce montant ne suppose rien de vous : c'est ce que la loi ouvre à toute personne imposée au Luxembourg, quels que soient son âge, son foyer et ses contrats en c…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "prevoyance",
+          "line_num": 30,
+          "snippet": "Deux conditions, et ce à quoi l'on s'engage. Ce dispositif ne concerne pas que les nouveaux arrivants : il s'ouvre à toute personne imposée au Luxembourg, quel…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "prevoyance",
+          "line_num": 63,
+          "snippet": "Oui, dès lors que vous faites une déclaration commune au Luxembourg. Ce qui ouvre le droit, c'est la qualité de contribuable luxembourgeois, que la déclaration…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "prevoyance",
+          "line_num": 69,
+          "snippet": "Toute personne imposée au Luxembourg, et la souscription doit intervenir avant 65 ans. Ce n'est pas réservé aux nouveaux arrivants : le dispositif s'ouvre à to…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "prevoyance",
+          "line_num": 73,
+          "snippet": "Oui, si vous êtes imposé au Luxembourg. C'est le lieu d'imposition qui décide, pas le lieu d'habitation. Un frontalier imposé au Luxembourg y a droit ; un rési…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "prevoyance",
+          "line_num": 142,
+          "snippet": "Que se passe-t-il si je quitte le Luxembourg ?"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "prevoyance",
+          "line_num": 143,
+          "snippet": "La déduction suppose d'être imposé au Luxembourg : elle cesse pour les années où vous ne l'êtes plus. Le contrat, lui, suit ses propres règles et l'épargne déj…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "prevoyance",
+          "line_num": 158,
+          "snippet": "Vivre au Luxembourg"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "recherche_logement",
+          "line_num": 16,
+          "snippet": "luxembourg.public.lu, se loger"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "simulateur",
+          "line_num": 17,
+          "snippet": "Payé hors du Luxembourg : l'encadré ci-dessous dit ce qui change."
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "simulateur",
+          "line_num": 22,
+          "snippet": "Payé hors du Luxembourg : l'encadré ci-dessous dit ce qui change."
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "telecom",
+          "line_num": 3,
+          "snippet": "Les principaux opérateurs fixes sont POST, l'opérateur historique, ainsi qu'Orange, Tango, Eltrona et Luxembourg Online. La fibre couvre les localités principa…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "vehicule",
+          "line_num": 9,
+          "snippet": "J'achète une occasion déjà immatriculée au Luxembourg"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "vehicule",
+          "line_num": 16,
+          "snippet": "Numéro de la série courante ou numéro personnalisé. Dès la confirmation, faites fabriquer les plaques chez un fabricant agréé au Luxembourg : elles sont demand…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "vehicule",
+          "line_num": 25,
+          "snippet": "Responsabilité civile, auprès d'une compagnie agréée au Luxembourg. L'attestation fait partie du dossier : l'assurance vient avant le dépôt."
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "vehicule",
+          "line_num": 41,
+          "snippet": "Centre douanier Luxembourg-Howald, 1 rue in Bouler (Croix de Gasperich), L-1350 Luxembourg, (+352) 281 84 499"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "vehicule",
+          "line_num": 51,
+          "snippet": "Sandweiler, 11 rue de Luxembourg, L-5230 Sandweiler"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "vehicule",
+          "line_num": 112,
+          "snippet": "Contrôle technique au Luxembourg, si nécessaire"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "vehicule",
+          "line_num": 118,
+          "snippet": "Le contrôle technique au Luxembourg : 77 € pour une voiture, plus 21,50 € de frais administratifs pour un véhicule importé (SNCT, prix au 2 mai 2025)."
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "vehicule",
+          "line_num": 125,
+          "snippet": "Un certificat passé dans un autre État membre ou en Suisse reste valable, mais pour la durée prévue au Luxembourg : premier contrôle 4 ans après la première mi…"
+        },
+        {
+          "concept": "luxembourg",
+          "variant": "luxembourg",
+          "doc_id": "vehicule",
+          "line_num": 141,
+          "snippet": "Guichet.lu, acheter un véhicule immatriculé au Luxembourg"
+        }
+      ],
+      "question_concepts": [
+        "meilleur",
+        "restaurant",
+        "luxembourg"
+      ],
+      "terms": [
+        {
+          "text": "meilleur",
+          "weight": 0.3,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "meilleur",
+          "weak": true,
+          "in_corpus": true
+        },
+        {
+          "text": "restaurant",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "restaurant",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "luxembourg",
+          "weight": 0.3,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "luxembourg",
+          "weak": true,
+          "in_corpus": true
+        }
+      ],
+      "content_words": [
+        {
+          "text": "meilleur",
+          "weight": 0.3,
+          "weak": true
+        },
+        {
+          "text": "restaurant",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "luxembourg",
+          "weight": 0.3,
+          "weak": true
+        }
+      ],
+      "uncovered_words": [
+        "meilleur",
+        "restaurant",
+        "luxembourg"
+      ],
+      "answer_context_used": "paragraph"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+# The expert dictionary, level 1: one row per concept of a newcomer-to-Luxembourg guide.
+# Topics are the closed list of SPEC §1 (housing, vehicle, liability, administration, health, work,
+# money, other) so that `scope_filters.topic` compares with `corpus_index.topic` directly.
+# Variants per language live in keywords.yaml; why each row exists is in CHANGELOG.md.
+concepts:
+  # ---- housing
+  - {concept: logement, topic: housing, definition: "Finding and renting a home: flats, houses, rooms."}
+  - {concept: bail, topic: housing, definition: "The written lease between landlord and tenant: duration, renewal, termination."}
+  - {concept: garantie_locative, topic: housing, definition: "The rental deposit the tenant gives at signature, usually two or three months of rent."}
+  - {concept: loyer, topic: housing, definition: "The monthly rent and how it may be fixed or increased."}
+  - {concept: etat_des_lieux, topic: housing, definition: "The move-in and move-out inspection report that fixes the state of the dwelling."}
+  - {concept: colocation, topic: housing, definition: "Sharing a dwelling with several tenants under one or several leases."}
+  - {concept: charges_locatives, topic: housing, definition: "The costs on top of the rent: heating, water, common parts, waste."}
+  - {concept: agence_immobiliere, topic: housing, definition: "Estate agents and the commission they charge for a rental."}
+  - {concept: preavis, topic: housing, definition: "The notice period to end a lease and how to give it."}
+  - {concept: proprietaire, topic: housing, definition: "The landlord, their duties and what they may ask."}
+  - {concept: locataire, topic: housing, definition: "The tenant, their duties and rights."}
+  # ---- vehicle
+  - {concept: voiture, topic: vehicle, definition: "Owning and driving a car in Luxembourg."}
+  - {concept: immatriculation, topic: vehicle, definition: "Registering a vehicle and obtaining number plates."}
+  - {concept: carte_grise, topic: vehicle, definition: "The vehicle registration certificate."}
+  - {concept: controle_technique, topic: vehicle, definition: "The periodic roadworthiness inspection of a vehicle."}
+  - {concept: permis_de_conduire, topic: vehicle, definition: "The driving licence: exchanging a foreign one, validity, categories."}
+  - {concept: vignette, topic: vehicle, definition: "The yearly vehicle tax sticker and the resident parking sticker."}
+  - {concept: assurance_auto, topic: vehicle, definition: "The compulsory third-party motor insurance and its options."}
+  - {concept: snca, topic: vehicle, definition: "The national body that registers vehicles and issues licences."}
+  - {concept: importation_vehicule, topic: vehicle, definition: "Bringing a vehicle from abroad: customs, conformity, re-registration."}
+  - {concept: stationnement, topic: vehicle, definition: "Parking rules, resident parking and parking permits."}
+  # ---- liability
+  - {concept: responsabilite_civile, topic: liability, definition: "Civil liability insurance covering damage caused to others."}
+  - {concept: degat_des_eaux, topic: liability, definition: "Water damage in a dwelling and who pays for it."}
+  - {concept: sinistre, topic: liability, definition: "An insurance claim: declaring a loss and the deadlines."}
+  - {concept: franchise, topic: liability, definition: "The deductible left to the insured on each claim."}
+  - {concept: assurance_habitation, topic: housing, definition: "Home contents and building insurance for tenants and owners."}
+  # ---- administration
+  - {concept: commune, topic: administration, definition: "The municipality: the first office a newcomer deals with."}
+  - {concept: biergercenter, topic: administration, definition: "The citizens' desk of a municipality, where registrations are made."}
+  - {concept: certificat_de_residence, topic: administration, definition: "The certificate proving where one lives, issued by the municipality."}
+  - {concept: declaration_arrivee, topic: administration, definition: "Declaring arrival at the municipality within the legal deadline."}
+  - {concept: titre_de_sejour, topic: administration, definition: "The residence permit or registration certificate for non-nationals."}
+  - {concept: matricule, topic: administration, definition: "The 13-digit national identification number given to every resident."}
+  - {concept: carte_identite, topic: administration, definition: "Identity documents: identity card and passport."}
+  - {concept: guichet, topic: administration, definition: "The online administrative portal and its personal space."}
+  - {concept: demenagement, topic: administration, definition: "Moving in or out: changing the address with the administrations."}
+  # ---- health
+  - {concept: cns, topic: health, definition: "The public health insurer that refunds medical costs."}
+  - {concept: ccss, topic: health, definition: "The social security office that registers insured persons and employers."}
+  - {concept: medecin, topic: health, definition: "Finding a doctor and how consultations are paid and refunded."}
+  - {concept: carte_securite_sociale, topic: health, definition: "The social security card shown at every consultation."}
+  - {concept: mutuelle, topic: health, definition: "Complementary health insurance on top of the public cover."}
+  - {concept: urgences, topic: health, definition: "Emergency numbers and services."}
+  - {concept: hopital, topic: health, definition: "Hospitals and the on-call medical service."}
+  # ---- work
+  - {concept: contrat_de_travail, topic: work, definition: "The employment contract: types, trial period, what it must contain."}
+  - {concept: adem, topic: work, definition: "The public employment agency: job seekers, registration, benefits."}
+  - {concept: fiche_retenue_impot, topic: work, definition: "The tax withholding card the employer applies to the salary."}
+  - {concept: classe_impot, topic: money, definition: "The tax class that sets the withholding rate."}
+  - {concept: declaration_impot, topic: money, definition: "The yearly income tax return and its deadline."}
+  - {concept: salaire, topic: work, definition: "Salary, the minimum wage and the pay slip."}
+  - {concept: chomage, topic: work, definition: "Unemployment benefit and its conditions."}
+  - {concept: conge, topic: work, definition: "Paid leave, public holidays and other leave."}
+  # ---- money
+  - {concept: compte_bancaire, topic: money, definition: "Opening a bank account and what the bank asks for."}
+  - {concept: iban, topic: money, definition: "The account number used for salary and payments."}
+  - {concept: luxtrust, topic: money, definition: "The electronic identity used for online banking and administration."}
+  - {concept: carte_bancaire, topic: money, definition: "Debit and credit cards."}
+  # ---- other (mobility, school, utilities, daily life)
+  - {concept: transports_gratuits, topic: other, definition: "Free public transport: buses, trams and trains in second class."}
+  - {concept: mkaart, topic: other, definition: "The public transport card for first class and cross-border travel."}
+  - {concept: cfl, topic: other, definition: "The national railway and its trains."}
+  - {concept: velo, topic: other, definition: "Cycling, bike rental and shared bikes."}
+  - {concept: ecole, topic: other, definition: "Schools, enrolment and childcare."}
+  - {concept: cours_de_langue, topic: other, definition: "Learning Luxembourgish, French or German: courses and the public institute."}
+  - {concept: energie, topic: other, definition: "Electricity, gas and water contracts for a dwelling."}
+  - {concept: internet, topic: other, definition: "Internet, telephone and mobile subscriptions."}
+  - {concept: dechets, topic: other, definition: "Waste sorting, bins and recycling centres."}
+  - {concept: animaux, topic: other, definition: "Pets: dog tax, registration and rules."}
+  # ---- added 2026-10-31 from the first real runs and the 50 document titles (see CHANGELOG)
+  - {concept: garde_enfants, topic: other, definition: "Childcare: crèches, the service voucher, maisons relais."}
+  - {concept: impots, topic: money, definition: "Income tax in general: the tax office, taxation, what is taxed."}
+  - {concept: achat_immobilier, topic: housing, definition: "Buying a home: notary, deed, VAT on housing, registration duties."}
+  - {concept: pret_immobilier, topic: money, definition: "The mortgage loan that finances a home."}
+  - {concept: interets_hypothecaires, topic: money, definition: "Deducting mortgage interest from taxable income."}
+  - {concept: deduction_fiscale, topic: money, definition: "What reduces the income tax: deductions, lump sums, special expenses."}
+  - {concept: epargne_retraite, topic: money, definition: "Retirement and home savings plans with a tax advantage."}
+  - {concept: allocations_familiales, topic: other, definition: "Family allowances paid for children."}
+  - {concept: nationalite, topic: administration, definition: "Acquiring Luxembourg nationality: conditions, language test, procedure."}
+  - {concept: frontalier, topic: work, definition: "Cross-border workers: living in a neighbouring country, teleworking limits."}
+  - {concept: impatries, topic: work, definition: "The tax regime for impatriate employees."}
+  - {concept: independant, topic: work, definition: "Working self-employed: business permit, social security, tax."}
+  - {concept: cheques_repas, topic: work, definition: "Meal vouchers given by the employer."}
+  - {concept: cout_de_la_vie, topic: money, definition: "The cost of living and the automatic wage indexation."}
+  - {concept: credit_impot, topic: money, definition: "Tax credits applied to the salary or the tax bill."}
+  - {concept: reclamation, topic: other, definition: "Contesting an invoice or a service: complaint, mediator, appeal."}
+  - {concept: logement_abordable, topic: housing, definition: "Affordable and subsidised housing, rent subsidies."}
+  - {concept: emmenagement, topic: housing, definition: "Moving in: furnishing, lights and appliances the dwelling may lack."}
+  - {concept: simulateur, topic: other, definition: "The guide's calculators: gross to net, tax class, purchase budget."}

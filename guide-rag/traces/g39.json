@@ -1,0 +1,1084 @@
+{
+  "answer": {
+    "kind": "absence",
+    "answer": null,
+    "reason": "ambiguous_question",
+    "searched_concepts": [
+      {
+        "concept": "marche",
+        "variants": [
+          "marche"
+        ],
+        "pages_with_hits": [
+          "achat",
+          "choisir_commune",
+          "comparateur",
+          "emploi",
+          "fiches",
+          "lignes",
+          "logement_abordable",
+          "prevoyance",
+          "recherche_logement"
+        ],
+        "line_hits": 19
+      }
+    ],
+    "closest_mentions": [
+      {
+        "doc_id": "prevoyance",
+        "line_num": 27,
+        "snippet": "Comment ça marche",
+        "why_not_an_answer": "Covers only generic words (1.00 of the question's words);  not covered: supporting."
+      },
+      {
+        "doc_id": "prevoyance",
+        "line_num": 168,
+        "snippet": "Les montants sont ceux de la loi luxembourgeoise, vérifiés à la date indiquée sur chaque source. Cette rubrique ne compare aucun contrat d'épargne du marché et…",
+        "why_not_an_answer": "Covers only generic words (1.00 of the question's words);  not covered: tangential."
+      },
+      {
+        "doc_id": "recherche_logement",
+        "line_num": 2,
+        "snippet": "Un marché tendu, où un dossier complet et une garantie déjà disponible font la différence. Le marché locatif est tendu, en particulier dans la capitale et sa p…",
+        "why_not_an_answer": "names marche in the 'Trouver un logement' section, which is about logement"
+      },
+      {
+        "doc_id": "recherche_logement",
+        "line_num": 7,
+        "snippet": "Les portails d'annonces généralistes concentrent l'essentiel de l'offre, mais une partie du marché circule par les agences, par les groupes d'expatriés et par…",
+        "why_not_an_answer": "Covers only generic words (1.00 of the question's words);  not covered: tangential."
+      },
+      {
+        "doc_id": "achat",
+        "line_num": 5,
+        "snippet": "Le taux super-réduit de 3 %, au lieu de 17 %, est l'un des avantages les plus commentés du marché luxembourgeois. Il est aussi le plus mal compris. Il suppose…",
+        "why_not_an_answer": "names marche in the 'La TVA à 3 % : conditionnelle et plafonnée' section without the other concept(s) of the question"
+      }
+    ],
+    "parse_coverage": {
+      "pages_total": 50,
+      "pages_with_text": 49,
+      "lines_total": 1615,
+      "sections_total": 426,
+      "tables_total": 6,
+      "cross_refs": 158,
+      "fetched_at": "2026-10-31T10:23:00Z",
+      "index_version": "1d1bbf848338f32798d0c92366bd740f0513f72b56bd4745e85a507a1645d9ca",
+      "pipeline_version": "guide-rag/0.1.0",
+      "data_scripts": [
+        "/app/avantages.js: AVANTAGES with 28 cards in 5 moments",
+        "/app/fiches/vehicule.js: guided fiche(s) vehicule",
+        "/app/kb.js: window.KB with 36 fiches, 55 faq, 5 timeline phases",
+        "/prevoyance/app/prevoyance.js: TABLE with 6 deductible items",
+        "/prevoyance/app/questions.js: ENTREES with 29 questions in 8 themes"
+      ],
+      "documents": {
+        "fiche": 36,
+        "page": 1,
+        "panel": 13
+      },
+      "parsing_methods": [
+        "html_blocks/1",
+        "js_data+html_blocks/1"
+      ],
+      "raw_drift": {},
+      "summary_lines_reviewed": 12,
+      "table_rows_total": 30
+    },
+    "suggestion": "« ça » ne me dit pas de quoi il s'agit. De quel sujet du guide parlez-vous ?",
+    "suggested_clarification": "« ça » ne me dit pas de quoi il s'agit. De quel sujet du guide parlez-vous ?",
+    "answer_found": false,
+    "complete_answer_found": false
+  },
+  "meta": {
+    "question_id": "9a6e804af6a23c0b",
+    "index_version": "1d1bbf848338f32798d0c92366bd740f0513f72b56bd4745e85a507a1645d9ca",
+    "pipeline_version": "guide-rag/0.1",
+    "methods_used": [
+      "keyword_lines",
+      "title_match",
+      "arbiter_rules",
+      "sweep"
+    ],
+    "methods_skipped": {
+      "anchor_regex": "answer type text asks for no typed anchor",
+      "row_match": "answer_type=text and no table column named",
+      "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+      "llm_arbiter": "no model key configured",
+      "current_page_boost": "no pages_hint: no page to boost"
+    },
+    "activations": {
+      "use_keywords": {
+        "on": true,
+        "reason": "always: keyword detectors are deterministic and prove absence"
+      },
+      "use_toc": {
+        "on": true,
+        "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+      },
+      "use_row_level": {
+        "on": false,
+        "reason": "answer_type=text and no table column named"
+      },
+      "use_embeddings": {
+        "on": false,
+        "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+      },
+      "use_llm_arbiter": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "use_llm_generation": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "sweep_for_absence": {
+        "on": true,
+        "reason": "always: the exhaustive sweep is the evidence of absence"
+      },
+      "current_page_boost": {
+        "on": false,
+        "reason": "no pages_hint: no page to boost"
+      }
+    },
+    "chunk_strategy": "line as the unit; anchor = hit lines grouped by runs; context = ±3 lines within the section (answer_context=paragraph)",
+    "model_used": "no model",
+    "prompt_version": null,
+    "fragments_applied": [],
+    "iterations": 1,
+    "validator_report": {
+      "iteration_1": []
+    },
+    "replay": null
+  },
+  "trace": {
+    "parsed": {
+      "question_id": "9a6e804af6a23c0b",
+      "original_question": "ça marche comment ?",
+      "corrected_question": "ça marche comment ?",
+      "language": "fr",
+      "keywords": [
+        {
+          "text": "marche",
+          "weight": 0.3,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": true,
+          "in_corpus": true
+        }
+      ],
+      "answer_shape": "single",
+      "answer_type": "text",
+      "structural_hints": {
+        "pages_hint": null,
+        "toc_section_hint": "Comment ça marche",
+        "answer_context": "paragraph"
+      },
+      "decomposition": {
+        "pattern": "single",
+        "sub_questions": []
+      },
+      "suggested_clarification": "« ça » ne me dit pas de quoi il s'agit. De quel sujet du guide parlez-vous ?",
+      "ambiguity_reason": "pronoun_only",
+      "candidate_values": [],
+      "proposed_default": null,
+      "scope_filters": {
+        "topic": null
+      },
+      "parsing_notes": [
+        "language=fr: stop-word vote",
+        "answer_shape=single: no listing cue",
+        "answer_type=text: no typed cue",
+        "weak words (weight 0.3): marche",
+        "toc_section_hint='Comment ça marche': every word of this heading is in the question",
+        "scope topic=None: no dictionary concept matched",
+        "decomposition=single: no 'et / and' between two clauses",
+        "every content word is a weak word and a pronoun stands for the subject",
+        "clarification: pronoun_only"
+      ]
+    },
+    "plan": {
+      "activations": {
+        "use_keywords": {
+          "on": true,
+          "reason": "always: keyword detectors are deterministic and prove absence"
+        },
+        "use_toc": {
+          "on": true,
+          "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+        },
+        "use_row_level": {
+          "on": false,
+          "reason": "answer_type=text and no table column named"
+        },
+        "use_embeddings": {
+          "on": false,
+          "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+        },
+        "use_llm_arbiter": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "use_llm_generation": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "sweep_for_absence": {
+          "on": true,
+          "reason": "always: the exhaustive sweep is the evidence of absence"
+        },
+        "current_page_boost": {
+          "on": false,
+          "reason": "no pages_hint: no page to boost"
+        }
+      }
+    },
+    "retrieval": {
+      "question_id": "9a6e804af6a23c0b",
+      "question": "ça marche comment ?",
+      "candidates": [
+        {
+          "candidate_id": "prevoyance#l27-l27",
+          "anchor": {
+            "doc_id": "prevoyance",
+            "line_start": 27,
+            "line_end": 27,
+            "section_id": "prevoyance#s3"
+          },
+          "context": {
+            "doc_id": "prevoyance",
+            "line_start": 27,
+            "line_end": 28,
+            "section_id": "prevoyance#s3"
+          },
+          "snippet": "Comment ça marche",
+          "text": "Comment ça marche\nQuatre moments. Le troisième n'a rien d'automatique : sans la ligne dans la déclaration, le versement ne produit aucun effet fiscal.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "marche"
+          ],
+          "matched_concepts": [
+            "marche"
+          ],
+          "section_title": "Comment ça marche",
+          "breadcrumb": "Ce que l'État vous rend quand vous préparez votre retraite › Comment ça marche",
+          "url_anchor": "https://lux-guide.github.io/prevoyance/#acc-apercu",
+          "role": "supporting",
+          "reason": "Covers only generic words (1.00 of the question's words);  not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "marche"
+          ],
+          "uncovered_words": [],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "money",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "prevoyance#l168-l168",
+          "anchor": {
+            "doc_id": "prevoyance",
+            "line_start": 168,
+            "line_end": 168,
+            "section_id": "prevoyance#s46"
+          },
+          "context": {
+            "doc_id": "prevoyance",
+            "line_start": 167,
+            "line_end": 168,
+            "section_id": "prevoyance#s46"
+          },
+          "snippet": "Les montants sont ceux de la loi luxembourgeoise, vérifiés à la date indiquée sur chaque source. Cette rubrique ne compare aucun contrat d'épargne du marché et…",
+          "text": "Voir aussi\nLes montants sont ceux de la loi luxembourgeoise, vérifiés à la date indiquée sur chaque source. Cette rubrique ne compare aucun contrat d'épargne du marché et ne recommande aucun placement. Rien de ce que vous saisissez ne quitte votre navigateur.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "marche"
+          ],
+          "matched_concepts": [
+            "marche"
+          ],
+          "section_title": "Voir aussi",
+          "breadcrumb": "Questions fréquentes › Voir aussi",
+          "url_anchor": "https://lux-guide.github.io/prevoyance/#pied-liens",
+          "role": "tangential",
+          "reason": "Covers only generic words (1.00 of the question's words);  not covered: tangential.",
+          "score": 0.3,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "marche"
+          ],
+          "uncovered_words": [],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "money",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "recherche_logement#l2-l3",
+          "anchor": {
+            "doc_id": "recherche_logement",
+            "line_start": 2,
+            "line_end": 3,
+            "section_id": "recherche_logement#s1"
+          },
+          "context": {
+            "doc_id": "recherche_logement",
+            "line_start": 1,
+            "line_end": 3,
+            "section_id": "recherche_logement#s1"
+          },
+          "snippet": "Un marché tendu, où un dossier complet et une garantie déjà disponible font la différence. Le marché locatif est tendu, en particulier dans la capitale et sa p…",
+          "text": "Trouver un logement\nUn marché tendu, où un dossier complet et une garantie déjà disponible font la différence.\nLe marché locatif est tendu, en particulier dans la capitale et sa première couronne. Les biens intéressants partent en quelques jours, et le candidat retenu n'est pas toujours celui qui paie le plus : c'est souvent celui dont le dossier est complet et immédiatement exploitable.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "marche"
+          ],
+          "matched_concepts": [
+            "marche"
+          ],
+          "section_title": "Trouver un logement",
+          "breadcrumb": "Trouver un logement",
+          "url_anchor": "https://lux-guide.github.io/#fiche/recherche_logement#fiche-detail",
+          "role": "tangential",
+          "reason": "Covers only generic words (1.00 of the question's words);  not covered: tangential.",
+          "score": 0.3,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "marche"
+          ],
+          "uncovered_words": [],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "recherche_logement#l7-l7",
+          "anchor": {
+            "doc_id": "recherche_logement",
+            "line_start": 7,
+            "line_end": 7,
+            "section_id": "recherche_logement#s3"
+          },
+          "context": {
+            "doc_id": "recherche_logement",
+            "line_start": 6,
+            "line_end": 7,
+            "section_id": "recherche_logement#s3"
+          },
+          "snippet": "Les portails d'annonces généralistes concentrent l'essentiel de l'offre, mais une partie du marché circule par les agences, par les groupes d'expatriés et par…",
+          "text": "Où chercher\nLes portails d'annonces généralistes concentrent l'essentiel de l'offre, mais une partie du marché circule par les agences, par les groupes d'expatriés et par le bouche-à-oreille des employeurs. Les grandes entreprises et les institutions disposent souvent d'un service ou d'un prestataire d'accompagnement : demandez-le, c'est fréquemment inclus dans le package d'embauche.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "marche"
+          ],
+          "matched_concepts": [
+            "marche"
+          ],
+          "section_title": "Où chercher",
+          "breadcrumb": "Trouver un logement › Où chercher",
+          "url_anchor": "https://lux-guide.github.io/#fiche/recherche_logement#fiche-detail",
+          "role": "tangential",
+          "reason": "Covers only generic words (1.00 of the question's words);  not covered: tangential.",
+          "score": 0.3,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "marche"
+          ],
+          "uncovered_words": [],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        }
+      ],
+      "methods_used": [
+        "keyword_lines",
+        "title_match",
+        "arbiter_rules",
+        "sweep"
+      ],
+      "methods_skipped": {
+        "anchor_regex": "answer type text asks for no typed anchor",
+        "row_match": "answer_type=text and no table column named",
+        "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+        "llm_arbiter": "no model key configured",
+        "current_page_boost": "no pages_hint: no page to boost"
+      },
+      "not_found": true,
+      "not_found_reason": "words_not_covered: marche — the best candidate prevoyance#l27-l27 covers only marche (1.00 of the question's words, below 0.34).",
+      "confidence": 0.0,
+      "per_section_audit": [
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s1",
+          "title": "Ce que l'État vous rend quand vous préparez votre retraite",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s2",
+          "title": "Ce que la loi ouvre à tout le monde",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s3",
+          "title": "Comment ça marche",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s4",
+          "title": "Est-ce que cela me concerne",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s5",
+          "title": "Six questions pour commencer",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s6",
+          "title": "Ce que cela rapporte",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s7",
+          "title": "Questions fréquentes",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s8",
+          "title": "Le principe",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s9",
+          "title": "Qu'est-ce que la prévoyance-vieillesse, ou 111bis ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s10",
+          "title": "L'argent est-il bloqué pendant dix ans ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s11",
+          "title": "Est-ce une assurance vie ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s12",
+          "title": "Combien déduire",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s13",
+          "title": "Combien puis-je déduire par an ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s14",
+          "title": "Le plafond est-il doublé pour un couple ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s15",
+          "title": "Puis-je reporter ce que je n'ai pas versé sur l'année suivante ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s16",
+          "title": "Mon conjoint qui travaille à l'étranger peut-il en ouvrir un ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s17",
+          "title": "Qui y a droit",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s18",
+          "title": "Qui peut en bénéficier ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s19",
+          "title": "Un frontalier y a-t-il droit ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s20",
+          "title": "Y a-t-il un âge limite pour souscrire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s21",
+          "title": "Verser",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s22",
+          "title": "Quand faut-il verser ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s23",
+          "title": "Puis-je arrêter ou réduire mes versements ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s24",
+          "title": "Récupérer l'épargne",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s25",
+          "title": "Quand puis-je récupérer mon épargne ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s26",
+          "title": "Sous quelle forme l'épargne est-elle versée ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s27",
+          "title": "Puis-je sortir avant soixante ans ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s28",
+          "title": "Comment la sortie est-elle imposée ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s29",
+          "title": "Puis-je récupérer seulement une partie de mon épargne ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s30",
+          "title": "Y a-t-il un intérêt à étaler la sortie sur plusieurs années ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s31",
+          "title": "La déclaration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s32",
+          "title": "Comment déclarer les versements ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s33",
+          "title": "Combien cela me rapporte-t-il vraiment ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s34",
+          "title": "À quel taux la déduction est-elle valorisée ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s35",
+          "title": "Quand l'argent de la déduction revient-il ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s36",
+          "title": "Y a-t-il d'autres prélèvements que l'impôt à la sortie ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s37",
+          "title": "Le placement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s38",
+          "title": "Sur quoi l'argent est-il placé ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s39",
+          "title": "Vaut-il mieux que l'épargne-logement ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s40",
+          "title": "Quand la vie change",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s41",
+          "title": "Que se passe-t-il si je quitte le Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s42",
+          "title": "Que devient l'épargne en cas de décès ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s43",
+          "title": "Comment est imposé ce qui revient à mes proches si je meurs avant l'échéance ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s44",
+          "title": "Et en cas de divorce ou de séparation ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s45",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s46",
+          "title": "Voir aussi",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s47",
+          "title": "Poser une question",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s1",
+          "title": "Trouver un logement",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s2",
+          "title": "Préparer le dossier avant de visiter",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s3",
+          "title": "Où chercher",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s4",
+          "title": "Élargir au-delà de la capitale",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s5",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s6",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        }
+      ],
+      "route_pages": [
+        {
+          "doc_id": "prevoyance",
+          "score": 0.6,
+          "reason": "kept: 1 term(s) in the summary line (marche); heading title match (Comment ça marche); tally 0.6"
+        },
+        {
+          "doc_id": "recherche_logement",
+          "score": 0.3,
+          "reason": "kept: 1 term(s) in the summary line (marche); tally 0.3"
+        }
+      ],
+      "route_sections": [
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s3",
+          "title": "Comment ça marche",
+          "score": 5.0,
+          "reason": "title 'Comment ça marche' matches marche, hint:Comment ça marche; 1 term(s) in its lines (marche); a leaf, stop here"
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s46",
+          "title": "Voir aussi",
+          "score": 1.0,
+          "reason": "1 term(s) in its lines (marche); a leaf, stop here"
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s3",
+          "title": "Où chercher",
+          "score": 1.0,
+          "reason": "1 term(s) in its lines (marche); a leaf, stop here"
+        }
+      ],
+      "route_notes": [
+        "prevoyance: no section of the outline carries a term; the page is read whole",
+        "recherche_logement: no section of the outline carries a term; the page is read whole",
+        "answer_context=section: a procedure question ('comment', 'how do I') is answered by a section's steps (plan said paragraph)"
+      ],
+      "sweep_concepts": [
+        {
+          "concept": "marche",
+          "variants": [
+            "marche"
+          ],
+          "pages_with_hits": [
+            "achat",
+            "choisir_commune",
+            "comparateur",
+            "emploi",
+            "fiches",
+            "lignes",
+            "logement_abordable",
+            "prevoyance",
+            "recherche_logement"
+          ],
+          "line_hits": 19
+        }
+      ],
+      "sweep_rows": [
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "achat",
+          "line_num": 5,
+          "snippet": "Le taux super-réduit de 3 %, au lieu de 17 %, est l'un des avantages les plus commentés du marché luxembourgeois. Il est aussi le plus mal compris. Il suppose…"
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "choisir_commune",
+          "line_num": 11,
+          "snippet": "Repérez la distance à pied jusqu'à l'arrêt de bus ou à la gare, et pas seulement leur existence : dix minutes de marche sous la pluie deux fois par jour change…"
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "comparateur",
+          "line_num": 3,
+          "snippet": "Deux registres, indiqués sur chaque carte. L'assurance habitation repose sur des documents réels : quatre contrats du marché luxembourgeois lus intégralement,…"
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "comparateur",
+          "line_num": 5,
+          "snippet": "données réelles Quatre contrats du marché luxembourgeois lus intégralement, treize sinistres concrets posés à chacun, et pour chaque réponse la clause exacte a…"
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "comparateur",
+          "line_num": 13,
+          "snippet": "Quatre conditions générales publiques du marché luxembourgeois, éditions 2017 à 2023, entre 60 et 139 pages chacune. Le texte est extrait page par page, ce qui…"
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "emploi",
+          "line_num": 2,
+          "snippet": "Un marché très international, où les postes vacants doivent être déclarés au service public de l'emploi."
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "emploi",
+          "line_num": 4,
+          "snippet": "Le marché est profondément international. Une part considérable des salariés vient chaque jour de France, de Belgique et d'Allemagne, ce qui élargit d'autant l…"
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "fiches",
+          "line_num": 14,
+          "snippet": "Un marché tendu, où un dossier complet et une garantie déjà disponible font la différence."
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "fiches",
+          "line_num": 30,
+          "snippet": "Un prix sous le marché, en échange de plafonds de revenus et d'une revente encadrée."
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "fiches",
+          "line_num": 48,
+          "snippet": "Un marché très international, où les postes vacants doivent être déclarés au service public de l'emploi."
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "lignes",
+          "line_num": 2,
+          "snippet": "Un logement se juge mal à vol d'oiseau. Deux kilomètres avec une correspondance et dix minutes de marche coûtent plus cher qu'une demi-heure de bus direct. Ind…"
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "logement_abordable",
+          "line_num": 2,
+          "snippet": "Un prix sous le marché, en échange de plafonds de revenus et d'une revente encadrée."
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "logement_abordable",
+          "line_num": 3,
+          "snippet": "Des promoteurs publics commercialisent des logements à un prix inférieur au marché. L'accès suppose un certificat d'éligibilité délivré par le Guichet unique d…"
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "logement_abordable",
+          "line_num": 10,
+          "snippet": "Ces logements sont assortis d'un droit de rachat inscrit dans l'acte authentique. Le prix de revente correspond au prix payé, réindexé sur l'indice du coût de…"
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "prevoyance",
+          "line_num": 27,
+          "snippet": "Comment ça marche"
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "prevoyance",
+          "line_num": 168,
+          "snippet": "Les montants sont ceux de la loi luxembourgeoise, vérifiés à la date indiquée sur chaque source. Cette rubrique ne compare aucun contrat d'épargne du marché et…"
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "recherche_logement",
+          "line_num": 2,
+          "snippet": "Un marché tendu, où un dossier complet et une garantie déjà disponible font la différence."
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "recherche_logement",
+          "line_num": 3,
+          "snippet": "Le marché locatif est tendu, en particulier dans la capitale et sa première couronne. Les biens intéressants partent en quelques jours, et le candidat retenu n…"
+        },
+        {
+          "concept": "marche",
+          "variant": "marche",
+          "doc_id": "recherche_logement",
+          "line_num": 7,
+          "snippet": "Les portails d'annonces généralistes concentrent l'essentiel de l'offre, mais une partie du marché circule par les agences, par les groupes d'expatriés et par…"
+        }
+      ],
+      "question_concepts": [
+        "marche"
+      ],
+      "terms": [
+        {
+          "text": "marche",
+          "weight": 0.3,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "marche",
+          "weak": true,
+          "in_corpus": true
+        }
+      ],
+      "content_words": [
+        {
+          "text": "marche",
+          "weight": 0.3,
+          "weak": true
+        }
+      ],
+      "uncovered_words": [
+        "marche"
+      ],
+      "answer_context_used": "section"
+    }
+  }
+}

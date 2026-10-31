@@ -1,0 +1,4504 @@
+{
+  "answer": {
+    "extraction_method": "verbatim",
+    "confidence": 0.819,
+    "caveats": [],
+    "answer_found": true,
+    "complete_answer_found": true,
+    "context_structured": [
+      {
+        "candidate_id": "permis#l2-l5",
+        "doc_id": "permis",
+        "section_id": "permis#s1",
+        "section_title": "Permis de conduire",
+        "breadcrumb": "Permis de conduire",
+        "line_start": 1,
+        "line_end": 5,
+        "url_anchor": "https://lux-guide.github.io/#fiche/permis#fiche-detail",
+        "role": "primary"
+      }
+    ],
+    "keywords_found": [
+      "conduire",
+      "demande",
+      "déposer",
+      "enregistrement",
+      "permis",
+      "permis de conduire"
+    ],
+    "llm_discovered_keywords": [],
+    "conflicting_evidence": [],
+    "suggested_clarification": null,
+    "kind": "text",
+    "items": [
+      {
+        "text": "Un permis européen reste valable sans limite. L'enregistrement est facultatif, gratuit, et ne se fait pas en ligne. Un permis délivré par un État de l'Espace économique européen reste valable au Luxembourg, sans limitation de durée. Ni l'échange ni l'enregistrement ne sont obligatoires, contrairement à une idée répandue chez les nouveaux arrivants. L'enregistrement auprès de la Société nationale de circulation automobile présente néanmoins un intérêt concret : en cas de perte ou de vol, l'administration connaît l'existence et les données de votre permis, et peut délivrer rapidement un duplicata. Sans cet enregistrement, il faut repasser par l'autorité qui a délivré le titre, souvent depuis l'étranger, ce qui peut prendre des semaines. La demande se dépose par courrier postal auprès du service des permis de conduire, ou en personne à l'accueil de Guichet.lu. Elle ne se fait ni par courriel ni via MyGuichet : la seule démarche permis disponible en ligne est la prise de rendez-vous pour l'examen théorique. Joignez le formulaire de transcription, échange ou enregistrement, une photocopie recto verso lisible du permis et une copie d'une pièce d'identité valide. L'enregistrement est gratuit, alors que l'échange contre un permis luxembourgeois est payant.",
+        "spans": [
+          {
+            "doc_id": "permis",
+            "line_start": 2,
+            "line_end": 5,
+            "quote": "Un permis européen reste valable sans limite. L'enregistrement est facultatif, gratuit, et ne se fait pas en ligne. Un permis délivré par un État de l'Espace économique européen reste valable au Luxembourg, sans limitation de durée. Ni l'échange ni l'enregistrement ne sont obligatoires, contrairement à une idée répandue chez les nouveaux arrivants. L'enregistrement auprès de la Société nationale de circulation automobile présente néanmoins un intérêt concret : en cas de perte ou de vol, l'administration connaît l'existence et les données de votre permis, et peut délivrer rapidement un duplicata. Sans cet enregistrement, il faut repasser par l'autorité qui a délivré le titre, souvent depuis l'étranger, ce qui peut prendre des semaines. La demande se dépose par courrier postal auprès du service des permis de conduire, ou en personne à l'accueil de Guichet.lu. Elle ne se fait ni par courriel ni via MyGuichet : la seule démarche permis disponible en ligne est la prise de rendez-vous pour l'examen théorique. Joignez le formulaire de transcription, échange ou enregistrement, une photocopie recto verso lisible du permis et une copie d'une pièce d'identité valide. L'enregistrement est gratuit, alors que l'échange contre un permis luxembourgeois est payant."
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "question_id": "4c4f254d2c8df1ef",
+    "index_version": "1d1bbf848338f32798d0c92366bd740f0513f72b56bd4745e85a507a1645d9ca",
+    "pipeline_version": "guide-rag/0.1",
+    "methods_used": [
+      "keyword_lines",
+      "title_match",
+      "arbiter_rules",
+      "sweep"
+    ],
+    "methods_skipped": {
+      "anchor_regex": "answer type text asks for no typed anchor",
+      "row_match": "answer_type=text and no table column named",
+      "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+      "llm_arbiter": "no model key configured",
+      "current_page_boost": "no pages_hint: no page to boost"
+    },
+    "activations": {
+      "use_keywords": {
+        "on": true,
+        "reason": "always: keyword detectors are deterministic and prove absence"
+      },
+      "use_toc": {
+        "on": true,
+        "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+      },
+      "use_row_level": {
+        "on": false,
+        "reason": "answer_type=text and no table column named"
+      },
+      "use_embeddings": {
+        "on": false,
+        "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+      },
+      "use_llm_arbiter": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "use_llm_generation": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "sweep_for_absence": {
+        "on": true,
+        "reason": "always: the exhaustive sweep is the evidence of absence"
+      },
+      "current_page_boost": {
+        "on": false,
+        "reason": "no pages_hint: no page to boost"
+      }
+    },
+    "chunk_strategy": "line as the unit; anchor = hit lines grouped by runs; context = ±3 lines within the section (answer_context=paragraph)",
+    "model_used": "no model",
+    "prompt_version": null,
+    "fragments_applied": [],
+    "iterations": 1,
+    "validator_report": {
+      "iteration_1": []
+    },
+    "replay": null
+  },
+  "trace": {
+    "parsed": {
+      "question_id": "4c4f254d2c8df1ef",
+      "original_question": "où déposer la demande d'enregistrement du permis de conduire",
+      "corrected_question": "où déposer la demande d'enregistrement du permis de conduire",
+      "language": "fr",
+      "keywords": [
+        {
+          "text": "déposer",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "demande",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "enregistrement",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "permis",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "conduire",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "déclaration d'arrivée",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "inscription",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "s'inscrire",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "inscription à la commune",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "declaration of arrival",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "registration",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "register with the commune",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "anmeldung",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "anmelden",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "déclarer son arrivée",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "s'inscrire à la commune",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "enregistrement à la commune",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "registre de la population",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "arrivée",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "register at the commune",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "arrival declaration",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "arrival",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "ankunftserklärung",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "huit premiers jours",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "premiers jours",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "huit jours",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "first days",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "first eight days",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "melden",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "melde",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "sich anmelden",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "bei der gemeinde anmelden",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "anmeldung bei der gemeinde",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "wohnsitz anmelden",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "permis de conduire",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "driving licence",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "driving license",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "driver's license",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "licence",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "führerschein",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "échange de permis",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "permis étranger",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "exchange a licence",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        }
+      ],
+      "answer_shape": "single",
+      "answer_type": "text",
+      "structural_hints": {
+        "pages_hint": null,
+        "toc_section_hint": "Permis de conduire",
+        "answer_context": "paragraph"
+      },
+      "decomposition": {
+        "pattern": "single",
+        "sub_questions": []
+      },
+      "suggested_clarification": null,
+      "ambiguity_reason": null,
+      "candidate_values": [],
+      "proposed_default": null,
+      "scope_filters": {
+        "topic": "vehicle"
+      },
+      "parsing_notes": [
+        "language=fr: stop-word vote",
+        "answer_shape=single: no listing cue",
+        "answer_type=text: no typed cue",
+        "concept 'declaration_arrivee' (administration) matched by 'enregistrement' [fr, secondary]",
+        "concept 'permis_de_conduire' (vehicle) matched by 'permis de conduire' [fr, primary]",
+        "toc_section_hint='Permis de conduire': every word of this heading is in the question",
+        "scope topic='vehicle': the matched concepts vote {'administration': 0.8, 'vehicle': 1.0}",
+        "decomposition=single: no 'et / and' between two clauses"
+      ]
+    },
+    "plan": {
+      "activations": {
+        "use_keywords": {
+          "on": true,
+          "reason": "always: keyword detectors are deterministic and prove absence"
+        },
+        "use_toc": {
+          "on": true,
+          "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+        },
+        "use_row_level": {
+          "on": false,
+          "reason": "answer_type=text and no table column named"
+        },
+        "use_embeddings": {
+          "on": false,
+          "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+        },
+        "use_llm_arbiter": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "use_llm_generation": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "sweep_for_absence": {
+          "on": true,
+          "reason": "always: the exhaustive sweep is the evidence of absence"
+        },
+        "current_page_boost": {
+          "on": false,
+          "reason": "no pages_hint: no page to boost"
+        }
+      }
+    },
+    "retrieval": {
+      "question_id": "4c4f254d2c8df1ef",
+      "question": "où déposer la demande d'enregistrement du permis de conduire",
+      "candidates": [
+        {
+          "candidate_id": "permis#l2-l5",
+          "anchor": {
+            "doc_id": "permis",
+            "line_start": 2,
+            "line_end": 5,
+            "section_id": "permis#s1"
+          },
+          "context": {
+            "doc_id": "permis",
+            "line_start": 1,
+            "line_end": 5,
+            "section_id": "permis#s1"
+          },
+          "snippet": "Un permis européen reste valable sans limite. L'enregistrement est facultatif, gratuit, et ne se fait pas en ligne. Un permis délivré par un État de l'Espace é…",
+          "text": "Permis de conduire\nUn permis européen reste valable sans limite. L'enregistrement est facultatif, gratuit, et ne se fait pas en ligne.\nUn permis délivré par un État de l'Espace économique européen reste valable au Luxembourg, sans limitation de durée. Ni l'échange ni l'enregistrement ne sont obligatoires, contrairement à une idée répandue chez les nouveaux arrivants.\nL'enregistrement auprès de la Société nationale de circulation automobile présente néanmoins un intérêt concret : en cas de perte ou de vol, l'administration connaît l'existence et les données de votre permis, et peut délivrer rapidement un duplicata. Sans cet enregistrement, il faut repasser par l'autorité qui a délivré le titre, souvent depuis l'étranger, ce qui peut prendre des semaines.\nLa demande se dépose par courrier postal auprès du service des permis de conduire, ou en personne à l'accueil de Guichet.lu. Elle ne se fait ni par courriel ni via MyGuichet : la seule démarche permis disponible en ligne est la prise de rendez-vous pour l'examen théorique. Joignez le formulaire de transcription, échange ou enregistrement, une photocopie recto verso lisible du permis et une copie d'une pièce d'identité valide. L'enregistrement est gratuit, alors que l'échange contre un permis luxembourgeois est payant.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "conduire",
+            "demande",
+            "déposer",
+            "enregistrement",
+            "permis",
+            "permis de conduire"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee",
+            "demande",
+            "deposer",
+            "permis_de_conduire"
+          ],
+          "section_title": "Permis de conduire",
+          "breadcrumb": "Permis de conduire",
+          "url_anchor": "https://lux-guide.github.io/#fiche/permis#fiche-detail",
+          "role": "primary",
+          "reason": "The document 'Permis de conduire' and the section 'Permis de conduire' name the question's words 'déposer', 'demande', 'enregistrement', 'permis' and 'conduire' (coverage 1.00); score 12.3: primary.",
+          "score": 12.3,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "déposer",
+            "demande",
+            "enregistrement",
+            "permis",
+            "conduire"
+          ],
+          "uncovered_words": [],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "permis#l7-l8",
+          "anchor": {
+            "doc_id": "permis",
+            "line_start": 7,
+            "line_end": 8,
+            "section_id": "permis#s2"
+          },
+          "context": {
+            "doc_id": "permis",
+            "line_start": 6,
+            "line_end": 9,
+            "section_id": "permis#s2"
+          },
+          "snippet": "Permis européen valable sans limite, aucune obligation. Enregistrement gratuit, par courrier ou au guichet.",
+          "text": "À retenir\nPermis européen valable sans limite, aucune obligation.\nEnregistrement gratuit, par courrier ou au guichet.\nUtile surtout pour obtenir vite un duplicata.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "enregistrement",
+            "permis"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee",
+            "permis_de_conduire"
+          ],
+          "section_title": "À retenir",
+          "breadcrumb": "Permis de conduire › À retenir",
+          "url_anchor": "https://lux-guide.github.io/#fiche/permis#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'enregistrement', 'permis' and 'conduire' (coverage 0.60) but permis#l2-l5 covers more of the question (1.00): supporting.",
+          "score": 2.4,
+          "matched_share": 0.6,
+          "coverage": 0.6,
+          "covered_words": [
+            "enregistrement",
+            "permis",
+            "conduire"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "demande"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": "section",
+          "captures": []
+        },
+        {
+          "candidate_id": "permis#l11-l11",
+          "anchor": {
+            "doc_id": "permis",
+            "line_start": 11,
+            "line_end": 11,
+            "section_id": "permis#s3"
+          },
+          "context": {
+            "doc_id": "permis",
+            "line_start": 10,
+            "line_end": 11,
+            "section_id": "permis#s3"
+          },
+          "snippet": "Guichet.lu, permis étranger",
+          "text": "Sources officielles\nGuichet.lu, permis étranger",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "permis",
+            "permis étranger"
+          ],
+          "matched_concepts": [
+            "permis_de_conduire"
+          ],
+          "section_title": "Sources officielles",
+          "breadcrumb": "Permis de conduire › Sources officielles",
+          "url_anchor": "https://lux-guide.github.io/#fiche/permis#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'permis' and 'conduire' (coverage 0.40) but permis#l2-l5 covers more of the question (1.00): supporting.",
+          "score": 1.54,
+          "matched_share": 0.4,
+          "coverage": 0.4,
+          "covered_words": [
+            "permis",
+            "conduire"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "demande",
+            "enregistrement"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l20-l21",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 20,
+            "line_end": 21,
+            "section_id": "faq#s8"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 19,
+            "line_end": 21,
+            "section_id": "faq#s8"
+          },
+          "snippet": "Oui, sans limite de durée et sans obligation d'échange ni d'enregistrement. L'enregistrement reste utile pour obtenir rapidement un duplicata en cas de perte o…",
+          "text": "Un permis de conduire européen reste-t-il valable ?\nOui, sans limite de durée et sans obligation d'échange ni d'enregistrement. L'enregistrement reste utile pour obtenir rapidement un duplicata en cas de perte ou de vol.\nVoir la fiche : Permis de conduire",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "conduire",
+            "enregistrement",
+            "permis",
+            "permis de conduire"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee",
+            "permis_de_conduire"
+          ],
+          "section_title": "Un permis de conduire européen reste-t-il valable ?",
+          "breadcrumb": "Questions et réponses › Mobilite › Un permis de conduire européen reste-t-il valable ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers 'enregistrement', 'permis' and 'conduire' (coverage 0.60) and points to 'Permis de conduire' (Voir la fiche), which covers the question as well: supporting (also answered here).",
+          "score": 7.44,
+          "matched_share": 0.6,
+          "coverage": 0.6,
+          "covered_words": [
+            "enregistrement",
+            "permis",
+            "conduire"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "demande"
+          ],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "section",
+          "captures": []
+        },
+        {
+          "candidate_id": "fiches#l60-l60",
+          "anchor": {
+            "doc_id": "fiches",
+            "line_start": 60,
+            "line_end": 60,
+            "section_id": "fiches#s30"
+          },
+          "context": {
+            "doc_id": "fiches",
+            "line_start": 59,
+            "line_end": 60,
+            "section_id": "fiches#s30"
+          },
+          "snippet": "Un permis européen reste valable sans limite. L'enregistrement est facultatif, gratuit, et ne se fait pas en ligne.",
+          "text": "Permis de conduire\nUn permis européen reste valable sans limite. L'enregistrement est facultatif, gratuit, et ne se fait pas en ligne.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "enregistrement",
+            "permis"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee",
+            "permis_de_conduire"
+          ],
+          "section_title": "Permis de conduire",
+          "breadcrumb": "Fiches pratiques › Permis de conduire",
+          "url_anchor": "https://lux-guide.github.io/#fiches#fiches-grid",
+          "role": "supporting",
+          "reason": "Covers 'enregistrement', 'permis' and 'conduire' (coverage 0.60) and points to 'Permis de conduire' (Voir la fiche), which covers the question as well: supporting (also answered here).",
+          "score": 6.9,
+          "matched_share": 0.6,
+          "coverage": 0.6,
+          "covered_words": [
+            "enregistrement",
+            "permis",
+            "conduire"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "demande"
+          ],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l127-l128",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 127,
+            "line_end": 128,
+            "section_id": "faq#s47"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 126,
+            "line_end": 128,
+            "section_id": "faq#s47"
+          },
+          "snippet": "Non, le délai est plus court. La déclaration d'arrivée à la commune doit être faite dans les trois jours de votre entrée sur le territoire, et non dans les hui…",
+          "text": "Les délais d'arrivée sont-ils les mêmes hors Union européenne ?\nNon, le délai est plus court. La déclaration d'arrivée à la commune doit être faite dans les trois jours de votre entrée sur le territoire, et non dans les huit jours. Vous devez ensuite introduire une demande de titre de séjour dans les trois mois de votre arrivée.\nVoir la fiche : Les huit premiers jours",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "arrivée",
+            "demande",
+            "déclaration d'arrivée",
+            "huit jours",
+            "huit premiers jours",
+            "premiers jours"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee",
+            "demande"
+          ],
+          "section_title": "Les délais d'arrivée sont-ils les mêmes hors Union européenne ?",
+          "breadcrumb": "Questions et réponses › Administratif › Les délais d'arrivée sont-ils les mêmes hors Union européenne ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers 'demande' and 'enregistrement' (coverage 0.40) but its page's topic 'other' is not the question's 'vehicle', which permis#l2-l5 is on: supporting.",
+          "score": 6.09,
+          "matched_share": 0.4,
+          "coverage": 0.4,
+          "covered_words": [
+            "demande",
+            "enregistrement"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l169-l169",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 169,
+            "line_end": 169,
+            "section_id": "faq#s63"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 168,
+            "line_end": 170,
+            "section_id": "faq#s63"
+          },
+          "snippet": "Commencez par là, avant même le logement. L'enregistrement à la commune précède l'inscription scolaire, et les sections les plus demandées se remplissent parfo…",
+          "text": "Comment se fait l'inscription à l'école ?\nCommencez par là, avant même le logement. L'enregistrement à la commune précède l'inscription scolaire, et les sections les plus demandées se remplissent parfois un an à l'avance.\nVoir la fiche : Scolariser ses enfants",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "enregistrement",
+            "enregistrement à la commune",
+            "inscription"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee"
+          ],
+          "section_title": "Comment se fait l'inscription à l'école ?",
+          "breadcrumb": "Questions et réponses › Famille › Comment se fait l'inscription à l'école ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only 'enregistrement' (0.20 of the question's words); 'déposer', 'demande', 'permis' and 'conduire' not covered: supporting.",
+          "score": 2.56,
+          "matched_share": 0.2,
+          "coverage": 0.2,
+          "covered_words": [
+            "enregistrement"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "demande",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "fiches#l3-l3",
+          "anchor": {
+            "doc_id": "fiches",
+            "line_start": 3,
+            "line_end": 3,
+            "section_id": "fiches#s2"
+          },
+          "context": {
+            "doc_id": "fiches",
+            "line_start": 3,
+            "line_end": 4,
+            "section_id": "fiches#s2"
+          },
+          "snippet": "Les huit premiers jours",
+          "text": "Les huit premiers jours\nTout part de la commune. Sans cette déclaration, ni matricule, ni sécurité sociale, ni banque, ni école.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "huit premiers jours",
+            "premiers jours"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee"
+          ],
+          "section_title": "Les huit premiers jours",
+          "breadcrumb": "Fiches pratiques › Les huit premiers jours",
+          "url_anchor": "https://lux-guide.github.io/#fiches#fiches-grid",
+          "role": "supporting",
+          "reason": "Covers only 'enregistrement' (0.20 of the question's words); 'déposer', 'demande', 'permis' and 'conduire' not covered: supporting.",
+          "score": 2.28,
+          "matched_share": 0.2,
+          "coverage": 0.2,
+          "covered_words": [
+            "enregistrement"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "demande",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l44-l44",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 44,
+            "line_end": 44,
+            "section_id": "faq#s17"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 44,
+            "line_end": 46,
+            "section_id": "faq#s17"
+          },
+          "snippet": "Quelle garantie locative un bailleur peut-il demander ?",
+          "text": "Quelle garantie locative un bailleur peut-il demander ?\nDeux mois de loyer au maximum depuis la réforme du 1er août 2024, contre trois auparavant. Les frais d'agence sont par ailleurs partagés par moitié entre bailleur et locataire.\nVoir la fiche : Signer un bail",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "demande"
+          ],
+          "matched_concepts": [
+            "demande"
+          ],
+          "section_title": "Quelle garantie locative un bailleur peut-il demander ?",
+          "breadcrumb": "Questions et réponses › Logement › Quelle garantie locative un bailleur peut-il demander ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only 'demande' (0.20 of the question's words); 'déposer', 'enregistrement', 'permis' and 'conduire' not covered: supporting.",
+          "score": 2.0,
+          "matched_share": 0.2,
+          "coverage": 0.2,
+          "covered_words": [
+            "demande"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "enregistrement",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l130-l131",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 130,
+            "line_end": 131,
+            "section_id": "faq#s48"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 129,
+            "line_end": 131,
+            "section_id": "faq#s48"
+          },
+          "snippet": "Non, une seconde formalité suit. Un citoyen de l'Union qui reste plus de trois mois doit remplir une déclaration d'enregistrement auprès de la commune dans les…",
+          "text": "La déclaration à la commune suffit-elle ?\nNon, une seconde formalité suit. Un citoyen de l'Union qui reste plus de trois mois doit remplir une déclaration d'enregistrement auprès de la commune dans les quatre-vingt-dix jours de son arrivée. Un ressortissant de pays tiers doit demander son titre de séjour dans les trois mois. Ce sont des démarches distinctes de la déclaration d'arrivée, avec leur propre échéance.\nVoir la fiche : Les huit premiers jours",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "arrivée",
+            "demande",
+            "déclaration d'arrivée",
+            "enregistrement",
+            "huit premiers jours",
+            "premiers jours"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee",
+            "demande"
+          ],
+          "section_title": "La déclaration à la commune suffit-elle ?",
+          "breadcrumb": "Questions et réponses › Administratif › La déclaration à la commune suffit-elle ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'La déclaration à la commune suffit-elle ?' names 'commune', not 'declaration arrivee / permis de conduire': its page's topic 'other' is not the question's 'vehicle', and permis#l2-l5 answers on a 'vehicle' page.",
+          "score": 6.24,
+          "matched_share": 0.4,
+          "coverage": 0.4,
+          "covered_words": [
+            "demande",
+            "enregistrement"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l139-l140",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 139,
+            "line_end": 140,
+            "section_id": "faq#s51"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 138,
+            "line_end": 140,
+            "section_id": "faq#s51"
+          },
+          "snippet": "Il est attribué lors de l'enregistrement à la commune et figure sur le certificat de résidence, sous la mention numéro d'identification. Il compte treize chiff…",
+          "text": "Comment obtient-on le matricule ?\nIl est attribué lors de l'enregistrement à la commune et figure sur le certificat de résidence, sous la mention numéro d'identification. Il compte treize chiffres : votre date de naissance inversée, suivie de cinq chiffres.\nVoir la fiche : Les huit premiers jours",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "enregistrement",
+            "enregistrement à la commune",
+            "huit premiers jours",
+            "premiers jours"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee"
+          ],
+          "section_title": "Comment obtient-on le matricule ?",
+          "breadcrumb": "Questions et réponses › Administratif › Comment obtient-on le matricule ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Comment obtient-on le matricule ?' names 'matricule', not 'declaration arrivee / permis de conduire'; its lines carry only 'enregistrement', 'enregistrement à la commune', 'huit premiers jours' and 'premiers jours'.",
+          "score": 2.74,
+          "matched_share": 0.2,
+          "coverage": 0.2,
+          "covered_words": [
+            "enregistrement"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "demande",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l136-l137",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 136,
+            "line_end": 137,
+            "section_id": "faq#s50"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 135,
+            "line_end": 137,
+            "section_id": "faq#s50"
+          },
+          "snippet": "Dans les huit jours suivant l'emménagement. Cette déclaration produit le certificat de résidence et le matricule, indispensables à toute la suite. Prenez rende…",
+          "text": "Dans quel délai faut-il se déclarer à la commune ?\nDans les huit jours suivant l'emménagement. Cette déclaration produit le certificat de résidence et le matricule, indispensables à toute la suite. Prenez rendez-vous en ligne avant même d'avoir les clés.\nVoir la fiche : Les huit premiers jours",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "huit jours",
+            "huit premiers jours",
+            "premiers jours"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee"
+          ],
+          "section_title": "Dans quel délai faut-il se déclarer à la commune ?",
+          "breadcrumb": "Questions et réponses › Administratif › Dans quel délai faut-il se déclarer à la commune ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Dans quel délai faut-il se déclarer à la commune ?' names 'commune', not 'declaration arrivee / permis de conduire'; its lines carry only 'huit jours', 'huit premiers jours' and 'premiers jours'.",
+          "score": 1.62,
+          "matched_share": 0.2,
+          "coverage": 0.2,
+          "covered_words": [
+            "enregistrement"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "demande",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l17-l17",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 17,
+            "line_end": 17,
+            "section_id": "faq#s7"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 16,
+            "line_end": 18,
+            "section_id": "faq#s7"
+          },
+          "snippet": "Dans les six mois de la déclaration d'arrivée à la commune. Avant la SNCA, il faut le numéro d'immatriculation, l'assurance luxembourgeoise et la vignette 705…",
+          "text": "Dans quel délai immatriculer un véhicule qu'on amène avec soi ?\nDans les six mois de la déclaration d'arrivée à la commune. Avant la SNCA, il faut le numéro d'immatriculation, l'assurance luxembourgeoise et la vignette 705 des douanes, cette dernière étant exigée même quand aucune TVA n'est due.\nVoir la fiche : Immatriculer son véhicule",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "arrivée",
+            "déclaration d'arrivée"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee"
+          ],
+          "section_title": "Dans quel délai immatriculer un véhicule qu'on amène avec soi ?",
+          "breadcrumb": "Questions et réponses › Mobilite › Dans quel délai immatriculer un véhicule qu'on amène avec soi ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Dans quel délai immatriculer un véhicule qu'on amène avec soi ?' names 'voiture', not 'declaration arrivee / permis de conduire'; its lines carry only 'arrivée' and 'déclaration d'arrivée'.",
+          "score": 1.02,
+          "matched_share": 0.2,
+          "coverage": 0.2,
+          "covered_words": [
+            "enregistrement"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "demande",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "fiches#l62-l62",
+          "anchor": {
+            "doc_id": "fiches",
+            "line_start": 62,
+            "line_end": 62,
+            "section_id": "fiches#s31"
+          },
+          "context": {
+            "doc_id": "fiches",
+            "line_start": 61,
+            "line_end": 62,
+            "section_id": "fiches#s31"
+          },
+          "snippet": "Un ordre imposé, une pièce à obtenir à chaque étape, et six mois après la déclaration d'arrivée pour tout boucler.",
+          "text": "Immatriculer son véhicule\nUn ordre imposé, une pièce à obtenir à chaque étape, et six mois après la déclaration d'arrivée pour tout boucler.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "arrivée",
+            "déclaration d'arrivée"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee"
+          ],
+          "section_title": "Immatriculer son véhicule",
+          "breadcrumb": "Fiches pratiques › Immatriculer son véhicule",
+          "url_anchor": "https://lux-guide.github.io/#fiches#fiches-grid",
+          "role": "discarded",
+          "reason": "The section 'Immatriculer son véhicule' names 'voiture', not 'declaration arrivee / permis de conduire'; its lines carry only 'arrivée' and 'déclaration d'arrivée'.",
+          "score": 1.02,
+          "matched_share": 0.2,
+          "coverage": 0.2,
+          "covered_words": [
+            "enregistrement"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "demande",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l172-l172",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 172,
+            "line_end": 172,
+            "section_id": "faq#s64"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 171,
+            "line_end": 173,
+            "section_id": "faq#s64"
+          },
+          "snippet": "Oui, le chèque-service accueil, obtenu à la commune après l'enregistrement. Il subventionne les heures de garde chez les prestataires conventionnés, avec un re…",
+          "text": "Existe-t-il une aide pour la crèche ?\nOui, le chèque-service accueil, obtenu à la commune après l'enregistrement. Il subventionne les heures de garde chez les prestataires conventionnés, avec un reste à charge fonction du revenu.\nVoir la fiche : Garde d'enfants et chèque-service",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "enregistrement"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee"
+          ],
+          "section_title": "Existe-t-il une aide pour la crèche ?",
+          "breadcrumb": "Questions et réponses › Famille › Existe-t-il une aide pour la crèche ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Existe-t-il une aide pour la crèche ?' names 'garde enfants', not 'declaration arrivee / permis de conduire'; its lines carry only 'enregistrement'.",
+          "score": 1.0,
+          "matched_share": 0.2,
+          "coverage": 0.2,
+          "covered_words": [
+            "enregistrement"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "demande",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l5-l5",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 5,
+            "line_end": 5,
+            "section_id": "faq#s3"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 4,
+            "line_end": 6,
+            "section_id": "faq#s3"
+          },
+          "snippet": "Il n'est pas exigé, ni pour assurer ni pour immatriculer : il ne joue que sur le prix. Si vous avez eu un contrat à votre nom, réclamez-le, c'est un droit : vo…",
+          "text": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?\nIl n'est pas exigé, ni pour assurer ni pour immatriculer : il ne joue que sur le prix. Si vous avez eu un contrat à votre nom, réclamez-le, c'est un droit : votre assureur doit le fournir dans les quinze jours et il couvre au moins cinq ans. Sans contrat à votre nom, il n'y a rien à demander, et vous entrez au degré neutre de l'échelle luxembourgeoise, le degré 11 sur une échelle qui va de -3 à 22.\nVoir la fiche : Assurer son véhicule",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "demande"
+          ],
+          "matched_concepts": [
+            "demande"
+          ],
+          "section_title": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "breadcrumb": "Questions et réponses › Mobilite › Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?' names 'voiture', not 'declaration arrivee / permis de conduire'; its lines carry only 'demande'.",
+          "score": 1.0,
+          "matched_share": 0.2,
+          "coverage": 0.2,
+          "covered_words": [
+            "demande"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "enregistrement",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l70-l70",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 70,
+            "line_end": 70,
+            "section_id": "faq#s26"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 69,
+            "line_end": 71,
+            "section_id": "faq#s26"
+          },
+          "snippet": "Deux à trois semaines en période normale, mais nettement plus de juin à septembre, saison des déménagements. Réclamez une solution 4G provisoire : plusieurs op…",
+          "text": "Combien de temps pour avoir internet ?\nDeux à trois semaines en période normale, mais nettement plus de juin à septembre, saison des déménagements. Réclamez une solution 4G provisoire : plusieurs opérateurs en prêtent une, rarement sans qu'on la demande.\nVoir la fiche : Internet et téléphonie",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "demande"
+          ],
+          "matched_concepts": [
+            "demande"
+          ],
+          "section_title": "Combien de temps pour avoir internet ?",
+          "breadcrumb": "Questions et réponses › Quotidien › Combien de temps pour avoir internet ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Combien de temps pour avoir internet ?' names 'internet', not 'declaration arrivee / permis de conduire'; its lines carry only 'demande'.",
+          "score": 1.0,
+          "matched_share": 0.2,
+          "coverage": 0.2,
+          "covered_words": [
+            "demande"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "enregistrement",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l8-l8",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 8,
+            "line_end": 8,
+            "section_id": "faq#s4"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 7,
+            "line_end": 9,
+            "section_id": "faq#s4"
+          },
+          "snippet": "Pas automatiquement. Le relevé appartient au preneur d'assurance et ne nomme que les conducteurs désignés au contrat : celui de votre proche ne vous mentionne…",
+          "text": "J'ai conduit la voiture d'un proche sans être inscrit au contrat, est-ce que ça compte ?\nPas automatiquement. Le relevé appartient au preneur d'assurance et ne nomme que les conducteurs désignés au contrat : celui de votre proche ne vous mentionne pas. Vous pouvez demander à son assureur une attestation écrite disant que vous conduisiez sans sinistre, mais aucun assureur luxembourgeois n'est tenu de l'accepter. Se faire inscrire comme conducteur désigné évite le problème pour la suite.\nVoir la fiche : Assurer son véhicule",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "demande"
+          ],
+          "matched_concepts": [
+            "demande"
+          ],
+          "section_title": "J'ai conduit la voiture d'un proche sans être inscrit au contrat, est-ce que ça compte ?",
+          "breadcrumb": "Questions et réponses › Mobilite › J'ai conduit la voiture d'un proche sans être inscrit au contrat, est-ce que ça compte ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'J'ai conduit la voiture d'un proche sans être inscrit au contrat, est-ce que ça compte ?' names 'voiture', not 'declaration arrivee / permis de conduire'; its lines carry only 'demande'.",
+          "score": 1.0,
+          "matched_share": 0.2,
+          "coverage": 0.2,
+          "covered_words": [
+            "demande"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "enregistrement",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l162-l162",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 162,
+            "line_end": 162,
+            "section_id": "faq#s60"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 161,
+            "line_end": 163,
+            "section_id": "faq#s60"
+          },
+          "snippet": "Déclarez-la au CCSS dans les huit jours. Si le revenu reste sous le tiers du salaire social minimum, demandez expressément la dispense pour revenu insignifiant…",
+          "text": "Peut-on exercer une activité indépendante en plus d'un emploi salarié ?\nDéclarez-la au CCSS dans les huit jours. Si le revenu reste sous le tiers du salaire social minimum, demandez expressément la dispense pour revenu insignifiant. Vérifiez surtout si votre activité exige une autorisation d'établissement.\nVoir la fiche : Exercer en indépendant",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "huit jours"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee"
+          ],
+          "section_title": "Peut-on exercer une activité indépendante en plus d'un emploi salarié ?",
+          "breadcrumb": "Questions et réponses › Travail › Peut-on exercer une activité indépendante en plus d'un emploi salarié ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Peut-on exercer une activité indépendante en plus d'un emploi salarié ?' names 'adem', not 'declaration arrivee / permis de conduire'; its lines carry only 'huit jours'.",
+          "score": 0.48,
+          "matched_share": 0.2,
+          "coverage": 0.2,
+          "covered_words": [
+            "enregistrement"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "demande",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l83-l83",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 83,
+            "line_end": 83,
+            "section_id": "faq#s31"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 82,
+            "line_end": 84,
+            "section_id": "faq#s31"
+          },
+          "snippet": "Non si vous êtes salarié : c'est l'employeur qui déclare votre entrée au Centre commun de la sécurité sociale, sans démarche de votre part. Votre carte arrive…",
+          "text": "Qui déclare l'entrée à la sécurité sociale ?\nNon si vous êtes salarié : c'est l'employeur qui déclare votre entrée au Centre commun de la sécurité sociale, sans démarche de votre part. Votre carte arrive ensuite par courrier. Les travailleurs indépendants, eux, déclarent leur activité eux-mêmes, dans un délai de huit jours.\nVoir la fiche : Sécurité sociale et remboursements",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "huit jours"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee"
+          ],
+          "section_title": "Qui déclare l'entrée à la sécurité sociale ?",
+          "breadcrumb": "Questions et réponses › Sante › Qui déclare l'entrée à la sécurité sociale ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Qui déclare l'entrée à la sécurité sociale ?' names 'cns', not 'declaration arrivee / permis de conduire'; its lines carry only 'huit jours'.",
+          "score": 0.48,
+          "matched_share": 0.2,
+          "coverage": 0.2,
+          "covered_words": [
+            "enregistrement"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "demande",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "fiches#l42-l42",
+          "anchor": {
+            "doc_id": "fiches",
+            "line_start": 42,
+            "line_end": 42,
+            "section_id": "fiches#s21"
+          },
+          "context": {
+            "doc_id": "fiches",
+            "line_start": 41,
+            "line_end": 42,
+            "section_id": "fiches#s21"
+          },
+          "snippet": "Déclaration au CCSS sous huit jours, dispense possible, et une autorisation d'établissement à vérifier avant de facturer.",
+          "text": "Exercer en indépendant\nDéclaration au CCSS sous huit jours, dispense possible, et une autorisation d'établissement à vérifier avant de facturer.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "huit jours"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee"
+          ],
+          "section_title": "Exercer en indépendant",
+          "breadcrumb": "Fiches pratiques › Exercer en indépendant",
+          "url_anchor": "https://lux-guide.github.io/#fiches#fiches-grid",
+          "role": "discarded",
+          "reason": "The section 'Exercer en indépendant' names 'independant', not 'declaration arrivee / permis de conduire'; its lines carry only 'huit jours'.",
+          "score": 0.48,
+          "matched_share": 0.2,
+          "coverage": 0.2,
+          "covered_words": [
+            "enregistrement"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "demande",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l80-l80",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 80,
+            "line_end": 80,
+            "section_id": "faq#s30"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 79,
+            "line_end": 81,
+            "section_id": "faq#s30"
+          },
+          "snippet": "Elle est facultative et couvre surtout la chambre seule, le dentaire et l'optique. Si vous en prenez une, souscrivez dès l'arrivée : la plupart des contrats pr…",
+          "text": "Une complémentaire santé est-elle utile ?\nElle est facultative et couvre surtout la chambre seule, le dentaire et l'optique. Si vous en prenez une, souscrivez dès l'arrivée : la plupart des contrats prévoient des délais de carence de plusieurs mois sur ces postes.\nVoir la fiche : La complémentaire santé",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "arrivée"
+          ],
+          "matched_concepts": [
+            "declaration_arrivee"
+          ],
+          "section_title": "Une complémentaire santé est-elle utile ?",
+          "breadcrumb": "Questions et réponses › Sante › Une complémentaire santé est-elle utile ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Une complémentaire santé est-elle utile ?' names 'mutuelle', not 'declaration arrivee / permis de conduire'; its lines carry only 'arrivée'.",
+          "score": 0.42,
+          "matched_share": 0.2,
+          "coverage": 0.2,
+          "covered_words": [
+            "enregistrement"
+          ],
+          "uncovered_words": [
+            "déposer",
+            "demande",
+            "permis",
+            "conduire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        }
+      ],
+      "methods_used": [
+        "keyword_lines",
+        "title_match",
+        "arbiter_rules",
+        "sweep"
+      ],
+      "methods_skipped": {
+        "anchor_regex": "answer type text asks for no typed anchor",
+        "row_match": "answer_type=text and no table column named",
+        "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+        "llm_arbiter": "no model key configured",
+        "current_page_boost": "no pages_hint: no page to boost"
+      },
+      "not_found": false,
+      "not_found_reason": null,
+      "confidence": 0.819,
+      "per_section_audit": [
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s1",
+          "title": "Questions et réponses",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s2",
+          "title": "Mobilite",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s3",
+          "title": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s4",
+          "title": "J'ai conduit la voiture d'un proche sans être inscrit au contrat, est-ce que ça compte ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s5",
+          "title": "La carte grise n'est pas au nom du vendeur, est-ce bloquant ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s6",
+          "title": "Faut-il repasser le contrôle technique en arrivant au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s7",
+          "title": "Dans quel délai immatriculer un véhicule qu'on amène avec soi ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s8",
+          "title": "Un permis de conduire européen reste-t-il valable ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s9",
+          "title": "Comment s'immatricule un véhicule importé ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s10",
+          "title": "Les transports publics sont-ils vraiment gratuits ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s11",
+          "title": "Logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s12",
+          "title": "Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s13",
+          "title": "Combien de jours de télétravail un frontalier peut-il faire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s14",
+          "title": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s15",
+          "title": "Sur quels critères choisir sa commune ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s16",
+          "title": "Comment comparer deux contrats d'assurance ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s17",
+          "title": "Quelle garantie locative un bailleur peut-il demander ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s18",
+          "title": "Comment se cherche un logement au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s19",
+          "title": "À quel moment souscrire l'assurance habitation ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s20",
+          "title": "Quelle part du prix une banque finance-t-elle ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s21",
+          "title": "La TVA sur un logement neuf est-elle toujours de 3 % ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s22",
+          "title": "Qui peut prétendre à un logement à coût modéré ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s23",
+          "title": "Quotidien",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s24",
+          "title": "Vers qui se tourner en cas de litige avec un professionnel ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s25",
+          "title": "Le luxembourgeois est-il nécessaire pour travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s26",
+          "title": "Combien de temps pour avoir internet ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s27",
+          "title": "Faut-il apprendre le luxembourgeois ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s28",
+          "title": "Comment fonctionne le tri des déchets ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s29",
+          "title": "Sante",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s30",
+          "title": "Une complémentaire santé est-elle utile ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s31",
+          "title": "Qui déclare l'entrée à la sécurité sociale ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s32",
+          "title": "Quel numéro d'urgence appeler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s33",
+          "title": "Impots",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s34",
+          "title": "Comment l'impôt est-il prélevé quand on est deux à travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s35",
+          "title": "Pourquoi la déclaration se solde-t-elle souvent par un montant à payer ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s36",
+          "title": "Qu'est-ce que le régime des impatriés ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s37",
+          "title": "Existe-t-il une classe d'impôt 1b ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s38",
+          "title": "Qui relève de la classe 1a ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s39",
+          "title": "Un divorce ou un décès fait-il changer de classe d'impôt immédiatement ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s40",
+          "title": "Le régime des impatriés dépend-il de la classe d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s41",
+          "title": "Quelle différence entre classe 1 et classe 2 ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s42",
+          "title": "Qu'est-ce qui se déduit des impôts ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s43",
+          "title": "Comment faire corriger une classe d'impôt inexacte ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s44",
+          "title": "Comment obtient-on sa fiche de retenue d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s45",
+          "title": "Les intérêts d'un prêt immobilier sont-ils déductibles ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s46",
+          "title": "Administratif",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s47",
+          "title": "Les délais d'arrivée sont-ils les mêmes hors Union européenne ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s48",
+          "title": "La déclaration à la commune suffit-elle ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s49",
+          "title": "Combien de temps faut-il pour obtenir la nationalité ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s50",
+          "title": "Dans quel délai faut-il se déclarer à la commune ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s51",
+          "title": "Comment obtient-on le matricule ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s52",
+          "title": "Peut-on avoir la double nationalité ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s53",
+          "title": "Finances",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s54",
+          "title": "Un compte bancaire étranger peut-il servir à recevoir le salaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s55",
+          "title": "Que faut-il pour ouvrir un compte bancaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s56",
+          "title": "Le salaire luxembourgeois compense-t-il le coût de la vie ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s57",
+          "title": "Un compte bancaire luxembourgeois est-il obligatoire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s58",
+          "title": "Qu'est-ce que l'indexation des salaires ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s59",
+          "title": "Travail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s60",
+          "title": "Peut-on exercer une activité indépendante en plus d'un emploi salarié ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s61",
+          "title": "Combien de jours de congé donne la loi ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s62",
+          "title": "Famille",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s63",
+          "title": "Comment se fait l'inscription à l'école ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s64",
+          "title": "Existe-t-il une aide pour la crèche ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s65",
+          "title": "Quel est le montant des allocations familiales ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s1",
+          "title": "Fiches pratiques",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s2",
+          "title": "Les huit premiers jours",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s3",
+          "title": "Sécurité sociale et remboursements",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s4",
+          "title": "La complémentaire santé",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s5",
+          "title": "Comment fonctionne l'administration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s6",
+          "title": "LuxTrust et MyGuichet",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s7",
+          "title": "Trouver un logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s8",
+          "title": "Choisir sa commune",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s9",
+          "title": "Habiter en France, en Belgique ou en Allemagne",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s10",
+          "title": "Contester une facture ou un service",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s11",
+          "title": "Emménager et meubler",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s12",
+          "title": "Signer un bail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s13",
+          "title": "Assurer son logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s14",
+          "title": "Acheter un logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s15",
+          "title": "Logement abordable et à coût modéré",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s16",
+          "title": "Classes d'impôt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s17",
+          "title": "Ce qui réduit votre impôt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s18",
+          "title": "Conseil fiscal : les leviers de la première année",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s19",
+          "title": "Régime des impatriés",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s20",
+          "title": "Déduire les intérêts d'emprunt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s21",
+          "title": "Exercer en indépendant",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s22",
+          "title": "Allocations familiales",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s23",
+          "title": "Congés et jours fériés",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s24",
+          "title": "Chercher un emploi",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s25",
+          "title": "Banque et moyens de paiement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s26",
+          "title": "Salaire, coût de la vie et indexation",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s27",
+          "title": "Scolariser ses enfants",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s28",
+          "title": "Garde d'enfants et chèque-service",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s29",
+          "title": "Se soigner au quotidien",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s30",
+          "title": "Permis de conduire",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s31",
+          "title": "Immatriculer son véhicule",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s32",
+          "title": "Assurer son véhicule",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s33",
+          "title": "Transports publics gratuits",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s34",
+          "title": "Internet et téléphonie",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s35",
+          "title": "Langues et intégration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s36",
+          "title": "Nationalité luxembourgeoise",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s37",
+          "title": "Déchets et vie communale",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "permis",
+          "section_id": "permis#s1",
+          "title": "Permis de conduire",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "permis",
+          "section_id": "permis#s2",
+          "title": "À retenir",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "permis",
+          "section_id": "permis#s3",
+          "title": "Sources officielles",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        }
+      ],
+      "route_pages": [
+        {
+          "doc_id": "fiches",
+          "score": 9.48,
+          "reason": "kept: 5 term(s) in the summary line (permis, conduire, huit premiers jours, premiers jours, permis de conduire); heading title match (Les huit premiers jours, Permis de conduire); concept(s) in tags (declaration arrivee, permis de conduire); tally 9.48"
+        },
+        {
+          "doc_id": "faq",
+          "score": 9.1,
+          "reason": "kept: 3 term(s) in the summary line (permis, conduire, permis de conduire); heading title match (Comment se fait l'inscription à l'école ?, Les délais d'arrivée sont-ils les mêmes hors Union européenne ?, Quelle garantie locative un bailleur peut-il demander ?, Un permis de conduire européen reste-t-il valable ?); concept(s) in tags (declaration arrivee, permis de conduire); tally 9.1"
+        },
+        {
+          "doc_id": "permis",
+          "score": 8.534,
+          "reason": "kept: 4 term(s) in the summary line (enregistrement, permis, conduire, permis de conduire); heading title match (Permis de conduire); concept(s) in tags (permis de conduire); document title 'Permis de conduire' covers 0.67 of the question's words; tally 8.534"
+        }
+      ],
+      "route_sections": [
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s30",
+          "title": "Permis de conduire",
+          "score": 12.0,
+          "reason": "title 'Permis de conduire' matches permis, conduire, permis de conduire, hint:Permis de conduire; 4 term(s) in its lines (conduire, enregistrement, permis, permis de conduire); a leaf, stop here"
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s2",
+          "title": "Les huit premiers jours",
+          "score": 6.0,
+          "reason": "title 'Les huit premiers jours' matches huit premiers jours, premiers jours; 2 term(s) in its lines (huit premiers jours, premiers jours); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s8",
+          "title": "Un permis de conduire européen reste-t-il valable ?",
+          "score": 12.0,
+          "reason": "title 'Un permis de conduire européen reste-t-il valable ?' matches permis, conduire, permis de conduire, hint:Permis de conduire; 4 term(s) in its lines (conduire, enregistrement, permis, permis de conduire); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s47",
+          "title": "Les délais d'arrivée sont-ils les mêmes hors Union européenne ?",
+          "score": 8.0,
+          "reason": "title 'Les délais d'arrivée sont-ils les mêmes hors Union européenne ?' matches arrivée; 6 term(s) in its lines (arrivée, demande, déclaration d'arrivée, huit jours, huit premiers jours, premiers jours); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s48",
+          "title": "La déclaration à la commune suffit-elle ?",
+          "score": 6.0,
+          "reason": "6 term(s) in its lines (arrivée, demande, déclaration d'arrivée, enregistrement, huit premiers jours, premiers jours); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s51",
+          "title": "Comment obtient-on le matricule ?",
+          "score": 4.0,
+          "reason": "4 term(s) in its lines (enregistrement, enregistrement à la commune, huit premiers jours, premiers jours); a leaf, stop here"
+        },
+        {
+          "doc_id": "permis",
+          "section_id": "permis#s1",
+          "title": "Permis de conduire",
+          "score": 15.0,
+          "reason": "title 'Permis de conduire' matches permis, conduire, permis de conduire, hint:Permis de conduire; 7 term(s) in its lines (conduire, demande, déposer, enregistrement, permis, permis de conduire, permis étranger); 11 lines, small enough to read whole"
+        }
+      ],
+      "route_notes": [
+        "fiches: no section of the outline carries a term; the page is read whole",
+        "faq: no section of the outline carries a term; the page is read whole"
+      ],
+      "sweep_concepts": [
+        {
+          "concept": "deposer",
+          "variants": [
+            "déposer"
+          ],
+          "pages_with_hits": [
+            "simulateur",
+            "vehicule"
+          ],
+          "line_hits": 2
+        },
+        {
+          "concept": "demande",
+          "variants": [
+            "demande"
+          ],
+          "pages_with_hits": [
+            "allocations",
+            "arrivee",
+            "assurance_auto",
+            "avantages",
+            "bail",
+            "banque",
+            "carte",
+            "cartes",
+            "comparateur",
+            "conseil_fiscal",
+            "ecole",
+            "faq",
+            "frontalier",
+            "garde",
+            "impatries",
+            "impots_classes",
+            "independant",
+            "langues",
+            "lignes",
+            "luxtrust",
+            "matricule",
+            "permis",
+            "simulateur",
+            "telecom",
+            "vehicule"
+          ],
+          "line_hits": 48
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variants": [
+            "déclaration d'arrivée",
+            "inscription",
+            "s'inscrire",
+            "inscription à la commune",
+            "declaration of arrival",
+            "registration",
+            "register with the commune",
+            "Anmeldung",
+            "anmelden",
+            "déclarer son arrivée",
+            "s'inscrire à la commune",
+            "enregistrement",
+            "enregistrement à la commune",
+            "registre de la population",
+            "arrivée",
+            "register at the commune",
+            "arrival declaration",
+            "arrival",
+            "Ankunftserklärung",
+            "huit premiers jours",
+            "premiers jours",
+            "huit jours",
+            "first days",
+            "first eight days",
+            "melden",
+            "melde",
+            "sich anmelden",
+            "bei der Gemeinde anmelden",
+            "Anmeldung bei der Gemeinde",
+            "Wohnsitz anmelden",
+            "anmeldung",
+            "ankunftserklärung",
+            "bei der gemeinde anmelden",
+            "anmeldung bei der gemeinde",
+            "wohnsitz anmelden"
+          ],
+          "pages_with_hits": [
+            "accueil",
+            "achat",
+            "administration",
+            "arrivee",
+            "assurance_sante",
+            "avantages",
+            "carte",
+            "choisir_commune",
+            "dechets",
+            "ecole",
+            "emploi",
+            "faq",
+            "fiches",
+            "garde",
+            "impots_classes",
+            "independant",
+            "lignes",
+            "luxtrust",
+            "matricule",
+            "parcours",
+            "permis",
+            "sante_pratique",
+            "vehicule"
+          ],
+          "line_hits": 96
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variants": [
+            "permis de conduire",
+            "permis",
+            "driving licence",
+            "driving license",
+            "driver's license",
+            "licence",
+            "Führerschein",
+            "échange de permis",
+            "permis étranger",
+            "exchange a licence",
+            "führerschein",
+            "conduire"
+          ],
+          "pages_with_hits": [
+            "administration",
+            "faq",
+            "fiches",
+            "luxtrust",
+            "parcours",
+            "permis",
+            "vehicule"
+          ],
+          "line_hits": 35
+        }
+      ],
+      "sweep_rows": [
+        {
+          "concept": "deposer",
+          "variant": "déposer",
+          "doc_id": "simulateur",
+          "line_num": 42,
+          "snippet": "Sept dispositifs pour l'achat d'une résidence principale. Deux se règlent chez le notaire ou avec l'entreprise, les autres se demandent au Guichet unique des a…"
+        },
+        {
+          "concept": "deposer",
+          "variant": "déposer",
+          "doc_id": "vehicule",
+          "line_num": 48,
+          "snippet": "Déposer le dossier à la SNCA"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "allocations",
+          "line_num": 4,
+          "snippet": "Le montant de base s'élève à 315,04 euros par mois et par enfant, majoré de 23,81 euros au-delà de six ans et de 59,44 euros au-delà de douze ans, valeurs appl…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "allocations",
+          "line_num": 5,
+          "snippet": "Seule la demande initiale nécessite une démarche, auprès de la caisse, en ligne via MyGuichet ou par formulaire. Ces montants suivent l'indexation générale : i…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "arrivee",
+          "line_num": 8,
+          "snippet": "Ensuite, la déclaration d'arrivée ne suffit pas à elle seule. Un citoyen de l'Union qui reste plus de trois mois doit remplir, dans les quatre-vingt-dix jours…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "arrivee",
+          "line_num": 12,
+          "snippet": "Prévoyez les originaux des pièces d'identité de chaque membre du foyer, le bail signé ou l'acte d'achat, et, selon votre situation familiale, les actes de nais…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "assurance_auto",
+          "line_num": 5,
+          "snippet": "Le point qui pèse le plus sur la prime est votre historique de sinistres, et le document qui le porte s'appelle relevé d'information en France, attestation de…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "avantages",
+          "line_num": 2,
+          "snippet": "Ce que l'État rend, ou ne prélève pas, moment de vie par moment de vie. Chaque carte donne le montant, à qui il s'adresse et, surtout, si l'avantage vient tout…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "avantages",
+          "line_num": 89,
+          "snippet": "C'est le notaire qui fait la demande à la signature de l'acte. Le logement doit être occupé dans les deux ans, quatre pour un terrain ou un logement en constru…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "avantages",
+          "line_num": 99,
+          "snippet": "Les travaux de création ou de rénovation d'un logement affecté à l'habitation principale relèvent du taux super-réduit de TVA de 3 %. Soit l'artisan facture di…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "avantages",
+          "line_num": 100,
+          "snippet": "Le logement doit rester la résidence principale pendant deux ans à partir de l'achèvement. Le remboursement se demande au plus tard cinq ans après le 31 décemb…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "avantages",
+          "line_num": 120,
+          "snippet": "La demande se fait dans l'année qui suit l'acte notarié ou le début des travaux, au Guichet unique des aides au logement. Passé ce délai, la prime est perdue."
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "avantages",
+          "line_num": 130,
+          "snippet": "La demande se dépose à tout moment de l'année au Guichet unique des aides au logement, et un simulateur officiel donne une estimation avant de la remplir."
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "avantages",
+          "line_num": 139,
+          "snippet": "Quand un propriétaire demande une garantie locative que le locataire ne peut pas avancer, le ministère du Logement et de l'Aménagement du territoire peut se po…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "avantages",
+          "line_num": 150,
+          "snippet": "L'accord de principe se demande avant de commencer les travaux, entre le 1er janvier 2026 et le 31 décembre 2030. Des travaux engagés sans cet accord ne sont p…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "avantages",
+          "line_num": 161,
+          "snippet": "Seule la première demande est à faire, auprès de la Caisse pour l'avenir des enfants. Les montants suivent l'indexation, ils sont revalorisés à chaque tranche…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "avantages",
+          "line_num": 181,
+          "snippet": "Le congé se demande à l'employeur puis à la caisse, avec des délais qui dépendent du moment choisi. Le calculateur officiel donne le montant sur votre revenu."
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "avantages",
+          "line_num": 190,
+          "snippet": "Un parent en classe d'impôt 1a qui élève seul au moins un enfant ouvrant droit à la modération d'impôt reçoit, sur demande, un crédit d'impôt de 3 504 euros pa…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "avantages",
+          "line_num": 201,
+          "snippet": "La demande se renouvelle chaque semestre, sur MyGuichet. La bourse est virée deux à quatre semaines après la lettre d'accord."
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "avantages",
+          "line_num": 286,
+          "snippet": "Le Fonds national de solidarité verse, sur demande, une allocation de vie chère aux ménages à revenu modeste : 1 817 euros pour une personne seule, 2 272 euros…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "avantages",
+          "line_num": 287,
+          "snippet": "Il faut avoir résidé au Luxembourg sans interruption pendant les trois mois précédant la demande, et la demande complète doit arriver au fonds au plus tard le…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "bail",
+          "line_num": 5,
+          "snippet": "La garantie prend le plus souvent la forme d'une garantie bancaire, que seule une banque luxembourgeoise émet en pratique. Un IBAN étranger, même européen, ne…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "banque",
+          "line_num": 4,
+          "snippet": "L'ouverture demande une pièce d'identité, un justificatif d'adresse et, le plus souvent, le contrat de travail. Les principaux acteurs de détail sont Spuerkees…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "carte",
+          "line_num": 7,
+          "snippet": "Arrêts, commerces et santé : données OpenStreetMap (© les contributeurs OpenStreetMap), chargées à la demande, l'exhaustivité n'est pas garantie. Les distances…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "cartes",
+          "line_num": 3,
+          "snippet": "Une carte de ce genre montre où se situe une commune, pas pourquoi. Un salaire médian élevé décrit les gens qui habitent là, pas le coût de la vie sur place. U…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "comparateur",
+          "line_num": 8,
+          "snippet": "Ce n'est pas un second assistant : c'est la commande du tableau. Écrivez ce que vous voulez comparer, en français courant, et la grille se réécrit. Chaque dema…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "conseil_fiscal",
+          "line_num": 6,
+          "snippet": "La modification se demande sans tarder au bureau RTS compétent pour votre commune, de préférence avec le formulaire 164 R. Tant que la fiche n'est pas corrigée…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "ecole",
+          "line_num": 7,
+          "snippet": "Les écoles européennes proposent un cursus par section linguistique menant au baccalauréat européen. L'accès est prioritaire pour les enfants de personnels des…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "faq",
+          "line_num": 70,
+          "snippet": "Deux à trois semaines en période normale, mais nettement plus de juin à septembre, saison des déménagements. Réclamez une solution 4G provisoire : plusieurs op…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "faq",
+          "line_num": 127,
+          "snippet": "Non, le délai est plus court. La déclaration d'arrivée à la commune doit être faite dans les trois jours de votre entrée sur le territoire, et non dans les hui…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "faq",
+          "line_num": 169,
+          "snippet": "Commencez par là, avant même le logement. L'enregistrement à la commune précède l'inscription scolaire, et les sections les plus demandées se remplissent parfo…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "frontalier",
+          "line_num": 10,
+          "snippet": "Le second plafond est social. Il décide de la caisse à laquelle vous cotisez, et il s'exprime en part du temps de travail, pas en jours. Un accord européen per…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "garde",
+          "line_num": 5,
+          "snippet": "Enfin, inscrivez-vous sur les listes d'attente très tôt, sans attendre d'avoir un logement définitif ni une date d'arrivée certaine. Dans les communes les plus…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "impatries",
+          "line_num": 10,
+          "snippet": "Enfin, le bénéfice n'est pas automatique : il se demande via l'employeur, qui doit respecter des obligations déclaratives. Vérifiez son application sur vos pre…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "impots_classes",
+          "line_num": 12,
+          "snippet": "Deux mécanismes évitent d'attendre la déclaration. Si le prélèvement est trop élevé, vous pouvez demander un taux réduit : la demande se fait par écrit, en joi…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "independant",
+          "line_num": 5,
+          "snippet": "Si le revenu tiré de l'activité ne dépasse pas ce tiers sur l'année, vous pouvez demander une dispense d'affiliation. Deux points méritent attention. D'abord,…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "independant",
+          "line_num": 11,
+          "snippet": "La dispense se demande sur un second formulaire."
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "langues",
+          "line_num": 4,
+          "snippet": "Cette souplesse a toutefois une limite nette : le luxembourgeois devient indispensable pour la naturalisation, ainsi que pour de nombreux emplois publics ou en…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "lignes",
+          "line_num": 4,
+          "snippet": "Ce que la carte ne dit pas : le temps d'attente, la correspondance, et le trafic réel. Un arrêt à 40 minutes desservi quatre fois par heure vaut mieux qu'un ar…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "luxtrust",
+          "line_num": 5,
+          "snippet": "Le chemin le moins coûteux passe par une banque luxembourgeoise, qui la fournit souvent gratuitement à ses clients. Sans compte local, il faut la commander en…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "matricule",
+          "line_num": 5,
+          "snippet": "Le principe surprend souvent les nouveaux arrivants : vous réglez la consultation intégralement, puis la Caisse nationale de santé vous rembourse, généralement…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "permis",
+          "line_num": 5,
+          "snippet": "La demande se dépose par courrier postal auprès du service des permis de conduire, ou en personne à l'accueil de Guichet.lu. Elle ne se fait ni par courriel ni…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "simulateur",
+          "line_num": 4,
+          "snippet": "Barème officiel de l'Administration des contributions directes, paramètres sociaux 2026, et les crédits d'impôt que l'employeur porte sur la fiche de paie : sa…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "simulateur",
+          "line_num": 16,
+          "snippet": "Hors CDI, la banque demande plus de preuves et retient souvent 80 %."
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "simulateur",
+          "line_num": 21,
+          "snippet": "Hors CDI, la banque demande plus de preuves et retient souvent 80 %."
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "simulateur",
+          "line_num": 42,
+          "snippet": "Sept dispositifs pour l'achat d'une résidence principale. Deux se règlent chez le notaire ou avec l'entreprise, les autres se demandent au Guichet unique des a…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "telecom",
+          "line_num": 8,
+          "snippet": "Réclamez systématiquement une solution 4G provisoire : plusieurs opérateurs en prêtent une pendant l'attente, mais rarement sans qu'on la demande. C'est le réf…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "vehicule",
+          "line_num": 14,
+          "snippet": "Dans cet ordre : chaque étape donne une pièce que la suivante demande, et la SNCA refuse un dossier incomplet."
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "vehicule",
+          "line_num": 16,
+          "snippet": "Numéro de la série courante ou numéro personnalisé. Dès la confirmation, faites fabriquer les plaques chez un fabricant agréé au Luxembourg : elles sont demand…"
+        },
+        {
+          "concept": "demande",
+          "variant": "demande",
+          "doc_id": "vehicule",
+          "line_num": 61,
+          "snippet": "Formulaire « Demande en obtention d'un certificat d'immatriculation », signé Sur Guichet.lu"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "accueil",
+          "line_num": 15,
+          "snippet": "Trois familles, les mêmes que le menu du haut. La première concerne l'arrivée, les deux autres servent à tout le monde. Chaque outil est autonome et se prend d…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "achat",
+          "line_num": 5,
+          "snippet": "Le taux super-réduit de 3 %, au lieu de 17 %, est l'un des avantages les plus commentés du marché luxembourgeois. Il est aussi le plus mal compris. Il suppose…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "achat",
+          "line_num": 7,
+          "snippet": "La question à poser au promoteur est donc précise : le prix affiché intègre-t-il déjà cette part à 17 %, ou suppose-t-il 3 % sur la totalité ? Certaines annonc…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "administration",
+          "line_num": 5,
+          "snippet": "Beaucoup de documents sont délivrés immédiatement au guichet : certificat de résidence, attestation d'enregistrement, copies conformes. Les communes fonctionne…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "inscription",
+          "doc_id": "administration",
+          "line_num": 8,
+          "snippet": "Tout n'est pas dématérialisé pour autant. Certaines démarches ne se traitent que par courrier postal ou en personne, l'enregistrement d'un permis de conduire é…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "administration",
+          "line_num": 8,
+          "snippet": "Tout n'est pas dématérialisé pour autant. Certaines démarches ne se traitent que par courrier postal ou en personne, l'enregistrement d'un permis de conduire é…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit premiers jours",
+          "doc_id": "arrivee",
+          "line_num": 1,
+          "snippet": "Les huit premiers jours"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "premiers jours",
+          "doc_id": "arrivee",
+          "line_num": 1,
+          "snippet": "Les huit premiers jours"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "arrivee",
+          "line_num": 3,
+          "snippet": "La première démarche après l'emménagement n'est ni la banque ni l'employeur : c'est la commune. Vous disposez de huit jours pour déclarer votre arrivée au bure…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "arrivee",
+          "line_num": 3,
+          "snippet": "La première démarche après l'emménagement n'est ni la banque ni l'employeur : c'est la commune. Vous disposez de huit jours pour déclarer votre arrivée au bure…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "arrivee",
+          "line_num": 4,
+          "snippet": "Elle produit en effet deux documents que l'on vous redemandera partout : le certificat de résidence et, pour les ressortissants de l'Union restant plus de troi…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "arrivee",
+          "line_num": 6,
+          "snippet": "Le délai de huit jours vaut pour la déclaration d'arrivée au bureau de la population. Deux autres délais s'y ajoutent, et les manquer coûte plus cher que le pr…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "arrivee",
+          "line_num": 6,
+          "snippet": "Le délai de huit jours vaut pour la déclaration d'arrivée au bureau de la population. Deux autres délais s'y ajoutent, et les manquer coûte plus cher que le pr…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "arrivee",
+          "line_num": 7,
+          "snippet": "Un ressortissant de pays tiers dispose non pas de huit jours mais de trois jours à compter de son arrivée sur le territoire pour cette même déclaration. Le dél…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "arrivee",
+          "line_num": 7,
+          "snippet": "Un ressortissant de pays tiers dispose non pas de huit jours mais de trois jours à compter de son arrivée sur le territoire pour cette même déclaration. Le dél…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "arrivee",
+          "line_num": 8,
+          "snippet": "Ensuite, la déclaration d'arrivée ne suffit pas à elle seule. Un citoyen de l'Union qui reste plus de trois mois doit remplir, dans les quatre-vingt-dix jours…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "arrivee",
+          "line_num": 8,
+          "snippet": "Ensuite, la déclaration d'arrivée ne suffit pas à elle seule. Un citoyen de l'Union qui reste plus de trois mois doit remplir, dans les quatre-vingt-dix jours…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "arrivee",
+          "line_num": 13,
+          "snippet": "La plupart des communes fonctionnent désormais sur rendez-vous, à prendre en ligne. En période de rentrée, les créneaux partent vite, ce qui peut suffire à fai…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "arrivee",
+          "line_num": 15,
+          "snippet": "Huit jours après l'emménagement, pas après la signature du bail. Trois jours seulement pour un ressortissant de pays tiers."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "arrivee",
+          "line_num": 17,
+          "snippet": "Prendre rendez-vous en ligne avant l'arrivée."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "arrivee",
+          "line_num": 19,
+          "snippet": "Guichet.lu, citoyenneté et démarches d'arrivée"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "assurance_sante",
+          "line_num": 6,
+          "snippet": "La plupart des contrats prévoient un délai de carence, c'est-à-dire une période initiale pendant laquelle certaines garanties ne jouent pas encore, souvent plu…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "assurance_sante",
+          "line_num": 13,
+          "snippet": "Souscrire à l'arrivée, à cause des délais de carence."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "avantages",
+          "line_num": 67,
+          "snippet": "Un salarié recruté à l'étranger pour un poste au Luxembourg peut voir la moitié de sa rémunération brute annuelle exonérée d'impôt, dans la limite de 400 000 e…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "avantages",
+          "line_num": 85,
+          "snippet": "40 000 € par personne, sur les droits d'enregistrement"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "avantages",
+          "line_num": 88,
+          "snippet": "Qui achète une maison, un appartement ou un terrain à bâtir pour l'occuper personnellement bénéficie d'un crédit d'impôt sur les droits d'enregistrement et de…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "avantages",
+          "line_num": 99,
+          "snippet": "Les travaux de création ou de rénovation d'un logement affecté à l'habitation principale relèvent du taux super-réduit de TVA de 3 %. Soit l'artisan facture di…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "avantages",
+          "line_num": 171,
+          "snippet": "L'adhésion se fait à la commune de résidence, ce qui suppose d'avoir déjà déclaré son arrivée. Le tarif restant dépend du revenu du ménage et du rang de l'enfa…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "inscription",
+          "doc_id": "carte",
+          "line_num": 7,
+          "snippet": "Arrêts, commerces et santé : données OpenStreetMap (© les contributeurs OpenStreetMap), chargées à la demande, l'exhaustivité n'est pas garantie. Les distances…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "inscription",
+          "doc_id": "choisir_commune",
+          "line_num": 12,
+          "snippet": "Un dernier réflexe utile : la commune est aussi votre guichet administratif pour l'enregistrement, le chèque-service et les inscriptions scolaires. Ses horaire…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "choisir_commune",
+          "line_num": 12,
+          "snippet": "Un dernier réflexe utile : la commune est aussi votre guichet administratif pour l'enregistrement, le chèque-service et les inscriptions scolaires. Ses horaire…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "inscription",
+          "doc_id": "dechets",
+          "line_num": 5,
+          "snippet": "Plus largement, la commune est le guichet de quantité de services du quotidien : certificats, vignettes de stationnement résidentiel, inscriptions scolaires et…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "ecole",
+          "line_num": 5,
+          "snippet": "L'enseignement public luxembourgeois alphabétise en luxembourgeois, puis introduit l'allemand, puis le français. Il intègre remarquablement bien les enfants ar…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "inscription",
+          "doc_id": "ecole",
+          "line_num": 9,
+          "snippet": "L'inscription à la commune précède généralement l'inscription scolaire, et les places dans les sections les plus recherchées partent parfois un an à l'avance.…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "inscription à la commune",
+          "doc_id": "ecole",
+          "line_num": 9,
+          "snippet": "L'inscription à la commune précède généralement l'inscription scolaire, et les places dans les sections les plus recherchées partent parfois un an à l'avance.…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "inscription",
+          "doc_id": "emploi",
+          "line_num": 3,
+          "snippet": "L'Agence pour le développement de l'emploi est le service public de l'emploi. S'y inscrire ouvre l'accès à un accompagnement, à des formations et, sous conditi…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "inscription",
+          "doc_id": "emploi",
+          "line_num": 7,
+          "snippet": "L'inscription à l'ADEM ouvre des offres non publiées ailleurs."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "faq",
+          "line_num": 17,
+          "snippet": "Dans les six mois de la déclaration d'arrivée à la commune. Avant la SNCA, il faut le numéro d'immatriculation, l'assurance luxembourgeoise et la vignette 705…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "faq",
+          "line_num": 20,
+          "snippet": "Oui, sans limite de durée et sans obligation d'échange ni d'enregistrement. L'enregistrement reste utile pour obtenir rapidement un duplicata en cas de perte o…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "faq",
+          "line_num": 80,
+          "snippet": "Elle est facultative et couvre surtout la chambre seule, le dentaire et l'optique. Si vous en prenez une, souscrivez dès l'arrivée : la plupart des contrats pr…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "faq",
+          "line_num": 83,
+          "snippet": "Non si vous êtes salarié : c'est l'employeur qui déclare votre entrée au Centre commun de la sécurité sociale, sans démarche de votre part. Votre carte arrive…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "faq",
+          "line_num": 126,
+          "snippet": "Les délais d'arrivée sont-ils les mêmes hors Union européenne ?"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "faq",
+          "line_num": 127,
+          "snippet": "Non, le délai est plus court. La déclaration d'arrivée à la commune doit être faite dans les trois jours de votre entrée sur le territoire, et non dans les hui…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "faq",
+          "line_num": 127,
+          "snippet": "Non, le délai est plus court. La déclaration d'arrivée à la commune doit être faite dans les trois jours de votre entrée sur le territoire, et non dans les hui…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit premiers jours",
+          "doc_id": "faq",
+          "line_num": 128,
+          "snippet": "Voir la fiche : Les huit premiers jours"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "premiers jours",
+          "doc_id": "faq",
+          "line_num": 128,
+          "snippet": "Voir la fiche : Les huit premiers jours"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "faq",
+          "line_num": 130,
+          "snippet": "Non, une seconde formalité suit. Un citoyen de l'Union qui reste plus de trois mois doit remplir une déclaration d'enregistrement auprès de la commune dans les…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "faq",
+          "line_num": 130,
+          "snippet": "Non, une seconde formalité suit. Un citoyen de l'Union qui reste plus de trois mois doit remplir une déclaration d'enregistrement auprès de la commune dans les…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit premiers jours",
+          "doc_id": "faq",
+          "line_num": 131,
+          "snippet": "Voir la fiche : Les huit premiers jours"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "premiers jours",
+          "doc_id": "faq",
+          "line_num": 131,
+          "snippet": "Voir la fiche : Les huit premiers jours"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "faq",
+          "line_num": 136,
+          "snippet": "Dans les huit jours suivant l'emménagement. Cette déclaration produit le certificat de résidence et le matricule, indispensables à toute la suite. Prenez rende…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit premiers jours",
+          "doc_id": "faq",
+          "line_num": 137,
+          "snippet": "Voir la fiche : Les huit premiers jours"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "premiers jours",
+          "doc_id": "faq",
+          "line_num": 137,
+          "snippet": "Voir la fiche : Les huit premiers jours"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "faq",
+          "line_num": 139,
+          "snippet": "Il est attribué lors de l'enregistrement à la commune et figure sur le certificat de résidence, sous la mention numéro d'identification. Il compte treize chiff…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement à la commune",
+          "doc_id": "faq",
+          "line_num": 139,
+          "snippet": "Il est attribué lors de l'enregistrement à la commune et figure sur le certificat de résidence, sous la mention numéro d'identification. Il compte treize chiff…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit premiers jours",
+          "doc_id": "faq",
+          "line_num": 140,
+          "snippet": "Voir la fiche : Les huit premiers jours"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "premiers jours",
+          "doc_id": "faq",
+          "line_num": 140,
+          "snippet": "Voir la fiche : Les huit premiers jours"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "faq",
+          "line_num": 162,
+          "snippet": "Déclarez-la au CCSS dans les huit jours. Si le revenu reste sous le tiers du salaire social minimum, demandez expressément la dispense pour revenu insignifiant…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "inscription",
+          "doc_id": "faq",
+          "line_num": 168,
+          "snippet": "Comment se fait l'inscription à l'école ?"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "inscription",
+          "doc_id": "faq",
+          "line_num": 169,
+          "snippet": "Commencez par là, avant même le logement. L'enregistrement à la commune précède l'inscription scolaire, et les sections les plus demandées se remplissent parfo…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "faq",
+          "line_num": 169,
+          "snippet": "Commencez par là, avant même le logement. L'enregistrement à la commune précède l'inscription scolaire, et les sections les plus demandées se remplissent parfo…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement à la commune",
+          "doc_id": "faq",
+          "line_num": 169,
+          "snippet": "Commencez par là, avant même le logement. L'enregistrement à la commune précède l'inscription scolaire, et les sections les plus demandées se remplissent parfo…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "faq",
+          "line_num": 172,
+          "snippet": "Oui, le chèque-service accueil, obtenu à la commune après l'enregistrement. Il subventionne les heures de garde chez les prestataires conventionnés, avec un re…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit premiers jours",
+          "doc_id": "fiches",
+          "line_num": 3,
+          "snippet": "Les huit premiers jours"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "premiers jours",
+          "doc_id": "fiches",
+          "line_num": 3,
+          "snippet": "Les huit premiers jours"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "fiches",
+          "line_num": 42,
+          "snippet": "Déclaration au CCSS sous huit jours, dispense possible, et une autorisation d'établissement à vérifier avant de facturer."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "fiches",
+          "line_num": 60,
+          "snippet": "Un permis européen reste valable sans limite. L'enregistrement est facultatif, gratuit, et ne se fait pas en ligne."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "fiches",
+          "line_num": 62,
+          "snippet": "Un ordre imposé, une pièce à obtenir à chaque étape, et six mois après la déclaration d'arrivée pour tout boucler."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "garde",
+          "line_num": 3,
+          "snippet": "Le chèque-service accueil subventionne les heures de garde chez les prestataires conventionnés. Il s'obtient à la commune de résidence, sur présentation du cer…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "garde",
+          "line_num": 5,
+          "snippet": "Enfin, inscrivez-vous sur les listes d'attente très tôt, sans attendre d'avoir un logement définitif ni une date d'arrivée certaine. Dans les communes les plus…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "garde",
+          "line_num": 7,
+          "snippet": "Passer par la commune, après l'enregistrement."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "impots_classes",
+          "line_num": 18,
+          "snippet": "Réclamez enfin votre fiche de retenue d'impôt dès l'arrivée, et vérifiez que l'employeur l'a bien reçue. Sans ce document, la retenue s'effectue au taux maxima…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "impots_classes",
+          "line_num": 21,
+          "snippet": "Réclamer la fiche de retenue dès l'arrivée."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "independant",
+          "line_num": 2,
+          "snippet": "Déclaration au CCSS sous huit jours, dispense possible, et une autorisation d'établissement à vérifier avant de facturer."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "independant",
+          "line_num": 3,
+          "snippet": "Le démarrage d'une activité indépendante se déclare au Centre commun de la sécurité sociale dans les huit jours, au moyen de la déclaration d'entrée pour trava…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "independant",
+          "line_num": 10,
+          "snippet": "Huit jours après le début de l'activité."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "lignes",
+          "line_num": 4,
+          "snippet": "Ce que la carte ne dit pas : le temps d'attente, la correspondance, et le trafic réel. Un arrêt à 40 minutes desservi quatre fois par heure vaut mieux qu'un ar…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "luxtrust",
+          "line_num": 7,
+          "snippet": "Ne présumez pas que tout est dématérialisé. L'enregistrement d'un permis de conduire étranger, par exemple, se traite exclusivement par courrier ou au guichet.…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "matricule",
+          "line_num": 3,
+          "snippet": "Une fois le matricule attribué, l'affiliation à la sécurité sociale se fait sans démarche de votre part si vous êtes salarié : c'est l'employeur qui déclare vo…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "matricule",
+          "line_num": 6,
+          "snippet": "Concrètement, prévoyez une petite trésorerie les premières semaines, le temps que le circuit s'amorce. Une famille qui enchaîne les visites médicales à l'arriv…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "matricule",
+          "line_num": 11,
+          "snippet": "Indépendant : déclaration au CCSS sous huit jours."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "déclarer son arrivée",
+          "doc_id": "parcours",
+          "line_num": 17,
+          "snippet": "Déclarer son arrivée à la commune, dans les huit jours."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "parcours",
+          "line_num": 17,
+          "snippet": "Déclarer son arrivée à la commune, dans les huit jours."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "parcours",
+          "line_num": 17,
+          "snippet": "Déclarer son arrivée à la commune, dans les huit jours."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "huit jours",
+          "doc_id": "parcours",
+          "line_num": 31,
+          "snippet": "Déclarer l'activité indépendante au CCSS, dans les huit jours."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "permis",
+          "line_num": 2,
+          "snippet": "Un permis européen reste valable sans limite. L'enregistrement est facultatif, gratuit, et ne se fait pas en ligne."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "permis",
+          "line_num": 3,
+          "snippet": "Un permis délivré par un État de l'Espace économique européen reste valable au Luxembourg, sans limitation de durée. Ni l'échange ni l'enregistrement ne sont o…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "permis",
+          "line_num": 4,
+          "snippet": "L'enregistrement auprès de la Société nationale de circulation automobile présente néanmoins un intérêt concret : en cas de perte ou de vol, l'administration c…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "permis",
+          "line_num": 5,
+          "snippet": "La demande se dépose par courrier postal auprès du service des permis de conduire, ou en personne à l'accueil de Guichet.lu. Elle ne se fait ni par courriel ni…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "permis",
+          "line_num": 8,
+          "snippet": "Enregistrement gratuit, par courrier ou au guichet."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "sante_pratique",
+          "line_num": 4,
+          "snippet": "Cette liberté a une contrepartie pratique : trouver un médecin qui accepte de nouveaux patients peut prendre du temps à l'arrivée. Lancez les recherches sans a…"
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "sante_pratique",
+          "line_num": 9,
+          "snippet": "Chercher un médecin dès l'arrivée, avant d'en avoir besoin."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "vehicule",
+          "line_num": 2,
+          "snippet": "Un ordre imposé, une pièce à obtenir à chaque étape, et six mois après la déclaration d'arrivée pour tout boucler."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "vehicule",
+          "line_num": 3,
+          "snippet": "Délai : 6 mois, après la déclaration d'arrivée à la commune."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "enregistrement",
+          "doc_id": "vehicule",
+          "line_num": 30,
+          "snippet": "Au guichet de l'Administration de l'enregistrement, des domaines et de la TVA, ou par virement. Le timbre se vend aussi à la SNCA, avec 3 € de frais."
+        },
+        {
+          "concept": "declaration_arrivee",
+          "variant": "arrivée",
+          "doc_id": "vehicule",
+          "line_num": 135,
+          "snippet": "Six mois après la déclaration d'arrivée."
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis de conduire",
+          "doc_id": "administration",
+          "line_num": 8,
+          "snippet": "Tout n'est pas dématérialisé pour autant. Certaines démarches ne se traitent que par courrier postal ou en personne, l'enregistrement d'un permis de conduire é…"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis",
+          "doc_id": "administration",
+          "line_num": 8,
+          "snippet": "Tout n'est pas dématérialisé pour autant. Certaines démarches ne se traitent que par courrier postal ou en personne, l'enregistrement d'un permis de conduire é…"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "conduire",
+          "doc_id": "administration",
+          "line_num": 8,
+          "snippet": "Tout n'est pas dématérialisé pour autant. Certaines démarches ne se traitent que par courrier postal ou en personne, l'enregistrement d'un permis de conduire é…"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis de conduire",
+          "doc_id": "faq",
+          "line_num": 19,
+          "snippet": "Un permis de conduire européen reste-t-il valable ?"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis",
+          "doc_id": "faq",
+          "line_num": 19,
+          "snippet": "Un permis de conduire européen reste-t-il valable ?"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "conduire",
+          "doc_id": "faq",
+          "line_num": 19,
+          "snippet": "Un permis de conduire européen reste-t-il valable ?"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis de conduire",
+          "doc_id": "faq",
+          "line_num": 21,
+          "snippet": "Voir la fiche : Permis de conduire"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis",
+          "doc_id": "faq",
+          "line_num": 21,
+          "snippet": "Voir la fiche : Permis de conduire"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "conduire",
+          "doc_id": "faq",
+          "line_num": 21,
+          "snippet": "Voir la fiche : Permis de conduire"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis de conduire",
+          "doc_id": "fiches",
+          "line_num": 59,
+          "snippet": "Permis de conduire"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis",
+          "doc_id": "fiches",
+          "line_num": 59,
+          "snippet": "Permis de conduire"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "conduire",
+          "doc_id": "fiches",
+          "line_num": 59,
+          "snippet": "Permis de conduire"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis",
+          "doc_id": "fiches",
+          "line_num": 60,
+          "snippet": "Un permis européen reste valable sans limite. L'enregistrement est facultatif, gratuit, et ne se fait pas en ligne."
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis de conduire",
+          "doc_id": "luxtrust",
+          "line_num": 7,
+          "snippet": "Ne présumez pas que tout est dématérialisé. L'enregistrement d'un permis de conduire étranger, par exemple, se traite exclusivement par courrier ou au guichet.…"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis",
+          "doc_id": "luxtrust",
+          "line_num": 7,
+          "snippet": "Ne présumez pas que tout est dématérialisé. L'enregistrement d'un permis de conduire étranger, par exemple, se traite exclusivement par courrier ou au guichet.…"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "conduire",
+          "doc_id": "luxtrust",
+          "line_num": 7,
+          "snippet": "Ne présumez pas que tout est dématérialisé. L'enregistrement d'un permis de conduire étranger, par exemple, se traite exclusivement par courrier ou au guichet.…"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis de conduire",
+          "doc_id": "luxtrust",
+          "line_num": 11,
+          "snippet": "Certaines démarches restent papier, dont le permis de conduire."
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis",
+          "doc_id": "luxtrust",
+          "line_num": 11,
+          "snippet": "Certaines démarches restent papier, dont le permis de conduire."
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "conduire",
+          "doc_id": "luxtrust",
+          "line_num": 11,
+          "snippet": "Certaines démarches restent papier, dont le permis de conduire."
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis de conduire",
+          "doc_id": "parcours",
+          "line_num": 35,
+          "snippet": "Enregistrer son permis de conduire, facultatif mais gratuit et utile."
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis",
+          "doc_id": "parcours",
+          "line_num": 35,
+          "snippet": "Enregistrer son permis de conduire, facultatif mais gratuit et utile."
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "conduire",
+          "doc_id": "parcours",
+          "line_num": 35,
+          "snippet": "Enregistrer son permis de conduire, facultatif mais gratuit et utile."
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis de conduire",
+          "doc_id": "permis",
+          "line_num": 1,
+          "snippet": "Permis de conduire"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis",
+          "doc_id": "permis",
+          "line_num": 1,
+          "snippet": "Permis de conduire"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "conduire",
+          "doc_id": "permis",
+          "line_num": 1,
+          "snippet": "Permis de conduire"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis",
+          "doc_id": "permis",
+          "line_num": 2,
+          "snippet": "Un permis européen reste valable sans limite. L'enregistrement est facultatif, gratuit, et ne se fait pas en ligne."
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis",
+          "doc_id": "permis",
+          "line_num": 3,
+          "snippet": "Un permis délivré par un État de l'Espace économique européen reste valable au Luxembourg, sans limitation de durée. Ni l'échange ni l'enregistrement ne sont o…"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis",
+          "doc_id": "permis",
+          "line_num": 4,
+          "snippet": "L'enregistrement auprès de la Société nationale de circulation automobile présente néanmoins un intérêt concret : en cas de perte ou de vol, l'administration c…"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis de conduire",
+          "doc_id": "permis",
+          "line_num": 5,
+          "snippet": "La demande se dépose par courrier postal auprès du service des permis de conduire, ou en personne à l'accueil de Guichet.lu. Elle ne se fait ni par courriel ni…"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis",
+          "doc_id": "permis",
+          "line_num": 5,
+          "snippet": "La demande se dépose par courrier postal auprès du service des permis de conduire, ou en personne à l'accueil de Guichet.lu. Elle ne se fait ni par courriel ni…"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "conduire",
+          "doc_id": "permis",
+          "line_num": 5,
+          "snippet": "La demande se dépose par courrier postal auprès du service des permis de conduire, ou en personne à l'accueil de Guichet.lu. Elle ne se fait ni par courriel ni…"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis",
+          "doc_id": "permis",
+          "line_num": 7,
+          "snippet": "Permis européen valable sans limite, aucune obligation."
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis",
+          "doc_id": "permis",
+          "line_num": 11,
+          "snippet": "Guichet.lu, permis étranger"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "permis étranger",
+          "doc_id": "permis",
+          "line_num": 11,
+          "snippet": "Guichet.lu, permis étranger"
+        },
+        {
+          "concept": "permis_de_conduire",
+          "variant": "conduire",
+          "doc_id": "vehicule",
+          "line_num": 129,
+          "snippet": "Avec les plaques qui portent votre futur numéro et une assurance responsabilité civile, vous pouvez conduire le véhicule jusqu'au lieu d'immatriculation, et ju…"
+        }
+      ],
+      "question_concepts": [
+        "deposer",
+        "demande",
+        "declaration_arrivee",
+        "permis_de_conduire"
+      ],
+      "terms": [
+        {
+          "text": "déposer",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "deposer",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "demande",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "demande",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "enregistrement",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "permis",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "concept_key": "permis_de_conduire",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "conduire",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "concept_key": "permis_de_conduire",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "déclaration d'arrivée",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "inscription",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "s'inscrire",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "inscription à la commune",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "declaration of arrival",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "registration",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "register with the commune",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "anmeldung",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "anmelden",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "déclarer son arrivée",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "s'inscrire à la commune",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "enregistrement à la commune",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "registre de la population",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "arrivée",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "register at the commune",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "arrival declaration",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "arrival",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "ankunftserklärung",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "huit premiers jours",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "premiers jours",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "huit jours",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "first days",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "first eight days",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "melden",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "melde",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "sich anmelden",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "bei der gemeinde anmelden",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "anmeldung bei der gemeinde",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "wohnsitz anmelden",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "declaration_arrivee",
+          "is_regex": false,
+          "concept_key": "declaration_arrivee",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "permis de conduire",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "concept_key": "permis_de_conduire",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "driving licence",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "concept_key": "permis_de_conduire",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "driving license",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "concept_key": "permis_de_conduire",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "driver's license",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "concept_key": "permis_de_conduire",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "licence",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "concept_key": "permis_de_conduire",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "führerschein",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "concept_key": "permis_de_conduire",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "échange de permis",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "concept_key": "permis_de_conduire",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "permis étranger",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "concept_key": "permis_de_conduire",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "exchange a licence",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "permis_de_conduire",
+          "is_regex": false,
+          "concept_key": "permis_de_conduire",
+          "weak": false,
+          "in_corpus": false
+        }
+      ],
+      "content_words": [
+        {
+          "text": "déposer",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "demande",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "enregistrement",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "permis",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "conduire",
+          "weight": 1.0,
+          "weak": false
+        }
+      ],
+      "uncovered_words": [],
+      "answer_context_used": "paragraph"
+    }
+  }
+}

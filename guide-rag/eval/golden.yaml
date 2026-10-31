@@ -1,0 +1,104 @@
+# The golden set (SPEC §6): real questions over this corpus, labelled by type, with where the guide
+# answers them (doc_id, section ids or titles, optionally a line range) or `absent` / `clarify`.
+# Lines were read in index/line_df.json when the set was written; sections are checked by id or title.
+version: 1
+questions:
+  # ---- factual
+  - {id: g01, type: factual, question: "combien de temps pour déclarer son arrivée à la commune",
+     expected: {doc_id: arrivee, sections: [arrivee#s1, arrivee#s2]}}
+  - {id: g02, type: factual, question: "quelle classe d'impôt pour un célibataire sans enfant",
+     expected: {doc_id: impots_classes, sections: [impots_classes#s1], lines: [2, 6]}}
+  - {id: g03, type: factual, question: "délai pour l'installation d'internet",
+     expected: {doc_id: telecom, sections: [telecom#s1, telecom#s2]}}
+  - {id: g04, type: factual, question: "comment obtenir luxtrust moins cher",
+     expected: {doc_id: luxtrust, sections: [luxtrust#s1, luxtrust#s2, luxtrust#s4]}, note: "the À retenir bullet says it too"}
+  - {id: g05, type: factual, question: "qui verse les allocations familiales",
+     expected: {doc_id: allocations, sections: [allocations#s1], lines: [2, 5]}}
+  - {id: g06, type: factual, question: "comment contester une facture",
+     expected: {doc_id: reclamation, sections: [reclamation#s1, reclamation#s2]}}
+  - {id: g07, type: factual, question: "quel est le délai de carence de la complémentaire santé",
+     expected: {doc_id: assurance_sante, sections: [assurance_sante#s2]}}
+  - {id: g08, type: factual, question: "combien de jours de congé légal par an",
+     expected: {doc_id: conges, sections: [conges#s1], lines: [2, 4]}}
+  - {id: g09, type: factual, question: "comment immatriculer ma voiture",
+     expected: {doc_id: vehicule, sections: [vehicule#s1], lines: [1, 5]}}
+  - {id: g10, type: factual, question: "quel est le numéro d'urgence",
+     expected: {doc_id: sante_pratique, sections: [sante_pratique#s1], lines: [2, 3]}}
+  # ---- listing
+  - {id: g11, type: listing, question: "quels documents pour ouvrir un compte bancaire",
+     expected: {doc_id: banque, sections: [banque#s1], lines: [2, 5]}}
+  - {id: g12, type: listing, question: "quels documents apporter à la commune",
+     expected: {doc_id: arrivee, sections: ["arrivee#s4", "Ce qu'il faut apporter", arrivee#s1]}}
+  - {id: g13, type: listing, question: "quelles pièces pour le dossier de location",
+     expected: {doc_id: recherche_logement, sections: [recherche_logement#s2, recherche_logement#s1]}}
+  - {id: g14, type: listing, question: "quelles garanties couvre l'assurance habitation",
+     expected: {doc_id: assurance_habitation, sections: [assurance_habitation#s2, assurance_habitation#s1]}}
+  - {id: g15, type: listing, question: "quelles sont les trois classes d'impôt",
+     expected: {doc_id: impots_classes, sections: [impots_classes#s1]}}
+  - {id: g16, type: listing, question: "quels documents réclamer avant de signer une assurance habitation",
+     expected: {doc_id: assurance_habitation, sections: [assurance_habitation#s4, assurance_habitation#s1]}}
+  - {id: g45, type: listing, question: "quelles sont les étapes pour immatriculer un véhicule importé",
+     expected: {doc_id: vehicule, sections: ["Étapes", vehicule#s1, "Votre cas"]}}
+  - {id: g46, type: listing, question: "quels sont les trois délais après l'arrivée",
+     expected: {doc_id: arrivee, sections: ["Trois délais, pas un seul", arrivee#s1, arrivee#s5]}}
+  # ---- amount
+  - {id: g17, type: amount, question: "combien coûte l'immatriculation",
+     expected: {doc_id: vehicule, sections: [vehicule#s1, "Coûts"], lines: [1, 5]}, note: "the intro gives 50 €; the Coûts section details it"}
+  - {id: g18, type: amount, question: "montant de base des allocations familiales",
+     expected: {doc_id: allocations, sections: [allocations#s1, allocations#s2]}}
+  - {id: g19, type: amount, question: "plafond de l'avantage de la TVA à 3 %",
+     expected: {doc_id: achat, sections: [achat#s2, achat#s1, achat#s3]}}
+  - {id: g20, type: amount, question: "combien de mois de loyer pour la garantie locative",
+     expected: {doc_id: bail, sections: [bail#s1, bail#s5], lines: [2, 3]}}
+  # ---- date
+  - {id: g21, type: date, question: "depuis quand les transports publics sont-ils gratuits",
+     expected: {doc_id: transport, sections: [transport#s1], lines: [2, 3]}}
+  - {id: g22, type: date, question: "depuis quelle date la garantie locative est plafonnée à deux mois",
+     expected: {doc_id: bail, sections: [bail#s1, bail#s5]}}
+  # ---- yes/no
+  - {id: g23, type: yes/no, question: "est-ce que la double nationalité est admise",
+     expected: {doc_id: nationalite, sections: [nationalite#s1], lines: [2, 3]}}
+  - {id: g24, type: yes/no, question: "est-ce qu'un permis de conduire européen reste valable",
+     expected: {doc_id: permis, sections: [permis#s1]}}
+  - {id: g25, type: yes/no, question: "est-ce que les transports publics sont gratuits",
+     expected: {doc_id: transport, sections: [transport#s1]}}
+  - {id: g26, type: yes/no, question: "est-ce que l'assurance responsabilité civile est obligatoire pour une voiture",
+     expected: {doc_id: assurance_auto, sections: [assurance_auto#s1, assurance_auto#s4, assurance_auto#s5]}}
+  # ---- address/phone
+  - {id: g27, type: address/phone, question: "où déposer la demande d'enregistrement du permis de conduire",
+     expected: {doc_id: permis, sections: [permis#s1], lines: [2, 5]}}
+  - {id: g28, type: address/phone, question: "quel numéro de téléphone pour les urgences",
+     expected: {doc_id: sante_pratique, sections: [sante_pratique#s1]}}
+  # ---- typo
+  - {id: g29, type: typo, question: "comment imatriculer ma voitur",
+     expected: {doc_id: vehicule, sections: [vehicule#s1]}}
+  - {id: g30, type: typo, question: "garanti locativ plafonée à combien de mois",
+     expected: {doc_id: bail, sections: [bail#s1, bail#s5]}}
+  # ---- EN
+  - {id: g31, type: EN, question: "how do I register my car",
+     expected: {doc_id: vehicule, sections: [vehicule#s1]}}
+  - {id: g32, type: EN, question: "how many days of annual leave",
+     expected: {doc_id: conges, sections: [conges#s1, conges#s3]}}
+  - {id: g33, type: EN, question: "is a local bank account mandatory",
+     expected: {doc_id: banque, sections: [banque#s1, banque#s2]}}
+  # ---- DE
+  - {id: g34, type: DE, question: "wie melde ich mich bei der Gemeinde an",
+     expected: {doc_id: arrivee, sections: [arrivee#s1, arrivee#s2, arrivee#s4]}}
+  - {id: g35, type: DE, question: "ist mein Führerschein in Luxemburg gültig",
+     expected: {doc_id: permis, sections: [permis#s1, permis#s2]}}
+  # ---- on-page
+  - {id: g36, type: on-page, question: "combien de temps pour l'immatriculation", page: vehicule,
+     expected: {doc_id: vehicule, sections: [vehicule#s1], lines: [1, 5]}}
+  - {id: g37, type: on-page, question: "et pour les plaques ?", page: vehicule,
+     expected: {doc_id: vehicule, sections: ["Réserver un numéro, puis faire les plaques", vehicule#s1]}}
+  # ---- compound
+  - {id: g38, type: compound, question: "combien coûte l'immatriculation et quel est le délai",
+     expected: {doc_id: vehicule, sections: [vehicule#s1], lines: [1, 5]}}
+  # ---- vague
+  - {id: g39, type: vague, question: "ça marche comment ?", expected: clarify}
+  - {id: g40, type: vague, question: "assurance", expected: clarify}
+  # ---- out-of-scope
+  - {id: g41, type: out-of-scope, question: "où acheter un sapin de noël", expected: absent}
+  - {id: g42, type: out-of-scope, question: "quel est le meilleur restaurant de Luxembourg", expected: absent}
+  - {id: g43, type: out-of-scope, question: "comment adopter un chien", expected: absent}
+  - {id: g44, type: out-of-scope, question: "horaires de la piscine municipale", expected: absent}

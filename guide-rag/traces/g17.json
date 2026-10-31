@@ -1,0 +1,3717 @@
+{
+  "answer": {
+    "extraction_method": "computed",
+    "confidence": 0.409,
+    "caveats": [],
+    "answer_found": true,
+    "complete_answer_found": true,
+    "context_structured": [
+      {
+        "candidate_id": "vehicule#l2-l5",
+        "doc_id": "vehicule",
+        "section_id": "vehicule#s1",
+        "section_title": "Immatriculer son véhicule",
+        "breadcrumb": "Immatriculer son véhicule",
+        "line_start": 2,
+        "line_end": 5,
+        "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#fiche-detail",
+        "role": "primary"
+      }
+    ],
+    "keywords_found": [
+      "plaques"
+    ],
+    "llm_discovered_keywords": [],
+    "conflicting_evidence": [],
+    "suggested_clarification": null,
+    "kind": "amount",
+    "items": [
+      {
+        "amount": {
+          "value": 6.0,
+          "currency": null,
+          "unit": "mois"
+        },
+        "spans": [
+          {
+            "doc_id": "vehicule",
+            "line_start": 2,
+            "line_end": 2,
+            "quote": "Un ordre imposé, une pièce à obtenir à chaque étape, et six mois après la déclaration d'arrivée pour tout boucler."
+          }
+        ]
+      },
+      {
+        "amount": {
+          "value": 50.0,
+          "currency": "EUR",
+          "unit": null
+        },
+        "spans": [
+          {
+            "doc_id": "vehicule",
+            "line_start": 4,
+            "line_end": 4,
+            "quote": "Coût : 50 €, droit de chancellerie, hors plaques et contrôle."
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "question_id": "84785a76bcfb6b1e",
+    "index_version": "1d1bbf848338f32798d0c92366bd740f0513f72b56bd4745e85a507a1645d9ca",
+    "pipeline_version": "guide-rag/0.1",
+    "methods_used": [
+      "keyword_lines",
+      "title_match",
+      "anchor_regex",
+      "row_match",
+      "arbiter_rules",
+      "sweep"
+    ],
+    "methods_skipped": {
+      "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+      "llm_arbiter": "no model key configured",
+      "current_page_boost": "no pages_hint: no page to boost"
+    },
+    "activations": {
+      "use_keywords": {
+        "on": true,
+        "reason": "always: keyword detectors are deterministic and prove absence"
+      },
+      "use_toc": {
+        "on": true,
+        "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+      },
+      "use_row_level": {
+        "on": true,
+        "reason": "answer_type=amount: tables carry typed values"
+      },
+      "use_embeddings": {
+        "on": false,
+        "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+      },
+      "use_llm_arbiter": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "use_llm_generation": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "sweep_for_absence": {
+        "on": true,
+        "reason": "always: the exhaustive sweep is the evidence of absence"
+      },
+      "current_page_boost": {
+        "on": false,
+        "reason": "no pages_hint: no page to boost"
+      }
+    },
+    "chunk_strategy": "line as the unit; anchor = hit lines grouped by runs; context = the hit lines (answer_context=line)",
+    "model_used": "no model",
+    "prompt_version": null,
+    "fragments_applied": [],
+    "iterations": 1,
+    "validator_report": {
+      "iteration_1": []
+    },
+    "replay": null
+  },
+  "trace": {
+    "parsed": {
+      "question_id": "84785a76bcfb6b1e",
+      "original_question": "combien coûte l'immatriculation",
+      "corrected_question": "combien coûte l'immatriculation",
+      "language": "fr",
+      "keywords": [
+        {
+          "text": "coûte",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "immatriculation",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "immatriculer",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "plaques d'immatriculation",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "plaques",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "vehicle registration",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "registration",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "number plates",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "license plates",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "zulassung",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "kennzeichen",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "immatriculer son véhicule",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "car registration",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "register a car",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "register my car",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "number plate",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "licence plate",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "plates",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "(?:\\d{1,3}(?:[ .]\\d{3})+|\\d+)(?:[.,]\\d+)?\\s?(?:€|euros?|eur)\\b",
+          "weight": 1.0,
+          "source": "anchor",
+          "concept": null,
+          "is_regex": true,
+          "weak": false,
+          "in_corpus": true
+        }
+      ],
+      "answer_shape": "single",
+      "answer_type": "amount",
+      "structural_hints": {
+        "pages_hint": null,
+        "toc_section_hint": "Coûts",
+        "answer_context": "line"
+      },
+      "decomposition": {
+        "pattern": "single",
+        "sub_questions": []
+      },
+      "suggested_clarification": null,
+      "ambiguity_reason": null,
+      "candidate_values": [],
+      "proposed_default": null,
+      "scope_filters": {
+        "topic": "vehicle"
+      },
+      "parsing_notes": [
+        "language=fr: stop-word vote",
+        "answer_shape=single: no listing cue",
+        "answer_type=amount: cue 'combien'",
+        "concept 'immatriculation' (vehicle) matched by 'immatriculation' [fr, primary]",
+        "anchor regex for amount added",
+        "toc_section_hint='Coûts': every word of this heading is in the question",
+        "scope topic='vehicle': the matched concepts vote {'vehicle': 1.0}",
+        "decomposition=single: no 'et / and' between two clauses"
+      ]
+    },
+    "plan": {
+      "activations": {
+        "use_keywords": {
+          "on": true,
+          "reason": "always: keyword detectors are deterministic and prove absence"
+        },
+        "use_toc": {
+          "on": true,
+          "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+        },
+        "use_row_level": {
+          "on": true,
+          "reason": "answer_type=amount: tables carry typed values"
+        },
+        "use_embeddings": {
+          "on": false,
+          "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+        },
+        "use_llm_arbiter": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "use_llm_generation": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "sweep_for_absence": {
+          "on": true,
+          "reason": "always: the exhaustive sweep is the evidence of absence"
+        },
+        "current_page_boost": {
+          "on": false,
+          "reason": "no pages_hint: no page to boost"
+        }
+      }
+    },
+    "retrieval": {
+      "question_id": "84785a76bcfb6b1e",
+      "question": "combien coûte l'immatriculation",
+      "candidates": [
+        {
+          "candidate_id": "vehicule#l2-l5",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 2,
+            "line_end": 5,
+            "section_id": "vehicule#s1"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 2,
+            "line_end": 5,
+            "section_id": "vehicule#s1"
+          },
+          "snippet": "Un ordre imposé, une pièce à obtenir à chaque étape, et six mois après la déclaration d'arrivée pour tout boucler. Délai : 6 mois, après la déclaration d'arriv…",
+          "text": "Un ordre imposé, une pièce à obtenir à chaque étape, et six mois après la déclaration d'arrivée pour tout boucler.\nDélai : 6 mois, après la déclaration d'arrivée à la commune.\nCoût : 50 €, droit de chancellerie, hors plaques et contrôle.\nDépôt : SNCA, sur rendez-vous, plaques déjà faites.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "plaques"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Immatriculer son véhicule",
+          "breadcrumb": "Immatriculer son véhicule",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#fiche-detail",
+          "role": "primary",
+          "reason": "The document 'Immatriculer son véhicule' and the section 'Immatriculer son véhicule' name the question's words 'immatriculation' (coverage 0.50); score 4.59: primary.",
+          "score": 4.59,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "amount",
+              "raw": "six mois",
+              "pos": 56,
+              "value": 6.0,
+              "currency": null,
+              "unit": "mois",
+              "line_num": 2
+            },
+            {
+              "kind": "amount",
+              "raw": "6 mois",
+              "pos": 8,
+              "value": 6.0,
+              "currency": null,
+              "unit": "mois",
+              "line_num": 3
+            },
+            {
+              "kind": "amount",
+              "raw": "50 €",
+              "pos": 7,
+              "value": 50.0,
+              "currency": "EUR",
+              "unit": null,
+              "line_num": 4
+            }
+          ]
+        },
+        {
+          "candidate_id": "vehicule#l129-l129",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 129,
+            "line_end": 129,
+            "section_id": "vehicule#s24"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 129,
+            "line_end": 129,
+            "section_id": "vehicule#s24"
+          },
+          "snippet": "Avec les plaques qui portent votre futur numéro et une assurance responsabilité civile, vous pouvez conduire le véhicule jusqu'au lieu d'immatriculation, et ju…",
+          "text": "Avec les plaques qui portent votre futur numéro et une assurance responsabilité civile, vous pouvez conduire le véhicule jusqu'au lieu d'immatriculation, et jusqu'à un garage ou un contrôle technique.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer",
+            "plaques"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Rouler avant l'immatriculation",
+          "breadcrumb": "Immatriculer son véhicule › Cas particuliers › Rouler avant l'immatriculation",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-cas",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but carries no amount, which an answer of type amount requires and vehicule#l2-l5 has: supporting.",
+          "score": 3.5,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "vehicule#l21-l23",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 21,
+            "line_end": 23,
+            "section_id": "vehicule#s4"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 21,
+            "line_end": 23,
+            "section_id": "vehicule#s4"
+          },
+          "snippet": "Sans supplément en série courante, 200 € pour un numéro personnalisé Vous obtenez La réservation du numéro, puis les plaques",
+          "text": "Sans supplément en série courante, 200 € pour un numéro personnalisé\nVous obtenez\nLa réservation du numéro, puis les plaques",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "plaques"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Réserver un numéro, puis faire les plaques",
+          "breadcrumb": "Immatriculer son véhicule › Étapes › Réserver un numéro, puis faire les plaques",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-etapes",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but the score 1.608 is behind vehicule#l2-l5: supporting.",
+          "score": 1.608,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": "section",
+          "captures": [
+            {
+              "kind": "amount",
+              "raw": "200 €",
+              "pos": 35,
+              "value": 200.0,
+              "currency": "EUR",
+              "unit": null,
+              "line_num": 21
+            }
+          ]
+        },
+        {
+          "candidate_id": "vehicule#l16-l16",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 16,
+            "line_end": 16,
+            "section_id": "vehicule#s4"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 16,
+            "line_end": 16,
+            "section_id": "vehicule#s4"
+          },
+          "snippet": "Numéro de la série courante ou numéro personnalisé. Dès la confirmation, faites fabriquer les plaques chez un fabricant agréé au Luxembourg : elles sont demand…",
+          "text": "Numéro de la série courante ou numéro personnalisé. Dès la confirmation, faites fabriquer les plaques chez un fabricant agréé au Luxembourg : elles sont demandées au rendez-vous.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "plaques"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Réserver un numéro, puis faire les plaques",
+          "breadcrumb": "Immatriculer son véhicule › Étapes › Réserver un numéro, puis faire les plaques",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-etapes",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but carries no amount, which an answer of type amount requires and vehicule#l2-l5 has: supporting.",
+          "score": 1.008,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": "section",
+          "captures": []
+        },
+        {
+          "candidate_id": "vehicule#l56-l58",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 56,
+            "line_end": 58,
+            "section_id": "vehicule#s8"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 56,
+            "line_end": 58,
+            "section_id": "vehicule#s8"
+          },
+          "snippet": "Le dossier complet et les plaques Vous obtenez Le certificat d'immatriculation à votre nom, et une vignette fiscale provisoire de 30 jours",
+          "text": "Le dossier complet et les plaques\nVous obtenez\nLe certificat d'immatriculation à votre nom, et une vignette fiscale provisoire de 30 jours",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer",
+            "plaques"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Déposer le dossier à la SNCA",
+          "breadcrumb": "Immatriculer son véhicule › Étapes › Déposer le dossier à la SNCA",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-etapes",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 3.69,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "amount",
+              "raw": "30 jours",
+              "pos": 83,
+              "value": 30.0,
+              "currency": null,
+              "unit": "jours",
+              "line_num": 58
+            }
+          ]
+        },
+        {
+          "candidate_id": "vehicule#l35-l37",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 35,
+            "line_end": 37,
+            "section_id": "vehicule#s6"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 35,
+            "line_end": 37,
+            "section_id": "vehicule#s6"
+          },
+          "snippet": "50 € Vous obtenez Le timbre, ou la preuve de virement avec nom, prénom, motif, numéro d'immatriculation et numéro de châssis",
+          "text": "50 €\nVous obtenez\nLe timbre, ou la preuve de virement avec nom, prénom, motif, numéro d'immatriculation et numéro de châssis",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Payer le droit de chancellerie",
+          "breadcrumb": "Immatriculer son véhicule › Étapes › Payer le droit de chancellerie",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-etapes",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 2.448,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": "section",
+          "captures": [
+            {
+              "kind": "amount",
+              "raw": "50 €",
+              "pos": 0,
+              "value": 50.0,
+              "currency": "EUR",
+              "unit": null,
+              "line_num": 35
+            }
+          ]
+        },
+        {
+          "candidate_id": "vehicule#l45-l45",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 45,
+            "line_end": 45,
+            "section_id": "vehicule#s7"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 45,
+            "line_end": 45,
+            "section_id": "vehicule#s7"
+          },
+          "snippet": "Le véhicule, le certificat d'immatriculation étranger, la facture ou le contrat de vente, une pièce d'identité",
+          "text": "Le véhicule, le certificat d'immatriculation étranger, la facture ou le contrat de vente, une pièce d'identité",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Obtenir la vignette 705 aux douanes",
+          "breadcrumb": "Immatriculer son véhicule › Étapes › Obtenir la vignette 705 aux douanes",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-etapes",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 1.848,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": "section",
+          "captures": []
+        },
+        {
+          "candidate_id": "vehicule#l12-l12",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 12,
+            "line_end": 12,
+            "section_id": "vehicule#s2"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 12,
+            "line_end": 12,
+            "section_id": "vehicule#s2"
+          },
+          "snippet": "Il immatricule pour vous. Il vous reste l'assurance.",
+          "text": "Il immatricule pour vous. Il vous reste l'assurance.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Votre cas",
+          "breadcrumb": "Immatriculer son véhicule › Votre cas",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 1.54,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "vehicule#l137-l138",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 137,
+            "line_end": 138,
+            "section_id": "vehicule#s26"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 137,
+            "line_end": 138,
+            "section_id": "vehicule#s26"
+          },
+          "snippet": "Guichet.lu, immatriculer un véhicule lors d'un déménagement SNCA, véhicule d'occasion immatriculé dans l'Union",
+          "text": "Guichet.lu, immatriculer un véhicule lors d'un déménagement\nSNCA, véhicule d'occasion immatriculé dans l'Union",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Sources officielles",
+          "breadcrumb": "Immatriculer son véhicule › Sources officielles",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-cas",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 1.54,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "vehicule#l141-l141",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 141,
+            "line_end": 141,
+            "section_id": "vehicule#s26"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 141,
+            "line_end": 141,
+            "section_id": "vehicule#s26"
+          },
+          "snippet": "Guichet.lu, acheter un véhicule immatriculé au Luxembourg",
+          "text": "Guichet.lu, acheter un véhicule immatriculé au Luxembourg",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Sources officielles",
+          "breadcrumb": "Immatriculer son véhicule › Sources officielles",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-cas",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 1.54,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "vehicule#l61-l61",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 61,
+            "line_end": 61,
+            "section_id": "vehicule#s9"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 61,
+            "line_end": 61,
+            "section_id": "vehicule#s9"
+          },
+          "snippet": "Formulaire « Demande en obtention d'un certificat d'immatriculation », signé Sur Guichet.lu",
+          "text": "Formulaire « Demande en obtention d'un certificat d'immatriculation », signé Sur Guichet.lu",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Dossier",
+          "breadcrumb": "Immatriculer son véhicule › Dossier",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-dossier",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 1.54,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "vehicule#l65-l66",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 65,
+            "line_end": 66,
+            "section_id": "vehicule#s9"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 65,
+            "line_end": 66,
+            "section_id": "vehicule#s9"
+          },
+          "snippet": "Certificat d'immatriculation étranger, complet : Dans l'Union, il a en général deux parties. Certificat de conformité européen : Si la première immatriculation…",
+          "text": "Certificat d'immatriculation étranger, complet : Dans l'Union, il a en général deux parties.\nCertificat de conformité européen : Si la première immatriculation date d'après le 1er février 2016.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Dossier",
+          "breadcrumb": "Immatriculer son véhicule › Dossier",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-dossier",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 1.54,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "vehicule#l84-l84",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 84,
+            "line_end": 84,
+            "section_id": "vehicule#s15"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 84,
+            "line_end": 84,
+            "section_id": "vehicule#s15"
+          },
+          "snippet": "Les deux parties du certificat d'immatriculation",
+          "text": "Les deux parties du certificat d'immatriculation",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Il vous remet",
+          "breadcrumb": "Immatriculer son véhicule › Vendeur › Belgique › Il vous remet",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-vendeur",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 1.54,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "vehicule#l107-l110",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 107,
+            "line_end": 110,
+            "section_id": "vehicule#s20"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 107,
+            "line_end": 110,
+            "section_id": "vehicule#s20"
+          },
+          "snippet": "+ 200 € Transfert d'un numéro personnalisé + 24 € Plaques",
+          "text": "+ 200 €\nTransfert d'un numéro personnalisé\n+ 24 €\nPlaques",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines",
+            "row_match"
+          ],
+          "matched_keywords": [
+            "plaques"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Coûts",
+          "breadcrumb": "Immatriculer son véhicule › Coûts",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-couts",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 1.104,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": "section",
+          "captures": [
+            {
+              "kind": "amount",
+              "raw": "200 €",
+              "pos": 2,
+              "value": 200.0,
+              "currency": "EUR",
+              "unit": null,
+              "line_num": 107
+            },
+            {
+              "kind": "amount",
+              "raw": "24 €",
+              "pos": 2,
+              "value": 24.0,
+              "currency": "EUR",
+              "unit": null,
+              "line_num": 109
+            }
+          ]
+        },
+        {
+          "candidate_id": "vehicule#l125-l127",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 125,
+            "line_end": 127,
+            "section_id": "vehicule#s23"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 125,
+            "line_end": 127,
+            "section_id": "vehicule#s23"
+          },
+          "snippet": "Un certificat passé dans un autre État membre ou en Suisse reste valable, mais pour la durée prévue au Luxembourg : premier contrôle 4 ans après la première mi…",
+          "text": "Un certificat passé dans un autre État membre ou en Suisse reste valable, mais pour la durée prévue au Luxembourg : premier contrôle 4 ans après la première mise en circulation, le suivant 2 ans plus tard, puis chaque année.\nExemple : une voiture de plus de six ans contrôlée en France il y a plus d'un an doit repasser le contrôle.\nLe plus simple est de le refaire dans le pays d'origine avant le dépôt. Un centre luxembourgeois peut refuser un véhicule encore en plaques étrangères : un refus a été constaté en septembre 2026.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "plaques"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Le contrôle technique passé à l'étranger",
+          "breadcrumb": "Immatriculer son véhicule › Cas particuliers › Le contrôle technique passé à l'étranger",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-cas",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 1.104,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": "section",
+          "captures": [
+            {
+              "kind": "amount",
+              "raw": "4 ans",
+              "pos": 133,
+              "value": 4.0,
+              "currency": null,
+              "unit": "ans",
+              "line_num": 125
+            },
+            {
+              "kind": "amount",
+              "raw": "2 ans",
+              "pos": 189,
+              "value": 2.0,
+              "currency": null,
+              "unit": "ans",
+              "line_num": 125
+            },
+            {
+              "kind": "amount",
+              "raw": "six ans",
+              "pos": 33,
+              "value": 6.0,
+              "currency": null,
+              "unit": "ans",
+              "line_num": 126
+            },
+            {
+              "kind": "amount",
+              "raw": "un an",
+              "pos": 75,
+              "value": 1.0,
+              "currency": null,
+              "unit": "an",
+              "line_num": 126
+            }
+          ]
+        },
+        {
+          "candidate_id": "vehicule#l131-l132",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 131,
+            "line_end": 132,
+            "section_id": "vehicule#s25"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 131,
+            "line_end": 132,
+            "section_id": "vehicule#s25"
+          },
+          "snippet": "Ordre : numéro et plaques, assurance, droit de chancellerie, vignette 705, SNCA. Les plaques se font avant le rendez-vous SNCA.",
+          "text": "Ordre : numéro et plaques, assurance, droit de chancellerie, vignette 705, SNCA.\nLes plaques se font avant le rendez-vous SNCA.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "plaques"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "À retenir",
+          "breadcrumb": "Immatriculer son véhicule › À retenir",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-cas",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 0.504,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": "section",
+          "captures": []
+        },
+        {
+          "candidate_id": "vehicule#l149-l149",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 149,
+            "line_end": 149,
+            "section_id": "vehicule#s26"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 149,
+            "line_end": 149,
+            "section_id": "vehicule#s26"
+          },
+          "snippet": "Allemagne, plaque d'exportation, service de Berlin",
+          "text": "Allemagne, plaque d'exportation, service de Berlin",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "plaques"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Sources officielles",
+          "breadcrumb": "Immatriculer son véhicule › Sources officielles",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-cas",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 0.42,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "vehicule#l70-l70",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 70,
+            "line_end": 70,
+            "section_id": "vehicule#s9"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 70,
+            "line_end": 70,
+            "section_id": "vehicule#s9"
+          },
+          "snippet": "Plaques luxembourgeoises : Fabriquées avant le rendez-vous.",
+          "text": "Plaques luxembourgeoises : Fabriquées avant le rendez-vous.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "plaques"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Dossier",
+          "breadcrumb": "Immatriculer son véhicule › Dossier",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-dossier",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 0.42,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "vehicule#l89-l89",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 89,
+            "line_end": 89,
+            "section_id": "vehicule#s16"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 89,
+            "line_end": 89,
+            "section_id": "vehicule#s16"
+          },
+          "snippet": "Garder sa plaque, qui est personnelle, et la faire radier auprès de la DIV",
+          "text": "Garder sa plaque, qui est personnelle, et la faire radier auprès de la DIV",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "plaques"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Il fait chez lui",
+          "breadcrumb": "Immatriculer son véhicule › Vendeur › Belgique › Il fait chez lui",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-vendeur",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 0.42,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "vehicule#l95-l96",
+          "anchor": {
+            "doc_id": "vehicule",
+            "line_start": 95,
+            "line_end": 96,
+            "section_id": "vehicule#s19"
+          },
+          "context": {
+            "doc_id": "vehicule",
+            "line_start": 95,
+            "line_end": 96,
+            "section_id": "vehicule#s19"
+          },
+          "snippet": "Remettre les plaques allemandes Demander une plaque d'exportation pour rouler jusqu'ici, sans désimmatriculation préalable",
+          "text": "Remettre les plaques allemandes\nDemander une plaque d'exportation pour rouler jusqu'ici, sans désimmatriculation préalable",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "plaques"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Il fait chez lui",
+          "breadcrumb": "Immatriculer son véhicule › Vendeur › Allemagne › Il fait chez lui",
+          "url_anchor": "https://lux-guide.github.io/#fiche/vehicule#g-vendeur",
+          "role": "supporting",
+          "reason": "Covers 'immatriculation' (coverage 0.50) but vehicule#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 0.42,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l175-l175",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 175,
+            "line_end": 175,
+            "section_id": "faq#s65"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 175,
+            "line_end": 175,
+            "section_id": "faq#s65"
+          },
+          "snippet": "315,04 euros par mois et par enfant, plus 23,81 euros au-delà de six ans et 59,44 euros au-delà de douze ans, montants au 1er juin 2026. Une allocation de rent…",
+          "text": "315,04 euros par mois et par enfant, plus 23,81 euros au-delà de six ans et 59,44 euros au-delà de douze ans, montants au 1er juin 2026. Une allocation de rentrée de 115 ou 235 euros est versée automatiquement en août.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "(?:\\d{1,3}(?:[ .]\\d{3})+|\\d+)(?:[.,]\\d+)?\\s?(?:€|euros?|eur)\\b"
+          ],
+          "matched_concepts": [
+            "regex:(?:\\d{1,3}(?:[ .]\\d{3})+|\\d+)(?:[.,]\\d+)?\\s?(?:€|euros?|eur)\\b"
+          ],
+          "section_title": "Quel est le montant des allocations familiales ?",
+          "breadcrumb": "Questions et réponses › Famille › Quel est le montant des allocations familiales ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only nothing (0.00 of the question's words); 'coûte' and 'immatriculation' not covered: supporting.",
+          "score": 2.25,
+          "matched_share": 0.0,
+          "coverage": 0.0,
+          "covered_words": [],
+          "uncovered_words": [
+            "coûte",
+            "immatriculation"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "amount",
+              "raw": "315,04 euros",
+              "pos": 0,
+              "value": 315.04,
+              "currency": "EUR",
+              "unit": null,
+              "line_num": 175
+            },
+            {
+              "kind": "amount",
+              "raw": "23,81 euros",
+              "pos": 42,
+              "value": 23.81,
+              "currency": "EUR",
+              "unit": null,
+              "line_num": 175
+            },
+            {
+              "kind": "amount",
+              "raw": "six ans",
+              "pos": 65,
+              "value": 6.0,
+              "currency": null,
+              "unit": "ans",
+              "line_num": 175
+            },
+            {
+              "kind": "amount",
+              "raw": "59,44 euros",
+              "pos": 76,
+              "value": 59.44,
+              "currency": "EUR",
+              "unit": null,
+              "line_num": 175
+            },
+            {
+              "kind": "amount",
+              "raw": "douze ans",
+              "pos": 99,
+              "value": 12.0,
+              "currency": null,
+              "unit": "ans",
+              "line_num": 175
+            },
+            {
+              "kind": "amount",
+              "raw": "235 euros",
+              "pos": 173,
+              "value": 235.0,
+              "currency": "EUR",
+              "unit": null,
+              "line_num": 175
+            }
+          ]
+        },
+        {
+          "candidate_id": "faq#l57-l57",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 57,
+            "line_end": 57,
+            "section_id": "faq#s21"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 57,
+            "line_end": 57,
+            "section_id": "faq#s21"
+          },
+          "snippet": "Non. Le taux de 3 % suppose une affectation en habitation principale pendant deux ans et l'accord préalable de l'administration, et l'avantage est plafonné à 5…",
+          "text": "Non. Le taux de 3 % suppose une affectation en habitation principale pendant deux ans et l'accord préalable de l'administration, et l'avantage est plafonné à 50 000 euros par logement. Au-delà, la part restante repasse à 17 %.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "(?:\\d{1,3}(?:[ .]\\d{3})+|\\d+)(?:[.,]\\d+)?\\s?(?:€|euros?|eur)\\b"
+          ],
+          "matched_concepts": [
+            "regex:(?:\\d{1,3}(?:[ .]\\d{3})+|\\d+)(?:[.,]\\d+)?\\s?(?:€|euros?|eur)\\b"
+          ],
+          "section_title": "La TVA sur un logement neuf est-elle toujours de 3 % ?",
+          "breadcrumb": "Questions et réponses › Logement › La TVA sur un logement neuf est-elle toujours de 3 % ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only nothing (0.00 of the question's words); 'coûte' and 'immatriculation' not covered: supporting.",
+          "score": 2.25,
+          "matched_share": 0.0,
+          "coverage": 0.0,
+          "covered_words": [],
+          "uncovered_words": [
+            "coûte",
+            "immatriculation"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "amount",
+              "raw": "deux ans",
+              "pos": 77,
+              "value": 2.0,
+              "currency": null,
+              "unit": "ans",
+              "line_num": 57
+            },
+            {
+              "kind": "amount",
+              "raw": "50 000 euros",
+              "pos": 158,
+              "value": 50000.0,
+              "currency": "EUR",
+              "unit": null,
+              "line_num": 57
+            }
+          ]
+        },
+        {
+          "candidate_id": "faq#l17-l18",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 17,
+            "line_end": 18,
+            "section_id": "faq#s7"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 17,
+            "line_end": 18,
+            "section_id": "faq#s7"
+          },
+          "snippet": "Dans les six mois de la déclaration d'arrivée à la commune. Avant la SNCA, il faut le numéro d'immatriculation, l'assurance luxembourgeoise et la vignette 705…",
+          "text": "Dans les six mois de la déclaration d'arrivée à la commune. Avant la SNCA, il faut le numéro d'immatriculation, l'assurance luxembourgeoise et la vignette 705 des douanes, cette dernière étant exigée même quand aucune TVA n'est due.\nVoir la fiche : Immatriculer son véhicule",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer",
+            "immatriculer son véhicule"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Dans quel délai immatriculer un véhicule qu'on amène avec soi ?",
+          "breadcrumb": "Questions et réponses › Mobilite › Dans quel délai immatriculer un véhicule qu'on amène avec soi ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Dans quel délai immatriculer un véhicule qu'on amène avec soi ?' names 'voiture', not 'immatriculation': its page's topic 'other' is not the question's 'vehicle', and vehicule#l84-l84 answers on a 'vehicle' page.",
+          "score": 6.27,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "amount",
+              "raw": "six mois",
+              "pos": 9,
+              "value": 6.0,
+              "currency": null,
+              "unit": "mois",
+              "line_num": 17
+            }
+          ]
+        },
+        {
+          "candidate_id": "fiches#l61-l62",
+          "anchor": {
+            "doc_id": "fiches",
+            "line_start": 61,
+            "line_end": 62,
+            "section_id": "fiches#s31"
+          },
+          "context": {
+            "doc_id": "fiches",
+            "line_start": 61,
+            "line_end": 62,
+            "section_id": "fiches#s31"
+          },
+          "snippet": "Immatriculer son véhicule Un ordre imposé, une pièce à obtenir à chaque étape, et six mois après la déclaration d'arrivée pour tout boucler.",
+          "text": "Immatriculer son véhicule\nUn ordre imposé, une pièce à obtenir à chaque étape, et six mois après la déclaration d'arrivée pour tout boucler.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer",
+            "immatriculer son véhicule"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Immatriculer son véhicule",
+          "breadcrumb": "Fiches pratiques › Immatriculer son véhicule",
+          "url_anchor": "https://lux-guide.github.io/#fiches#fiches-grid",
+          "role": "discarded",
+          "reason": "The section 'Immatriculer son véhicule' names 'voiture', not 'immatriculation': its page's topic 'other' is not the question's 'vehicle', and vehicule#l84-l84 answers on a 'vehicle' page.",
+          "score": 5.736,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "section",
+          "captures": [
+            {
+              "kind": "amount",
+              "raw": "six mois",
+              "pos": 56,
+              "value": 6.0,
+              "currency": null,
+              "unit": "mois",
+              "line_num": 62
+            }
+          ]
+        },
+        {
+          "candidate_id": "faq#l23-l24",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 23,
+            "line_end": 24,
+            "section_id": "faq#s9"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 23,
+            "line_end": 24,
+            "section_id": "faq#s9"
+          },
+          "snippet": "Cela dépend de votre cas. Import : contrôle technique, assurance, puis immatriculation. Achat chez un professionnel : il s'en charge. Achat entre particuliers…",
+          "text": "Cela dépend de votre cas. Import : contrôle technique, assurance, puis immatriculation. Achat chez un professionnel : il s'en charge. Achat entre particuliers : la démarche vous incombe, avec les deux parties du certificat.\nVoir la fiche : Immatriculer son véhicule",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer",
+            "immatriculer son véhicule"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Comment s'immatricule un véhicule importé ?",
+          "breadcrumb": "Questions et réponses › Mobilite › Comment s'immatricule un véhicule importé ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Comment s'immatricule un véhicule importé ?' names 'voiture', not 'immatriculation': its page's topic 'other' is not the question's 'vehicle', and vehicule#l84-l84 answers on a 'vehicle' page.",
+          "score": 3.68,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l14-l15",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 14,
+            "line_end": 15,
+            "section_id": "faq#s6"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 14,
+            "line_end": 15,
+            "section_id": "faq#s6"
+          },
+          "snippet": "Pas si le contrôle étranger est encore valable. Un certificat passé dans un autre État membre ou en Suisse reste valable, mais sa durée devient celle du droit…",
+          "text": "Pas si le contrôle étranger est encore valable. Un certificat passé dans un autre État membre ou en Suisse reste valable, mais sa durée devient celle du droit luxembourgeois : premier contrôle quatre ans après la première mise en circulation, deuxième deux ans après, puis chaque année.\nVoir la fiche : Immatriculer son véhicule",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer",
+            "immatriculer son véhicule"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Faut-il repasser le contrôle technique en arrivant au Luxembourg ?",
+          "breadcrumb": "Questions et réponses › Mobilite › Faut-il repasser le contrôle technique en arrivant au Luxembourg ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Faut-il repasser le contrôle technique en arrivant au Luxembourg ?' names 'controle technique', not 'immatriculation': its page's topic 'other' is not the question's 'vehicle', and vehicule#l84-l84 answers on a 'vehicle' page.",
+          "score": 3.168,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "section",
+          "captures": [
+            {
+              "kind": "amount",
+              "raw": "quatre ans",
+              "pos": 193,
+              "value": 4.0,
+              "currency": null,
+              "unit": "ans",
+              "line_num": 14
+            },
+            {
+              "kind": "amount",
+              "raw": "deux ans",
+              "pos": 252,
+              "value": 2.0,
+              "currency": null,
+              "unit": "ans",
+              "line_num": 14
+            }
+          ]
+        },
+        {
+          "candidate_id": "faq#l5-l5",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 5,
+            "line_end": 5,
+            "section_id": "faq#s3"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 5,
+            "line_end": 5,
+            "section_id": "faq#s3"
+          },
+          "snippet": "Il n'est pas exigé, ni pour assurer ni pour immatriculer : il ne joue que sur le prix. Si vous avez eu un contrat à votre nom, réclamez-le, c'est un droit : vo…",
+          "text": "Il n'est pas exigé, ni pour assurer ni pour immatriculer : il ne joue que sur le prix. Si vous avez eu un contrat à votre nom, réclamez-le, c'est un droit : votre assureur doit le fournir dans les quinze jours et il couvre au moins cinq ans. Sans contrat à votre nom, il n'y a rien à demander, et vous entrez au degré neutre de l'échelle luxembourgeoise, le degré 11 sur une échelle qui va de -3 à 22.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "breadcrumb": "Questions et réponses › Mobilite › Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?' names 'voiture', not 'immatriculation': its page's topic 'other' is not the question's 'vehicle', and vehicule#l84-l84 answers on a 'vehicle' page.",
+          "score": 3.06,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "amount",
+              "raw": "quinze jours",
+              "pos": 197,
+              "value": 15.0,
+              "currency": null,
+              "unit": "jours",
+              "line_num": 5
+            },
+            {
+              "kind": "amount",
+              "raw": "cinq ans",
+              "pos": 232,
+              "value": 5.0,
+              "currency": null,
+              "unit": "ans",
+              "line_num": 5
+            }
+          ]
+        },
+        {
+          "candidate_id": "faq#l12-l12",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 12,
+            "line_end": 12,
+            "section_id": "faq#s5"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 12,
+            "line_end": 12,
+            "section_id": "faq#s5"
+          },
+          "snippet": "Voir la fiche : Immatriculer son véhicule",
+          "text": "Voir la fiche : Immatriculer son véhicule",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "immatriculation",
+            "immatriculer",
+            "immatriculer son véhicule"
+          ],
+          "matched_concepts": [
+            "immatriculation"
+          ],
+          "section_title": "La carte grise n'est pas au nom du vendeur, est-ce bloquant ?",
+          "breadcrumb": "Questions et réponses › Mobilite › La carte grise n'est pas au nom du vendeur, est-ce bloquant ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'La carte grise n'est pas au nom du vendeur, est-ce bloquant ?' names 'carte grise', not 'immatriculation'; its lines carry only 'immatriculation', 'immatriculer' and 'immatriculer son véhicule'.",
+          "score": 2.14,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "immatriculation"
+          ],
+          "uncovered_words": [
+            "coûte"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l35-l35",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 35,
+            "line_end": 35,
+            "section_id": "faq#s14"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 35,
+            "line_end": 35,
+            "section_id": "faq#s14"
+          },
+          "snippet": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "text": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "coûte"
+          ],
+          "matched_concepts": [
+            "coute"
+          ],
+          "section_title": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "breadcrumb": "Questions et réponses › Logement › Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?' names 'cout de la vie', not 'immatriculation': its page's topic 'other' is not the question's 'vehicle', and vehicule#l84-l84 answers on a 'vehicle' page.",
+          "score": 2.0,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "coûte"
+          ],
+          "uncovered_words": [
+            "immatriculation"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        }
+      ],
+      "methods_used": [
+        "keyword_lines",
+        "title_match",
+        "anchor_regex",
+        "row_match",
+        "arbiter_rules",
+        "sweep"
+      ],
+      "methods_skipped": {
+        "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+        "llm_arbiter": "no model key configured",
+        "current_page_boost": "no pages_hint: no page to boost"
+      },
+      "not_found": false,
+      "not_found_reason": null,
+      "confidence": 0.409,
+      "per_section_audit": [
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s1",
+          "title": "Questions et réponses",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s2",
+          "title": "Mobilite",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s3",
+          "title": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s4",
+          "title": "J'ai conduit la voiture d'un proche sans être inscrit au contrat, est-ce que ça compte ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s5",
+          "title": "La carte grise n'est pas au nom du vendeur, est-ce bloquant ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s6",
+          "title": "Faut-il repasser le contrôle technique en arrivant au Luxembourg ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s7",
+          "title": "Dans quel délai immatriculer un véhicule qu'on amène avec soi ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s8",
+          "title": "Un permis de conduire européen reste-t-il valable ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s9",
+          "title": "Comment s'immatricule un véhicule importé ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s10",
+          "title": "Les transports publics sont-ils vraiment gratuits ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s11",
+          "title": "Logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s12",
+          "title": "Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s13",
+          "title": "Combien de jours de télétravail un frontalier peut-il faire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s14",
+          "title": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s15",
+          "title": "Sur quels critères choisir sa commune ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s16",
+          "title": "Comment comparer deux contrats d'assurance ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s17",
+          "title": "Quelle garantie locative un bailleur peut-il demander ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s18",
+          "title": "Comment se cherche un logement au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s19",
+          "title": "À quel moment souscrire l'assurance habitation ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s20",
+          "title": "Quelle part du prix une banque finance-t-elle ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s21",
+          "title": "La TVA sur un logement neuf est-elle toujours de 3 % ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s22",
+          "title": "Qui peut prétendre à un logement à coût modéré ?",
+          "keyword": ".",
+          "toc": "Y",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s23",
+          "title": "Quotidien",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s24",
+          "title": "Vers qui se tourner en cas de litige avec un professionnel ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s25",
+          "title": "Le luxembourgeois est-il nécessaire pour travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s26",
+          "title": "Combien de temps pour avoir internet ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s27",
+          "title": "Faut-il apprendre le luxembourgeois ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s28",
+          "title": "Comment fonctionne le tri des déchets ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s29",
+          "title": "Sante",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s30",
+          "title": "Une complémentaire santé est-elle utile ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s31",
+          "title": "Qui déclare l'entrée à la sécurité sociale ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s32",
+          "title": "Quel numéro d'urgence appeler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s33",
+          "title": "Impots",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s34",
+          "title": "Comment l'impôt est-il prélevé quand on est deux à travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s35",
+          "title": "Pourquoi la déclaration se solde-t-elle souvent par un montant à payer ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s36",
+          "title": "Qu'est-ce que le régime des impatriés ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s37",
+          "title": "Existe-t-il une classe d'impôt 1b ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s38",
+          "title": "Qui relève de la classe 1a ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s39",
+          "title": "Un divorce ou un décès fait-il changer de classe d'impôt immédiatement ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s40",
+          "title": "Le régime des impatriés dépend-il de la classe d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s41",
+          "title": "Quelle différence entre classe 1 et classe 2 ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s42",
+          "title": "Qu'est-ce qui se déduit des impôts ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s43",
+          "title": "Comment faire corriger une classe d'impôt inexacte ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s44",
+          "title": "Comment obtient-on sa fiche de retenue d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s45",
+          "title": "Les intérêts d'un prêt immobilier sont-ils déductibles ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s46",
+          "title": "Administratif",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s47",
+          "title": "Les délais d'arrivée sont-ils les mêmes hors Union européenne ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s48",
+          "title": "La déclaration à la commune suffit-elle ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s49",
+          "title": "Combien de temps faut-il pour obtenir la nationalité ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s50",
+          "title": "Dans quel délai faut-il se déclarer à la commune ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s51",
+          "title": "Comment obtient-on le matricule ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s52",
+          "title": "Peut-on avoir la double nationalité ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s53",
+          "title": "Finances",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s54",
+          "title": "Un compte bancaire étranger peut-il servir à recevoir le salaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s55",
+          "title": "Que faut-il pour ouvrir un compte bancaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s56",
+          "title": "Le salaire luxembourgeois compense-t-il le coût de la vie ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s57",
+          "title": "Un compte bancaire luxembourgeois est-il obligatoire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s58",
+          "title": "Qu'est-ce que l'indexation des salaires ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s59",
+          "title": "Travail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s60",
+          "title": "Peut-on exercer une activité indépendante en plus d'un emploi salarié ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s61",
+          "title": "Combien de jours de congé donne la loi ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s62",
+          "title": "Famille",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s63",
+          "title": "Comment se fait l'inscription à l'école ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s64",
+          "title": "Existe-t-il une aide pour la crèche ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s65",
+          "title": "Quel est le montant des allocations familiales ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s1",
+          "title": "Fiches pratiques",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s2",
+          "title": "Les huit premiers jours",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s3",
+          "title": "Sécurité sociale et remboursements",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s4",
+          "title": "La complémentaire santé",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s5",
+          "title": "Comment fonctionne l'administration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s6",
+          "title": "LuxTrust et MyGuichet",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s7",
+          "title": "Trouver un logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s8",
+          "title": "Choisir sa commune",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s9",
+          "title": "Habiter en France, en Belgique ou en Allemagne",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s10",
+          "title": "Contester une facture ou un service",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s11",
+          "title": "Emménager et meubler",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s12",
+          "title": "Signer un bail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s13",
+          "title": "Assurer son logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s14",
+          "title": "Acheter un logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s15",
+          "title": "Logement abordable et à coût modéré",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s16",
+          "title": "Classes d'impôt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s17",
+          "title": "Ce qui réduit votre impôt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s18",
+          "title": "Conseil fiscal : les leviers de la première année",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s19",
+          "title": "Régime des impatriés",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s20",
+          "title": "Déduire les intérêts d'emprunt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s21",
+          "title": "Exercer en indépendant",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s22",
+          "title": "Allocations familiales",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s23",
+          "title": "Congés et jours fériés",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s24",
+          "title": "Chercher un emploi",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s25",
+          "title": "Banque et moyens de paiement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s26",
+          "title": "Salaire, coût de la vie et indexation",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s27",
+          "title": "Scolariser ses enfants",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s28",
+          "title": "Garde d'enfants et chèque-service",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s29",
+          "title": "Se soigner au quotidien",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s30",
+          "title": "Permis de conduire",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s31",
+          "title": "Immatriculer son véhicule",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s32",
+          "title": "Assurer son véhicule",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s33",
+          "title": "Transports publics gratuits",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s34",
+          "title": "Internet et téléphonie",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s35",
+          "title": "Langues et intégration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s36",
+          "title": "Nationalité luxembourgeoise",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s37",
+          "title": "Déchets et vie communale",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s1",
+          "title": "Immatriculer son véhicule",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s2",
+          "title": "Votre cas",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s3",
+          "title": "Étapes",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s4",
+          "title": "Réserver un numéro, puis faire les plaques",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s5",
+          "title": "Assurer le véhicule",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s6",
+          "title": "Payer le droit de chancellerie",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s7",
+          "title": "Obtenir la vignette 705 aux douanes",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s8",
+          "title": "Déposer le dossier à la SNCA",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s9",
+          "title": "Dossier",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s10",
+          "title": "Vendeur",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s11",
+          "title": "France",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s12",
+          "title": "Il vous remet",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s13",
+          "title": "Il fait chez lui",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s14",
+          "title": "Belgique",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s15",
+          "title": "Il vous remet",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s16",
+          "title": "Il fait chez lui",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s17",
+          "title": "Allemagne",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s18",
+          "title": "Il vous remet",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s19",
+          "title": "Il fait chez lui",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s20",
+          "title": "Coûts",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s21",
+          "title": "Cas particuliers",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s22",
+          "title": "Le certificat n'est pas au nom du vendeur",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s23",
+          "title": "Le contrôle technique passé à l'étranger",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s24",
+          "title": "Rouler avant l'immatriculation",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s25",
+          "title": "À retenir",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s26",
+          "title": "Sources officielles",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        }
+      ],
+      "route_pages": [
+        {
+          "doc_id": "vehicule",
+          "score": 8.12,
+          "reason": "kept: 4 term(s) in the summary line (immatriculation, immatriculer, plaques, immatriculer son véhicule); heading title match (Immatriculer son véhicule, Rouler avant l'immatriculation, Réserver un numéro, puis faire les plaques); concept(s) in tags (immatriculation); document title 'Immatriculer son véhicule' covers 1.00 of the question's words; tally 8.12"
+        },
+        {
+          "doc_id": "faq",
+          "score": 5.08,
+          "reason": "kept: 2 term(s) in the summary line (immatriculation, immatriculer); heading title match (Comment s'immatricule un véhicule importé ?, Dans quel délai immatriculer un véhicule qu'on amène avec soi ?, Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?); concept(s) in tags (immatriculation); tally 5.08"
+        },
+        {
+          "doc_id": "fiches",
+          "score": 4.68,
+          "reason": "kept: 2 term(s) in the summary line (immatriculation, immatriculer); heading title match (Immatriculer son véhicule); concept(s) in tags (immatriculation); tally 4.68"
+        }
+      ],
+      "route_sections": [
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s4",
+          "title": "Réserver un numéro, puis faire les plaques",
+          "score": 3.0,
+          "reason": "title 'Réserver un numéro, puis faire les plaques' matches plaques; 1 term(s) in its lines (plaques); a leaf, stop here"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s9",
+          "title": "Dossier",
+          "score": 3.0,
+          "reason": "3 term(s) in its lines (immatriculation, immatriculer, plaques); a leaf, stop here"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s2",
+          "title": "Votre cas",
+          "score": 2.0,
+          "reason": "2 term(s) in its lines (immatriculation, immatriculer); a leaf, stop here"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s6",
+          "title": "Payer le droit de chancellerie",
+          "score": 2.0,
+          "reason": "2 term(s) in its lines (immatriculation, immatriculer); a leaf, stop here"
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s7",
+          "title": "Obtenir la vignette 705 aux douanes",
+          "score": 2.0,
+          "reason": "2 term(s) in its lines (immatriculation, immatriculer); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s7",
+          "title": "Dans quel délai immatriculer un véhicule qu'on amène avec soi ?",
+          "score": 7.0,
+          "reason": "title 'Dans quel délai immatriculer un véhicule qu'on amène avec soi ?' matches immatriculation, immatriculer; 3 term(s) in its lines (immatriculation, immatriculer, immatriculer son véhicule); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s9",
+          "title": "Comment s'immatricule un véhicule importé ?",
+          "score": 7.0,
+          "reason": "title 'Comment s'immatricule un véhicule importé ?' matches immatriculation, immatriculer; 3 term(s) in its lines (immatriculation, immatriculer, immatriculer son véhicule); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s14",
+          "title": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "score": 3.0,
+          "reason": "title 'Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?' matches coûte; 1 term(s) in its lines (coûte); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s22",
+          "title": "Qui peut prétendre à un logement à coût modéré ?",
+          "score": 2.0,
+          "reason": "title 'Qui peut prétendre à un logement à coût modéré ?' matches hint:Coûts; a leaf, stop here"
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s31",
+          "title": "Immatriculer son véhicule",
+          "score": 9.0,
+          "reason": "title 'Immatriculer son véhicule' matches immatriculation, immatriculer, immatriculer son véhicule; 3 term(s) in its lines (immatriculation, immatriculer, immatriculer son véhicule); a leaf, stop here"
+        }
+      ],
+      "route_notes": [
+        "faq: no section of the outline carries a term; the page is read whole",
+        "fiches: no section of the outline carries a term; the page is read whole"
+      ],
+      "sweep_concepts": [
+        {
+          "concept": "coute",
+          "variants": [
+            "coûte"
+          ],
+          "pages_with_hits": [
+            "arrivee",
+            "faq",
+            "luxtrust"
+          ],
+          "line_hits": 3
+        },
+        {
+          "concept": "immatriculation",
+          "variants": [
+            "immatriculation",
+            "immatriculer",
+            "plaques d'immatriculation",
+            "plaques",
+            "vehicle registration",
+            "registration",
+            "number plates",
+            "license plates",
+            "Zulassung",
+            "Kennzeichen",
+            "immatriculer son véhicule",
+            "car registration",
+            "register a car",
+            "register my car",
+            "number plate",
+            "licence plate",
+            "plates",
+            "zulassung",
+            "kennzeichen"
+          ],
+          "pages_with_hits": [
+            "assurance_auto",
+            "faq",
+            "fiches",
+            "parcours",
+            "vehicule"
+          ],
+          "line_hits": 44
+        }
+      ],
+      "sweep_rows": [
+        {
+          "concept": "coute",
+          "variant": "coûte",
+          "doc_id": "arrivee",
+          "line_num": 6,
+          "snippet": "Le délai de huit jours vaut pour la déclaration d'arrivée au bureau de la population. Deux autres délais s'y ajoutent, et les manquer coûte plus cher que le pr…"
+        },
+        {
+          "concept": "coute",
+          "variant": "coûte",
+          "doc_id": "faq",
+          "line_num": 35,
+          "snippet": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?"
+        },
+        {
+          "concept": "coute",
+          "variant": "coûte",
+          "doc_id": "luxtrust",
+          "line_num": 9,
+          "snippet": "Ouvrir le compte bancaire d'abord, LuxTrust suit et coûte moins cher."
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculation",
+          "doc_id": "assurance_auto",
+          "line_num": 3,
+          "snippet": "L'assurance en responsabilité civile est obligatoire pour tout véhicule immatriculé, et l'attestation est exigée au moment de l'immatriculation. Elle doit donc…"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer",
+          "doc_id": "assurance_auto",
+          "line_num": 9,
+          "snippet": "Concrètement, vous entrez alors au degré neutre de l'échelle luxembourgeoise, celle qui va de -3 à 22 et dont le degré 11 correspond à la prime de base. Ce n'e…"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculation",
+          "doc_id": "assurance_auto",
+          "line_num": 14,
+          "snippet": "Assurance obligatoire avant l'immatriculation."
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer",
+          "doc_id": "faq",
+          "line_num": 5,
+          "snippet": "Il n'est pas exigé, ni pour assurer ni pour immatriculer : il ne joue que sur le prix. Si vous avez eu un contrat à votre nom, réclamez-le, c'est un droit : vo…"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer",
+          "doc_id": "faq",
+          "line_num": 12,
+          "snippet": "Voir la fiche : Immatriculer son véhicule"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer son véhicule",
+          "doc_id": "faq",
+          "line_num": 12,
+          "snippet": "Voir la fiche : Immatriculer son véhicule"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer",
+          "doc_id": "faq",
+          "line_num": 15,
+          "snippet": "Voir la fiche : Immatriculer son véhicule"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer son véhicule",
+          "doc_id": "faq",
+          "line_num": 15,
+          "snippet": "Voir la fiche : Immatriculer son véhicule"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer",
+          "doc_id": "faq",
+          "line_num": 16,
+          "snippet": "Dans quel délai immatriculer un véhicule qu'on amène avec soi ?"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculation",
+          "doc_id": "faq",
+          "line_num": 17,
+          "snippet": "Dans les six mois de la déclaration d'arrivée à la commune. Avant la SNCA, il faut le numéro d'immatriculation, l'assurance luxembourgeoise et la vignette 705…"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer",
+          "doc_id": "faq",
+          "line_num": 18,
+          "snippet": "Voir la fiche : Immatriculer son véhicule"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer son véhicule",
+          "doc_id": "faq",
+          "line_num": 18,
+          "snippet": "Voir la fiche : Immatriculer son véhicule"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculation",
+          "doc_id": "faq",
+          "line_num": 23,
+          "snippet": "Cela dépend de votre cas. Import : contrôle technique, assurance, puis immatriculation. Achat chez un professionnel : il s'en charge. Achat entre particuliers…"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer",
+          "doc_id": "faq",
+          "line_num": 24,
+          "snippet": "Voir la fiche : Immatriculer son véhicule"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer son véhicule",
+          "doc_id": "faq",
+          "line_num": 24,
+          "snippet": "Voir la fiche : Immatriculer son véhicule"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer",
+          "doc_id": "fiches",
+          "line_num": 61,
+          "snippet": "Immatriculer son véhicule"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer son véhicule",
+          "doc_id": "fiches",
+          "line_num": 61,
+          "snippet": "Immatriculer son véhicule"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculation",
+          "doc_id": "parcours",
+          "line_num": 33,
+          "snippet": "Assurer le véhicule, préalable obligatoire à l'immatriculation."
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer",
+          "doc_id": "parcours",
+          "line_num": 34,
+          "snippet": "Immatriculer le véhicule selon votre cas : import, achat professionnel ou entre particuliers."
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer",
+          "doc_id": "vehicule",
+          "line_num": 1,
+          "snippet": "Immatriculer son véhicule"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer son véhicule",
+          "doc_id": "vehicule",
+          "line_num": 1,
+          "snippet": "Immatriculer son véhicule"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "plaques",
+          "doc_id": "vehicule",
+          "line_num": 4,
+          "snippet": "Coût : 50 €, droit de chancellerie, hors plaques et contrôle."
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "plaques",
+          "doc_id": "vehicule",
+          "line_num": 5,
+          "snippet": "Dépôt : SNCA, sur rendez-vous, plaques déjà faites."
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "plaques",
+          "doc_id": "vehicule",
+          "line_num": 15,
+          "snippet": "Réserver un numéro, puis faire les plaques"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "plaques",
+          "doc_id": "vehicule",
+          "line_num": 16,
+          "snippet": "Numéro de la série courante ou numéro personnalisé. Dès la confirmation, faites fabriquer les plaques chez un fabricant agréé au Luxembourg : elles sont demand…"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "plaques",
+          "doc_id": "vehicule",
+          "line_num": 23,
+          "snippet": "La réservation du numéro, puis les plaques"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculation",
+          "doc_id": "vehicule",
+          "line_num": 37,
+          "snippet": "Le timbre, ou la preuve de virement avec nom, prénom, motif, numéro d'immatriculation et numéro de châssis"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculation",
+          "doc_id": "vehicule",
+          "line_num": 45,
+          "snippet": "Le véhicule, le certificat d'immatriculation étranger, la facture ou le contrat de vente, une pièce d'identité"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "plaques",
+          "doc_id": "vehicule",
+          "line_num": 56,
+          "snippet": "Le dossier complet et les plaques"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculation",
+          "doc_id": "vehicule",
+          "line_num": 58,
+          "snippet": "Le certificat d'immatriculation à votre nom, et une vignette fiscale provisoire de 30 jours"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculation",
+          "doc_id": "vehicule",
+          "line_num": 61,
+          "snippet": "Formulaire « Demande en obtention d'un certificat d'immatriculation », signé Sur Guichet.lu"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculation",
+          "doc_id": "vehicule",
+          "line_num": 65,
+          "snippet": "Certificat d'immatriculation étranger, complet : Dans l'Union, il a en général deux parties."
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculation",
+          "doc_id": "vehicule",
+          "line_num": 66,
+          "snippet": "Certificat de conformité européen : Si la première immatriculation date d'après le 1er février 2016."
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "plaques",
+          "doc_id": "vehicule",
+          "line_num": 70,
+          "snippet": "Plaques luxembourgeoises : Fabriquées avant le rendez-vous."
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculation",
+          "doc_id": "vehicule",
+          "line_num": 84,
+          "snippet": "Les deux parties du certificat d'immatriculation"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "plaques",
+          "doc_id": "vehicule",
+          "line_num": 95,
+          "snippet": "Remettre les plaques allemandes"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "plaques",
+          "doc_id": "vehicule",
+          "line_num": 110,
+          "snippet": "Plaques"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "plaques",
+          "doc_id": "vehicule",
+          "line_num": 127,
+          "snippet": "Le plus simple est de le refaire dans le pays d'origine avant le dépôt. Un centre luxembourgeois peut refuser un véhicule encore en plaques étrangères : un ref…"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculation",
+          "doc_id": "vehicule",
+          "line_num": 128,
+          "snippet": "Rouler avant l'immatriculation"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculation",
+          "doc_id": "vehicule",
+          "line_num": 129,
+          "snippet": "Avec les plaques qui portent votre futur numéro et une assurance responsabilité civile, vous pouvez conduire le véhicule jusqu'au lieu d'immatriculation, et ju…"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "plaques",
+          "doc_id": "vehicule",
+          "line_num": 129,
+          "snippet": "Avec les plaques qui portent votre futur numéro et une assurance responsabilité civile, vous pouvez conduire le véhicule jusqu'au lieu d'immatriculation, et ju…"
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "plaques",
+          "doc_id": "vehicule",
+          "line_num": 131,
+          "snippet": "Ordre : numéro et plaques, assurance, droit de chancellerie, vignette 705, SNCA."
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "plaques",
+          "doc_id": "vehicule",
+          "line_num": 132,
+          "snippet": "Les plaques se font avant le rendez-vous SNCA."
+        },
+        {
+          "concept": "immatriculation",
+          "variant": "immatriculer",
+          "doc_id": "vehicule",
+          "line_num": 137,
+          "snippet": "Guichet.lu, immatriculer un véhicule lors d'un déménagement"
+        }
+      ],
+      "question_concepts": [
+        "coute",
+        "immatriculation"
+      ],
+      "terms": [
+        {
+          "text": "coûte",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "coute",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "immatriculation",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "immatriculer",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "plaques d'immatriculation",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "plaques",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "vehicle registration",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "registration",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "number plates",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "license plates",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "zulassung",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "kennzeichen",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "immatriculer son véhicule",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "car registration",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "register a car",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "register my car",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "number plate",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "licence plate",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "plates",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "immatriculation",
+          "is_regex": false,
+          "concept_key": "immatriculation",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "(?:\\d{1,3}(?:[ .]\\d{3})+|\\d+)(?:[.,]\\d+)?\\s?(?:€|euros?|eur)\\b",
+          "weight": 1.0,
+          "source": "anchor",
+          "concept": null,
+          "is_regex": true,
+          "concept_key": "regex:(?:\\d{1,3}(?:[ .]\\d{3})+|\\d+)(?:[.,]\\d+)?\\s?(?:€|euros?|eur)\\b",
+          "weak": false,
+          "in_corpus": true
+        }
+      ],
+      "content_words": [
+        {
+          "text": "coûte",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "immatriculation",
+          "weight": 1.0,
+          "weak": false
+        }
+      ],
+      "uncovered_words": [],
+      "answer_context_used": "line"
+    }
+  }
+}

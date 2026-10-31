@@ -1,0 +1,2635 @@
+{
+  "answer": {
+    "extraction_method": "verbatim",
+    "confidence": 0.7,
+    "caveats": [],
+    "answer_found": true,
+    "complete_answer_found": true,
+    "context_structured": [
+      {
+        "candidate_id": "allocations#l2-l4",
+        "doc_id": "allocations",
+        "section_id": "allocations#s1",
+        "section_title": "Allocations familiales",
+        "breadcrumb": "Allocations familiales",
+        "line_start": 1,
+        "line_end": 5,
+        "url_anchor": "https://lux-guide.github.io/#fiche/allocations#fiche-detail",
+        "role": "primary"
+      }
+    ],
+    "keywords_found": [
+      "allocations",
+      "caisse pour l'avenir des enfants",
+      "familiales",
+      "verse"
+    ],
+    "llm_discovered_keywords": [],
+    "conflicting_evidence": [],
+    "suggested_clarification": null,
+    "kind": "text",
+    "items": [
+      {
+        "text": "Versées sans condition de nationalité, avec un supplément selon l'âge et une allocation de rentrée automatique. Les prestations familiales sont versées par la Caisse pour l'avenir des enfants, et elles sont dues pour tout enfant résidant au Luxembourg, sans condition de nationalité. C'est la résidence qui compte, pas le passeport, ce qui en fait l'une des aides les plus simples à obtenir pour un nouvel arrivant. Le montant de base s'élève à 315,04 euros par mois et par enfant, majoré de 23,81 euros au-delà de six ans et de 59,44 euros au-delà de douze ans, valeurs applicables au 1er juin 2026. S'y ajoute chaque année, en août, une allocation de rentrée scolaire de 115 euros pour un enfant de plus de six ans et de 235 euros au-delà de douze ans, versée automatiquement, sans aucune demande.",
+        "spans": [
+          {
+            "doc_id": "allocations",
+            "line_start": 2,
+            "line_end": 4,
+            "quote": "Versées sans condition de nationalité, avec un supplément selon l'âge et une allocation de rentrée automatique. Les prestations familiales sont versées par la Caisse pour l'avenir des enfants, et elles sont dues pour tout enfant résidant au Luxembourg, sans condition de nationalité. C'est la résidence qui compte, pas le passeport, ce qui en fait l'une des aides les plus simples à obtenir pour un nouvel arrivant. Le montant de base s'élève à 315,04 euros par mois et par enfant, majoré de 23,81 euros au-delà de six ans et de 59,44 euros au-delà de douze ans, valeurs applicables au 1er juin 2026. S'y ajoute chaque année, en août, une allocation de rentrée scolaire de 115 euros pour un enfant de plus de six ans et de 235 euros au-delà de douze ans, versée automatiquement, sans aucune demande."
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "question_id": "03ebd33456e7cd77",
+    "index_version": "1d1bbf848338f32798d0c92366bd740f0513f72b56bd4745e85a507a1645d9ca",
+    "pipeline_version": "guide-rag/0.1",
+    "methods_used": [
+      "keyword_lines",
+      "title_match",
+      "arbiter_rules",
+      "sweep"
+    ],
+    "methods_skipped": {
+      "anchor_regex": "answer type text asks for no typed anchor",
+      "row_match": "answer_type=text and no table column named",
+      "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+      "llm_arbiter": "no model key configured",
+      "current_page_boost": "no pages_hint: no page to boost"
+    },
+    "activations": {
+      "use_keywords": {
+        "on": true,
+        "reason": "always: keyword detectors are deterministic and prove absence"
+      },
+      "use_toc": {
+        "on": true,
+        "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+      },
+      "use_row_level": {
+        "on": false,
+        "reason": "answer_type=text and no table column named"
+      },
+      "use_embeddings": {
+        "on": false,
+        "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+      },
+      "use_llm_arbiter": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "use_llm_generation": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "sweep_for_absence": {
+        "on": true,
+        "reason": "always: the exhaustive sweep is the evidence of absence"
+      },
+      "current_page_boost": {
+        "on": false,
+        "reason": "no pages_hint: no page to boost"
+      }
+    },
+    "chunk_strategy": "line as the unit; anchor = hit lines grouped by runs; context = ±3 lines within the section (answer_context=paragraph)",
+    "model_used": "no model",
+    "prompt_version": null,
+    "fragments_applied": [],
+    "iterations": 1,
+    "validator_report": {
+      "iteration_1": []
+    },
+    "replay": null
+  },
+  "trace": {
+    "parsed": {
+      "question_id": "03ebd33456e7cd77",
+      "original_question": "qui verse les allocations familiales",
+      "corrected_question": "qui verse les allocations familiales",
+      "language": "fr",
+      "keywords": [
+        {
+          "text": "verse",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "allocations",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "familiales",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "allocations familiales",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "allocation familiale",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "allocation de naissance",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "caisse pour l'avenir des enfants",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "family allowance",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "child benefit",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "family benefits",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "kindergeld",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "familienzulage",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        }
+      ],
+      "answer_shape": "single",
+      "answer_type": "text",
+      "structural_hints": {
+        "pages_hint": null,
+        "toc_section_hint": "Allocations familiales",
+        "answer_context": "paragraph"
+      },
+      "decomposition": {
+        "pattern": "single",
+        "sub_questions": []
+      },
+      "suggested_clarification": null,
+      "ambiguity_reason": null,
+      "candidate_values": [],
+      "proposed_default": null,
+      "scope_filters": {
+        "topic": "other"
+      },
+      "parsing_notes": [
+        "language=fr: stop-word vote",
+        "answer_shape=single: no listing cue",
+        "answer_type=text: no typed cue",
+        "concept 'allocations_familiales' (other) matched by 'allocations familiales' [fr, primary]",
+        "toc_section_hint='Allocations familiales': every word of this heading is in the question",
+        "scope topic='other': the matched concepts vote {'other': 1.0}",
+        "decomposition=single: no 'et / and' between two clauses"
+      ]
+    },
+    "plan": {
+      "activations": {
+        "use_keywords": {
+          "on": true,
+          "reason": "always: keyword detectors are deterministic and prove absence"
+        },
+        "use_toc": {
+          "on": true,
+          "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+        },
+        "use_row_level": {
+          "on": false,
+          "reason": "answer_type=text and no table column named"
+        },
+        "use_embeddings": {
+          "on": false,
+          "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+        },
+        "use_llm_arbiter": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "use_llm_generation": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "sweep_for_absence": {
+          "on": true,
+          "reason": "always: the exhaustive sweep is the evidence of absence"
+        },
+        "current_page_boost": {
+          "on": false,
+          "reason": "no pages_hint: no page to boost"
+        }
+      }
+    },
+    "retrieval": {
+      "question_id": "03ebd33456e7cd77",
+      "question": "qui verse les allocations familiales",
+      "candidates": [
+        {
+          "candidate_id": "allocations#l2-l4",
+          "anchor": {
+            "doc_id": "allocations",
+            "line_start": 2,
+            "line_end": 4,
+            "section_id": "allocations#s1"
+          },
+          "context": {
+            "doc_id": "allocations",
+            "line_start": 1,
+            "line_end": 5,
+            "section_id": "allocations#s1"
+          },
+          "snippet": "Versées sans condition de nationalité, avec un supplément selon l'âge et une allocation de rentrée automatique. Les prestations familiales sont versées par la…",
+          "text": "Allocations familiales\nVersées sans condition de nationalité, avec un supplément selon l'âge et une allocation de rentrée automatique.\nLes prestations familiales sont versées par la Caisse pour l'avenir des enfants, et elles sont dues pour tout enfant résidant au Luxembourg, sans condition de nationalité. C'est la résidence qui compte, pas le passeport, ce qui en fait l'une des aides les plus simples à obtenir pour un nouvel arrivant.\nLe montant de base s'élève à 315,04 euros par mois et par enfant, majoré de 23,81 euros au-delà de six ans et de 59,44 euros au-delà de douze ans, valeurs applicables au 1er juin 2026. S'y ajoute chaque année, en août, une allocation de rentrée scolaire de 115 euros pour un enfant de plus de six ans et de 235 euros au-delà de douze ans, versée automatiquement, sans aucune demande.\nSeule la demande initiale nécessite une démarche, auprès de la caisse, en ligne via MyGuichet ou par formulaire. Ces montants suivent l'indexation générale : ils sont revalorisés à chaque tranche indiciaire, ce qui explique qu'un montant lu il y a un an ne corresponde plus.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "allocations",
+            "caisse pour l'avenir des enfants",
+            "familiales",
+            "verse"
+          ],
+          "matched_concepts": [
+            "allocations_familiales",
+            "verse"
+          ],
+          "section_title": "Allocations familiales",
+          "breadcrumb": "Allocations familiales",
+          "url_anchor": "https://lux-guide.github.io/#fiche/allocations#fiche-detail",
+          "role": "primary",
+          "reason": "The document 'Allocations familiales' and the section 'Allocations familiales' name the question's words 'verse', 'allocations' and 'familiales' (coverage 1.00); score 10.11: primary.",
+          "score": 10.11,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "verse",
+            "allocations",
+            "familiales"
+          ],
+          "uncovered_words": [],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l175-l176",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 175,
+            "line_end": 176,
+            "section_id": "faq#s65"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 174,
+            "line_end": 177,
+            "section_id": "faq#s65"
+          },
+          "snippet": "315,04 euros par mois et par enfant, plus 23,81 euros au-delà de six ans et 59,44 euros au-delà de douze ans, montants au 1er juin 2026. Une allocation de rent…",
+          "text": "Quel est le montant des allocations familiales ?\n315,04 euros par mois et par enfant, plus 23,81 euros au-delà de six ans et 59,44 euros au-delà de douze ans, montants au 1er juin 2026. Une allocation de rentrée de 115 ou 235 euros est versée automatiquement en août.\nVoir la fiche : Allocations familiales\nVotre question n'y est pas ? L'assistant cherche aussi dans le corps des fiches, et dit quand il ne sait pas.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "allocation familiale",
+            "allocations",
+            "allocations familiales",
+            "familiales",
+            "verse"
+          ],
+          "matched_concepts": [
+            "allocations_familiales",
+            "verse"
+          ],
+          "section_title": "Quel est le montant des allocations familiales ?",
+          "breadcrumb": "Questions et réponses › Famille › Quel est le montant des allocations familiales ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers 'verse', 'allocations' and 'familiales' (coverage 1.00) and points to 'Allocations familiales' (Voir la fiche), which covers the question as well: supporting (also answered here).",
+          "score": 11.1,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "verse",
+            "allocations",
+            "familiales"
+          ],
+          "uncovered_words": [],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "avantages#l286-l288",
+          "anchor": {
+            "doc_id": "avantages",
+            "line_start": 286,
+            "line_end": 288,
+            "section_id": "avantages#s34"
+          },
+          "context": {
+            "doc_id": "avantages",
+            "line_start": 283,
+            "line_end": 291,
+            "section_id": "avantages#s34"
+          },
+          "snippet": "Le Fonds national de solidarité verse, sur demande, une allocation de vie chère aux ménages à revenu modeste : 1 817 euros pour une personne seule, 2 272 euros…",
+          "text": "1 817 à 3 637 € par an selon la taille du ménage, sous condition de revenu\nÀ demander\nUn formulaire ou un guichet, souvent avec un délai.\nLe Fonds national de solidarité verse, sur demande, une allocation de vie chère aux ménages à revenu modeste : 1 817 euros pour une personne seule, 2 272 euros pour deux, 2 727 pour trois, 3 182 pour quatre, 3 637 à partir de cinq. Une prime énergie s'y ajoute, de 600 euros pour une personne seule à 1 200 euros à partir de cinq. Le revenu brut mensuel ne doit pas dépasser 2 710,52 euros pour une personne seule, davantage selon la taille du ménage.\nIl faut avoir résidé au Luxembourg sans interruption pendant les trois mois précédant la demande, et la demande complète doit arriver au fonds au plus tard le 31 décembre de l'année.\nGuichet.lu, allocation de vie chère et prime énergie\nVérifié\n18 septembre 2026\nFiche « Salaire, coût de la vie et indexation »",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "allocations",
+            "verse"
+          ],
+          "matched_concepts": [
+            "allocations_familiales",
+            "verse"
+          ],
+          "section_title": "Allocation de vie chère et prime énergie",
+          "breadcrumb": "Économies et avantages fiscaux › Quotidien et revenus modestes › Allocation de vie chère et prime énergie",
+          "url_anchor": "https://lux-guide.github.io/#avantages#av-vie-chere",
+          "role": "supporting",
+          "reason": "Covers 'verse', 'allocations' and 'familiales' (coverage 1.00) but allocations#l2-l4 is titled with the question's words: supporting (also answered here).",
+          "score": 4.5,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "verse",
+            "allocations",
+            "familiales"
+          ],
+          "uncovered_words": [],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "money",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "allocations#l21-l21",
+          "anchor": {
+            "doc_id": "allocations",
+            "line_start": 21,
+            "line_end": 21,
+            "section_id": "allocations#s3"
+          },
+          "context": {
+            "doc_id": "allocations",
+            "line_start": 19,
+            "line_end": 22,
+            "section_id": "allocations#s3"
+          },
+          "snippet": "L'allocation de rentrée est automatique.",
+          "text": "À retenir\nAucune condition de nationalité, seule la résidence compte.\nL'allocation de rentrée est automatique.\nMontants revalorisés à chaque tranche indiciaire.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "allocations"
+          ],
+          "matched_concepts": [
+            "allocations_familiales"
+          ],
+          "section_title": "À retenir",
+          "breadcrumb": "Allocations familiales › À retenir",
+          "url_anchor": "https://lux-guide.github.io/#fiche/allocations#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'allocations' and 'familiales' (coverage 0.67) but allocations#l2-l4 covers more of the question (1.00): supporting.",
+          "score": 1.0,
+          "matched_share": 0.667,
+          "coverage": 0.667,
+          "covered_words": [
+            "allocations",
+            "familiales"
+          ],
+          "uncovered_words": [
+            "verse"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "allocations#l24-l24",
+          "anchor": {
+            "doc_id": "allocations",
+            "line_start": 24,
+            "line_end": 24,
+            "section_id": "allocations#s4"
+          },
+          "context": {
+            "doc_id": "allocations",
+            "line_start": 23,
+            "line_end": 24,
+            "section_id": "allocations#s4"
+          },
+          "snippet": "Caisse pour l'avenir des enfants",
+          "text": "Sources officielles\nCaisse pour l'avenir des enfants",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "caisse pour l'avenir des enfants"
+          ],
+          "matched_concepts": [
+            "allocations_familiales"
+          ],
+          "section_title": "Sources officielles",
+          "breadcrumb": "Allocations familiales › Sources officielles",
+          "url_anchor": "https://lux-guide.github.io/#fiche/allocations#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'allocations' and 'familiales' (coverage 0.67) but allocations#l2-l4 covers more of the question (1.00): supporting.",
+          "score": 0.54,
+          "matched_share": 0.667,
+          "coverage": 0.667,
+          "covered_words": [
+            "allocations",
+            "familiales"
+          ],
+          "uncovered_words": [
+            "verse"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "avantages#l165-l165",
+          "anchor": {
+            "doc_id": "avantages",
+            "line_start": 165,
+            "line_end": 165,
+            "section_id": "avantages#s20"
+          },
+          "context": {
+            "doc_id": "avantages",
+            "line_start": 162,
+            "line_end": 165,
+            "section_id": "avantages#s20"
+          },
+          "snippet": "Fiche « Allocations familiales »",
+          "text": "Caisse pour l'avenir des enfants, montants de l'allocation\nVérifié\n18 septembre 2026\nFiche « Allocations familiales »",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "allocation familiale",
+            "allocations",
+            "allocations familiales",
+            "familiales"
+          ],
+          "matched_concepts": [
+            "allocations_familiales"
+          ],
+          "section_title": "Allocations familiales",
+          "breadcrumb": "Économies et avantages fiscaux › Famille et études › Allocations familiales",
+          "url_anchor": "https://lux-guide.github.io/#avantages#av-allocations",
+          "role": "supporting",
+          "reason": "Covers 'allocations' and 'familiales' (coverage 0.67) and points to 'Allocations familiales' (Voir la fiche), which covers the question as well: supporting (also answered here).",
+          "score": 6.4,
+          "matched_share": 0.667,
+          "coverage": 0.667,
+          "covered_words": [
+            "allocations",
+            "familiales"
+          ],
+          "uncovered_words": [
+            "verse"
+          ],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "money",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "avantages#l160-l162",
+          "anchor": {
+            "doc_id": "avantages",
+            "line_start": 160,
+            "line_end": 162,
+            "section_id": "avantages#s20"
+          },
+          "context": {
+            "doc_id": "avantages",
+            "line_start": 157,
+            "line_end": 165,
+            "section_id": "avantages#s20"
+          },
+          "snippet": "Toute famille dont l'enfant réside au Luxembourg reçoit une allocation de 315,04 euros par mois et par enfant, majorée de 23,81 euros au-delà de six ans et de…",
+          "text": "315,04 € par mois et par enfant, majorées à 6 et 12 ans\nÀ demander\nUn formulaire ou un guichet, souvent avec un délai.\nToute famille dont l'enfant réside au Luxembourg reçoit une allocation de 315,04 euros par mois et par enfant, majorée de 23,81 euros au-delà de six ans et de 59,44 euros au-delà de douze ans, valeurs au 1er juin 2026. Il n'y a aucune condition de nationalité. Une allocation de rentrée scolaire s'y ajoute chaque année en août, sans démarche.\nSeule la première demande est à faire, auprès de la Caisse pour l'avenir des enfants. Les montants suivent l'indexation, ils sont revalorisés à chaque tranche indiciaire.\nCaisse pour l'avenir des enfants, montants de l'allocation\nVérifié\n18 septembre 2026\nFiche « Allocations familiales »",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "allocations",
+            "caisse pour l'avenir des enfants"
+          ],
+          "matched_concepts": [
+            "allocations_familiales"
+          ],
+          "section_title": "Allocations familiales",
+          "breadcrumb": "Économies et avantages fiscaux › Famille et études › Allocations familiales",
+          "url_anchor": "https://lux-guide.github.io/#avantages#av-allocations",
+          "role": "supporting",
+          "reason": "Covers 'allocations' and 'familiales' (coverage 0.67) and points to 'Allocations familiales' (Voir la fiche), which covers the question as well: supporting (also answered here).",
+          "score": 4.74,
+          "matched_share": 0.667,
+          "coverage": 0.667,
+          "covered_words": [
+            "allocations",
+            "familiales"
+          ],
+          "uncovered_words": [
+            "verse"
+          ],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "money",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "avantages#l200-l200",
+          "anchor": {
+            "doc_id": "avantages",
+            "line_start": 200,
+            "line_end": 200,
+            "section_id": "avantages#s24"
+          },
+          "context": {
+            "doc_id": "avantages",
+            "line_start": 197,
+            "line_end": 203,
+            "section_id": "avantages#s24"
+          },
+          "snippet": "Un étudiant qui remplit les conditions reçoit d'office une bourse de base de 1 289 euros par semestre. S'y ajoutent, selon la situation, une bourse sur critère…",
+          "text": "1 289 € de bourse de base par semestre, cumulable avec d'autres bourses\nÀ demander\nUn formulaire ou un guichet, souvent avec un délai.\nUn étudiant qui remplit les conditions reçoit d'office une bourse de base de 1 289 euros par semestre. S'y ajoutent, selon la situation, une bourse sur critères sociaux jusqu'à 2 500 euros par semestre, une bourse de mobilité de 1 686 euros pour des études à l'étranger, une bourse familiale de 307 euros quand plusieurs enfants du ménage étudient, et un prêt de base de 3 250 euros garanti par l'État à un taux maximal de 1,8 %.\nLa demande se renouvelle chaque semestre, sur MyGuichet. La bourse est virée deux à quatre semaines après la lettre d'accord.\nMengStudien.lu, la composition de l'AideFi\nVérifié",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "familiales"
+          ],
+          "matched_concepts": [
+            "allocations_familiales"
+          ],
+          "section_title": "Aide financière pour études supérieures",
+          "breadcrumb": "Économies et avantages fiscaux › Famille et études › Aide financière pour études supérieures",
+          "url_anchor": "https://lux-guide.github.io/#avantages#av-aidefi",
+          "role": "tangential",
+          "reason": "Covers only 'familiales' (0.33 of the question's words); 'verse' and 'allocations' not covered: tangential.",
+          "score": 1.0,
+          "matched_share": 0.333,
+          "coverage": 0.333,
+          "covered_words": [
+            "familiales"
+          ],
+          "uncovered_words": [
+            "verse",
+            "allocations"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "money",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "avantages#l243-l243",
+          "anchor": {
+            "doc_id": "avantages",
+            "line_start": 243,
+            "line_end": 243,
+            "section_id": "avantages#s29"
+          },
+          "context": {
+            "doc_id": "avantages",
+            "line_start": 240,
+            "line_end": 246,
+            "section_id": "avantages#s29"
+          },
+          "snippet": "La première tranche de 1 500 euros par an de revenus de capitaux mobiliers, intérêts et dividendes imposables confondus, est exempte d'impôt, et elle est doubl…",
+          "text": "1 500 € exonérés par an, 3 000 € pour un couple imposé collectivement\nÀ la déclaration\nÀ porter dans la déclaration d'impôt annuelle, sinon il est perdu.\nLa première tranche de 1 500 euros par an de revenus de capitaux mobiliers, intérêts et dividendes imposables confondus, est exempte d'impôt, et elle est doublée pour les époux ou partenaires imposés collectivement. Les dividendes versés par une société de capitaux pleinement imposable établie au Luxembourg, dans l'Union européenne ou dans un pays lié par une convention fiscale sont en outre exonérés à hauteur de 50 %.\nUn minimum forfaitaire de 25 euros de frais d'obtention est déduit en plus, doublé pour un couple.\nAdministration des contributions directes, revenu net provenant de capitaux mobiliers\nGuichet.lu, identifier et déclarer les dividendes perçus",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "verse"
+          ],
+          "matched_concepts": [
+            "verse"
+          ],
+          "section_title": "Intérêts et dividendes",
+          "breadcrumb": "Économies et avantages fiscaux › Épargne et déclaration › Intérêts et dividendes",
+          "url_anchor": "https://lux-guide.github.io/#avantages#av-capitaux",
+          "role": "tangential",
+          "reason": "Covers only 'verse' (0.33 of the question's words); 'allocations' and 'familiales' not covered: tangential.",
+          "score": 1.0,
+          "matched_share": 0.333,
+          "coverage": 0.333,
+          "covered_words": [
+            "verse"
+          ],
+          "uncovered_words": [
+            "allocations",
+            "familiales"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "money",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "avantages#l48-l48",
+          "anchor": {
+            "doc_id": "avantages",
+            "line_start": 48,
+            "line_end": 48,
+            "section_id": "avantages#s7"
+          },
+          "context": {
+            "doc_id": "avantages",
+            "line_start": 45,
+            "line_end": 51,
+            "section_id": "avantages#s7"
+          },
+          "snippet": "Une prime que l'employeur verse en fonction de son résultat positif est exemptée d'impôt à hauteur de 50 %, dans la limite de 25 % du montant brut de la rémuné…",
+          "text": "50 % de la prime exemptés d'impôt\nPar l'employeur\nC'est l'employeur qui le met en place, il se négocie à l'embauche.\nUne prime que l'employeur verse en fonction de son résultat positif est exemptée d'impôt à hauteur de 50 %, dans la limite de 25 % du montant brut de la rémunération annuelle du salarié. L'employeur doit réaliser un bénéfice, tenir une comptabilité régulière et déclarer nominativement les bénéficiaires.\nL'exemption dépend de conditions du côté de l'employeur, pas du salarié. Une prime ordinaire, hors de ce cadre, est imposée en entier.\nAdministration des contributions directes, prime participative\nVérifié",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "verse"
+          ],
+          "matched_concepts": [
+            "verse"
+          ],
+          "section_title": "Prime participative",
+          "breadcrumb": "Économies et avantages fiscaux › Salaire et travail › Prime participative",
+          "url_anchor": "https://lux-guide.github.io/#avantages#av-prime-participative",
+          "role": "tangential",
+          "reason": "Covers only 'verse' (0.33 of the question's words); 'allocations' and 'familiales' not covered: tangential.",
+          "score": 1.0,
+          "matched_share": 0.333,
+          "coverage": 0.333,
+          "covered_words": [
+            "verse"
+          ],
+          "uncovered_words": [
+            "allocations",
+            "familiales"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "money",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "avantages#l276-l278",
+          "anchor": {
+            "doc_id": "avantages",
+            "line_start": 276,
+            "line_end": 278,
+            "section_id": "avantages#s33"
+          },
+          "context": {
+            "doc_id": "avantages",
+            "line_start": 273,
+            "line_end": 281,
+            "section_id": "avantages#s33"
+          },
+          "snippet": "Les allocations familiales et l'indemnité de congé parental suivent le même indice depuis 2021. STATEC, statistiques officielles Caisse pour l'avenir des enfan…",
+          "text": "Automatique\nRien à demander, il est déjà dans votre retenue ou votre versement.\nDès que l'indice des prix à la consommation progresse de 2,5 %, une tranche indiciaire est déclenchée et l'ensemble des salaires, pensions et minima sociaux est revalorisé d'autant. Le mécanisme s'applique à tous les salariés, sans négociation, et il explique pourquoi les montants publiés changent en cours d'année.\nLes allocations familiales et l'indemnité de congé parental suivent le même indice depuis 2021.\nSTATEC, statistiques officielles\nCaisse pour l'avenir des enfants, montants de l'allocation\nVérifié\n18 septembre 2026\nFiche « Salaire, coût de la vie et indexation »",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "allocation familiale",
+            "allocations",
+            "allocations familiales",
+            "caisse pour l'avenir des enfants",
+            "familiales"
+          ],
+          "matched_concepts": [
+            "allocations_familiales"
+          ],
+          "section_title": "Salaires indexés automatiquement",
+          "breadcrumb": "Économies et avantages fiscaux › Quotidien et revenus modestes › Salaires indexés automatiquement",
+          "url_anchor": "https://lux-guide.github.io/#avantages#av-indexation",
+          "role": "discarded",
+          "reason": "The section 'Salaires indexés automatiquement' names 'salaire', not 'allocations familiales'; its lines carry only 'allocation familiale', 'allocations', 'allocations familiales', 'caisse pour l'avenir des enfants' and 'familiales'.",
+          "score": 3.74,
+          "matched_share": 0.667,
+          "coverage": 0.667,
+          "covered_words": [
+            "allocations",
+            "familiales"
+          ],
+          "uncovered_words": [
+            "verse"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "money",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "avantages#l191-l191",
+          "anchor": {
+            "doc_id": "avantages",
+            "line_start": 191,
+            "line_end": 191,
+            "section_id": "avantages#s23"
+          },
+          "context": {
+            "doc_id": "avantages",
+            "line_start": 188,
+            "line_end": 194,
+            "section_id": "avantages#s23"
+          },
+          "snippet": "Le crédit est réduit de la moitié des allocations que reçoit l'enfant au-delà de 2 712 euros par an, les pensions alimentaires par exemple.",
+          "text": "À demander\nUn formulaire ou un guichet, souvent avec un délai.\nUn parent en classe d'impôt 1a qui élève seul au moins un enfant ouvrant droit à la modération d'impôt reçoit, sur demande, un crédit d'impôt de 3 504 euros par an quand le revenu imposable ajusté est inférieur à 60 000 euros. Il décroît ensuite jusqu'à 750 euros au-delà de 105 000 euros. Il n'est pas accordé quand les deux parents partagent une habitation avec l'enfant.\nLe crédit est réduit de la moitié des allocations que reçoit l'enfant au-delà de 2 712 euros par an, les pensions alimentaires par exemple.\nAdministration des contributions directes, crédit d'impôt monoparental à partir de 2025\nVérifié\n18 septembre 2026",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "allocations"
+          ],
+          "matched_concepts": [
+            "allocations_familiales"
+          ],
+          "section_title": "Crédit d'impôt monoparental",
+          "breadcrumb": "Économies et avantages fiscaux › Famille et études › Crédit d'impôt monoparental",
+          "url_anchor": "https://lux-guide.github.io/#avantages#av-cim",
+          "role": "discarded",
+          "reason": "The section 'Crédit d'impôt monoparental' names 'impots', not 'allocations familiales'; its lines carry only 'allocations'.",
+          "score": 1.0,
+          "matched_share": 0.667,
+          "coverage": 0.667,
+          "covered_words": [
+            "allocations",
+            "familiales"
+          ],
+          "uncovered_words": [
+            "verse"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "money",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l30-l30",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 30,
+            "line_end": 30,
+            "section_id": "faq#s12"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 29,
+            "line_end": 31,
+            "section_id": "faq#s12"
+          },
+          "snippet": "Oui, et près d'un salarié sur deux le fait. Le salaire reste imposé au Luxembourg, là où le travail est exercé, mais il doit aussi être déclaré dans le pays de…",
+          "text": "Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?\nOui, et près d'un salarié sur deux le fait. Le salaire reste imposé au Luxembourg, là où le travail est exercé, mais il doit aussi être déclaré dans le pays de résidence, où il sert à calculer le taux appliqué à vos autres revenus. La santé, les allocations et l'école suivent des règles de coordination entre les deux pays.\nVoir la fiche : Habiter en France, en Belgique ou en Allemagne",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "allocations"
+          ],
+          "matched_concepts": [
+            "allocations_familiales"
+          ],
+          "section_title": "Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?",
+          "breadcrumb": "Questions et réponses › Logement › Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?' names 'logement', not 'allocations familiales'; its lines carry only 'allocations'.",
+          "score": 1.0,
+          "matched_share": 0.667,
+          "coverage": 0.667,
+          "covered_words": [
+            "allocations",
+            "familiales"
+          ],
+          "uncovered_words": [
+            "verse"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "avantages#l180-l182",
+          "anchor": {
+            "doc_id": "avantages",
+            "line_start": 180,
+            "line_end": 182,
+            "section_id": "avantages#s22"
+          },
+          "context": {
+            "doc_id": "avantages",
+            "line_start": 177,
+            "line_end": 185,
+            "section_id": "avantages#s22"
+          },
+          "snippet": "Chaque parent peut prendre un congé parental indemnisé par la Caisse pour l'avenir des enfants, en remplacement du salaire. À temps plein, l'indemnité est calc…",
+          "text": "2 771 à 4 619 € par mois à temps plein, pour chaque parent\nÀ demander\nUn formulaire ou un guichet, souvent avec un délai.\nChaque parent peut prendre un congé parental indemnisé par la Caisse pour l'avenir des enfants, en remplacement du salaire. À temps plein, l'indemnité est calculée sur le revenu des douze mois précédents, avec une limite inférieure de 2 771,33 euros et une limite supérieure de 4 618,88 euros par mois, montants publiés par la caisse en mai 2026. Elle est soumise aux cotisations et à l'impôt, la caisse figurant comme employeur sur la fiche de retenue.\nLe congé se demande à l'employeur puis à la caisse, avec des délais qui dépendent du moment choisi. Le calculateur officiel donne le montant sur votre revenu.\nCaisse pour l'avenir des enfants, montants du congé parental\nVérifié\n18 septembre 2026\nFiche « Congés et jours fériés »",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "caisse pour l'avenir des enfants"
+          ],
+          "matched_concepts": [
+            "allocations_familiales"
+          ],
+          "section_title": "Congé parental indemnisé",
+          "breadcrumb": "Économies et avantages fiscaux › Famille et études › Congé parental indemnisé",
+          "url_anchor": "https://lux-guide.github.io/#avantages#av-conge-parental",
+          "role": "discarded",
+          "reason": "The section 'Congé parental indemnisé' names 'conge', not 'allocations familiales'; its lines carry only 'caisse pour l'avenir des enfants'.",
+          "score": 0.54,
+          "matched_share": 0.667,
+          "coverage": 0.667,
+          "covered_words": [
+            "allocations",
+            "familiales"
+          ],
+          "uncovered_words": [
+            "verse"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "money",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "avantages#l211-l211",
+          "anchor": {
+            "doc_id": "avantages",
+            "line_start": 211,
+            "line_end": 211,
+            "section_id": "avantages#s26"
+          },
+          "context": {
+            "doc_id": "avantages",
+            "line_start": 208,
+            "line_end": 214,
+            "section_id": "avantages#s26"
+          },
+          "snippet": "Les primes versées à un contrat de prévoyance-vieillesse se déduisent du revenu imposable jusqu'à 4 500 euros par an et par contribuable depuis le 1er janvier…",
+          "text": "4 500 € déductibles par an et par contribuable depuis 2026\nÀ la déclaration\nÀ porter dans la déclaration d'impôt annuelle, sinon il est perdu.\nLes primes versées à un contrat de prévoyance-vieillesse se déduisent du revenu imposable jusqu'à 4 500 euros par an et par contribuable depuis le 1er janvier 2026, quel que soit l'âge. Chaque conjoint qui souscrit son propre contrat a son plafond. En contrepartie, l'épargne est longue : dix ans au moins, remboursable entre 60 et 75 ans.\nLe site voisin chiffre l'économie d'impôt sur votre situation, et détaille les autres postes : primes d'assurance, épargne-logement, régime complémentaire.\nAdministration des contributions directes, prévoyance-vieillesse\nGouvernement luxembourgeois, nouveautés 2026",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "verse"
+          ],
+          "matched_concepts": [
+            "verse"
+          ],
+          "section_title": "Prévoyance-vieillesse, le contrat 111bis",
+          "breadcrumb": "Économies et avantages fiscaux › Épargne et déclaration › Prévoyance-vieillesse, le contrat 111bis",
+          "url_anchor": "https://lux-guide.github.io/#avantages#av-prevoyance",
+          "role": "discarded",
+          "reason": "The section 'Prévoyance-vieillesse, le contrat 111bis' names 'epargne retraite', not 'allocations familiales'; its lines carry only 'verse'.",
+          "score": 1.0,
+          "matched_share": 0.333,
+          "coverage": 0.333,
+          "covered_words": [
+            "verse"
+          ],
+          "uncovered_words": [
+            "allocations",
+            "familiales"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "money",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "avantages#l9-l9",
+          "anchor": {
+            "doc_id": "avantages",
+            "line_start": 9,
+            "line_end": 9,
+            "section_id": "avantages#s3"
+          },
+          "context": {
+            "doc_id": "avantages",
+            "line_start": 6,
+            "line_end": 12,
+            "section_id": "avantages#s3"
+          },
+          "snippet": "Il est imputable et restituable : si la retenue est inférieure au crédit, la différence est versée au salarié.",
+          "text": "Automatique\nRien à demander, il est déjà dans votre retenue ou votre versement.\nUn crédit d'impôt vient en déduction de la retenue sur salaire, et l'employeur l'applique lui-même sur la base de la fiche de retenue. Il vaut 600 euros par an pour un salaire brut annuel de 11 266 à 40 000 euros, puis diminue jusqu'à 80 000 euros, à partir desquels il n'est plus accordé. Un crédit d'impôt CO2 de 216 euros par an suit la même logique jusqu'à 40 000 euros, dégressif ensuite.\nIl est imputable et restituable : si la retenue est inférieure au crédit, la différence est versée au salarié.\nAdministration des contributions directes, CIS et CI-CO2 salarié à partir de 2026\nVérifié\n18 septembre 2026",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "verse"
+          ],
+          "matched_concepts": [
+            "verse"
+          ],
+          "section_title": "Crédit d'impôt pour salariés",
+          "breadcrumb": "Économies et avantages fiscaux › Salaire et travail › Crédit d'impôt pour salariés",
+          "url_anchor": "https://lux-guide.github.io/#avantages#av-cis",
+          "role": "discarded",
+          "reason": "The section 'Crédit d'impôt pour salariés' names 'impots', not 'allocations familiales'; its lines carry only 'verse'.",
+          "score": 1.0,
+          "matched_share": 0.333,
+          "coverage": 0.333,
+          "covered_words": [
+            "verse"
+          ],
+          "uncovered_words": [
+            "allocations",
+            "familiales"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "money",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l114-l114",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 114,
+            "line_end": 114,
+            "section_id": "faq#s42"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 113,
+            "line_end": 115,
+            "section_id": "faq#s42"
+          },
+          "snippet": "Au-delà des forfaits appliqués d'office : les frais de déplacement, les cotisations de prévoyance, les primes d'assurance, l'épargne-logement, les frais de gar…",
+          "text": "Qu'est-ce qui se déduit des impôts ?\nAu-delà des forfaits appliqués d'office : les frais de déplacement, les cotisations de prévoyance, les primes d'assurance, l'épargne-logement, les frais de garde et, sous conditions, les pensions alimentaires versées.\nVoir la fiche : Ce qui réduit votre impôt",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "verse"
+          ],
+          "matched_concepts": [
+            "verse"
+          ],
+          "section_title": "Qu'est-ce qui se déduit des impôts ?",
+          "breadcrumb": "Questions et réponses › Impots › Qu'est-ce qui se déduit des impôts ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Qu'est-ce qui se déduit des impôts ?' names 'impots', not 'allocations familiales'; its lines carry only 'verse'.",
+          "score": 1.0,
+          "matched_share": 0.333,
+          "coverage": 0.333,
+          "covered_words": [
+            "verse"
+          ],
+          "uncovered_words": [
+            "allocations",
+            "familiales"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        }
+      ],
+      "methods_used": [
+        "keyword_lines",
+        "title_match",
+        "arbiter_rules",
+        "sweep"
+      ],
+      "methods_skipped": {
+        "anchor_regex": "answer type text asks for no typed anchor",
+        "row_match": "answer_type=text and no table column named",
+        "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+        "llm_arbiter": "no model key configured",
+        "current_page_boost": "no pages_hint: no page to boost"
+      },
+      "not_found": false,
+      "not_found_reason": null,
+      "confidence": 0.7,
+      "per_section_audit": [
+        {
+          "doc_id": "allocations",
+          "section_id": "allocations#s1",
+          "title": "Allocations familiales",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "allocations",
+          "section_id": "allocations#s2",
+          "title": "Montants mensuels par enfant au 1er juin 2026",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "allocations",
+          "section_id": "allocations#s3",
+          "title": "À retenir",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "allocations",
+          "section_id": "allocations#s4",
+          "title": "Sources officielles",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s1",
+          "title": "Économies et avantages fiscaux",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s2",
+          "title": "Salaire et travail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s3",
+          "title": "Crédit d'impôt pour salariés",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s4",
+          "title": "Frais de déplacement forfaitaires",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s5",
+          "title": "Heures supplémentaires exemptées",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s6",
+          "title": "Chèques-repas",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s7",
+          "title": "Prime participative",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s8",
+          "title": "Prime jeune salarié",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s9",
+          "title": "Régime des impatriés",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s10",
+          "title": "Abattement extra-professionnel",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s11",
+          "title": "Logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s12",
+          "title": "Crédit d'impôt sur l'acte notarié, le Bëllegen Akt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s13",
+          "title": "TVA à 3 % sur la construction et la rénovation",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s14",
+          "title": "Intérêts du prêt de l'habitation principale",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s15",
+          "title": "Prime d'accession à la propriété",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s16",
+          "title": "Subvention de loyer",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s17",
+          "title": "Garantie locative financée par l'État",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s18",
+          "title": "Klimabonus, la rénovation énergétique",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s19",
+          "title": "Famille et études",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s20",
+          "title": "Allocations familiales",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s21",
+          "title": "Chèque-service accueil",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s22",
+          "title": "Congé parental indemnisé",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s23",
+          "title": "Crédit d'impôt monoparental",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s24",
+          "title": "Aide financière pour études supérieures",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s25",
+          "title": "Épargne et déclaration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s26",
+          "title": "Prévoyance-vieillesse, le contrat 111bis",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s27",
+          "title": "Épargne-logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s28",
+          "title": "Primes d'assurance et intérêts débiteurs",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s29",
+          "title": "Intérêts et dividendes",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s30",
+          "title": "Dons déductibles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s31",
+          "title": "Quotidien et revenus modestes",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s32",
+          "title": "Transports publics gratuits",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s33",
+          "title": "Salaires indexés automatiquement",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s34",
+          "title": "Allocation de vie chère et prime énergie",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s1",
+          "title": "Questions et réponses",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s2",
+          "title": "Mobilite",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s3",
+          "title": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s4",
+          "title": "J'ai conduit la voiture d'un proche sans être inscrit au contrat, est-ce que ça compte ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s5",
+          "title": "La carte grise n'est pas au nom du vendeur, est-ce bloquant ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s6",
+          "title": "Faut-il repasser le contrôle technique en arrivant au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s7",
+          "title": "Dans quel délai immatriculer un véhicule qu'on amène avec soi ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s8",
+          "title": "Un permis de conduire européen reste-t-il valable ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s9",
+          "title": "Comment s'immatricule un véhicule importé ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s10",
+          "title": "Les transports publics sont-ils vraiment gratuits ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s11",
+          "title": "Logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s12",
+          "title": "Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s13",
+          "title": "Combien de jours de télétravail un frontalier peut-il faire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s14",
+          "title": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s15",
+          "title": "Sur quels critères choisir sa commune ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s16",
+          "title": "Comment comparer deux contrats d'assurance ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s17",
+          "title": "Quelle garantie locative un bailleur peut-il demander ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s18",
+          "title": "Comment se cherche un logement au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s19",
+          "title": "À quel moment souscrire l'assurance habitation ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s20",
+          "title": "Quelle part du prix une banque finance-t-elle ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s21",
+          "title": "La TVA sur un logement neuf est-elle toujours de 3 % ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s22",
+          "title": "Qui peut prétendre à un logement à coût modéré ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s23",
+          "title": "Quotidien",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s24",
+          "title": "Vers qui se tourner en cas de litige avec un professionnel ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s25",
+          "title": "Le luxembourgeois est-il nécessaire pour travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s26",
+          "title": "Combien de temps pour avoir internet ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s27",
+          "title": "Faut-il apprendre le luxembourgeois ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s28",
+          "title": "Comment fonctionne le tri des déchets ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s29",
+          "title": "Sante",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s30",
+          "title": "Une complémentaire santé est-elle utile ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s31",
+          "title": "Qui déclare l'entrée à la sécurité sociale ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s32",
+          "title": "Quel numéro d'urgence appeler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s33",
+          "title": "Impots",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s34",
+          "title": "Comment l'impôt est-il prélevé quand on est deux à travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s35",
+          "title": "Pourquoi la déclaration se solde-t-elle souvent par un montant à payer ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s36",
+          "title": "Qu'est-ce que le régime des impatriés ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s37",
+          "title": "Existe-t-il une classe d'impôt 1b ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s38",
+          "title": "Qui relève de la classe 1a ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s39",
+          "title": "Un divorce ou un décès fait-il changer de classe d'impôt immédiatement ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s40",
+          "title": "Le régime des impatriés dépend-il de la classe d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s41",
+          "title": "Quelle différence entre classe 1 et classe 2 ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s42",
+          "title": "Qu'est-ce qui se déduit des impôts ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s43",
+          "title": "Comment faire corriger une classe d'impôt inexacte ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s44",
+          "title": "Comment obtient-on sa fiche de retenue d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s45",
+          "title": "Les intérêts d'un prêt immobilier sont-ils déductibles ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s46",
+          "title": "Administratif",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s47",
+          "title": "Les délais d'arrivée sont-ils les mêmes hors Union européenne ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s48",
+          "title": "La déclaration à la commune suffit-elle ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s49",
+          "title": "Combien de temps faut-il pour obtenir la nationalité ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s50",
+          "title": "Dans quel délai faut-il se déclarer à la commune ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s51",
+          "title": "Comment obtient-on le matricule ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s52",
+          "title": "Peut-on avoir la double nationalité ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s53",
+          "title": "Finances",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s54",
+          "title": "Un compte bancaire étranger peut-il servir à recevoir le salaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s55",
+          "title": "Que faut-il pour ouvrir un compte bancaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s56",
+          "title": "Le salaire luxembourgeois compense-t-il le coût de la vie ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s57",
+          "title": "Un compte bancaire luxembourgeois est-il obligatoire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s58",
+          "title": "Qu'est-ce que l'indexation des salaires ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s59",
+          "title": "Travail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s60",
+          "title": "Peut-on exercer une activité indépendante en plus d'un emploi salarié ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s61",
+          "title": "Combien de jours de congé donne la loi ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s62",
+          "title": "Famille",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s63",
+          "title": "Comment se fait l'inscription à l'école ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s64",
+          "title": "Existe-t-il une aide pour la crèche ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s65",
+          "title": "Quel est le montant des allocations familiales ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        }
+      ],
+      "route_pages": [
+        {
+          "doc_id": "allocations",
+          "score": 9.4,
+          "reason": "kept: 4 term(s) in the summary line (allocations, familiales, allocations familiales, allocation familiale); heading title match (Allocations familiales); concept(s) in tags (allocations familiales); document title 'Allocations familiales' covers 1.00 of the question's words; tally 9.4"
+        },
+        {
+          "doc_id": "avantages",
+          "score": 4.2,
+          "reason": "kept: heading title match (Allocation de vie chère et prime énergie, Allocations familiales); concept(s) in tags (allocations familiales); tally 4.2"
+        },
+        {
+          "doc_id": "faq",
+          "score": 4.2,
+          "reason": "kept: heading title match (Quel est le montant des allocations familiales ?); concept(s) in tags (allocations familiales); tally 4.2"
+        }
+      ],
+      "route_sections": [
+        {
+          "doc_id": "allocations",
+          "section_id": "allocations#s3",
+          "title": "À retenir",
+          "score": 1.0,
+          "reason": "1 term(s) in its lines (allocations); a leaf, stop here"
+        },
+        {
+          "doc_id": "allocations",
+          "section_id": "allocations#s4",
+          "title": "Sources officielles",
+          "score": 1.0,
+          "reason": "1 term(s) in its lines (caisse pour l'avenir des enfants); a leaf, stop here"
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s20",
+          "title": "Allocations familiales",
+          "score": 15.0,
+          "reason": "title 'Allocations familiales' matches allocations, familiales, allocations familiales, allocation familiale, hint:Allocations familiales; 5 term(s) in its lines (allocation familiale, allocations, allocations familiales, caisse pour l'avenir des enfants, familiales); a leaf, stop here"
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s33",
+          "title": "Salaires indexés automatiquement",
+          "score": 5.0,
+          "reason": "5 term(s) in its lines (allocation familiale, allocations, allocations familiales, caisse pour l'avenir des enfants, familiales); a leaf, stop here"
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s34",
+          "title": "Allocation de vie chère et prime énergie",
+          "score": 4.0,
+          "reason": "title 'Allocation de vie chère et prime énergie' matches allocations; 2 term(s) in its lines (allocations, verse); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s65",
+          "title": "Quel est le montant des allocations familiales ?",
+          "score": 15.0,
+          "reason": "title 'Quel est le montant des allocations familiales ?' matches allocations, familiales, allocations familiales, allocation familiale, hint:Allocations familiales; 5 term(s) in its lines (allocation familiale, allocations, allocations familiales, familiales, verse); a leaf, stop here"
+        }
+      ],
+      "route_notes": [
+        "avantages: no section of the outline carries a term; the page is read whole",
+        "faq: no section of the outline carries a term; the page is read whole"
+      ],
+      "sweep_concepts": [
+        {
+          "concept": "verse",
+          "variants": [
+            "verse"
+          ],
+          "pages_with_hits": [
+            "allocations",
+            "avantages",
+            "conseil_fiscal",
+            "deductions",
+            "faq",
+            "fiches",
+            "frontalier",
+            "interets",
+            "prevoyance"
+          ],
+          "line_hits": 13
+        },
+        {
+          "concept": "allocations_familiales",
+          "variants": [
+            "allocations familiales",
+            "allocation familiale",
+            "allocation de naissance",
+            "caisse pour l'avenir des enfants",
+            "allocations",
+            "family allowance",
+            "child benefit",
+            "family benefits",
+            "Kindergeld",
+            "Familienzulage",
+            "kindergeld",
+            "familienzulage",
+            "familiales"
+          ],
+          "pages_with_hits": [
+            "allocations",
+            "avantages",
+            "faq",
+            "fiches",
+            "frontalier",
+            "parcours",
+            "simulateur"
+          ],
+          "line_hits": 47
+        }
+      ],
+      "sweep_rows": [
+        {
+          "concept": "verse",
+          "variant": "verse",
+          "doc_id": "allocations",
+          "line_num": 2,
+          "snippet": "Versées sans condition de nationalité, avec un supplément selon l'âge et une allocation de rentrée automatique."
+        },
+        {
+          "concept": "verse",
+          "variant": "verse",
+          "doc_id": "allocations",
+          "line_num": 3,
+          "snippet": "Les prestations familiales sont versées par la Caisse pour l'avenir des enfants, et elles sont dues pour tout enfant résidant au Luxembourg, sans condition de…"
+        },
+        {
+          "concept": "verse",
+          "variant": "verse",
+          "doc_id": "avantages",
+          "line_num": 48,
+          "snippet": "Une prime que l'employeur verse en fonction de son résultat positif est exemptée d'impôt à hauteur de 50 %, dans la limite de 25 % du montant brut de la rémuné…"
+        },
+        {
+          "concept": "verse",
+          "variant": "verse",
+          "doc_id": "avantages",
+          "line_num": 211,
+          "snippet": "Les primes versées à un contrat de prévoyance-vieillesse se déduisent du revenu imposable jusqu'à 4 500 euros par an et par contribuable depuis le 1er janvier…"
+        },
+        {
+          "concept": "verse",
+          "variant": "verse",
+          "doc_id": "avantages",
+          "line_num": 243,
+          "snippet": "La première tranche de 1 500 euros par an de revenus de capitaux mobiliers, intérêts et dividendes imposables confondus, est exempte d'impôt, et elle est doubl…"
+        },
+        {
+          "concept": "verse",
+          "variant": "verse",
+          "doc_id": "avantages",
+          "line_num": 286,
+          "snippet": "Le Fonds national de solidarité verse, sur demande, une allocation de vie chère aux ménages à revenu modeste : 1 817 euros pour une personne seule, 2 272 euros…"
+        },
+        {
+          "concept": "verse",
+          "variant": "verse",
+          "doc_id": "conseil_fiscal",
+          "line_num": 8,
+          "snippet": "Les primes versées à un contrat de prévoyance-vieillesse se déduisent jusqu'à 4 500 euros par an et par contribuable depuis le 1er janvier 2026, contre 3 200 e…"
+        },
+        {
+          "concept": "verse",
+          "variant": "verse",
+          "doc_id": "deductions",
+          "line_num": 9,
+          "snippet": "Les rentes versées"
+        },
+        {
+          "concept": "verse",
+          "variant": "verse",
+          "doc_id": "faq",
+          "line_num": 114,
+          "snippet": "Au-delà des forfaits appliqués d'office : les frais de déplacement, les cotisations de prévoyance, les primes d'assurance, l'épargne-logement, les frais de gar…"
+        },
+        {
+          "concept": "verse",
+          "variant": "verse",
+          "doc_id": "fiches",
+          "line_num": 44,
+          "snippet": "Versées sans condition de nationalité, avec un supplément selon l'âge et une allocation de rentrée automatique."
+        },
+        {
+          "concept": "verse",
+          "variant": "verse",
+          "doc_id": "frontalier",
+          "line_num": 14,
+          "snippet": "Les allocations familiales sont versées par la Caisse pour l'avenir des enfants, au titre de votre activité au Luxembourg. Si votre pays de résidence verse lui…"
+        },
+        {
+          "concept": "verse",
+          "variant": "verse",
+          "doc_id": "interets",
+          "line_num": 7,
+          "snippet": "Deux limites enfin : les subventions d'intérêts versées par l'État réduisent d'autant la dépense déductible, et les intérêts liés à une résidence secondaire ne…"
+        },
+        {
+          "concept": "verse",
+          "variant": "verse",
+          "doc_id": "prevoyance",
+          "line_num": 59,
+          "snippet": "Puis-je reporter ce que je n'ai pas versé sur l'année suivante ?"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations familiales",
+          "doc_id": "allocations",
+          "line_num": 1,
+          "snippet": "Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocation familiale",
+          "doc_id": "allocations",
+          "line_num": 1,
+          "snippet": "Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "allocations",
+          "line_num": 1,
+          "snippet": "Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "familiales",
+          "doc_id": "allocations",
+          "line_num": 1,
+          "snippet": "Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "familiales",
+          "doc_id": "allocations",
+          "line_num": 3,
+          "snippet": "Les prestations familiales sont versées par la Caisse pour l'avenir des enfants, et elles sont dues pour tout enfant résidant au Luxembourg, sans condition de…"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations familiales",
+          "doc_id": "avantages",
+          "line_num": 156,
+          "snippet": "Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocation familiale",
+          "doc_id": "avantages",
+          "line_num": 156,
+          "snippet": "Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "avantages",
+          "line_num": 156,
+          "snippet": "Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "familiales",
+          "doc_id": "avantages",
+          "line_num": 156,
+          "snippet": "Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations familiales",
+          "doc_id": "avantages",
+          "line_num": 165,
+          "snippet": "Fiche « Allocations familiales »"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocation familiale",
+          "doc_id": "avantages",
+          "line_num": 165,
+          "snippet": "Fiche « Allocations familiales »"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "avantages",
+          "line_num": 165,
+          "snippet": "Fiche « Allocations familiales »"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "familiales",
+          "doc_id": "avantages",
+          "line_num": 165,
+          "snippet": "Fiche « Allocations familiales »"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "avantages",
+          "line_num": 191,
+          "snippet": "Le crédit est réduit de la moitié des allocations que reçoit l'enfant au-delà de 2 712 euros par an, les pensions alimentaires par exemple."
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations familiales",
+          "doc_id": "avantages",
+          "line_num": 276,
+          "snippet": "Les allocations familiales et l'indemnité de congé parental suivent le même indice depuis 2021."
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocation familiale",
+          "doc_id": "avantages",
+          "line_num": 276,
+          "snippet": "Les allocations familiales et l'indemnité de congé parental suivent le même indice depuis 2021."
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "avantages",
+          "line_num": 276,
+          "snippet": "Les allocations familiales et l'indemnité de congé parental suivent le même indice depuis 2021."
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "familiales",
+          "doc_id": "avantages",
+          "line_num": 276,
+          "snippet": "Les allocations familiales et l'indemnité de congé parental suivent le même indice depuis 2021."
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "faq",
+          "line_num": 30,
+          "snippet": "Oui, et près d'un salarié sur deux le fait. Le salaire reste imposé au Luxembourg, là où le travail est exercé, mais il doit aussi être déclaré dans le pays de…"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations familiales",
+          "doc_id": "faq",
+          "line_num": 174,
+          "snippet": "Quel est le montant des allocations familiales ?"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocation familiale",
+          "doc_id": "faq",
+          "line_num": 174,
+          "snippet": "Quel est le montant des allocations familiales ?"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "faq",
+          "line_num": 174,
+          "snippet": "Quel est le montant des allocations familiales ?"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "familiales",
+          "doc_id": "faq",
+          "line_num": 174,
+          "snippet": "Quel est le montant des allocations familiales ?"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations familiales",
+          "doc_id": "faq",
+          "line_num": 176,
+          "snippet": "Voir la fiche : Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocation familiale",
+          "doc_id": "faq",
+          "line_num": 176,
+          "snippet": "Voir la fiche : Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "faq",
+          "line_num": 176,
+          "snippet": "Voir la fiche : Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "familiales",
+          "doc_id": "faq",
+          "line_num": 176,
+          "snippet": "Voir la fiche : Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations familiales",
+          "doc_id": "fiches",
+          "line_num": 43,
+          "snippet": "Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocation familiale",
+          "doc_id": "fiches",
+          "line_num": 43,
+          "snippet": "Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "fiches",
+          "line_num": 43,
+          "snippet": "Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "familiales",
+          "doc_id": "fiches",
+          "line_num": 43,
+          "snippet": "Allocations familiales"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "frontalier",
+          "line_num": 10,
+          "snippet": "Le second plafond est social. Il décide de la caisse à laquelle vous cotisez, et il s'exprime en part du temps de travail, pas en jours. Un accord européen per…"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "frontalier",
+          "line_num": 12,
+          "snippet": "Santé, allocations, école : le quotidien suit la résidence"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations familiales",
+          "doc_id": "frontalier",
+          "line_num": 14,
+          "snippet": "Les allocations familiales sont versées par la Caisse pour l'avenir des enfants, au titre de votre activité au Luxembourg. Si votre pays de résidence verse lui…"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocation familiale",
+          "doc_id": "frontalier",
+          "line_num": 14,
+          "snippet": "Les allocations familiales sont versées par la Caisse pour l'avenir des enfants, au titre de votre activité au Luxembourg. Si votre pays de résidence verse lui…"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "frontalier",
+          "line_num": 14,
+          "snippet": "Les allocations familiales sont versées par la Caisse pour l'avenir des enfants, au titre de votre activité au Luxembourg. Si votre pays de résidence verse lui…"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "familiales",
+          "doc_id": "frontalier",
+          "line_num": 14,
+          "snippet": "Les allocations familiales sont versées par la Caisse pour l'avenir des enfants, au titre de votre activité au Luxembourg. Si votre pays de résidence verse lui…"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "frontalier",
+          "line_num": 23,
+          "snippet": "L'école suit le pays de résidence, les allocations se coordonnent entre les deux."
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "frontalier",
+          "line_num": 30,
+          "snippet": "Caisse pour l'avenir des enfants, allocations"
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations familiales",
+          "doc_id": "parcours",
+          "line_num": 27,
+          "snippet": "Demander les allocations familiales à la Caisse pour l'avenir des enfants."
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocation familiale",
+          "doc_id": "parcours",
+          "line_num": 27,
+          "snippet": "Demander les allocations familiales à la Caisse pour l'avenir des enfants."
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "parcours",
+          "line_num": 27,
+          "snippet": "Demander les allocations familiales à la Caisse pour l'avenir des enfants."
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "familiales",
+          "doc_id": "parcours",
+          "line_num": 27,
+          "snippet": "Demander les allocations familiales à la Caisse pour l'avenir des enfants."
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations familiales",
+          "doc_id": "simulateur",
+          "line_num": 28,
+          "snippet": "Allocations familiales, pension alimentaire reçue, rente. Pas les chèques-repas ni les remboursements de frais."
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocation familiale",
+          "doc_id": "simulateur",
+          "line_num": 28,
+          "snippet": "Allocations familiales, pension alimentaire reçue, rente. Pas les chèques-repas ni les remboursements de frais."
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "allocations",
+          "doc_id": "simulateur",
+          "line_num": 28,
+          "snippet": "Allocations familiales, pension alimentaire reçue, rente. Pas les chèques-repas ni les remboursements de frais."
+        },
+        {
+          "concept": "allocations_familiales",
+          "variant": "familiales",
+          "doc_id": "simulateur",
+          "line_num": 28,
+          "snippet": "Allocations familiales, pension alimentaire reçue, rente. Pas les chèques-repas ni les remboursements de frais."
+        }
+      ],
+      "question_concepts": [
+        "verse",
+        "allocations_familiales"
+      ],
+      "terms": [
+        {
+          "text": "verse",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "verse",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "allocations",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "concept_key": "allocations_familiales",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "familiales",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "concept_key": "allocations_familiales",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "allocations familiales",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "concept_key": "allocations_familiales",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "allocation familiale",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "concept_key": "allocations_familiales",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "allocation de naissance",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "concept_key": "allocations_familiales",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "caisse pour l'avenir des enfants",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "concept_key": "allocations_familiales",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "family allowance",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "concept_key": "allocations_familiales",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "child benefit",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "concept_key": "allocations_familiales",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "family benefits",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "concept_key": "allocations_familiales",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "kindergeld",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "concept_key": "allocations_familiales",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "familienzulage",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "allocations_familiales",
+          "is_regex": false,
+          "concept_key": "allocations_familiales",
+          "weak": false,
+          "in_corpus": false
+        }
+      ],
+      "content_words": [
+        {
+          "text": "verse",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "allocations",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "familiales",
+          "weight": 1.0,
+          "weak": false
+        }
+      ],
+      "uncovered_words": [],
+      "answer_context_used": "paragraph"
+    }
+  }
+}

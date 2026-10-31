@@ -1,0 +1,2150 @@
+{
+  "answer": {
+    "extraction_method": "verbatim",
+    "confidence": 0.872,
+    "caveats": [],
+    "answer_found": true,
+    "complete_answer_found": true,
+    "context_structured": [
+      {
+        "candidate_id": "recherche_logement#l5-l5",
+        "doc_id": "recherche_logement",
+        "section_id": "recherche_logement#s2",
+        "section_title": "Préparer le dossier avant de visiter",
+        "breadcrumb": "Trouver un logement › Préparer le dossier avant de visiter",
+        "line_start": 4,
+        "line_end": 5,
+        "url_anchor": "https://lux-guide.github.io/#fiche/recherche_logement#fiche-detail",
+        "role": "primary"
+      }
+    ],
+    "keywords_found": [
+      "dossier",
+      "pièces"
+    ],
+    "llm_discovered_keywords": [],
+    "conflicting_evidence": [],
+    "suggested_clarification": null,
+    "kind": "list",
+    "items": [
+      {
+        "text": "Constituez à l'avance un dossier unique : pièces d'identité, contrat de travail ou promesse d'embauche, trois derniers bulletins de salaire, et coordonnées bancaires. Ajoutez, si vous l'avez déjà, la confirmation que votre banque peut émettre la garantie locative. C'est précisément le point qui bloque les candidats étrangers, et celui qui vous distinguera.",
+        "spans": [
+          {
+            "doc_id": "recherche_logement",
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "Constituez à l'avance un dossier unique : pièces d'identité, contrat de travail ou promesse d'embauche, trois derniers bulletins de salaire, et coordonnées bancaires. Ajoutez, si vous l'avez déjà, la confirmation que votre banque peut émettre la garantie locative. C'est précisément le point qui bloque les candidats étrangers, et celui qui vous distinguera."
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "question_id": "74e56ccf86f5f41f",
+    "index_version": "1d1bbf848338f32798d0c92366bd740f0513f72b56bd4745e85a507a1645d9ca",
+    "pipeline_version": "guide-rag/0.1",
+    "methods_used": [
+      "keyword_lines",
+      "title_match",
+      "arbiter_rules",
+      "sweep"
+    ],
+    "methods_skipped": {
+      "anchor_regex": "answer type text asks for no typed anchor",
+      "row_match": "answer_type=text and no table column named",
+      "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+      "llm_arbiter": "no model key configured",
+      "current_page_boost": "no pages_hint: no page to boost"
+    },
+    "activations": {
+      "use_keywords": {
+        "on": true,
+        "reason": "always: keyword detectors are deterministic and prove absence"
+      },
+      "use_toc": {
+        "on": true,
+        "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+      },
+      "use_row_level": {
+        "on": false,
+        "reason": "answer_type=text and no table column named"
+      },
+      "use_embeddings": {
+        "on": false,
+        "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+      },
+      "use_llm_arbiter": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "use_llm_generation": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "sweep_for_absence": {
+        "on": true,
+        "reason": "always: the exhaustive sweep is the evidence of absence"
+      },
+      "current_page_boost": {
+        "on": false,
+        "reason": "no pages_hint: no page to boost"
+      }
+    },
+    "chunk_strategy": "line as the unit; anchor = hit lines grouped by runs; context = the whole section (answer_context=section)",
+    "model_used": "no model",
+    "prompt_version": null,
+    "fragments_applied": [],
+    "iterations": 1,
+    "validator_report": {
+      "iteration_1": []
+    },
+    "replay": null
+  },
+  "trace": {
+    "parsed": {
+      "question_id": "74e56ccf86f5f41f",
+      "original_question": "quelles pièces pour le dossier de location",
+      "corrected_question": "quelles pièces pour le dossier de location",
+      "language": "fr",
+      "keywords": [
+        {
+          "text": "pièces",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "dossier",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "location",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "logement",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "appartement",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "louer",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "housing",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "flat",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "apartment",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "accommodation",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "wohnung",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "unterkunft",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "habitation",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "dwelling",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        }
+      ],
+      "answer_shape": "listing",
+      "answer_type": "text",
+      "structural_hints": {
+        "pages_hint": null,
+        "toc_section_hint": "Dossier",
+        "answer_context": "section"
+      },
+      "decomposition": {
+        "pattern": "single",
+        "sub_questions": []
+      },
+      "suggested_clarification": null,
+      "ambiguity_reason": null,
+      "candidate_values": [],
+      "proposed_default": null,
+      "scope_filters": {
+        "topic": "housing"
+      },
+      "parsing_notes": [
+        "language=fr: stop-word vote",
+        "answer_shape=listing: cue 'quelles'",
+        "answer_type=text: no typed cue",
+        "concept 'logement' (housing) matched by 'location' [fr, secondary]",
+        "toc_section_hint='Dossier': every word of this heading is in the question",
+        "scope topic='housing': the matched concepts vote {'housing': 0.8}",
+        "decomposition=single: no 'et / and' between two clauses"
+      ]
+    },
+    "plan": {
+      "activations": {
+        "use_keywords": {
+          "on": true,
+          "reason": "always: keyword detectors are deterministic and prove absence"
+        },
+        "use_toc": {
+          "on": true,
+          "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+        },
+        "use_row_level": {
+          "on": false,
+          "reason": "answer_type=text and no table column named"
+        },
+        "use_embeddings": {
+          "on": false,
+          "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+        },
+        "use_llm_arbiter": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "use_llm_generation": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "sweep_for_absence": {
+          "on": true,
+          "reason": "always: the exhaustive sweep is the evidence of absence"
+        },
+        "current_page_boost": {
+          "on": false,
+          "reason": "no pages_hint: no page to boost"
+        }
+      }
+    },
+    "retrieval": {
+      "question_id": "74e56ccf86f5f41f",
+      "question": "quelles pièces pour le dossier de location",
+      "candidates": [
+        {
+          "candidate_id": "recherche_logement#l5-l5",
+          "anchor": {
+            "doc_id": "recherche_logement",
+            "line_start": 5,
+            "line_end": 5,
+            "section_id": "recherche_logement#s2"
+          },
+          "context": {
+            "doc_id": "recherche_logement",
+            "line_start": 4,
+            "line_end": 5,
+            "section_id": "recherche_logement#s2"
+          },
+          "snippet": "Constituez à l'avance un dossier unique : pièces d'identité, contrat de travail ou promesse d'embauche, trois derniers bulletins de salaire, et coordonnées ban…",
+          "text": "Préparer le dossier avant de visiter\nConstituez à l'avance un dossier unique : pièces d'identité, contrat de travail ou promesse d'embauche, trois derniers bulletins de salaire, et coordonnées bancaires. Ajoutez, si vous l'avez déjà, la confirmation que votre banque peut émettre la garantie locative. C'est précisément le point qui bloque les candidats étrangers, et celui qui vous distinguera.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "dossier",
+            "pièces"
+          ],
+          "matched_concepts": [
+            "dossier",
+            "pieces"
+          ],
+          "section_title": "Préparer le dossier avant de visiter",
+          "breadcrumb": "Trouver un logement › Préparer le dossier avant de visiter",
+          "url_anchor": "https://lux-guide.github.io/#fiche/recherche_logement#fiche-detail",
+          "role": "primary",
+          "reason": "The document 'Trouver un logement' title names 'pièces', 'dossier' and 'location' (coverage 1.00); score 4.5: primary.",
+          "score": 4.5,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "pièces",
+            "dossier",
+            "location"
+          ],
+          "uncovered_words": [],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": true,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "assurance_habitation#l3-l3",
+          "anchor": {
+            "doc_id": "assurance_habitation",
+            "line_start": 3,
+            "line_end": 3,
+            "section_id": "assurance_habitation#s1"
+          },
+          "context": {
+            "doc_id": "assurance_habitation",
+            "line_start": 1,
+            "line_end": 3,
+            "section_id": "assurance_habitation#s1"
+          },
+          "snippet": "L'attestation d'assurance est demandée avant la remise des clés, aussi bien par un bailleur que par une banque en cas d'achat. Ce n'est donc pas une formalité…",
+          "text": "Assurer son logement\nExigée avant la remise des clés, et à comparer sur les garanties plutôt que sur la prime.\nL'attestation d'assurance est demandée avant la remise des clés, aussi bien par un bailleur que par une banque en cas d'achat. Ce n'est donc pas une formalité que l'on traite après l'emménagement : elle fait partie du dossier de signature, au même titre que la garantie locative.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "dossier"
+          ],
+          "matched_concepts": [
+            "dossier"
+          ],
+          "section_title": "Assurer son logement",
+          "breadcrumb": "Assurer son logement",
+          "url_anchor": "https://lux-guide.github.io/#fiche/assurance_habitation#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'dossier' and 'location' (coverage 0.67) but recherche_logement#l5-l5 covers more of the question (1.00): supporting.",
+          "score": 1.92,
+          "matched_share": 0.667,
+          "coverage": 0.667,
+          "covered_words": [
+            "dossier",
+            "location"
+          ],
+          "uncovered_words": [
+            "pièces"
+          ],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": true,
+          "co_occurrence": "section",
+          "captures": []
+        },
+        {
+          "candidate_id": "recherche_logement#l2-l3",
+          "anchor": {
+            "doc_id": "recherche_logement",
+            "line_start": 2,
+            "line_end": 3,
+            "section_id": "recherche_logement#s1"
+          },
+          "context": {
+            "doc_id": "recherche_logement",
+            "line_start": 1,
+            "line_end": 3,
+            "section_id": "recherche_logement#s1"
+          },
+          "snippet": "Un marché tendu, où un dossier complet et une garantie déjà disponible font la différence. Le marché locatif est tendu, en particulier dans la capitale et sa p…",
+          "text": "Trouver un logement\nUn marché tendu, où un dossier complet et une garantie déjà disponible font la différence.\nLe marché locatif est tendu, en particulier dans la capitale et sa première couronne. Les biens intéressants partent en quelques jours, et le candidat retenu n'est pas toujours celui qui paie le plus : c'est souvent celui dont le dossier est complet et immédiatement exploitable.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "dossier"
+          ],
+          "matched_concepts": [
+            "dossier"
+          ],
+          "section_title": "Trouver un logement",
+          "breadcrumb": "Trouver un logement",
+          "url_anchor": "https://lux-guide.github.io/#fiche/recherche_logement#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'dossier' and 'location' (coverage 0.67) but recherche_logement#l5-l5 covers more of the question (1.00): supporting.",
+          "score": 1.92,
+          "matched_share": 0.667,
+          "coverage": 0.667,
+          "covered_words": [
+            "dossier",
+            "location"
+          ],
+          "uncovered_words": [
+            "pièces"
+          ],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": true,
+          "co_occurrence": "section",
+          "captures": []
+        },
+        {
+          "candidate_id": "recherche_logement#l12-l12",
+          "anchor": {
+            "doc_id": "recherche_logement",
+            "line_start": 12,
+            "line_end": 12,
+            "section_id": "recherche_logement#s5"
+          },
+          "context": {
+            "doc_id": "recherche_logement",
+            "line_start": 11,
+            "line_end": 14,
+            "section_id": "recherche_logement#s5"
+          },
+          "snippet": "Dossier complet prêt avant la première visite.",
+          "text": "À retenir\nDossier complet prêt avant la première visite.\nLa garantie bancaire est le point bloquant des candidats étrangers.\nJuger une commune sur sa desserte, pas sur sa distance.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "dossier"
+          ],
+          "matched_concepts": [
+            "dossier"
+          ],
+          "section_title": "À retenir",
+          "breadcrumb": "Trouver un logement › À retenir",
+          "url_anchor": "https://lux-guide.github.io/#fiche/recherche_logement#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'dossier' and 'location' (coverage 0.67) but recherche_logement#l5-l5 covers more of the question (1.00): supporting.",
+          "score": 1.0,
+          "matched_share": 0.667,
+          "coverage": 0.667,
+          "covered_words": [
+            "dossier",
+            "location"
+          ],
+          "uncovered_words": [
+            "pièces"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "achat#l1-l1",
+          "anchor": {
+            "doc_id": "achat",
+            "line_start": 1,
+            "line_end": 1,
+            "section_id": "achat#s1"
+          },
+          "context": {
+            "doc_id": "achat",
+            "line_start": 1,
+            "line_end": 3,
+            "section_id": "achat#s1"
+          },
+          "snippet": "Acheter un logement",
+          "text": "Acheter un logement\nQuotités de financement encadrées, et une TVA à 3 % qui n'est ni automatique ni illimitée.\nLe financement immobilier est encadré par des quotités maximales, fixées par la CSSF sur recommandation du Comité du risque systémique. Un primo-accédant peut financer jusqu'à 100 % du prix pour sa résidence principale, contre 90 % pour un acquéreur qui a déjà été propriétaire, et 80 % seulement pour un investissement locatif. Ces pourcentages portent sur le prix du bien : les frais d'acte restent, dans tous les cas, à financer sur fonds propres.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "logement"
+          ],
+          "matched_concepts": [
+            "logement"
+          ],
+          "section_title": "Acheter un logement",
+          "breadcrumb": "Acheter un logement",
+          "url_anchor": "https://lux-guide.github.io/#fiche/achat#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers only 'location' (0.33 of the question's words); 'pièces' and 'dossier' not covered: supporting.",
+          "score": 1.2,
+          "matched_share": 0.333,
+          "coverage": 0.333,
+          "covered_words": [
+            "location"
+          ],
+          "uncovered_words": [
+            "pièces",
+            "dossier"
+          ],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "achat#l5-l7",
+          "anchor": {
+            "doc_id": "achat",
+            "line_start": 5,
+            "line_end": 7,
+            "section_id": "achat#s2"
+          },
+          "context": {
+            "doc_id": "achat",
+            "line_start": 4,
+            "line_end": 7,
+            "section_id": "achat#s2"
+          },
+          "snippet": "Le taux super-réduit de 3 %, au lieu de 17 %, est l'un des avantages les plus commentés du marché luxembourgeois. Il est aussi le plus mal compris. Il suppose…",
+          "text": "La TVA à 3 % : conditionnelle et plafonnée\nLe taux super-réduit de 3 %, au lieu de 17 %, est l'un des avantages les plus commentés du marché luxembourgeois. Il est aussi le plus mal compris. Il suppose d'abord une affectation à l'habitation principale pendant au moins deux ans, et l'accord préalable de l'Administration de l'enregistrement, d'où la mention « sous réserve d'acceptation » qui figure sur les annonces.\nSurtout, l'avantage est plafonné à 50 000 euros par logement. Comme l'écart entre 17 % et 3 % représente quatorze points, ce plafond couvre environ 357 000 euros de base hors taxe. Au-delà, la part restante repasse à 17 %. Sur un bien neuf à prix élevé, une fraction du prix supporte donc le taux plein, ce qui peut représenter plusieurs dizaines de milliers d'euros.\nLa question à poser au promoteur est donc précise : le prix affiché intègre-t-il déjà cette part à 17 %, ou suppose-t-il 3 % sur la totalité ? Certaines annonces mentionnent honnêtement « TVA à 3 % et 17 % comprises », d'autres non. Un crédit d'impôt sur les droits d'enregistrement, connu sous le nom de Bëllegen Akt, existe par ailleurs pour l'acquisition d'une habitation principale ; son montant évolue, vérifiez-le à la date de votre projet.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "habitation",
+            "logement"
+          ],
+          "matched_concepts": [
+            "logement"
+          ],
+          "section_title": "La TVA à 3 % : conditionnelle et plafonnée",
+          "breadcrumb": "Acheter un logement › La TVA à 3 % : conditionnelle et plafonnée",
+          "url_anchor": "https://lux-guide.github.io/#fiche/achat#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers only 'location' (0.33 of the question's words); 'pièces' and 'dossier' not covered: supporting.",
+          "score": 1.08,
+          "matched_share": 0.333,
+          "coverage": 0.333,
+          "covered_words": [
+            "location"
+          ],
+          "uncovered_words": [
+            "pièces",
+            "dossier"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "achat#l13-l13",
+          "anchor": {
+            "doc_id": "achat",
+            "line_start": 13,
+            "line_end": 13,
+            "section_id": "achat#s4"
+          },
+          "context": {
+            "doc_id": "achat",
+            "line_start": 12,
+            "line_end": 14,
+            "section_id": "achat#s4"
+          },
+          "snippet": "Guichet.lu, TVA logement",
+          "text": "Sources officielles\nGuichet.lu, TVA logement\nComité du risque systémique, quotités",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "logement"
+          ],
+          "matched_concepts": [
+            "logement"
+          ],
+          "section_title": "Sources officielles",
+          "breadcrumb": "Acheter un logement › Sources officielles",
+          "url_anchor": "https://lux-guide.github.io/#fiche/achat#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers only 'location' (0.33 of the question's words); 'pièces' and 'dossier' not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 0.333,
+          "coverage": 0.333,
+          "covered_words": [
+            "location"
+          ],
+          "uncovered_words": [
+            "pièces",
+            "dossier"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "assurance_habitation#l7-l7",
+          "anchor": {
+            "doc_id": "assurance_habitation",
+            "line_start": 7,
+            "line_end": 7,
+            "section_id": "assurance_habitation#s3"
+          },
+          "context": {
+            "doc_id": "assurance_habitation",
+            "line_start": 6,
+            "line_end": 7,
+            "section_id": "assurance_habitation#s3"
+          },
+          "snippet": "Regardez d'abord la franchise, c'est-à-dire ce qui reste à votre charge à chaque sinistre. Regardez ensuite si les biens sont indemnisés en valeur à neuf ou ap…",
+          "text": "Les quatre points à comparer\nRegardez d'abord la franchise, c'est-à-dire ce qui reste à votre charge à chaque sinistre. Regardez ensuite si les biens sont indemnisés en valeur à neuf ou après vétusté, ce qui change tout sur du mobilier récent. Vérifiez le plafond applicable aux objets de valeur, souvent bien plus bas que le plafond général. Vérifiez enfin les exclusions liées à l'absence prolongée du logement, fréquentes et rarement lues.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "logement"
+          ],
+          "matched_concepts": [
+            "logement"
+          ],
+          "section_title": "Les quatre points à comparer",
+          "breadcrumb": "Assurer son logement › Les quatre points à comparer",
+          "url_anchor": "https://lux-guide.github.io/#fiche/assurance_habitation#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers only 'location' (0.33 of the question's words); 'pièces' and 'dossier' not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 0.333,
+          "coverage": 0.333,
+          "covered_words": [
+            "location"
+          ],
+          "uncovered_words": [
+            "pièces",
+            "dossier"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        }
+      ],
+      "methods_used": [
+        "keyword_lines",
+        "title_match",
+        "arbiter_rules",
+        "sweep"
+      ],
+      "methods_skipped": {
+        "anchor_regex": "answer type text asks for no typed anchor",
+        "row_match": "answer_type=text and no table column named",
+        "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+        "llm_arbiter": "no model key configured",
+        "current_page_boost": "no pages_hint: no page to boost"
+      },
+      "not_found": false,
+      "not_found_reason": null,
+      "confidence": 0.872,
+      "per_section_audit": [
+        {
+          "doc_id": "achat",
+          "section_id": "achat#s1",
+          "title": "Acheter un logement",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "achat",
+          "section_id": "achat#s2",
+          "title": "La TVA à 3 % : conditionnelle et plafonnée",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "achat",
+          "section_id": "achat#s3",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "achat",
+          "section_id": "achat#s4",
+          "title": "Sources officielles",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "section_id": "assurance_habitation#s1",
+          "title": "Assurer son logement",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "section_id": "assurance_habitation#s2",
+          "title": "Ce que couvre réellement un contrat",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "section_id": "assurance_habitation#s3",
+          "title": "Les quatre points à comparer",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "section_id": "assurance_habitation#s4",
+          "title": "Les documents à réclamer avant de signer",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "section_id": "assurance_habitation#s5",
+          "title": "En cas d'achat",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "section_id": "assurance_habitation#s6",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "section_id": "assurance_habitation#s7",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s1",
+          "title": "Trouver un logement",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s2",
+          "title": "Préparer le dossier avant de visiter",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s3",
+          "title": "Où chercher",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s4",
+          "title": "Élargir au-delà de la capitale",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s5",
+          "title": "À retenir",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s6",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        }
+      ],
+      "route_pages": [
+        {
+          "doc_id": "recherche_logement",
+          "score": 9.22,
+          "reason": "kept: 6 term(s) in the summary line (pièces, dossier, location, logement, appartement, louer); heading title match (Préparer le dossier avant de visiter, Trouver un logement); concept(s) in tags (logement); document title 'Trouver un logement' covers 1.00 of the question's words; tally 9.22"
+        },
+        {
+          "doc_id": "achat",
+          "score": 5.68,
+          "reason": "kept: 3 term(s) in the summary line (dossier, logement, habitation); heading title match (Acheter un logement); concept(s) in tags (logement); document title 'Acheter un logement' covers 1.00 of the question's words; tally 5.68"
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "score": 4.68,
+          "reason": "kept: 2 term(s) in the summary line (logement, habitation); heading title match (Assurer son logement); concept(s) in tags (logement); document title 'Assurer son logement' covers 1.00 of the question's words; tally 4.68"
+        }
+      ],
+      "route_sections": [
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s2",
+          "title": "Préparer le dossier avant de visiter",
+          "score": 6.0,
+          "reason": "title 'Préparer le dossier avant de visiter' matches dossier, hint:Dossier; 2 term(s) in its lines (dossier, pièces); a leaf, stop here"
+        },
+        {
+          "doc_id": "achat",
+          "section_id": "achat#s2",
+          "title": "La TVA à 3 % : conditionnelle et plafonnée",
+          "score": 2.0,
+          "reason": "2 term(s) in its lines (habitation, logement); a leaf, stop here"
+        },
+        {
+          "doc_id": "achat",
+          "section_id": "achat#s4",
+          "title": "Sources officielles",
+          "score": 1.0,
+          "reason": "1 term(s) in its lines (logement); a leaf, stop here"
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "section_id": "assurance_habitation#s3",
+          "title": "Les quatre points à comparer",
+          "score": 1.0,
+          "reason": "1 term(s) in its lines (logement); a leaf, stop here"
+        }
+      ],
+      "route_notes": [],
+      "sweep_concepts": [
+        {
+          "concept": "pieces",
+          "variants": [
+            "pièces"
+          ],
+          "pages_with_hits": [
+            "administration",
+            "arrivee",
+            "garde",
+            "parcours",
+            "recherche_logement",
+            "reclamation",
+            "simulateur",
+            "vehicule"
+          ],
+          "line_hits": 10
+        },
+        {
+          "concept": "dossier",
+          "variants": [
+            "dossier"
+          ],
+          "pages_with_hits": [
+            "administration",
+            "assurance_habitation",
+            "faq",
+            "fiches",
+            "luxtrust",
+            "parcours",
+            "recherche_logement",
+            "reclamation",
+            "simulateur",
+            "vehicule"
+          ],
+          "line_hits": 21
+        },
+        {
+          "concept": "logement",
+          "variants": [
+            "logement",
+            "appartement",
+            "louer",
+            "location",
+            "housing",
+            "flat",
+            "apartment",
+            "accommodation",
+            "Wohnung",
+            "Unterkunft",
+            "habitation",
+            "dwelling",
+            "wohnung",
+            "unterkunft"
+          ],
+          "pages_with_hits": [
+            "accueil",
+            "achat",
+            "admin",
+            "assurance_auto",
+            "assurance_habitation",
+            "assurance_sante",
+            "avantages",
+            "bail",
+            "carte",
+            "choisir_commune",
+            "comparateur",
+            "conseil_fiscal",
+            "cout_vie",
+            "deductions",
+            "ecole",
+            "emmenagement",
+            "faq",
+            "fiches",
+            "garde",
+            "impatries",
+            "interets",
+            "lignes",
+            "logement_abordable",
+            "parcours",
+            "prevoyance",
+            "recherche_logement",
+            "simulateur",
+            "telecom"
+          ],
+          "line_hits": 112
+        }
+      ],
+      "sweep_rows": [
+        {
+          "concept": "pieces",
+          "variant": "pièces",
+          "doc_id": "administration",
+          "line_num": 11,
+          "snippet": "Prenez rendez-vous en ligne dès que c'est possible, en particulier en période de rentrée, où les créneaux se remplissent plusieurs semaines à l'avance. Vérifie…"
+        },
+        {
+          "concept": "pieces",
+          "variant": "pièces",
+          "doc_id": "administration",
+          "line_num": 15,
+          "snippet": "Prendre rendez-vous tôt, et vérifier la liste des pièces auprès de sa commune."
+        },
+        {
+          "concept": "pieces",
+          "variant": "pièces",
+          "doc_id": "arrivee",
+          "line_num": 12,
+          "snippet": "Prévoyez les originaux des pièces d'identité de chaque membre du foyer, le bail signé ou l'acte d'achat, et, selon votre situation familiale, les actes de nais…"
+        },
+        {
+          "concept": "pieces",
+          "variant": "pièces",
+          "doc_id": "garde",
+          "line_num": 3,
+          "snippet": "Le chèque-service accueil subventionne les heures de garde chez les prestataires conventionnés. Il s'obtient à la commune de résidence, sur présentation du cer…"
+        },
+        {
+          "concept": "pieces",
+          "variant": "pièces",
+          "doc_id": "parcours",
+          "line_num": 8,
+          "snippet": "Vérifier la validité des passeports et pièces d'identité de tout le foyer."
+        },
+        {
+          "concept": "pieces",
+          "variant": "pièces",
+          "doc_id": "recherche_logement",
+          "line_num": 5,
+          "snippet": "Constituez à l'avance un dossier unique : pièces d'identité, contrat de travail ou promesse d'embauche, trois derniers bulletins de salaire, et coordonnées ban…"
+        },
+        {
+          "concept": "pieces",
+          "variant": "pièces",
+          "doc_id": "reclamation",
+          "line_num": 7,
+          "snippet": "Pour les communications électroniques, la médiation relève de l'Institut luxembourgeois de régulation, et elle est gratuite. Pour les autres litiges de consomm…"
+        },
+        {
+          "concept": "pieces",
+          "variant": "pièces",
+          "doc_id": "simulateur",
+          "line_num": 42,
+          "snippet": "Sept dispositifs pour l'achat d'une résidence principale. Deux se règlent chez le notaire ou avec l'entreprise, les autres se demandent au Guichet unique des a…"
+        },
+        {
+          "concept": "pieces",
+          "variant": "pièces",
+          "doc_id": "vehicule",
+          "line_num": 72,
+          "snippet": "La procédure luxembourgeoise est la même partout. Ce qui change, ce sont les pièces que le vendeur vous remet et ce qu'il doit faire chez lui. S'il oublie, vot…"
+        },
+        {
+          "concept": "pieces",
+          "variant": "pièces",
+          "doc_id": "vehicule",
+          "line_num": 123,
+          "snippet": "Sans aucune de ces pièces, la SNCA vous inscrit comme titulaire, et le certificat dit que vous n'êtes pas identifié comme propriétaire. Vous roulez, assurez et…"
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "administration",
+          "line_num": 6,
+          "snippet": "Les délais de traitement des dossiers plus lourds restent raisonnables, et surtout, les administrations sont joignables. Un appel ou un courriel obtient généra…"
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "assurance_habitation",
+          "line_num": 3,
+          "snippet": "L'attestation d'assurance est demandée avant la remise des clés, aussi bien par un bailleur que par une banque en cas d'achat. Ce n'est donc pas une formalité…"
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "faq",
+          "line_num": 48,
+          "snippet": "En préparant le dossier complet avant la première visite, et surtout en ayant déjà la capacité d'émettre une garantie bancaire. C'est ce point, plus que le loy…"
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "faq",
+          "line_num": 51,
+          "snippet": "Avant la remise des clés : l'attestation fait partie du dossier de signature. Comparez sur les franchises, la valeur à neuf et les exclusions, en exigeant les…"
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "fiches",
+          "line_num": 14,
+          "snippet": "Un marché tendu, où un dossier complet et une garantie déjà disponible font la différence."
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "luxtrust",
+          "line_num": 7,
+          "snippet": "Ne présumez pas que tout est dématérialisé. L'enregistrement d'un permis de conduire étranger, par exemple, se traite exclusivement par courrier ou au guichet.…"
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "luxtrust",
+          "line_num": 10,
+          "snippet": "Le portail permet de suivre l'état d'un dossier."
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "parcours",
+          "line_num": 11,
+          "snippet": "Préparer le dossier de location complet avant la première visite."
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "recherche_logement",
+          "line_num": 2,
+          "snippet": "Un marché tendu, où un dossier complet et une garantie déjà disponible font la différence."
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "recherche_logement",
+          "line_num": 3,
+          "snippet": "Le marché locatif est tendu, en particulier dans la capitale et sa première couronne. Les biens intéressants partent en quelques jours, et le candidat retenu n…"
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "recherche_logement",
+          "line_num": 4,
+          "snippet": "Préparer le dossier avant de visiter"
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "recherche_logement",
+          "line_num": 5,
+          "snippet": "Constituez à l'avance un dossier unique : pièces d'identité, contrat de travail ou promesse d'embauche, trois derniers bulletins de salaire, et coordonnées ban…"
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "recherche_logement",
+          "line_num": 12,
+          "snippet": "Dossier complet prêt avant la première visite."
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "reclamation",
+          "line_num": 7,
+          "snippet": "Pour les communications électroniques, la médiation relève de l'Institut luxembourgeois de régulation, et elle est gratuite. Pour les autres litiges de consomm…"
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "simulateur",
+          "line_num": 10,
+          "snippet": "La banque raisonne sur le net qui arrive sur le compte, après cotisations et retenue d'impôt, jamais sur le brut. Elle en accepte 33 à 45 % en mensualités selo…"
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "vehicule",
+          "line_num": 14,
+          "snippet": "Dans cet ordre : chaque étape donne une pièce que la suivante demande, et la SNCA refuse un dossier incomplet."
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "vehicule",
+          "line_num": 25,
+          "snippet": "Responsabilité civile, auprès d'une compagnie agréée au Luxembourg. L'attestation fait partie du dossier : l'assurance vient avant le dépôt."
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "vehicule",
+          "line_num": 48,
+          "snippet": "Déposer le dossier à la SNCA"
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "vehicule",
+          "line_num": 56,
+          "snippet": "Le dossier complet et les plaques"
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "vehicule",
+          "line_num": 60,
+          "snippet": "Dossier"
+        },
+        {
+          "concept": "dossier",
+          "variant": "dossier",
+          "doc_id": "vehicule",
+          "line_num": 72,
+          "snippet": "La procédure luxembourgeoise est la même partout. Ce qui change, ce sont les pièces que le vendeur vous remet et ce qu'il doit faire chez lui. S'il oublie, vot…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "accueil",
+          "line_num": 2,
+          "snippet": "Démarches, salaire, logement, transports : cherchez une fiche ou posez votre question. L'assistant répond depuis le guide, sources à l'appui."
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "achat",
+          "line_num": 1,
+          "snippet": "Acheter un logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "achat",
+          "line_num": 5,
+          "snippet": "Le taux super-réduit de 3 %, au lieu de 17 %, est l'un des avantages les plus commentés du marché luxembourgeois. Il est aussi le plus mal compris. Il suppose…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "achat",
+          "line_num": 6,
+          "snippet": "Surtout, l'avantage est plafonné à 50 000 euros par logement. Comme l'écart entre 17 % et 3 % représente quatorze points, ce plafond couvre environ 357 000 eur…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "achat",
+          "line_num": 7,
+          "snippet": "La question à poser au promoteur est donc précise : le prix affiché intègre-t-il déjà cette part à 17 %, ou suppose-t-il 3 % sur la totalité ? Certaines annonc…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "achat",
+          "line_num": 13,
+          "snippet": "Guichet.lu, TVA logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "admin",
+          "line_num": 11,
+          "snippet": "Une exception, la carte. Pour placer une adresse et chercher ce qui l'entoure, l'onglet Comparer des logements interroge deux services publics extérieurs, Nomi…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "assurance_auto",
+          "line_num": 12,
+          "snippet": "Comme pour l'habitation, ces éléments figurent dans les conditions générales et non dans le devis. Réclamez le document d'information standardisé, les conditio…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "assurance_habitation",
+          "line_num": 1,
+          "snippet": "Assurer son logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "assurance_habitation",
+          "line_num": 7,
+          "snippet": "Regardez d'abord la franchise, c'est-à-dire ce qui reste à votre charge à chaque sinistre. Regardez ensuite si les biens sont indemnisés en valeur à neuf ou ap…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "assurance_sante",
+          "line_num": 11,
+          "snippet": "Contrairement aux assurances habitation ou automobile, les complémentaires santé ne sont pas couvertes par le document d'information standardisé européen. Vous…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 83,
+          "snippet": "Logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "appartement",
+          "doc_id": "avantages",
+          "line_num": 88,
+          "snippet": "Qui achète une maison, un appartement ou un terrain à bâtir pour l'occuper personnellement bénéficie d'un crédit d'impôt sur les droits d'enregistrement et de…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 89,
+          "snippet": "C'est le notaire qui fait la demande à la signature de l'acte. Le logement doit être occupé dans les deux ans, quatre pour un terrain ou un logement en constru…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 91,
+          "snippet": "Gouvernement luxembourgeois, nouvelles modalités des avantages fiscaux en matière de logement, 2 juin 2025"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 94,
+          "snippet": "Fiche « Acheter un logement »"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 96,
+          "snippet": "3 % au lieu du taux normal, jusqu'à 50 000 € d'avantage par logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 99,
+          "snippet": "Les travaux de création ou de rénovation d'un logement affecté à l'habitation principale relèvent du taux super-réduit de TVA de 3 %. Soit l'artisan facture di…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "avantages",
+          "line_num": 99,
+          "snippet": "Les travaux de création ou de rénovation d'un logement affecté à l'habitation principale relèvent du taux super-réduit de TVA de 3 %. Soit l'artisan facture di…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 100,
+          "snippet": "Le logement doit rester la résidence principale pendant deux ans à partir de l'achèvement. Le remboursement se demande au plus tard cinq ans après le 31 décemb…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 104,
+          "snippet": "Fiche « Acheter un logement »"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "avantages",
+          "line_num": 105,
+          "snippet": "Intérêts du prêt de l'habitation principale"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 109,
+          "snippet": "Les intérêts d'un prêt qui finance le logement occupé se déduisent : en entier les deux premières années, puis dans la limite de 4 000 euros par an pendant qua…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "avantages",
+          "line_num": 111,
+          "snippet": "Administration des contributions directes, habitation personnelle du propriétaire"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 119,
+          "snippet": "Qui contracte un prêt hypothécaire pour acheter ou construire son habitation principale peut recevoir une prime en capital, entre 500 et 10 000 euros selon le…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "avantages",
+          "line_num": 119,
+          "snippet": "Qui contracte un prêt hypothécaire pour acheter ou construire son habitation principale peut recevoir une prime en capital, entre 500 et 10 000 euros selon le…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 120,
+          "snippet": "La demande se fait dans l'année qui suit l'acte notarié ou le début des travaux, au Guichet unique des aides au logement. Passé ce délai, la prime est perdue."
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 124,
+          "snippet": "Fiche « Acheter un logement »"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 129,
+          "snippet": "Un locataire dont le loyer mensuel hors charges dépasse 25 % du revenu net du ménage peut recevoir une subvention de loyer, entre 10 et 520 euros par mois selo…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 130,
+          "snippet": "La demande se dépose à tout moment de l'année au Guichet unique des aides au logement, et un simulateur officiel donne une estimation avant de la remplir."
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 136,
+          "snippet": "2 mois de loyer au plus, garantis par le ministère du Logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 139,
+          "snippet": "Quand un propriétaire demande une garantie locative que le locataire ne peut pas avancer, le ministère du Logement et de l'Aménagement du territoire peut se po…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 140,
+          "snippet": "Il faut des revenus réguliers depuis au moins trois mois, un droit de séjour de plus de trois mois, et ne posséder aucun logement."
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 149,
+          "snippet": "L'Administration de l'environnement subventionne la rénovation énergétique d'un logement, sur la base d'un conseil en énergie ou, pour un seul élément, sans co…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "avantages",
+          "line_num": 151,
+          "snippet": "Guichet.lu, aide financière pour la rénovation énergétique d'un logement, Klimabonus 2026"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "avantages",
+          "line_num": 190,
+          "snippet": "Un parent en classe d'impôt 1a qui élève seul au moins un enfant ouvrant droit à la modération d'impôt reçoit, sur demande, un crédit d'impôt de 3 504 euros pa…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "avantages",
+          "line_num": 222,
+          "snippet": "Les cotisations à un contrat d'épargne-logement se déduisent jusqu'à 1 344 euros par an quand le souscripteur a entre 18 et 40 ans, 672 euros au-delà. Le plafo…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "bail",
+          "line_num": 5,
+          "snippet": "La garantie prend le plus souvent la forme d'une garantie bancaire, que seule une banque luxembourgeoise émet en pratique. Un IBAN étranger, même européen, ne…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "carte",
+          "line_num": 1,
+          "snippet": "Comparer des logements"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "carte",
+          "line_num": 2,
+          "snippet": "Quand on hésite entre plusieurs logements, la question n'est pas « qu'y a-t-il autour » mais « lequel est le mieux placé ». Enregistrez ici les adresses que vo…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "carte",
+          "line_num": 3,
+          "snippet": "Vos logements"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "carte",
+          "line_num": 6,
+          "snippet": "Les pastilles numérotées sont vos logements, le cercle en pointillé leur rayon. Une école entourée d'un anneau vert a, sur le même site, une structure qui accu…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "choisir_commune",
+          "line_num": 5,
+          "snippet": "Si vous vous déplacez en voiture, la distance pèse peu et vous pouvez élargir largement la zone de recherche, ce qui fait baisser le loyer de façon significati…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "choisir_commune",
+          "line_num": 6,
+          "snippet": "Si vous comptez sur les transports publics, la logique s'inverse totalement. La gratuité ne sert à rien si aucune ligne ne passe. Ouvrez les horaires réels dep…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "choisir_commune",
+          "line_num": 8,
+          "snippet": "Le trajet domicile-travail est rarement le plus contraignant pour une famille. Celui qui structure vraiment les journées, c'est l'école, et surtout la garde, p…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "comparateur",
+          "line_num": 2,
+          "snippet": "En arrivant au Luxembourg, quatre contrats se signent presque en même temps : l'assurance habitation, l'assurance auto, le forfait mobile et le contrat d'élect…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "comparateur",
+          "line_num": 3,
+          "snippet": "Deux registres, indiqués sur chaque carte. L'assurance habitation repose sur des documents réels : quatre contrats du marché luxembourgeois lus intégralement,…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "comparateur",
+          "line_num": 4,
+          "snippet": "Assurance habitation : la comparaison complète"
+        },
+        {
+          "concept": "logement",
+          "variant": "appartement",
+          "doc_id": "comparateur",
+          "line_num": 16,
+          "snippet": "Demander à un contrat s'il couvre le vol donne toujours oui. La réponse utile est ailleurs : dans l'exclusion, le plafond, la condition. Deux contrats qui affi…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "comparateur",
+          "line_num": 18,
+          "snippet": "Elle ne donne aucun prix : les conditions générales n'en contiennent pas, la prime dépend de votre logement et de vos capitaux déclarés. Elle porte sur des édi…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "conseil_fiscal",
+          "line_num": 10,
+          "snippet": "Les cotisations à un contrat d'épargne-logement se déduisent jusqu'à 1 344 euros par an et par personne du ménage lorsque le souscripteur a entre 18 et 41 ans,…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "conseil_fiscal",
+          "line_num": 12,
+          "snippet": "Les frais réels au-delà des forfaits, les primes d'assurance et les frais de garde sont détaillés dans la fiche « Ce qui réduit votre impôt ». Les intérêts d'u…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "cout_vie",
+          "line_num": 2,
+          "snippet": "Des salaires élevés, un logement cher, et une indexation automatique qui n'existe pas ailleurs."
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "cout_vie",
+          "line_num": 6,
+          "snippet": "Le logement absorbe l'essentiel de l'écart de rémunération avec les régions voisines, ce qui explique qu'une part importante des salariés choisisse de résider…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "deductions",
+          "line_num": 7,
+          "snippet": "Les frais de déplacement entre domicile et lieu de travail sont déductibles selon un barème forfaitaire fondé sur la distance, ce qui concerne particulièrement…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "ecole",
+          "line_num": 3,
+          "snippet": "C'est la démarche la plus longue et la plus contrainte de toute l'installation, et celle qu'il faut engager en premier, avant même la recherche de logement. Tr…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "ecole",
+          "line_num": 11,
+          "snippet": "Commencer par l'école, avant même le logement."
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "emmenagement",
+          "line_num": 2,
+          "snippet": "Le logement se remet souvent sans luminaires montés, et les magasins de quatre pays sont à portée de voiture."
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "emmenagement",
+          "line_num": 3,
+          "snippet": "Deux choses surprennent en emménageant ici, et aucune des deux ne relève du bon sens général : ce que le logement contient à la remise des clés, et le fait que…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "emmenagement",
+          "line_num": 4,
+          "snippet": "Le logement se loue souvent sans luminaires"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "emmenagement",
+          "line_num": 5,
+          "snippet": "Beaucoup de logements sont remis avec des fils qui pendent au plafond et aucun point lumineux monté. Ce n'est pas un défaut ni un oubli du bailleur, c'est l'us…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "faq",
+          "line_num": 28,
+          "snippet": "Logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "faq",
+          "line_num": 43,
+          "snippet": "Voir la fiche : Assurer son logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "faq",
+          "line_num": 47,
+          "snippet": "Comment se cherche un logement au Luxembourg ?"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "faq",
+          "line_num": 49,
+          "snippet": "Voir la fiche : Trouver un logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "faq",
+          "line_num": 50,
+          "snippet": "À quel moment souscrire l'assurance habitation ?"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "faq",
+          "line_num": 52,
+          "snippet": "Voir la fiche : Assurer son logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "faq",
+          "line_num": 55,
+          "snippet": "Voir la fiche : Acheter un logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "faq",
+          "line_num": 56,
+          "snippet": "La TVA sur un logement neuf est-elle toujours de 3 % ?"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "faq",
+          "line_num": 57,
+          "snippet": "Non. Le taux de 3 % suppose une affectation en habitation principale pendant deux ans et l'accord préalable de l'administration, et l'avantage est plafonné à 5…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "faq",
+          "line_num": 57,
+          "snippet": "Non. Le taux de 3 % suppose une affectation en habitation principale pendant deux ans et l'accord préalable de l'administration, et l'avantage est plafonné à 5…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "faq",
+          "line_num": 58,
+          "snippet": "Voir la fiche : Acheter un logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "faq",
+          "line_num": 59,
+          "snippet": "Qui peut prétendre à un logement à coût modéré ?"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "faq",
+          "line_num": 60,
+          "snippet": "Il faut rester sous un plafond de revenu net du ménage et ne posséder aucun autre logement, au Luxembourg comme à l'étranger, au plus tard neuf mois après l'ac…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "faq",
+          "line_num": 61,
+          "snippet": "Voir la fiche : Logement abordable et à coût modéré"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "faq",
+          "line_num": 123,
+          "snippet": "Oui, pour l'habitation principale. La déduction est intégrale les deux premières années, puis plafonnée. Surtout, le plafond est multiplié par le nombre de mem…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "faq",
+          "line_num": 152,
+          "snippet": "Comparez sur le brut annuel, treizième mois compris, et intégrez le logement dès le début du calcul : c'est lui qui absorbe l'essentiel de l'écart de salaire a…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "faq",
+          "line_num": 169,
+          "snippet": "Commencez par là, avant même le logement. L'enregistrement à la commune précède l'inscription scolaire, et les sections les plus demandées se remplissent parfo…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "fiches",
+          "line_num": 13,
+          "snippet": "Trouver un logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "fiches",
+          "line_num": 22,
+          "snippet": "Le logement se remet souvent sans luminaires montés, et les magasins de quatre pays sont à portée de voiture."
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "fiches",
+          "line_num": 25,
+          "snippet": "Assurer son logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "fiches",
+          "line_num": 27,
+          "snippet": "Acheter un logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "fiches",
+          "line_num": 29,
+          "snippet": "Logement abordable et à coût modéré"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "fiches",
+          "line_num": 52,
+          "snippet": "Des salaires élevés, un logement cher, et une indexation automatique qui n'existe pas ailleurs."
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "garde",
+          "line_num": 5,
+          "snippet": "Enfin, inscrivez-vous sur les listes d'attente très tôt, sans attendre d'avoir un logement définitif ni une date d'arrivée certaine. Dans les communes les plus…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "impatries",
+          "line_num": 8,
+          "snippet": "Premier effet : l'exonération augmente mécaniquement votre revenu net, ce qui peut vous faire dépasser des plafonds utilisés ailleurs, notamment pour l'accès a…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "interets",
+          "line_num": 3,
+          "snippet": "Les intérêts d'un prêt finançant le logement que vous occupez sont déductibles, dans la catégorie des revenus provenant de la location de biens. Depuis l'année…"
+        },
+        {
+          "concept": "logement",
+          "variant": "location",
+          "doc_id": "interets",
+          "line_num": 3,
+          "snippet": "Les intérêts d'un prêt finançant le logement que vous occupez sont déductibles, dans la catégorie des revenus provenant de la location de biens. Depuis l'année…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "interets",
+          "line_num": 34,
+          "snippet": "ACD, habitation personnelle du propriétaire"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "lignes",
+          "line_num": 1,
+          "snippet": "Chercher un logement sur une ligne de bus, de tram ou de train"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "lignes",
+          "line_num": 2,
+          "snippet": "Un logement se juge mal à vol d'oiseau. Deux kilomètres avec une correspondance et dix minutes de marche coûtent plus cher qu'une demi-heure de bus direct. Ind…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "lignes",
+          "line_num": 4,
+          "snippet": "Ce que la carte ne dit pas : le temps d'attente, la correspondance, et le trafic réel. Un arrêt à 40 minutes desservi quatre fois par heure vaut mieux qu'un ar…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "logement_abordable",
+          "line_num": 1,
+          "snippet": "Logement abordable et à coût modéré"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "logement_abordable",
+          "line_num": 3,
+          "snippet": "Des promoteurs publics commercialisent des logements à un prix inférieur au marché. L'accès suppose un certificat d'éligibilité délivré par le Guichet unique d…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "logement_abordable",
+          "line_num": 4,
+          "snippet": "Ne posséder aucun autre logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "logement_abordable",
+          "line_num": 5,
+          "snippet": "Ni vous, ni aucune personne vivant sous votre toit, ne devez être propriétaire, usufruitier, emphytéote ou titulaire d'un droit d'habitation portant sur plus d…"
+        },
+        {
+          "concept": "logement",
+          "variant": "appartement",
+          "doc_id": "logement_abordable",
+          "line_num": 5,
+          "snippet": "Ni vous, ni aucune personne vivant sous votre toit, ne devez être propriétaire, usufruitier, emphytéote ou titulaire d'un droit d'habitation portant sur plus d…"
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "logement_abordable",
+          "line_num": 5,
+          "snippet": "Ni vous, ni aucune personne vivant sous votre toit, ne devez être propriétaire, usufruitier, emphytéote ou titulaire d'un droit d'habitation portant sur plus d…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "logement_abordable",
+          "line_num": 7,
+          "snippet": "Le revenu retenu est celui de l'ensemble de la communauté domestique, c'est-à-dire de toutes les personnes vivant dans le logement. Seuls les revenus des enfan…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "logement_abordable",
+          "line_num": 10,
+          "snippet": "Ces logements sont assortis d'un droit de rachat inscrit dans l'acte authentique. Le prix de revente correspond au prix payé, réindexé sur l'indice du coût de…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "logement_abordable",
+          "line_num": 38,
+          "snippet": "Logement.lu, certificat d'éligibilité"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "parcours",
+          "line_num": 5,
+          "snippet": "Contacter les écoles : la démarche la plus longue, à engager avant la recherche de logement."
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "parcours",
+          "line_num": 7,
+          "snippet": "S'inscrire sur les listes d'attente des crèches, sans attendre d'avoir un logement."
+        },
+        {
+          "concept": "logement",
+          "variant": "location",
+          "doc_id": "parcours",
+          "line_num": 11,
+          "snippet": "Préparer le dossier de location complet avant la première visite."
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "parcours",
+          "line_num": 20,
+          "snippet": "Souscrire l'assurance habitation, exigée avant la remise des clés."
+        },
+        {
+          "concept": "logement",
+          "variant": "habitation",
+          "doc_id": "prevoyance",
+          "line_num": 73,
+          "snippet": "Oui, si vous êtes imposé au Luxembourg. C'est le lieu d'imposition qui décide, pas le lieu d'habitation. Un frontalier imposé au Luxembourg y a droit ; un rési…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "recherche_logement",
+          "line_num": 1,
+          "snippet": "Trouver un logement"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "simulateur",
+          "line_num": 26,
+          "snippet": "Hors charges : les charges que paie le locataire ne sont pas un revenu. Le crédit de ce logement va dans les crédits en cours."
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "simulateur",
+          "line_num": 31,
+          "snippet": "Les mensualités, pas le capital : voiture, consommation, un autre logement. Un crédit soldé à l'achat ne compte pas."
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "simulateur",
+          "line_num": 33,
+          "snippet": "Pension alimentaire versée, leasing auto, loyer d'un logement conservé. Pas les dépenses courantes."
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "simulateur",
+          "line_num": 42,
+          "snippet": "Sept dispositifs pour l'achat d'une résidence principale. Deux se règlent chez le notaire ou avec l'entreprise, les autres se demandent au Guichet unique des a…"
+        },
+        {
+          "concept": "logement",
+          "variant": "logement",
+          "doc_id": "telecom",
+          "line_num": 6,
+          "snippet": "Si votre logement n'est pas encore raccordé, une intervention en deux passages peut être nécessaire, l'une pour amener la fibre, l'autre pour installer l'équip…"
+        }
+      ],
+      "question_concepts": [
+        "pieces",
+        "dossier",
+        "logement"
+      ],
+      "terms": [
+        {
+          "text": "pièces",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "pieces",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "dossier",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "dossier",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "location",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "logement",
+          "is_regex": false,
+          "concept_key": "logement",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "logement",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "concept_key": "logement",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "appartement",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "concept_key": "logement",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "louer",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "concept_key": "logement",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "housing",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "concept_key": "logement",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "flat",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "concept_key": "logement",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "apartment",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "concept_key": "logement",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "accommodation",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "concept_key": "logement",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "wohnung",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "concept_key": "logement",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "unterkunft",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "concept_key": "logement",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "habitation",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "concept_key": "logement",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "dwelling",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "logement",
+          "is_regex": false,
+          "concept_key": "logement",
+          "weak": false,
+          "in_corpus": false
+        }
+      ],
+      "content_words": [
+        {
+          "text": "pièces",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "dossier",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "location",
+          "weight": 1.0,
+          "weak": false
+        }
+      ],
+      "uncovered_words": [],
+      "answer_context_used": "section"
+    }
+  }
+}

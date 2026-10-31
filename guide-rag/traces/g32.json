@@ -1,0 +1,1580 @@
+{
+  "answer": {
+    "extraction_method": "computed",
+    "confidence": 0.523,
+    "caveats": [],
+    "answer_found": true,
+    "complete_answer_found": true,
+    "context_structured": [
+      {
+        "candidate_id": "conges#l2-l4",
+        "doc_id": "conges",
+        "section_id": "conges#s1",
+        "section_title": "Congés et jours fériés",
+        "breadcrumb": "Congés et jours fériés",
+        "line_start": 2,
+        "line_end": 4,
+        "url_anchor": "https://lux-guide.github.io/#fiche/conges#fiche-detail",
+        "role": "primary"
+      }
+    ],
+    "keywords_found": [
+      "annuel",
+      "congé",
+      "jours fériés"
+    ],
+    "llm_discovered_keywords": [],
+    "conflicting_evidence": [],
+    "suggested_clarification": null,
+    "kind": "amount",
+    "items": [
+      {
+        "amount": {
+          "value": 26.0,
+          "currency": null,
+          "unit": "jours ouvrables"
+        },
+        "spans": [
+          {
+            "doc_id": "conges",
+            "line_start": 2,
+            "line_end": 2,
+            "quote": "Vingt-six jours ouvrables de congé légal et onze jours fériés, souvent améliorés par convention collective."
+          }
+        ]
+      },
+      {
+        "amount": {
+          "value": 11.0,
+          "currency": null,
+          "unit": "jours"
+        },
+        "spans": [
+          {
+            "doc_id": "conges",
+            "line_start": 2,
+            "line_end": 2,
+            "quote": "Vingt-six jours ouvrables de congé légal et onze jours fériés, souvent améliorés par convention collective."
+          }
+        ]
+      },
+      {
+        "amount": {
+          "value": 3.0,
+          "currency": null,
+          "unit": "mois"
+        },
+        "spans": [
+          {
+            "doc_id": "conges",
+            "line_start": 3,
+            "line_end": 3,
+            "quote": "Le congé annuel légal s'élève à vingt-six jours ouvrables par an. Le droit s'ouvre après trois mois de travail ininterrompu chez le même employeur, puis s'acquiert par douzièmes. Une semaine de congé compte au maximum pour cinq jours ouvrables, même si votre temps de travail est réparti sur davantage de jours. S'y ajoutent onze jours fériés légaux, que l'employeur peut partiellement remplacer par des fêtes locales ou professionnelles, à condition d'en respecter le total."
+          }
+        ]
+      },
+      {
+        "amount": {
+          "value": 1.0,
+          "currency": null,
+          "unit": "semaine"
+        },
+        "spans": [
+          {
+            "doc_id": "conges",
+            "line_start": 3,
+            "line_end": 3,
+            "quote": "Le congé annuel légal s'élève à vingt-six jours ouvrables par an. Le droit s'ouvre après trois mois de travail ininterrompu chez le même employeur, puis s'acquiert par douzièmes. Une semaine de congé compte au maximum pour cinq jours ouvrables, même si votre temps de travail est réparti sur davantage de jours. S'y ajoutent onze jours fériés légaux, que l'employeur peut partiellement remplacer par des fêtes locales ou professionnelles, à condition d'en respecter le total."
+          }
+        ]
+      },
+      {
+        "amount": {
+          "value": 5.0,
+          "currency": null,
+          "unit": "jours ouvrables"
+        },
+        "spans": [
+          {
+            "doc_id": "conges",
+            "line_start": 3,
+            "line_end": 3,
+            "quote": "Le congé annuel légal s'élève à vingt-six jours ouvrables par an. Le droit s'ouvre après trois mois de travail ininterrompu chez le même employeur, puis s'acquiert par douzièmes. Une semaine de congé compte au maximum pour cinq jours ouvrables, même si votre temps de travail est réparti sur davantage de jours. S'y ajoutent onze jours fériés légaux, que l'employeur peut partiellement remplacer par des fêtes locales ou professionnelles, à condition d'en respecter le total."
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "question_id": "3185aa50b5743be6",
+    "index_version": "1d1bbf848338f32798d0c92366bd740f0513f72b56bd4745e85a507a1645d9ca",
+    "pipeline_version": "guide-rag/0.1",
+    "methods_used": [
+      "keyword_lines",
+      "title_match",
+      "anchor_regex",
+      "arbiter_rules",
+      "sweep"
+    ],
+    "methods_skipped": {
+      "row_match": "answer_type=duration and no table column named",
+      "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+      "llm_arbiter": "no model key configured",
+      "current_page_boost": "no pages_hint: no page to boost"
+    },
+    "activations": {
+      "use_keywords": {
+        "on": true,
+        "reason": "always: keyword detectors are deterministic and prove absence"
+      },
+      "use_toc": {
+        "on": true,
+        "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+      },
+      "use_row_level": {
+        "on": false,
+        "reason": "answer_type=duration and no table column named"
+      },
+      "use_embeddings": {
+        "on": false,
+        "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+      },
+      "use_llm_arbiter": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "use_llm_generation": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "sweep_for_absence": {
+        "on": true,
+        "reason": "always: the exhaustive sweep is the evidence of absence"
+      },
+      "current_page_boost": {
+        "on": false,
+        "reason": "no pages_hint: no page to boost"
+      }
+    },
+    "chunk_strategy": "line as the unit; anchor = hit lines grouped by runs; context = the hit lines (answer_context=line)",
+    "model_used": "no model",
+    "prompt_version": null,
+    "fragments_applied": [],
+    "iterations": 1,
+    "validator_report": {
+      "iteration_1": []
+    },
+    "replay": null
+  },
+  "trace": {
+    "parsed": {
+      "question_id": "3185aa50b5743be6",
+      "original_question": "how many days of annual leave",
+      "corrected_question": "how many days of annuel leave",
+      "language": "en",
+      "keywords": [
+        {
+          "text": "many",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "days",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "annuel",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "leave",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "congé",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "congés payés",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "jours fériés",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "vacances",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "paid leave",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "holidays",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "public holidays",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "urlaub",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "feiertage",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "\\b\\d+\\s?(?:jours?|mois|ans?|annees?|semaines?|heures?|days?|months?|years?|weeks?|hours?|tagen?|monaten?|jahren?|wochen?)\\b",
+          "weight": 1.0,
+          "source": "anchor",
+          "concept": null,
+          "is_regex": true,
+          "weak": false,
+          "in_corpus": true
+        }
+      ],
+      "answer_shape": "single",
+      "answer_type": "duration",
+      "structural_hints": {
+        "pages_hint": null,
+        "toc_section_hint": null,
+        "answer_context": "line"
+      },
+      "decomposition": {
+        "pattern": "single",
+        "sub_questions": []
+      },
+      "suggested_clarification": null,
+      "ambiguity_reason": null,
+      "candidate_values": [],
+      "proposed_default": null,
+      "scope_filters": {
+        "topic": "work"
+      },
+      "parsing_notes": [
+        "spelling 'annual' corrected to 'annuel' (distance 1, corpus frequency 14)",
+        "language=en: stop-word vote",
+        "answer_shape=single: no listing cue",
+        "answer_type=duration: cue 'how many days'",
+        "'many' is in no line of the corpus (kept, in_corpus=false)",
+        "'days' is in no line of the corpus (kept, in_corpus=false)",
+        "'leave' is in no line of the corpus (kept, in_corpus=false)",
+        "concept 'conge' (work) matched by 'leave' [en, primary]",
+        "anchor regex for duration added",
+        "scope topic='work': the matched concepts vote {'work': 1.0}",
+        "decomposition=single: no 'et / and' between two clauses"
+      ]
+    },
+    "plan": {
+      "activations": {
+        "use_keywords": {
+          "on": true,
+          "reason": "always: keyword detectors are deterministic and prove absence"
+        },
+        "use_toc": {
+          "on": true,
+          "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+        },
+        "use_row_level": {
+          "on": false,
+          "reason": "answer_type=duration and no table column named"
+        },
+        "use_embeddings": {
+          "on": false,
+          "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+        },
+        "use_llm_arbiter": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "use_llm_generation": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "sweep_for_absence": {
+          "on": true,
+          "reason": "always: the exhaustive sweep is the evidence of absence"
+        },
+        "current_page_boost": {
+          "on": false,
+          "reason": "no pages_hint: no page to boost"
+        }
+      }
+    },
+    "retrieval": {
+      "question_id": "3185aa50b5743be6",
+      "question": "how many days of annual leave",
+      "candidates": [
+        {
+          "candidate_id": "conges#l2-l4",
+          "anchor": {
+            "doc_id": "conges",
+            "line_start": 2,
+            "line_end": 4,
+            "section_id": "conges#s1"
+          },
+          "context": {
+            "doc_id": "conges",
+            "line_start": 2,
+            "line_end": 4,
+            "section_id": "conges#s1"
+          },
+          "snippet": "Vingt-six jours ouvrables de congé légal et onze jours fériés, souvent améliorés par convention collective. Le congé annuel légal s'élève à vingt-six jours ouv…",
+          "text": "Vingt-six jours ouvrables de congé légal et onze jours fériés, souvent améliorés par convention collective.\nLe congé annuel légal s'élève à vingt-six jours ouvrables par an. Le droit s'ouvre après trois mois de travail ininterrompu chez le même employeur, puis s'acquiert par douzièmes. Une semaine de congé compte au maximum pour cinq jours ouvrables, même si votre temps de travail est réparti sur davantage de jours. S'y ajoutent onze jours fériés légaux, que l'employeur peut partiellement remplacer par des fêtes locales ou professionnelles, à condition d'en respecter le total.\nCes chiffres ne sont qu'un plancher. Les conventions collectives, très présentes dans la finance et les services, accordent fréquemment plusieurs jours supplémentaires. Avant de comparer deux offres d'emploi, vérifiez la convention applicable : l'écart peut atteindre une semaine entière.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "annuel",
+            "congé",
+            "jours fériés"
+          ],
+          "matched_concepts": [
+            "annuel",
+            "conge"
+          ],
+          "section_title": "Congés et jours fériés",
+          "breadcrumb": "Congés et jours fériés",
+          "url_anchor": "https://lux-guide.github.io/#fiche/conges#fiche-detail",
+          "role": "primary",
+          "reason": "The document 'Congés et jours fériés' and the section 'Congés et jours fériés' name the question's words 'annuel' and 'leave' (coverage 0.50); score 5.67: primary.",
+          "score": 5.67,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "annuel",
+            "leave"
+          ],
+          "uncovered_words": [
+            "many",
+            "days"
+          ],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "work",
+          "topic_match": true,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "duration",
+              "raw": "vingt-six jours ouvrables",
+              "pos": 0,
+              "value": 26.0,
+              "currency": null,
+              "unit": "jours ouvrables",
+              "line_num": 2
+            },
+            {
+              "kind": "duration",
+              "raw": "onze jours",
+              "pos": 44,
+              "value": 11.0,
+              "currency": null,
+              "unit": "jours",
+              "line_num": 2
+            },
+            {
+              "kind": "duration",
+              "raw": "vingt-six jours ouvrables",
+              "pos": 32,
+              "value": 26.0,
+              "currency": null,
+              "unit": "jours ouvrables",
+              "line_num": 3
+            },
+            {
+              "kind": "duration",
+              "raw": "trois mois",
+              "pos": 89,
+              "value": 3.0,
+              "currency": null,
+              "unit": "mois",
+              "line_num": 3
+            },
+            {
+              "kind": "duration",
+              "raw": "une semaine",
+              "pos": 179,
+              "value": 1.0,
+              "currency": null,
+              "unit": "semaine",
+              "line_num": 3
+            },
+            {
+              "kind": "duration",
+              "raw": "cinq jours ouvrables",
+              "pos": 223,
+              "value": 5.0,
+              "currency": null,
+              "unit": "jours ouvrables",
+              "line_num": 3
+            },
+            {
+              "kind": "duration",
+              "raw": "onze jours",
+              "pos": 325,
+              "value": 11.0,
+              "currency": null,
+              "unit": "jours",
+              "line_num": 3
+            },
+            {
+              "kind": "duration",
+              "raw": "une semaine",
+              "pos": 268,
+              "value": 1.0,
+              "currency": null,
+              "unit": "semaine",
+              "line_num": 4
+            }
+          ]
+        },
+        {
+          "candidate_id": "conges#l13-l13",
+          "anchor": {
+            "doc_id": "conges",
+            "line_start": 13,
+            "line_end": 13,
+            "section_id": "conges#s4"
+          },
+          "context": {
+            "doc_id": "conges",
+            "line_start": 13,
+            "line_end": 13,
+            "section_id": "conges#s4"
+          },
+          "snippet": "Guichet.lu, congé légal annuel",
+          "text": "Guichet.lu, congé légal annuel",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "annuel",
+            "congé"
+          ],
+          "matched_concepts": [
+            "annuel",
+            "conge"
+          ],
+          "section_title": "Sources officielles",
+          "breadcrumb": "Congés et jours fériés › Sources officielles",
+          "url_anchor": "https://lux-guide.github.io/#fiche/conges#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'annuel' and 'leave' (coverage 0.50) but conges#l2-l4 is titled with the question's words: supporting (also answered here).",
+          "score": 2.4,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "annuel",
+            "leave"
+          ],
+          "uncovered_words": [
+            "many",
+            "days"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "work",
+          "topic_match": true,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "conges#l8-l9",
+          "anchor": {
+            "doc_id": "conges",
+            "line_start": 8,
+            "line_end": 9,
+            "section_id": "conges#s3"
+          },
+          "context": {
+            "doc_id": "conges",
+            "line_start": 8,
+            "line_end": 9,
+            "section_id": "conges#s3"
+          },
+          "snippet": "Vingt-six jours ouvrables et onze jours fériés au minimum. Droit ouvert après trois mois chez le même employeur.",
+          "text": "Vingt-six jours ouvrables et onze jours fériés au minimum.\nDroit ouvert après trois mois chez le même employeur.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "jours fériés"
+          ],
+          "matched_concepts": [
+            "conge"
+          ],
+          "section_title": "À retenir",
+          "breadcrumb": "Congés et jours fériés › À retenir",
+          "url_anchor": "https://lux-guide.github.io/#fiche/conges#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers only 'leave' (0.25 of the question's words); 'many', 'days' and 'annuel' not covered: supporting.",
+          "score": 1.56,
+          "matched_share": 0.25,
+          "coverage": 0.25,
+          "covered_words": [
+            "leave"
+          ],
+          "uncovered_words": [
+            "many",
+            "days",
+            "annuel"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "work",
+          "topic_match": true,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "duration",
+              "raw": "vingt-six jours ouvrables",
+              "pos": 0,
+              "value": 26.0,
+              "currency": null,
+              "unit": "jours ouvrables",
+              "line_num": 8
+            },
+            {
+              "kind": "duration",
+              "raw": "onze jours",
+              "pos": 29,
+              "value": 11.0,
+              "currency": null,
+              "unit": "jours",
+              "line_num": 8
+            },
+            {
+              "kind": "duration",
+              "raw": "trois mois",
+              "pos": 19,
+              "value": 3.0,
+              "currency": null,
+              "unit": "mois",
+              "line_num": 9
+            }
+          ]
+        },
+        {
+          "candidate_id": "conges#l6-l6",
+          "anchor": {
+            "doc_id": "conges",
+            "line_start": 6,
+            "line_end": 6,
+            "section_id": "conges#s2"
+          },
+          "context": {
+            "doc_id": "conges",
+            "line_start": 6,
+            "line_end": 6,
+            "section_id": "conges#s2"
+          },
+          "snippet": "La période d'essai doit être stipulée par écrit au plus tard au moment de l'entrée en service, et sa durée conditionne le préavis applicable pendant cette péri…",
+          "text": "La période d'essai doit être stipulée par écrit au plus tard au moment de l'entrée en service, et sa durée conditionne le préavis applicable pendant cette période. À la fin du contrat, retenez un point souvent ignoré : le congé reste dû pendant le préavis, même en cas de dispense de travail, et l'employeur ne peut pas vous imposer de solder vos jours à ce moment-là.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "congé"
+          ],
+          "matched_concepts": [
+            "conge"
+          ],
+          "section_title": "Essai et préavis",
+          "breadcrumb": "Congés et jours fériés › Essai et préavis",
+          "url_anchor": "https://lux-guide.github.io/#fiche/conges#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers only 'leave' (0.25 of the question's words); 'many', 'days' and 'annuel' not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 0.25,
+          "coverage": 0.25,
+          "covered_words": [
+            "leave"
+          ],
+          "uncovered_words": [
+            "many",
+            "days",
+            "annuel"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "work",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "interets#l3-l3",
+          "anchor": {
+            "doc_id": "interets",
+            "line_start": 3,
+            "line_end": 3,
+            "section_id": "interets#s1"
+          },
+          "context": {
+            "doc_id": "interets",
+            "line_start": 3,
+            "line_end": 3,
+            "section_id": "interets#s1"
+          },
+          "snippet": "Les intérêts d'un prêt finançant le logement que vous occupez sont déductibles, dans la catégorie des revenus provenant de la location de biens. Depuis l'année…",
+          "text": "Les intérêts d'un prêt finançant le logement que vous occupez sont déductibles, dans la catégorie des revenus provenant de la location de biens. Depuis l'année d'imposition 2024, le plafond annuel dépend de l'ancienneté de l'occupation : la déduction est intégrale l'année de fixation de la valeur locative et l'année suivante, puis limitée à 4 000 euros pendant quatre ans, à 3 000 euros pendant les cinq années suivantes, et à 2 000 euros ensuite.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "annuel"
+          ],
+          "matched_concepts": [
+            "annuel"
+          ],
+          "section_title": "Déduire les intérêts d'emprunt",
+          "breadcrumb": "Déduire les intérêts d'emprunt",
+          "url_anchor": "https://lux-guide.github.io/#fiche/interets#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers only 'annuel' (0.25 of the question's words); 'many', 'days' and 'leave' not covered: supporting.",
+          "score": 2.25,
+          "matched_share": 0.25,
+          "coverage": 0.25,
+          "covered_words": [
+            "annuel"
+          ],
+          "uncovered_words": [
+            "many",
+            "days",
+            "leave"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "money",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "duration",
+              "raw": "quatre ans",
+              "pos": 363,
+              "value": 4.0,
+              "currency": null,
+              "unit": "ans",
+              "line_num": 3
+            },
+            {
+              "kind": "duration",
+              "raw": "cinq annees",
+              "pos": 401,
+              "value": 5.0,
+              "currency": null,
+              "unit": "annees",
+              "line_num": 3
+            }
+          ]
+        },
+        {
+          "candidate_id": "interets#l8-l8",
+          "anchor": {
+            "doc_id": "interets",
+            "line_start": 8,
+            "line_end": 8,
+            "section_id": "interets#s3"
+          },
+          "context": {
+            "doc_id": "interets",
+            "line_start": 8,
+            "line_end": 8,
+            "section_id": "interets#s3"
+          },
+          "snippet": "Plafond annuel selon la composition du ménage",
+          "text": "Plafond annuel selon la composition du ménage",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "annuel"
+          ],
+          "matched_concepts": [
+            "annuel"
+          ],
+          "section_title": "Plafond annuel selon la composition du ménage",
+          "breadcrumb": "Déduire les intérêts d'emprunt › L'élément décisif : la composition du ménage › Plafond annuel selon la composition du ménage",
+          "url_anchor": "https://lux-guide.github.io/#fiche/interets#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers only 'annuel' (0.25 of the question's words); 'many', 'days' and 'leave' not covered: supporting.",
+          "score": 2.0,
+          "matched_share": 0.25,
+          "coverage": 0.25,
+          "covered_words": [
+            "annuel"
+          ],
+          "uncovered_words": [
+            "many",
+            "days",
+            "leave"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "money",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "logement_abordable#l11-l11",
+          "anchor": {
+            "doc_id": "logement_abordable",
+            "line_start": 11,
+            "line_end": 11,
+            "section_id": "logement_abordable#s5"
+          },
+          "context": {
+            "doc_id": "logement_abordable",
+            "line_start": 11,
+            "line_end": 11,
+            "section_id": "logement_abordable#s5"
+          },
+          "snippet": "Plafonds de revenu annuel net du ménage",
+          "text": "Plafonds de revenu annuel net du ménage",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "annuel"
+          ],
+          "matched_concepts": [
+            "annuel"
+          ],
+          "section_title": "Plafonds de revenu annuel net du ménage",
+          "breadcrumb": "Logement abordable et à coût modéré › Une revente à prix encadré › Plafonds de revenu annuel net du ménage",
+          "url_anchor": "https://lux-guide.github.io/#fiche/logement_abordable#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers only 'annuel' (0.25 of the question's words); 'many', 'days' and 'leave' not covered: supporting.",
+          "score": 2.0,
+          "matched_share": 0.25,
+          "coverage": 0.25,
+          "covered_words": [
+            "annuel"
+          ],
+          "uncovered_words": [
+            "many",
+            "days",
+            "leave"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        }
+      ],
+      "methods_used": [
+        "keyword_lines",
+        "title_match",
+        "anchor_regex",
+        "arbiter_rules",
+        "sweep"
+      ],
+      "methods_skipped": {
+        "row_match": "answer_type=duration and no table column named",
+        "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+        "llm_arbiter": "no model key configured",
+        "current_page_boost": "no pages_hint: no page to boost"
+      },
+      "not_found": false,
+      "not_found_reason": null,
+      "confidence": 0.523,
+      "per_section_audit": [
+        {
+          "doc_id": "conges",
+          "section_id": "conges#s1",
+          "title": "Congés et jours fériés",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "conges",
+          "section_id": "conges#s2",
+          "title": "Essai et préavis",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "conges",
+          "section_id": "conges#s3",
+          "title": "À retenir",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "conges",
+          "section_id": "conges#s4",
+          "title": "Sources officielles",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "interets",
+          "section_id": "interets#s1",
+          "title": "Déduire les intérêts d'emprunt",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "interets",
+          "section_id": "interets#s2",
+          "title": "L'élément décisif : la composition du ménage",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "interets",
+          "section_id": "interets#s3",
+          "title": "Plafond annuel selon la composition du ménage",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "interets",
+          "section_id": "interets#s4",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "interets",
+          "section_id": "interets#s5",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "logement_abordable",
+          "section_id": "logement_abordable#s1",
+          "title": "Logement abordable et à coût modéré",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "logement_abordable",
+          "section_id": "logement_abordable#s2",
+          "title": "Ne posséder aucun autre logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "logement_abordable",
+          "section_id": "logement_abordable#s3",
+          "title": "Rester sous le plafond de revenus",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "logement_abordable",
+          "section_id": "logement_abordable#s4",
+          "title": "Une revente à prix encadré",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "logement_abordable",
+          "section_id": "logement_abordable#s5",
+          "title": "Plafonds de revenu annuel net du ménage",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "logement_abordable",
+          "section_id": "logement_abordable#s6",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "logement_abordable",
+          "section_id": "logement_abordable#s7",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        }
+      ],
+      "route_pages": [
+        {
+          "doc_id": "conges",
+          "score": 4.76,
+          "reason": "kept: 3 term(s) in the summary line (congé, jours fériés, vacances); heading title match (Congés et jours fériés); document title 'Congés et jours fériés' covers 1.00 of the question's words; tally 4.76"
+        },
+        {
+          "doc_id": "interets",
+          "score": 2.0,
+          "reason": "kept: 1 term(s) in the summary line (annuel); heading title match (Plafond annuel selon la composition du ménage); tally 2.0"
+        },
+        {
+          "doc_id": "logement_abordable",
+          "score": 2.0,
+          "reason": "kept: 1 term(s) in the summary line (annuel); heading title match (Plafonds de revenu annuel net du ménage); tally 2.0"
+        }
+      ],
+      "route_sections": [
+        {
+          "doc_id": "conges",
+          "section_id": "conges#s4",
+          "title": "Sources officielles",
+          "score": 2.0,
+          "reason": "2 term(s) in its lines (annuel, congé); a leaf, stop here"
+        },
+        {
+          "doc_id": "conges",
+          "section_id": "conges#s2",
+          "title": "Essai et préavis",
+          "score": 1.0,
+          "reason": "1 term(s) in its lines (congé); a leaf, stop here"
+        },
+        {
+          "doc_id": "conges",
+          "section_id": "conges#s3",
+          "title": "À retenir",
+          "score": 1.0,
+          "reason": "1 term(s) in its lines (jours fériés); a leaf, stop here"
+        },
+        {
+          "doc_id": "interets",
+          "section_id": "interets#s3",
+          "title": "Plafond annuel selon la composition du ménage",
+          "score": 3.0,
+          "reason": "title 'Plafond annuel selon la composition du ménage' matches annuel; 1 term(s) in its lines (annuel); a leaf, stop here"
+        },
+        {
+          "doc_id": "logement_abordable",
+          "section_id": "logement_abordable#s5",
+          "title": "Plafonds de revenu annuel net du ménage",
+          "score": 3.0,
+          "reason": "title 'Plafonds de revenu annuel net du ménage' matches annuel; 1 term(s) in its lines (annuel); a leaf, stop here"
+        }
+      ],
+      "route_notes": [
+        "interets: no section of the outline carries a term; the page is read whole",
+        "logement_abordable: no section of the outline carries a term; the page is read whole"
+      ],
+      "sweep_concepts": [
+        {
+          "concept": "many",
+          "variants": [
+            "many"
+          ],
+          "pages_with_hits": [],
+          "line_hits": 0
+        },
+        {
+          "concept": "days",
+          "variants": [
+            "days"
+          ],
+          "pages_with_hits": [],
+          "line_hits": 0
+        },
+        {
+          "concept": "annuel",
+          "variants": [
+            "annuel"
+          ],
+          "pages_with_hits": [
+            "assurance_sante",
+            "avantages",
+            "conges",
+            "cout_vie",
+            "faq",
+            "impatries",
+            "interets",
+            "logement_abordable",
+            "matricule",
+            "simulateur"
+          ],
+          "line_hits": 15
+        },
+        {
+          "concept": "conge",
+          "variants": [
+            "congé",
+            "congés payés",
+            "jours fériés",
+            "vacances",
+            "leave",
+            "paid leave",
+            "holidays",
+            "public holidays",
+            "Urlaub",
+            "Feiertage",
+            "urlaub",
+            "feiertage"
+          ],
+          "pages_with_hits": [
+            "avantages",
+            "conges",
+            "faq",
+            "fiches",
+            "frontalier",
+            "telecom"
+          ],
+          "line_hits": 27
+        }
+      ],
+      "sweep_rows": [
+        {
+          "concept": "annuel",
+          "variant": "annuel",
+          "doc_id": "assurance_sante",
+          "line_num": 8,
+          "snippet": "Deux contrats affichant la même cotisation mensuelle peuvent différer du simple au double sur ce qu'ils remboursent. Regardez le plafond annuel par poste, en p…"
+        },
+        {
+          "concept": "annuel",
+          "variant": "annuel",
+          "doc_id": "avantages",
+          "line_num": 8,
+          "snippet": "Un crédit d'impôt vient en déduction de la retenue sur salaire, et l'employeur l'applique lui-même sur la base de la fiche de retenue. Il vaut 600 euros par an…"
+        },
+        {
+          "concept": "annuel",
+          "variant": "annuel",
+          "doc_id": "avantages",
+          "line_num": 254,
+          "snippet": "Les dons en argent à des organismes reconnus d'utilité publique, au Fonds culturel national et à des organismes comparables de l'Union européenne se déduisent…"
+        },
+        {
+          "concept": "annuel",
+          "variant": "annuel",
+          "doc_id": "conges",
+          "line_num": 3,
+          "snippet": "Le congé annuel légal s'élève à vingt-six jours ouvrables par an. Le droit s'ouvre après trois mois de travail ininterrompu chez le même employeur, puis s'acqu…"
+        },
+        {
+          "concept": "annuel",
+          "variant": "annuel",
+          "doc_id": "conges",
+          "line_num": 13,
+          "snippet": "Guichet.lu, congé légal annuel"
+        },
+        {
+          "concept": "annuel",
+          "variant": "annuel",
+          "doc_id": "cout_vie",
+          "line_num": 7,
+          "snippet": "Un dernier point à vérifier avant de signer : le treizième mois est fréquent mais n'a rien d'une obligation légale. Il dépend du contrat ou de la convention co…"
+        },
+        {
+          "concept": "annuel",
+          "variant": "annuel",
+          "doc_id": "cout_vie",
+          "line_num": 11,
+          "snippet": "Comparer les offres sur le brut annuel, treizième mois compris."
+        },
+        {
+          "concept": "annuel",
+          "variant": "annuel",
+          "doc_id": "faq",
+          "line_num": 152,
+          "snippet": "Comparez sur le brut annuel, treizième mois compris, et intégrez le logement dès le début du calcul : c'est lui qui absorbe l'essentiel de l'écart de salaire a…"
+        },
+        {
+          "concept": "annuel",
+          "variant": "annuel",
+          "doc_id": "impatries",
+          "line_num": 6,
+          "snippet": "S'y ajoute une condition de rémunération, avec un brut annuel fixe minimum de l'ordre de 75 000 euros hors avantages en nature. Côté employeur, le nombre d'imp…"
+        },
+        {
+          "concept": "annuel",
+          "variant": "annuel",
+          "doc_id": "interets",
+          "line_num": 3,
+          "snippet": "Les intérêts d'un prêt finançant le logement que vous occupez sont déductibles, dans la catégorie des revenus provenant de la location de biens. Depuis l'année…"
+        },
+        {
+          "concept": "annuel",
+          "variant": "annuel",
+          "doc_id": "interets",
+          "line_num": 8,
+          "snippet": "Plafond annuel selon la composition du ménage"
+        },
+        {
+          "concept": "annuel",
+          "variant": "annuel",
+          "doc_id": "logement_abordable",
+          "line_num": 11,
+          "snippet": "Plafonds de revenu annuel net du ménage"
+        },
+        {
+          "concept": "annuel",
+          "variant": "annuel",
+          "doc_id": "matricule",
+          "line_num": 8,
+          "snippet": "La couverture obligatoire laisse un reste à charge sur l'hospitalisation en chambre individuelle, les soins dentaires lourds et l'optique. Une assurance complé…"
+        },
+        {
+          "concept": "annuel",
+          "variant": "annuel",
+          "doc_id": "simulateur",
+          "line_num": 15,
+          "snippet": "Le « net à payer » de la fiche de paie. Avec un 13e mois : le net annuel divisé par 12."
+        },
+        {
+          "concept": "annuel",
+          "variant": "annuel",
+          "doc_id": "simulateur",
+          "line_num": 20,
+          "snippet": "Le « net à payer » de la fiche de paie. Avec un 13e mois : le net annuel divisé par 12."
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "avantages",
+          "line_num": 176,
+          "snippet": "Congé parental indemnisé"
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "avantages",
+          "line_num": 180,
+          "snippet": "Chaque parent peut prendre un congé parental indemnisé par la Caisse pour l'avenir des enfants, en remplacement du salaire. À temps plein, l'indemnité est calc…"
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "avantages",
+          "line_num": 181,
+          "snippet": "Le congé se demande à l'employeur puis à la caisse, avec des délais qui dépendent du moment choisi. Le calculateur officiel donne le montant sur votre revenu."
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "avantages",
+          "line_num": 182,
+          "snippet": "Caisse pour l'avenir des enfants, montants du congé parental"
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "avantages",
+          "line_num": 185,
+          "snippet": "Fiche « Congés et jours fériés »"
+        },
+        {
+          "concept": "conge",
+          "variant": "jours fériés",
+          "doc_id": "avantages",
+          "line_num": 185,
+          "snippet": "Fiche « Congés et jours fériés »"
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "avantages",
+          "line_num": 276,
+          "snippet": "Les allocations familiales et l'indemnité de congé parental suivent le même indice depuis 2021."
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "conges",
+          "line_num": 1,
+          "snippet": "Congés et jours fériés"
+        },
+        {
+          "concept": "conge",
+          "variant": "jours fériés",
+          "doc_id": "conges",
+          "line_num": 1,
+          "snippet": "Congés et jours fériés"
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "conges",
+          "line_num": 2,
+          "snippet": "Vingt-six jours ouvrables de congé légal et onze jours fériés, souvent améliorés par convention collective."
+        },
+        {
+          "concept": "conge",
+          "variant": "jours fériés",
+          "doc_id": "conges",
+          "line_num": 2,
+          "snippet": "Vingt-six jours ouvrables de congé légal et onze jours fériés, souvent améliorés par convention collective."
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "conges",
+          "line_num": 3,
+          "snippet": "Le congé annuel légal s'élève à vingt-six jours ouvrables par an. Le droit s'ouvre après trois mois de travail ininterrompu chez le même employeur, puis s'acqu…"
+        },
+        {
+          "concept": "conge",
+          "variant": "jours fériés",
+          "doc_id": "conges",
+          "line_num": 3,
+          "snippet": "Le congé annuel légal s'élève à vingt-six jours ouvrables par an. Le droit s'ouvre après trois mois de travail ininterrompu chez le même employeur, puis s'acqu…"
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "conges",
+          "line_num": 6,
+          "snippet": "La période d'essai doit être stipulée par écrit au plus tard au moment de l'entrée en service, et sa durée conditionne le préavis applicable pendant cette péri…"
+        },
+        {
+          "concept": "conge",
+          "variant": "jours fériés",
+          "doc_id": "conges",
+          "line_num": 8,
+          "snippet": "Vingt-six jours ouvrables et onze jours fériés au minimum."
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "conges",
+          "line_num": 13,
+          "snippet": "Guichet.lu, congé légal annuel"
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "faq",
+          "line_num": 164,
+          "snippet": "Combien de jours de congé donne la loi ?"
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "faq",
+          "line_num": 165,
+          "snippet": "Vingt-six jours ouvrables de congé légal par an, plus onze jours fériés. Le droit s'ouvre après trois mois chez le même employeur, et les conventions collectiv…"
+        },
+        {
+          "concept": "conge",
+          "variant": "jours fériés",
+          "doc_id": "faq",
+          "line_num": 165,
+          "snippet": "Vingt-six jours ouvrables de congé légal par an, plus onze jours fériés. Le droit s'ouvre après trois mois chez le même employeur, et les conventions collectiv…"
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "faq",
+          "line_num": 166,
+          "snippet": "Voir la fiche : Congés et jours fériés"
+        },
+        {
+          "concept": "conge",
+          "variant": "jours fériés",
+          "doc_id": "faq",
+          "line_num": 166,
+          "snippet": "Voir la fiche : Congés et jours fériés"
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "fiches",
+          "line_num": 45,
+          "snippet": "Congés et jours fériés"
+        },
+        {
+          "concept": "conge",
+          "variant": "jours fériés",
+          "doc_id": "fiches",
+          "line_num": 45,
+          "snippet": "Congés et jours fériés"
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "fiches",
+          "line_num": 46,
+          "snippet": "Vingt-six jours ouvrables de congé légal et onze jours fériés, souvent améliorés par convention collective."
+        },
+        {
+          "concept": "conge",
+          "variant": "jours fériés",
+          "doc_id": "fiches",
+          "line_num": 46,
+          "snippet": "Vingt-six jours ouvrables de congé légal et onze jours fériés, souvent améliorés par convention collective."
+        },
+        {
+          "concept": "conge",
+          "variant": "vacances",
+          "doc_id": "frontalier",
+          "line_num": 15,
+          "snippet": "L'école relève entièrement du pays de résidence, avec son calendrier, ses langues et ses vacances. Une famille qui hésite entre les deux côtés compare donc deu…"
+        },
+        {
+          "concept": "conge",
+          "variant": "congé",
+          "doc_id": "telecom",
+          "line_num": 5,
+          "snippet": "Comptez deux à trois semaines entre la souscription et l'installation en période normale. Cette moyenne est trompeuse : les mois de forte mobilité, typiquement…"
+        }
+      ],
+      "question_concepts": [
+        "many",
+        "days",
+        "annuel",
+        "conge"
+      ],
+      "terms": [
+        {
+          "text": "many",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "many",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "days",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "days",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "annuel",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "annuel",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "leave",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "conge",
+          "is_regex": false,
+          "concept_key": "conge",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "congé",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "concept_key": "conge",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "congés payés",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "concept_key": "conge",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "jours fériés",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "concept_key": "conge",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "vacances",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "concept_key": "conge",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "paid leave",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "concept_key": "conge",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "holidays",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "concept_key": "conge",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "public holidays",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "concept_key": "conge",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "urlaub",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "concept_key": "conge",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "feiertage",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "conge",
+          "is_regex": false,
+          "concept_key": "conge",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "\\b\\d+\\s?(?:jours?|mois|ans?|annees?|semaines?|heures?|days?|months?|years?|weeks?|hours?|tagen?|monaten?|jahren?|wochen?)\\b",
+          "weight": 1.0,
+          "source": "anchor",
+          "concept": null,
+          "is_regex": true,
+          "concept_key": "regex:\\b\\d+\\s?(?:jours?|mois|ans?|annees?|semaines?|heures?|days?|months?|years?|weeks?|hours?|tagen?|monaten?|jahren?|wochen?)\\b",
+          "weak": false,
+          "in_corpus": true
+        }
+      ],
+      "content_words": [
+        {
+          "text": "many",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "days",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "annuel",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "leave",
+          "weight": 1.0,
+          "weak": false
+        }
+      ],
+      "uncovered_words": [],
+      "answer_context_used": "line"
+    }
+  }
+}

@@ -1,0 +1,1677 @@
+{
+  "answer": {
+    "extraction_method": "verbatim",
+    "confidence": 0.826,
+    "caveats": [],
+    "answer_found": true,
+    "complete_answer_found": true,
+    "context_structured": [
+      {
+        "candidate_id": "arrivee#l12-l13",
+        "doc_id": "arrivee",
+        "section_id": "arrivee#s4",
+        "section_title": "Ce qu'il faut apporter",
+        "breadcrumb": "Les huit premiers jours › Ce qu'il faut apporter",
+        "line_start": 11,
+        "line_end": 13,
+        "url_anchor": "https://lux-guide.github.io/#fiche/arrivee#fiche-detail",
+        "role": "primary"
+      }
+    ],
+    "keywords_found": [
+      "commune",
+      "documents"
+    ],
+    "llm_discovered_keywords": [],
+    "conflicting_evidence": [],
+    "suggested_clarification": null,
+    "kind": "list",
+    "items": [
+      {
+        "text": "Prévoyez les originaux des pièces d'identité de chaque membre du foyer, le bail signé ou l'acte d'achat, et, selon votre situation familiale, les actes de naissance et de mariage. Certaines communes exigent des documents récents ou traduits : vérifiez leurs demandes avant de vous déplacer, cela évite un second rendez-vous.",
+        "spans": [
+          {
+            "doc_id": "arrivee",
+            "line_start": 12,
+            "line_end": 12,
+            "quote": "Prévoyez les originaux des pièces d'identité de chaque membre du foyer, le bail signé ou l'acte d'achat, et, selon votre situation familiale, les actes de naissance et de mariage. Certaines communes exigent des documents récents ou traduits : vérifiez leurs demandes avant de vous déplacer, cela évite un second rendez-vous."
+          }
+        ]
+      },
+      {
+        "text": "La plupart des communes fonctionnent désormais sur rendez-vous, à prendre en ligne. En période de rentrée, les créneaux partent vite, ce qui peut suffire à faire dépasser le délai de huit jours. Réservez avant même d'avoir les clés.",
+        "spans": [
+          {
+            "doc_id": "arrivee",
+            "line_start": 13,
+            "line_end": 13,
+            "quote": "La plupart des communes fonctionnent désormais sur rendez-vous, à prendre en ligne. En période de rentrée, les créneaux partent vite, ce qui peut suffire à faire dépasser le délai de huit jours. Réservez avant même d'avoir les clés."
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "question_id": "9323db117d1574eb",
+    "index_version": "1d1bbf848338f32798d0c92366bd740f0513f72b56bd4745e85a507a1645d9ca",
+    "pipeline_version": "guide-rag/0.1",
+    "methods_used": [
+      "keyword_lines",
+      "title_match",
+      "arbiter_rules",
+      "sweep"
+    ],
+    "methods_skipped": {
+      "anchor_regex": "answer type text asks for no typed anchor",
+      "row_match": "answer_type=text and no table column named",
+      "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+      "llm_arbiter": "no model key configured",
+      "current_page_boost": "no pages_hint: no page to boost"
+    },
+    "activations": {
+      "use_keywords": {
+        "on": true,
+        "reason": "always: keyword detectors are deterministic and prove absence"
+      },
+      "use_toc": {
+        "on": true,
+        "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+      },
+      "use_row_level": {
+        "on": false,
+        "reason": "answer_type=text and no table column named"
+      },
+      "use_embeddings": {
+        "on": false,
+        "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+      },
+      "use_llm_arbiter": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "use_llm_generation": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "sweep_for_absence": {
+        "on": true,
+        "reason": "always: the exhaustive sweep is the evidence of absence"
+      },
+      "current_page_boost": {
+        "on": false,
+        "reason": "no pages_hint: no page to boost"
+      }
+    },
+    "chunk_strategy": "line as the unit; anchor = hit lines grouped by runs; context = the whole section (answer_context=section)",
+    "model_used": "no model",
+    "prompt_version": null,
+    "fragments_applied": [],
+    "iterations": 1,
+    "validator_report": {
+      "iteration_1": []
+    },
+    "replay": null
+  },
+  "trace": {
+    "parsed": {
+      "question_id": "9323db117d1574eb",
+      "original_question": "quels documents apporter à la commune",
+      "corrected_question": "quels documents apporter à la commune",
+      "language": "fr",
+      "keywords": [
+        {
+          "text": "documents",
+          "weight": 0.3,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": true,
+          "in_corpus": true
+        },
+        {
+          "text": "apporter",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "commune",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "administration communale",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "mairie",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "municipality",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "town hall",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "gemeinde",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "gemeindeverwaltung",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "hôtel de ville",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "gemeng",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        }
+      ],
+      "answer_shape": "listing",
+      "answer_type": "text",
+      "structural_hints": {
+        "pages_hint": null,
+        "toc_section_hint": "Ce qu'il faut apporter",
+        "answer_context": "section"
+      },
+      "decomposition": {
+        "pattern": "single",
+        "sub_questions": []
+      },
+      "suggested_clarification": null,
+      "ambiguity_reason": null,
+      "candidate_values": [],
+      "proposed_default": null,
+      "scope_filters": {
+        "topic": "administration"
+      },
+      "parsing_notes": [
+        "language=fr: stop-word vote",
+        "answer_shape=listing: cue 'quels'",
+        "answer_type=text: no typed cue",
+        "weak words (weight 0.3): documents",
+        "concept 'commune' (administration) matched by 'commune' [fr, primary]",
+        "toc_section_hint='Ce qu'il faut apporter': every word of this heading is in the question",
+        "scope topic='administration': the matched concepts vote {'administration': 1.0}",
+        "decomposition=single: no 'et / and' between two clauses"
+      ]
+    },
+    "plan": {
+      "activations": {
+        "use_keywords": {
+          "on": true,
+          "reason": "always: keyword detectors are deterministic and prove absence"
+        },
+        "use_toc": {
+          "on": true,
+          "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+        },
+        "use_row_level": {
+          "on": false,
+          "reason": "answer_type=text and no table column named"
+        },
+        "use_embeddings": {
+          "on": false,
+          "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+        },
+        "use_llm_arbiter": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "use_llm_generation": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "sweep_for_absence": {
+          "on": true,
+          "reason": "always: the exhaustive sweep is the evidence of absence"
+        },
+        "current_page_boost": {
+          "on": false,
+          "reason": "no pages_hint: no page to boost"
+        }
+      }
+    },
+    "retrieval": {
+      "question_id": "9323db117d1574eb",
+      "question": "quels documents apporter à la commune",
+      "candidates": [
+        {
+          "candidate_id": "arrivee#l12-l13",
+          "anchor": {
+            "doc_id": "arrivee",
+            "line_start": 12,
+            "line_end": 13,
+            "section_id": "arrivee#s4"
+          },
+          "context": {
+            "doc_id": "arrivee",
+            "line_start": 11,
+            "line_end": 13,
+            "section_id": "arrivee#s4"
+          },
+          "snippet": "Prévoyez les originaux des pièces d'identité de chaque membre du foyer, le bail signé ou l'acte d'achat, et, selon votre situation familiale, les actes de nais…",
+          "text": "Ce qu'il faut apporter\nPrévoyez les originaux des pièces d'identité de chaque membre du foyer, le bail signé ou l'acte d'achat, et, selon votre situation familiale, les actes de naissance et de mariage. Certaines communes exigent des documents récents ou traduits : vérifiez leurs demandes avant de vous déplacer, cela évite un second rendez-vous.\nLa plupart des communes fonctionnent désormais sur rendez-vous, à prendre en ligne. En période de rentrée, les créneaux partent vite, ce qui peut suffire à faire dépasser le délai de huit jours. Réservez avant même d'avoir les clés.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "commune",
+            "documents"
+          ],
+          "matched_concepts": [
+            "commune",
+            "documents"
+          ],
+          "section_title": "Ce qu'il faut apporter",
+          "breadcrumb": "Les huit premiers jours › Ce qu'il faut apporter",
+          "url_anchor": "https://lux-guide.github.io/#fiche/arrivee#fiche-detail",
+          "role": "primary",
+          "reason": "The section title 'Ce qu'il faut apporter' is exactly in the question (every word of it) and the section holds the best lines; covers 'documents', 'apporter' and 'commune' (coverage 1.00); score 3.45: primary.",
+          "score": 3.45,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "documents",
+            "apporter",
+            "commune"
+          ],
+          "uncovered_words": [],
+          "title_tier": 0,
+          "title_exact": true,
+          "page_topic": "administration",
+          "topic_match": true,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "arrivee#l2-l4",
+          "anchor": {
+            "doc_id": "arrivee",
+            "line_start": 2,
+            "line_end": 4,
+            "section_id": "arrivee#s1"
+          },
+          "context": {
+            "doc_id": "arrivee",
+            "line_start": 1,
+            "line_end": 4,
+            "section_id": "arrivee#s1"
+          },
+          "snippet": "Tout part de la commune. Sans cette déclaration, ni matricule, ni sécurité sociale, ni banque, ni école. La première démarche après l'emménagement n'est ni la…",
+          "text": "Les huit premiers jours\nTout part de la commune. Sans cette déclaration, ni matricule, ni sécurité sociale, ni banque, ni école.\nLa première démarche après l'emménagement n'est ni la banque ni l'employeur : c'est la commune. Vous disposez de huit jours pour déclarer votre arrivée au bureau de la population, souvent appelé Biergercenter. Cette formalité, qui prend une vingtaine de minutes, conditionne littéralement tout le reste de votre installation.\nElle produit en effet deux documents que l'on vous redemandera partout : le certificat de résidence et, pour les ressortissants de l'Union restant plus de trois mois, l'attestation d'enregistrement.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "commune",
+            "documents"
+          ],
+          "matched_concepts": [
+            "commune",
+            "documents"
+          ],
+          "section_title": "Les huit premiers jours",
+          "breadcrumb": "Les huit premiers jours",
+          "url_anchor": "https://lux-guide.github.io/#fiche/arrivee#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'documents' and 'commune' (coverage 0.56) but the title of arrivee#l12-l13 ('Ce qu'il faut apporter') is exactly in the question: supporting (also answered here).",
+          "score": 1.56,
+          "matched_share": 0.565,
+          "coverage": 0.565,
+          "covered_words": [
+            "documents",
+            "commune"
+          ],
+          "uncovered_words": [
+            "apporter"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "administration",
+          "topic_match": true,
+          "co_occurrence": "section",
+          "captures": []
+        },
+        {
+          "candidate_id": "cartes#l2-l3",
+          "anchor": {
+            "doc_id": "cartes",
+            "line_start": 2,
+            "line_end": 3,
+            "section_id": "cartes#s1"
+          },
+          "context": {
+            "doc_id": "cartes",
+            "line_start": 1,
+            "line_end": 3,
+            "section_id": "cartes#s1"
+          },
+          "snippet": "Le Luxembourg tient dans une heure de route, et pourtant le loyer double d'une commune à l'autre, le salaire médian va du simple au double, et la part de résid…",
+          "text": "Les communes, chiffre par chiffre\nLe Luxembourg tient dans une heure de route, et pourtant le loyer double d'une commune à l'autre, le salaire médian va du simple au double, et la part de résidents étrangers passe de 20 à 70 %. Choisissez un indicateur : les communes se colorent, du plus clair au plus foncé. Cliquez-en une pour voir sa valeur, son rang et son évolution dans le temps. Pour lire toutes les données de plusieurs communes côte à côte, jusqu'à dix, il y a une vue à part, « Comparer des communes », et une autre pour poser deux cartes l'une à côté de l'autre. La Ville de Luxembourg se regarde aussi quartier par quartier, là où les sources descendent à ce grain. Et comme un salarié sur deux habite de l'autre côté, la carte passe la frontière : la France, la Belgique et l'Allemagne se regardent une par une, avec ce qui s'y mesure de la même façon qu'ici.\nUne carte de ce genre montre où se situe une commune, pas pourquoi. Un salaire médian élevé décrit les gens qui habitent là, pas le coût de la vie sur place. Un taux de chômage bas peut tenir à la structure d'âge. Et les prix affichés sont ceux des annonces, donc au dessus des prix signés. Cet onglet demande un accès réseau pour le fond de carte.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "commune"
+          ],
+          "matched_concepts": [
+            "commune"
+          ],
+          "section_title": "Les communes, chiffre par chiffre",
+          "breadcrumb": "Les communes, chiffre par chiffre",
+          "url_anchor": "https://lux-guide.github.io/#cartes#panel-cartes",
+          "role": "supporting",
+          "reason": "Covers 'commune' (coverage 0.43) but the title of arrivee#l12-l13 ('Ce qu'il faut apporter') is exactly in the question: supporting (also answered here).",
+          "score": 2.0,
+          "matched_share": 0.435,
+          "coverage": 0.435,
+          "covered_words": [
+            "commune"
+          ],
+          "uncovered_words": [
+            "documents",
+            "apporter"
+          ],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "choisir_commune#l3-l3",
+          "anchor": {
+            "doc_id": "choisir_commune",
+            "line_start": 3,
+            "line_end": 3,
+            "section_id": "choisir_commune#s1"
+          },
+          "context": {
+            "doc_id": "choisir_commune",
+            "line_start": 1,
+            "line_end": 3,
+            "section_id": "choisir_commune#s1"
+          },
+          "snippet": "Beaucoup de nouveaux arrivants choisissent leur commune sur une carte, en traçant un rayon autour du lieu de travail. C'est le meilleur moyen de se tromper : d…",
+          "text": "Choisir sa commune\nLe bon critère n'est pas la distance, mais votre mode de déplacement et les trajets que vous ferez tous les jours.\nBeaucoup de nouveaux arrivants choisissent leur commune sur une carte, en traçant un rayon autour du lieu de travail. C'est le meilleur moyen de se tromper : deux communes situées à la même distance peuvent offrir des quotidiens radicalement différents selon la desserte et selon les trajets réellement effectués chaque jour.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "commune"
+          ],
+          "matched_concepts": [
+            "commune"
+          ],
+          "section_title": "Choisir sa commune",
+          "breadcrumb": "Choisir sa commune",
+          "url_anchor": "https://lux-guide.github.io/#fiche/choisir_commune#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'commune' (coverage 0.43) but the title of arrivee#l12-l13 ('Ce qu'il faut apporter') is exactly in the question: supporting (also answered here).",
+          "score": 2.0,
+          "matched_share": 0.435,
+          "coverage": 0.435,
+          "covered_words": [
+            "commune"
+          ],
+          "uncovered_words": [
+            "documents",
+            "apporter"
+          ],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "choisir_commune#l12-l12",
+          "anchor": {
+            "doc_id": "choisir_commune",
+            "line_start": 12,
+            "line_end": 12,
+            "section_id": "choisir_commune#s4"
+          },
+          "context": {
+            "doc_id": "choisir_commune",
+            "line_start": 10,
+            "line_end": 12,
+            "section_id": "choisir_commune#s4"
+          },
+          "snippet": "Un dernier réflexe utile : la commune est aussi votre guichet administratif pour l'enregistrement, le chèque-service et les inscriptions scolaires. Ses horaire…",
+          "text": "Les critères qu'on oublie\nRepérez la distance à pied jusqu'à l'arrêt de bus ou à la gare, et pas seulement leur existence : dix minutes de marche sous la pluie deux fois par jour changent l'expérience. Vérifiez la présence d'un parking relais si vous combinez voiture et train. Regardez enfin les commerces de proximité, la crèche communale et le centre de recyclage, ces trois adresses que vous fréquenterez plus que vous ne le pensez.\nUn dernier réflexe utile : la commune est aussi votre guichet administratif pour l'enregistrement, le chèque-service et les inscriptions scolaires. Ses horaires d'ouverture et sa réactivité font partie du confort de vie.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "commune"
+          ],
+          "matched_concepts": [
+            "commune"
+          ],
+          "section_title": "Les critères qu'on oublie",
+          "breadcrumb": "Choisir sa commune › Les critères qu'on oublie",
+          "url_anchor": "https://lux-guide.github.io/#fiche/choisir_commune#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'commune' (coverage 0.43) but the title of arrivee#l12-l13 ('Ce qu'il faut apporter') is exactly in the question: supporting (also answered here).",
+          "score": 1.0,
+          "matched_share": 0.435,
+          "coverage": 0.435,
+          "covered_words": [
+            "commune"
+          ],
+          "uncovered_words": [
+            "documents",
+            "apporter"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "arrivee#l16-l16",
+          "anchor": {
+            "doc_id": "arrivee",
+            "line_start": 16,
+            "line_end": 16,
+            "section_id": "arrivee#s5"
+          },
+          "context": {
+            "doc_id": "arrivee",
+            "line_start": 14,
+            "line_end": 17,
+            "section_id": "arrivee#s5"
+          },
+          "snippet": "Le matricule vient de la commune, pas de la sécurité sociale.",
+          "text": "À retenir\nHuit jours après l'emménagement, pas après la signature du bail. Trois jours seulement pour un ressortissant de pays tiers.\nLe matricule vient de la commune, pas de la sécurité sociale.\nPrendre rendez-vous en ligne avant l'arrivée.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "commune"
+          ],
+          "matched_concepts": [
+            "commune"
+          ],
+          "section_title": "À retenir",
+          "breadcrumb": "Les huit premiers jours › À retenir",
+          "url_anchor": "https://lux-guide.github.io/#fiche/arrivee#fiche-detail",
+          "role": "tangential",
+          "reason": "Only 'commune' hits these lines: no second concept and no title match.",
+          "score": 1.0,
+          "matched_share": 0.435,
+          "coverage": 0.435,
+          "covered_words": [
+            "commune"
+          ],
+          "uncovered_words": [
+            "documents",
+            "apporter"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "administration",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "arrivee#l8-l8",
+          "anchor": {
+            "doc_id": "arrivee",
+            "line_start": 8,
+            "line_end": 8,
+            "section_id": "arrivee#s2"
+          },
+          "context": {
+            "doc_id": "arrivee",
+            "line_start": 5,
+            "line_end": 8,
+            "section_id": "arrivee#s2"
+          },
+          "snippet": "Ensuite, la déclaration d'arrivée ne suffit pas à elle seule. Un citoyen de l'Union qui reste plus de trois mois doit remplir, dans les quatre-vingt-dix jours…",
+          "text": "Trois délais, pas un seul\nLe délai de huit jours vaut pour la déclaration d'arrivée au bureau de la population. Deux autres délais s'y ajoutent, et les manquer coûte plus cher que le premier.\nUn ressortissant de pays tiers dispose non pas de huit jours mais de trois jours à compter de son arrivée sur le territoire pour cette même déclaration. Le délai est court, et il court dès l'entrée, pas depuis l'emménagement.\nEnsuite, la déclaration d'arrivée ne suffit pas à elle seule. Un citoyen de l'Union qui reste plus de trois mois doit remplir, dans les quatre-vingt-dix jours de son arrivée, une déclaration d'enregistrement auprès de la même commune. Un ressortissant de pays tiers doit, lui, introduire une demande de titre de séjour dans les trois mois de son arrivée. Ce sont deux formalités distinctes de la première, avec leur propre échéance.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "commune"
+          ],
+          "matched_concepts": [
+            "commune"
+          ],
+          "section_title": "Trois délais, pas un seul",
+          "breadcrumb": "Les huit premiers jours › Trois délais, pas un seul",
+          "url_anchor": "https://lux-guide.github.io/#fiche/arrivee#fiche-detail",
+          "role": "tangential",
+          "reason": "Only 'commune' hits these lines: no second concept and no title match.",
+          "score": 1.0,
+          "matched_share": 0.435,
+          "coverage": 0.435,
+          "covered_words": [
+            "commune"
+          ],
+          "uncovered_words": [
+            "documents",
+            "apporter"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "administration",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "arrivee#l10-l10",
+          "anchor": {
+            "doc_id": "arrivee",
+            "line_start": 10,
+            "line_end": 10,
+            "section_id": "arrivee#s3"
+          },
+          "context": {
+            "doc_id": "arrivee",
+            "line_start": 9,
+            "line_end": 10,
+            "section_id": "arrivee#s3"
+          },
+          "snippet": "Le certificat porte votre numéro d'identification national, communément appelé matricule. Ce numéro à treize chiffres suit une logique simple : votre date de n…",
+          "text": "Le matricule, clé de tout le reste\nLe certificat porte votre numéro d'identification national, communément appelé matricule. Ce numéro à treize chiffres suit une logique simple : votre date de naissance inversée, au format année, mois, jour, suivie de cinq chiffres. Il vous servira d'identifiant auprès de la sécurité sociale, de l'administration fiscale, de votre banque, de l'école et de la commune elle-même. Notez-le dès que vous l'avez, vous le taperez souvent.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "commune"
+          ],
+          "matched_concepts": [
+            "commune"
+          ],
+          "section_title": "Le matricule, clé de tout le reste",
+          "breadcrumb": "Les huit premiers jours › Le matricule, clé de tout le reste",
+          "url_anchor": "https://lux-guide.github.io/#fiche/arrivee#fiche-detail",
+          "role": "discarded",
+          "reason": "The section 'Le matricule, clé de tout le reste' names 'matricule', not 'commune'; its lines carry only 'commune'.",
+          "score": 1.0,
+          "matched_share": 0.435,
+          "coverage": 0.435,
+          "covered_words": [
+            "commune"
+          ],
+          "uncovered_words": [
+            "documents",
+            "apporter"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "administration",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "choisir_commune#l6-l6",
+          "anchor": {
+            "doc_id": "choisir_commune",
+            "line_start": 6,
+            "line_end": 6,
+            "section_id": "choisir_commune#s2"
+          },
+          "context": {
+            "doc_id": "choisir_commune",
+            "line_start": 4,
+            "line_end": 6,
+            "section_id": "choisir_commune#s2"
+          },
+          "snippet": "Si vous comptez sur les transports publics, la logique s'inverse totalement. La gratuité ne sert à rien si aucune ligne ne passe. Ouvrez les horaires réels dep…",
+          "text": "Première question : voiture ou transports ?\nSi vous vous déplacez en voiture, la distance pèse peu et vous pouvez élargir largement la zone de recherche, ce qui fait baisser le loyer de façon significative. Regardez alors le temps de trajet aux heures de pointe, et non le kilométrage : les axes vers la capitale saturent, et vingt kilomètres peuvent prendre quarante-cinq minutes le matin. Vérifiez aussi le stationnement, à la fois au logement et sur le lieu de travail, souvent cher et contingenté.\nSi vous comptez sur les transports publics, la logique s'inverse totalement. La gratuité ne sert à rien si aucune ligne ne passe. Ouvrez les horaires réels depuis l'arrêt le plus proche du logement visité, aux heures qui vous concernent, y compris le soir et le week-end. Une commune desservie toutes les dix minutes en semaine peut n'avoir qu'un bus par heure le samedi.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "commune"
+          ],
+          "matched_concepts": [
+            "commune"
+          ],
+          "section_title": "Première question : voiture ou transports ?",
+          "breadcrumb": "Choisir sa commune › Première question : voiture ou transports ?",
+          "url_anchor": "https://lux-guide.github.io/#fiche/choisir_commune#fiche-detail",
+          "role": "discarded",
+          "reason": "The section 'Première question : voiture ou transports ?' names 'voiture', not 'commune': its page's topic 'housing' is not the question's 'administration', and arrivee#l8-l8 answers on a 'administration' page.",
+          "score": 1.0,
+          "matched_share": 0.435,
+          "coverage": 0.435,
+          "covered_words": [
+            "commune"
+          ],
+          "uncovered_words": [
+            "documents",
+            "apporter"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        }
+      ],
+      "methods_used": [
+        "keyword_lines",
+        "title_match",
+        "arbiter_rules",
+        "sweep"
+      ],
+      "methods_skipped": {
+        "anchor_regex": "answer type text asks for no typed anchor",
+        "row_match": "answer_type=text and no table column named",
+        "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+        "llm_arbiter": "no model key configured",
+        "current_page_boost": "no pages_hint: no page to boost"
+      },
+      "not_found": false,
+      "not_found_reason": null,
+      "confidence": 0.826,
+      "per_section_audit": [
+        {
+          "doc_id": "arrivee",
+          "section_id": "arrivee#s1",
+          "title": "Les huit premiers jours",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "arrivee",
+          "section_id": "arrivee#s2",
+          "title": "Trois délais, pas un seul",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "arrivee",
+          "section_id": "arrivee#s3",
+          "title": "Le matricule, clé de tout le reste",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "arrivee",
+          "section_id": "arrivee#s4",
+          "title": "Ce qu'il faut apporter",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "arrivee",
+          "section_id": "arrivee#s5",
+          "title": "À retenir",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "arrivee",
+          "section_id": "arrivee#s6",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "cartes",
+          "section_id": "cartes#s1",
+          "title": "Les communes, chiffre par chiffre",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "choisir_commune",
+          "section_id": "choisir_commune#s1",
+          "title": "Choisir sa commune",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "choisir_commune",
+          "section_id": "choisir_commune#s2",
+          "title": "Première question : voiture ou transports ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "."
+        },
+        {
+          "doc_id": "choisir_commune",
+          "section_id": "choisir_commune#s3",
+          "title": "Deuxième question : les trajets contraints",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "choisir_commune",
+          "section_id": "choisir_commune#s4",
+          "title": "Les critères qu'on oublie",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "choisir_commune",
+          "section_id": "choisir_commune#s5",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "choisir_commune",
+          "section_id": "choisir_commune#s6",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        }
+      ],
+      "route_pages": [
+        {
+          "doc_id": "cartes",
+          "score": 5.0,
+          "reason": "kept: 1 term(s) in the summary line (commune); heading title match (Les communes, chiffre par chiffre); concept(s) in tags (commune); document title 'Les communes, chiffre par chiffre' covers 1.00 of the question's words; tally 5.0"
+        },
+        {
+          "doc_id": "choisir_commune",
+          "score": 5.0,
+          "reason": "kept: 1 term(s) in the summary line (commune); heading title match (Choisir sa commune); concept(s) in tags (commune); document title 'Choisir sa commune' covers 1.00 of the question's words; tally 5.0"
+        },
+        {
+          "doc_id": "arrivee",
+          "score": 4.48,
+          "reason": "kept: 3 term(s) in the summary line (apporter, commune, mairie); heading title match (Ce qu'il faut apporter); concept(s) in tags (commune); tally 4.48"
+        }
+      ],
+      "route_sections": [
+        {
+          "doc_id": "cartes",
+          "section_id": "cartes#s1",
+          "title": "Les communes, chiffre par chiffre",
+          "score": 3.0,
+          "reason": "title 'Les communes, chiffre par chiffre' matches commune; 1 term(s) in its lines (commune); a leaf, stop here"
+        },
+        {
+          "doc_id": "choisir_commune",
+          "section_id": "choisir_commune#s2",
+          "title": "Première question : voiture ou transports ?",
+          "score": 1.0,
+          "reason": "1 term(s) in its lines (commune); a leaf, stop here"
+        },
+        {
+          "doc_id": "choisir_commune",
+          "section_id": "choisir_commune#s4",
+          "title": "Les critères qu'on oublie",
+          "score": 1.0,
+          "reason": "1 term(s) in its lines (commune); a leaf, stop here"
+        },
+        {
+          "doc_id": "arrivee",
+          "section_id": "arrivee#s4",
+          "title": "Ce qu'il faut apporter",
+          "score": 7.0,
+          "reason": "title 'Ce qu'il faut apporter' matches apporter, hint:Ce qu'il faut apporter; 3 term(s) in its lines (apporter, commune, documents); a leaf, stop here"
+        }
+      ],
+      "route_notes": [
+        "arrivee: no section of the outline carries a term; the page is read whole"
+      ],
+      "sweep_concepts": [
+        {
+          "concept": "documents",
+          "variants": [
+            "documents"
+          ],
+          "pages_with_hits": [
+            "administration",
+            "arrivee",
+            "assurance_habitation",
+            "comparateur"
+          ],
+          "line_hits": 9
+        },
+        {
+          "concept": "apporter",
+          "variants": [
+            "apporter"
+          ],
+          "pages_with_hits": [
+            "arrivee"
+          ],
+          "line_hits": 1
+        },
+        {
+          "concept": "commune",
+          "variants": [
+            "commune",
+            "administration communale",
+            "mairie",
+            "municipality",
+            "town hall",
+            "Gemeinde",
+            "Gemeindeverwaltung",
+            "hôtel de ville",
+            "Gemeng",
+            "gemeinde",
+            "gemeindeverwaltung",
+            "gemeng"
+          ],
+          "pages_with_hits": [
+            "accueil",
+            "administration",
+            "arrivee",
+            "avantages",
+            "bail",
+            "carte",
+            "cartes",
+            "choisir_commune",
+            "comparateur",
+            "conseil_fiscal",
+            "dechets",
+            "ecole",
+            "faq",
+            "fiches",
+            "frontalier",
+            "garde",
+            "impots_classes",
+            "langues",
+            "parcours",
+            "prevoyance",
+            "recherche_logement",
+            "sante_pratique",
+            "telecom",
+            "transport",
+            "vehicule"
+          ],
+          "line_hits": 72
+        }
+      ],
+      "sweep_rows": [
+        {
+          "concept": "documents",
+          "variant": "documents",
+          "doc_id": "administration",
+          "line_num": 5,
+          "snippet": "Beaucoup de documents sont délivrés immédiatement au guichet : certificat de résidence, attestation d'enregistrement, copies conformes. Les communes fonctionne…"
+        },
+        {
+          "concept": "documents",
+          "variant": "documents",
+          "doc_id": "administration",
+          "line_num": 13,
+          "snippet": "Beaucoup de documents sont délivrés immédiatement au guichet."
+        },
+        {
+          "concept": "documents",
+          "variant": "documents",
+          "doc_id": "arrivee",
+          "line_num": 4,
+          "snippet": "Elle produit en effet deux documents que l'on vous redemandera partout : le certificat de résidence et, pour les ressortissants de l'Union restant plus de troi…"
+        },
+        {
+          "concept": "documents",
+          "variant": "documents",
+          "doc_id": "arrivee",
+          "line_num": 12,
+          "snippet": "Prévoyez les originaux des pièces d'identité de chaque membre du foyer, le bail signé ou l'acte d'achat, et, selon votre situation familiale, les actes de nais…"
+        },
+        {
+          "concept": "documents",
+          "variant": "documents",
+          "doc_id": "assurance_habitation",
+          "line_num": 8,
+          "snippet": "Les documents à réclamer avant de signer"
+        },
+        {
+          "concept": "documents",
+          "variant": "documents",
+          "doc_id": "assurance_habitation",
+          "line_num": 9,
+          "snippet": "Trois documents décrivent réellement le contrat, et le devis commercial n'en fait pas partie. Le premier est le document d'information standardisé sur le produ…"
+        },
+        {
+          "concept": "documents",
+          "variant": "documents",
+          "doc_id": "comparateur",
+          "line_num": 3,
+          "snippet": "Deux registres, indiqués sur chaque carte. L'assurance habitation repose sur des documents réels : quatre contrats du marché luxembourgeois lus intégralement,…"
+        },
+        {
+          "concept": "documents",
+          "variant": "documents",
+          "doc_id": "comparateur",
+          "line_num": 9,
+          "snippet": "Dix-sept garanties recherchées dans les quatre documents. Une case pleine veut dire que le sujet est traité, et à quelle page il apparaît en premier. Attention…"
+        },
+        {
+          "concept": "documents",
+          "variant": "documents",
+          "doc_id": "comparateur",
+          "line_num": 14,
+          "snippet": "Deux passages ensuite. Le premier cherche dix-sept garanties dans les quatre documents, en français, en allemand et en anglais, et produit la matrice de couver…"
+        },
+        {
+          "concept": "apporter",
+          "variant": "apporter",
+          "doc_id": "arrivee",
+          "line_num": 11,
+          "snippet": "Ce qu'il faut apporter"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "accueil",
+          "line_num": 5,
+          "snippet": "Les démarches, le salaire net, le choix d'une commune, les transports : tout est expliqué ici avec sa source officielle, que vous arriviez ou que vous viviez a…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "accueil",
+          "line_num": 9,
+          "snippet": "communes comparées"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "administration",
+          "line_num": 5,
+          "snippet": "Beaucoup de documents sont délivrés immédiatement au guichet : certificat de résidence, attestation d'enregistrement, copies conformes. Les communes fonctionne…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "administration",
+          "line_num": 8,
+          "snippet": "Tout n'est pas dématérialisé pour autant. Certaines démarches ne se traitent que par courrier postal ou en personne, l'enregistrement d'un permis de conduire é…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "administration",
+          "line_num": 11,
+          "snippet": "Prenez rendez-vous en ligne dès que c'est possible, en particulier en période de rentrée, où les créneaux se remplissent plusieurs semaines à l'avance. Vérifie…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "administration",
+          "line_num": 15,
+          "snippet": "Prendre rendez-vous tôt, et vérifier la liste des pièces auprès de sa commune."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "arrivee",
+          "line_num": 2,
+          "snippet": "Tout part de la commune. Sans cette déclaration, ni matricule, ni sécurité sociale, ni banque, ni école."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "arrivee",
+          "line_num": 3,
+          "snippet": "La première démarche après l'emménagement n'est ni la banque ni l'employeur : c'est la commune. Vous disposez de huit jours pour déclarer votre arrivée au bure…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "arrivee",
+          "line_num": 8,
+          "snippet": "Ensuite, la déclaration d'arrivée ne suffit pas à elle seule. Un citoyen de l'Union qui reste plus de trois mois doit remplir, dans les quatre-vingt-dix jours…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "arrivee",
+          "line_num": 10,
+          "snippet": "Le certificat porte votre numéro d'identification national, communément appelé matricule. Ce numéro à treize chiffres suit une logique simple : votre date de n…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "arrivee",
+          "line_num": 12,
+          "snippet": "Prévoyez les originaux des pièces d'identité de chaque membre du foyer, le bail signé ou l'acte d'achat, et, selon votre situation familiale, les actes de nais…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "arrivee",
+          "line_num": 13,
+          "snippet": "La plupart des communes fonctionnent désormais sur rendez-vous, à prendre en ligne. En période de rentrée, les créneaux partent vite, ce qui peut suffire à fai…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "arrivee",
+          "line_num": 16,
+          "snippet": "Le matricule vient de la commune, pas de la sécurité sociale."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "avantages",
+          "line_num": 78,
+          "snippet": "Il est accordé dans le cadre de l'imposition collective, qui elle-même suppose une déclaration commune : c'est là qu'il apparaît."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "avantages",
+          "line_num": 171,
+          "snippet": "L'adhésion se fait à la commune de résidence, ce qui suppose d'avoir déjà déclaré son arrivée. Le tarif restant dépend du revenu du ménage et du rang de l'enfa…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "avantages",
+          "line_num": 266,
+          "snippet": "L'économie dépend de la desserte réelle de la commune, à vérifier aux heures qui vous concernent avant de choisir où habiter."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "bail",
+          "line_num": 9,
+          "snippet": "Beaucoup de baux interdisent, sans accord écrit du bailleur, les percements et modifications, la sous-location et la présence d'animaux. Vous éviterez d'achete…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "carte",
+          "line_num": 7,
+          "snippet": "Arrêts, commerces et santé : données OpenStreetMap (© les contributeurs OpenStreetMap), chargées à la demande, l'exhaustivité n'est pas garantie. Les distances…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "cartes",
+          "line_num": 1,
+          "snippet": "Les communes, chiffre par chiffre"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "cartes",
+          "line_num": 2,
+          "snippet": "Le Luxembourg tient dans une heure de route, et pourtant le loyer double d'une commune à l'autre, le salaire médian va du simple au double, et la part de résid…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "cartes",
+          "line_num": 3,
+          "snippet": "Une carte de ce genre montre où se situe une commune, pas pourquoi. Un salaire médian élevé décrit les gens qui habitent là, pas le coût de la vie sur place. U…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "choisir_commune",
+          "line_num": 1,
+          "snippet": "Choisir sa commune"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "choisir_commune",
+          "line_num": 3,
+          "snippet": "Beaucoup de nouveaux arrivants choisissent leur commune sur une carte, en traçant un rayon autour du lieu de travail. C'est le meilleur moyen de se tromper : d…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "choisir_commune",
+          "line_num": 6,
+          "snippet": "Si vous comptez sur les transports publics, la logique s'inverse totalement. La gratuité ne sert à rien si aucune ligne ne passe. Ouvrez les horaires réels dep…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "choisir_commune",
+          "line_num": 12,
+          "snippet": "Un dernier réflexe utile : la commune est aussi votre guichet administratif pour l'enregistrement, le chèque-service et les inscriptions scolaires. Ses horaire…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "comparateur",
+          "line_num": 16,
+          "snippet": "Demander à un contrat s'il couvre le vol donne toujours oui. La réponse utile est ailleurs : dans l'exclusion, le plafond, la condition. Deux contrats qui affi…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "conseil_fiscal",
+          "line_num": 6,
+          "snippet": "La modification se demande sans tarder au bureau RTS compétent pour votre commune, de préférence avec le formulaire 164 R. Tant que la fiche n'est pas corrigée…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "dechets",
+          "line_num": 2,
+          "snippet": "La commune fournit les bacs, publie le calendrier et donne accès au centre de recyclage."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "dechets",
+          "line_num": 3,
+          "snippet": "La gestion des déchets relève entièrement de la commune : c'est elle qui fournit les bacs, publie le calendrier de collecte et donne accès au centre de recycla…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "dechets",
+          "line_num": 5,
+          "snippet": "Plus largement, la commune est le guichet de quantité de services du quotidien : certificats, vignettes de stationnement résidentiel, inscriptions scolaires et…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "dechets",
+          "line_num": 7,
+          "snippet": "Tout passe par la commune."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "ecole",
+          "line_num": 9,
+          "snippet": "L'inscription à la commune précède généralement l'inscription scolaire, et les places dans les sections les plus recherchées partent parfois un an à l'avance.…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "faq",
+          "line_num": 17,
+          "snippet": "Dans les six mois de la déclaration d'arrivée à la commune. Avant la SNCA, il faut le numéro d'immatriculation, l'assurance luxembourgeoise et la vignette 705…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "faq",
+          "line_num": 36,
+          "snippet": "D'après les indices de niveau des prix d'Eurostat, l'alimentation, l'habillement et les télécommunications reviennent moins cher chez les trois voisins, tandis…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "faq",
+          "line_num": 38,
+          "snippet": "Sur quels critères choisir sa commune ?"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "faq",
+          "line_num": 40,
+          "snippet": "Voir la fiche : Choisir sa commune"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "faq",
+          "line_num": 76,
+          "snippet": "Tout passe par la commune : elle fournit les bacs, publie le calendrier de collecte et donne accès au centre de recyclage. Récupérez ce calendrier dès l'emména…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "faq",
+          "line_num": 93,
+          "snippet": "Parce que le taux forfaitaire appliqué au second salaire sous-prélève souvent. La déclaration commune recalcule l'impôt réellement dû sur le revenu cumulé. Les…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "faq",
+          "line_num": 117,
+          "snippet": "Cela arrive, surtout la première année. Ni vous ni l'employeur ne pouvez corriger la fiche de retenue : demandez la modification au bureau RTS compétent pour v…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "faq",
+          "line_num": 127,
+          "snippet": "Non, le délai est plus court. La déclaration d'arrivée à la commune doit être faite dans les trois jours de votre entrée sur le territoire, et non dans les hui…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "faq",
+          "line_num": 129,
+          "snippet": "La déclaration à la commune suffit-elle ?"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "faq",
+          "line_num": 130,
+          "snippet": "Non, une seconde formalité suit. Un citoyen de l'Union qui reste plus de trois mois doit remplir une déclaration d'enregistrement auprès de la commune dans les…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "faq",
+          "line_num": 135,
+          "snippet": "Dans quel délai faut-il se déclarer à la commune ?"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "faq",
+          "line_num": 139,
+          "snippet": "Il est attribué lors de l'enregistrement à la commune et figure sur le certificat de résidence, sous la mention numéro d'identification. Il compte treize chiff…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "faq",
+          "line_num": 169,
+          "snippet": "Commencez par là, avant même le logement. L'enregistrement à la commune précède l'inscription scolaire, et les sections les plus demandées se remplissent parfo…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "faq",
+          "line_num": 172,
+          "snippet": "Oui, le chèque-service accueil, obtenu à la commune après l'enregistrement. Il subventionne les heures de garde chez les prestataires conventionnés, avec un re…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "fiches",
+          "line_num": 4,
+          "snippet": "Tout part de la commune. Sans cette déclaration, ni matricule, ni sécurité sociale, ni banque, ni école."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "fiches",
+          "line_num": 15,
+          "snippet": "Choisir sa commune"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "fiches",
+          "line_num": 66,
+          "snippet": "Gratuité totale depuis février 2020, mais une desserte très inégale selon les communes."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "fiches",
+          "line_num": 74,
+          "snippet": "La commune fournit les bacs, publie le calendrier et donne accès au centre de recyclage."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "frontalier",
+          "line_num": 17,
+          "snippet": "Les niveaux de prix ne sont pas les mêmes des quatre côtés, et l'écart ne va pas toujours dans le même sens. Les indices d'Eurostat, publiés dans l'onglet Les…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "frontalier",
+          "line_num": 18,
+          "snippet": "Le trajet, enfin, se mesure en temps et non en kilomètres. Les axes vers la capitale saturent le matin, et une commune à quarante kilomètres sur une ligne de t…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "garde",
+          "line_num": 3,
+          "snippet": "Le chèque-service accueil subventionne les heures de garde chez les prestataires conventionnés. Il s'obtient à la commune de résidence, sur présentation du cer…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "garde",
+          "line_num": 5,
+          "snippet": "Enfin, inscrivez-vous sur les listes d'attente très tôt, sans attendre d'avoir un logement définitif ni une date d'arrivée certaine. Dans les communes les plus…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "garde",
+          "line_num": 7,
+          "snippet": "Passer par la commune, après l'enregistrement."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "impots_classes",
+          "line_num": 10,
+          "snippet": "Conséquence directe : ce taux forfaitaire sous-prélève souvent, parfois de plusieurs milliers d'euros par an. L'écart apparaît à la déclaration commune, qui re…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "langues",
+          "line_num": 5,
+          "snippet": "L'Institut national des langues propose des cours à tarif réduit dans les quatre langues, avec des sessions du soir adaptées aux salariés. Les communes et le s…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "langues",
+          "line_num": 9,
+          "snippet": "Cours subventionnés à l'INL et dans les communes."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "parcours",
+          "line_num": 3,
+          "snippet": "La chaîne à ne pas casser. Déclaration à la commune, puis certificat de résidence et matricule, puis sécurité sociale, banque, chèque-service et impôts. Tout p…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "parcours",
+          "line_num": 10,
+          "snippet": "Définir ses critères de commune selon son mode de déplacement et les trajets quotidiens."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "parcours",
+          "line_num": 17,
+          "snippet": "Déclarer son arrivée à la commune, dans les huit jours."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "parcours",
+          "line_num": 28,
+          "snippet": "Demander le chèque-service accueil à la commune."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "parcours",
+          "line_num": 38,
+          "snippet": "Se renseigner sur les cours de langue proposés par la commune."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "prevoyance",
+          "line_num": 63,
+          "snippet": "Oui, dès lors que vous faites une déclaration commune au Luxembourg. Ce qui ouvre le droit, c'est la qualité de contribuable luxembourgeois, que la déclaration…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "recherche_logement",
+          "line_num": 9,
+          "snippet": "Le prix baisse nettement dès que l'on s'éloigne de Luxembourg-ville, mais la variable décisive n'est pas la distance : c'est la desserte. Une commune située à…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "recherche_logement",
+          "line_num": 14,
+          "snippet": "Juger une commune sur sa desserte, pas sur sa distance."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "sante_pratique",
+          "line_num": 5,
+          "snippet": "Pour les soirs et les week-ends, les pharmacies de garde et les maisons médicales de garde assurent la continuité des soins, avec des listes publiées en ligne…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "telecom",
+          "line_num": 3,
+          "snippet": "Les principaux opérateurs fixes sont POST, l'opérateur historique, ainsi qu'Orange, Tango, Eltrona et Luxembourg Online. La fibre couvre les localités principa…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "transport",
+          "line_num": 2,
+          "snippet": "Gratuité totale depuis février 2020, mais une desserte très inégale selon les communes."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "transport",
+          "line_num": 5,
+          "snippet": "Avant de choisir une commune, vérifiez donc concrètement les horaires depuis l'arrêt le plus proche, aux heures qui vous concernent, et pas seulement l'existen…"
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "transport",
+          "line_num": 8,
+          "snippet": "Vérifier la desserte réelle avant de choisir une commune."
+        },
+        {
+          "concept": "commune",
+          "variant": "commune",
+          "doc_id": "vehicule",
+          "line_num": 3,
+          "snippet": "Délai : 6 mois, après la déclaration d'arrivée à la commune."
+        }
+      ],
+      "question_concepts": [
+        "documents",
+        "apporter",
+        "commune"
+      ],
+      "terms": [
+        {
+          "text": "documents",
+          "weight": 0.3,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "documents",
+          "weak": true,
+          "in_corpus": true
+        },
+        {
+          "text": "apporter",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "apporter",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "commune",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "commune",
+          "is_regex": false,
+          "concept_key": "commune",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "administration communale",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "concept_key": "commune",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "mairie",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "concept_key": "commune",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "municipality",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "concept_key": "commune",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "town hall",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "concept_key": "commune",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "gemeinde",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "concept_key": "commune",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "gemeindeverwaltung",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "concept_key": "commune",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "hôtel de ville",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "concept_key": "commune",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "gemeng",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "commune",
+          "is_regex": false,
+          "concept_key": "commune",
+          "weak": false,
+          "in_corpus": false
+        }
+      ],
+      "content_words": [
+        {
+          "text": "documents",
+          "weight": 0.3,
+          "weak": true
+        },
+        {
+          "text": "apporter",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "commune",
+          "weight": 1.0,
+          "weak": false
+        }
+      ],
+      "uncovered_words": [],
+      "answer_context_used": "section"
+    }
+  }
+}

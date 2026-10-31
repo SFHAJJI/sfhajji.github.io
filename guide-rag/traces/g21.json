@@ -1,0 +1,2542 @@
+{
+  "answer": {
+    "extraction_method": "computed",
+    "confidence": 0.743,
+    "caveats": [],
+    "answer_found": true,
+    "complete_answer_found": true,
+    "context_structured": [
+      {
+        "candidate_id": "transport#l2-l5",
+        "doc_id": "transport",
+        "section_id": "transport#s1",
+        "section_title": "Transports publics gratuits",
+        "breadcrumb": "Transports publics gratuits",
+        "line_start": 2,
+        "line_end": 5,
+        "url_anchor": "https://lux-guide.github.io/#fiche/transport#fiche-detail",
+        "role": "primary"
+      }
+    ],
+    "keywords_found": [
+      "\\b\\d{1,2}(?:er)?\\s+(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b|\\b\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4}\\b|\\b(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b",
+      "bus",
+      "gratuits",
+      "publics",
+      "train",
+      "tram",
+      "transports",
+      "transports publics"
+    ],
+    "llm_discovered_keywords": [],
+    "conflicting_evidence": [],
+    "suggested_clarification": null,
+    "kind": "date",
+    "items": [
+      {
+        "date": {
+          "iso": "2020-02-29",
+          "original": "29 fevrier 2020"
+        },
+        "spans": [
+          {
+            "doc_id": "transport",
+            "line_start": 3,
+            "line_end": 3,
+            "quote": "Depuis le 29 février 2020, les transports publics sont gratuits pour tous sur l'ensemble du territoire : bus, trams et trains en seconde classe, sans titre de transport à acheter. La gratuité bénéficie également aux frontaliers, mais uniquement sur la portion luxembourgeoise de leur trajet. Seule la première classe des trains reste payante."
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "question_id": "548f37ff119428f9",
+    "index_version": "1d1bbf848338f32798d0c92366bd740f0513f72b56bd4745e85a507a1645d9ca",
+    "pipeline_version": "guide-rag/0.1",
+    "methods_used": [
+      "keyword_lines",
+      "title_match",
+      "anchor_regex",
+      "row_match",
+      "arbiter_rules",
+      "sweep"
+    ],
+    "methods_skipped": {
+      "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+      "llm_arbiter": "no model key configured",
+      "current_page_boost": "no pages_hint: no page to boost"
+    },
+    "activations": {
+      "use_keywords": {
+        "on": true,
+        "reason": "always: keyword detectors are deterministic and prove absence"
+      },
+      "use_toc": {
+        "on": true,
+        "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+      },
+      "use_row_level": {
+        "on": true,
+        "reason": "answer_type=date: tables carry typed values"
+      },
+      "use_embeddings": {
+        "on": false,
+        "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+      },
+      "use_llm_arbiter": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "use_llm_generation": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "sweep_for_absence": {
+        "on": true,
+        "reason": "always: the exhaustive sweep is the evidence of absence"
+      },
+      "current_page_boost": {
+        "on": false,
+        "reason": "no pages_hint: no page to boost"
+      }
+    },
+    "chunk_strategy": "line as the unit; anchor = hit lines grouped by runs; context = the hit lines (answer_context=line)",
+    "model_used": "no model",
+    "prompt_version": null,
+    "fragments_applied": [],
+    "iterations": 1,
+    "validator_report": {
+      "iteration_1": []
+    },
+    "replay": null
+  },
+  "trace": {
+    "parsed": {
+      "question_id": "548f37ff119428f9",
+      "original_question": "depuis quand les transports publics sont-ils gratuits",
+      "corrected_question": "depuis quand les transports publics sont-ils gratuits",
+      "language": "fr",
+      "keywords": [
+        {
+          "text": "transports",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "publics",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "gratuits",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "transports gratuits",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "transports publics",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "transports en commun",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "bus",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "tram",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "train",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "free public transport",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "public transport",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "öffentlicher verkehr",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "kostenloser nahverkehr",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "zug",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "gratuité des transports",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "mobilité",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "free transport",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "mobilitéit",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "\\b\\d{1,2}(?:er)?\\s+(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b|\\b\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4}\\b|\\b(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b",
+          "weight": 1.0,
+          "source": "anchor",
+          "concept": null,
+          "is_regex": true,
+          "weak": false,
+          "in_corpus": true
+        }
+      ],
+      "answer_shape": "single",
+      "answer_type": "date",
+      "structural_hints": {
+        "pages_hint": null,
+        "toc_section_hint": "Transports publics gratuits",
+        "answer_context": "line"
+      },
+      "decomposition": {
+        "pattern": "single",
+        "sub_questions": []
+      },
+      "suggested_clarification": null,
+      "ambiguity_reason": null,
+      "candidate_values": [],
+      "proposed_default": null,
+      "scope_filters": {
+        "topic": "other"
+      },
+      "parsing_notes": [
+        "language=fr: stop-word vote",
+        "answer_shape=single: no listing cue",
+        "answer_type=date: cue 'quand'",
+        "concept 'transports_gratuits' (other) matched by 'transports publics' [fr, secondary]",
+        "anchor regex for date added",
+        "toc_section_hint='Transports publics gratuits': every word of this heading is in the question",
+        "scope topic='other': the matched concepts vote {'other': 1.0}",
+        "decomposition=single: no 'et / and' between two clauses"
+      ]
+    },
+    "plan": {
+      "activations": {
+        "use_keywords": {
+          "on": true,
+          "reason": "always: keyword detectors are deterministic and prove absence"
+        },
+        "use_toc": {
+          "on": true,
+          "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+        },
+        "use_row_level": {
+          "on": true,
+          "reason": "answer_type=date: tables carry typed values"
+        },
+        "use_embeddings": {
+          "on": false,
+          "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+        },
+        "use_llm_arbiter": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "use_llm_generation": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "sweep_for_absence": {
+          "on": true,
+          "reason": "always: the exhaustive sweep is the evidence of absence"
+        },
+        "current_page_boost": {
+          "on": false,
+          "reason": "no pages_hint: no page to boost"
+        }
+      }
+    },
+    "retrieval": {
+      "question_id": "548f37ff119428f9",
+      "question": "depuis quand les transports publics sont-ils gratuits",
+      "candidates": [
+        {
+          "candidate_id": "transport#l2-l5",
+          "anchor": {
+            "doc_id": "transport",
+            "line_start": 2,
+            "line_end": 5,
+            "section_id": "transport#s1"
+          },
+          "context": {
+            "doc_id": "transport",
+            "line_start": 2,
+            "line_end": 5,
+            "section_id": "transport#s1"
+          },
+          "snippet": "Gratuité totale depuis février 2020, mais une desserte très inégale selon les communes. Depuis le 29 février 2020, les transports publics sont gratuits pour to…",
+          "text": "Gratuité totale depuis février 2020, mais une desserte très inégale selon les communes.\nDepuis le 29 février 2020, les transports publics sont gratuits pour tous sur l'ensemble du territoire : bus, trams et trains en seconde classe, sans titre de transport à acheter. La gratuité bénéficie également aux frontaliers, mais uniquement sur la portion luxembourgeoise de leur trajet. Seule la première classe des trains reste payante.\nCette gratuité pèse davantage qu'on ne le croit dans un budget familial, et peut légitimement remettre en cause l'achat d'une seconde voiture. Encore faut-il que la desserte suive : le réseau est dense autour de la capitale et le long des axes ferroviaires, mais nettement plus clairsemé dans les zones rurales, où la voiture reste souvent indispensable.\nAvant de choisir une commune, vérifiez donc concrètement les horaires depuis l'arrêt le plus proche, aux heures qui vous concernent, et pas seulement l'existence d'une ligne. Des parkings relais gratuits en périphérie permettent par ailleurs de combiner voiture et train, et d'éviter le stationnement en ville, cher et contraint.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "\\b\\d{1,2}(?:er)?\\s+(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b|\\b\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4}\\b|\\b(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b",
+            "bus",
+            "gratuits",
+            "publics",
+            "train",
+            "tram",
+            "transports",
+            "transports publics"
+          ],
+          "matched_concepts": [
+            "gratuits",
+            "regex:\\b\\d{1,2}(?:er)?\\s+(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b|\\b\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4}\\b|\\b(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b",
+            "transports_gratuits"
+          ],
+          "section_title": "Transports publics gratuits",
+          "breadcrumb": "Transports publics gratuits",
+          "url_anchor": "https://lux-guide.github.io/#fiche/transport#fiche-detail",
+          "role": "primary",
+          "reason": "The document 'Transports publics gratuits' and the section 'Transports publics gratuits' name the question's words 'transports', 'publics' and 'gratuits' (coverage 1.00); score 15.21: primary.",
+          "score": 15.21,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "transports",
+            "publics",
+            "gratuits"
+          ],
+          "uncovered_words": [],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "date",
+              "raw": "29 fevrier 2020",
+              "pos": 10,
+              "iso": "2020-02-29",
+              "original": "29 fevrier 2020",
+              "line_num": 3
+            }
+          ]
+        },
+        {
+          "candidate_id": "transport#l7-l7",
+          "anchor": {
+            "doc_id": "transport",
+            "line_start": 7,
+            "line_end": 7,
+            "section_id": "transport#s2"
+          },
+          "context": {
+            "doc_id": "transport",
+            "line_start": 7,
+            "line_end": 7,
+            "section_id": "transport#s2"
+          },
+          "snippet": "Gratuit partout, sans titre de transport.",
+          "text": "Gratuit partout, sans titre de transport.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "gratuits",
+            "transports"
+          ],
+          "matched_concepts": [
+            "gratuits",
+            "transports_gratuits"
+          ],
+          "section_title": "À retenir",
+          "breadcrumb": "Transports publics gratuits › À retenir",
+          "url_anchor": "https://lux-guide.github.io/#fiche/transport#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'transports', 'publics' and 'gratuits' (coverage 1.00) but transport#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 3.0,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "transports",
+            "publics",
+            "gratuits"
+          ],
+          "uncovered_words": [],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "transport#l11-l11",
+          "anchor": {
+            "doc_id": "transport",
+            "line_start": 11,
+            "line_end": 11,
+            "section_id": "transport#s3"
+          },
+          "context": {
+            "doc_id": "transport",
+            "line_start": 11,
+            "line_end": 11,
+            "section_id": "transport#s3"
+          },
+          "snippet": "mobiliteit.lu",
+          "text": "mobiliteit.lu",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "mobilitéit"
+          ],
+          "matched_concepts": [
+            "transports_gratuits"
+          ],
+          "section_title": "Sources officielles",
+          "breadcrumb": "Transports publics gratuits › Sources officielles",
+          "url_anchor": "https://lux-guide.github.io/#fiche/transport#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'transports', 'publics' and 'gratuits' (coverage 1.00) but transport#l2-l5 is titled with the question's words: supporting (also answered here).",
+          "score": 0.6,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "transports",
+            "publics",
+            "gratuits"
+          ],
+          "uncovered_words": [],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l26-l27",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 26,
+            "line_end": 27,
+            "section_id": "faq#s10"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 26,
+            "line_end": 27,
+            "section_id": "faq#s10"
+          },
+          "snippet": "Oui, depuis février 2020, sur tout le territoire et pour tous, y compris les frontaliers sur la portion luxembourgeoise. Seule la première classe des trains re…",
+          "text": "Oui, depuis février 2020, sur tout le territoire et pour tous, y compris les frontaliers sur la portion luxembourgeoise. Seule la première classe des trains reste payante.\nVoir la fiche : Transports publics gratuits",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "\\b\\d{1,2}(?:er)?\\s+(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b|\\b\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4}\\b|\\b(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b",
+            "gratuits",
+            "publics",
+            "train",
+            "transports",
+            "transports publics"
+          ],
+          "matched_concepts": [
+            "gratuits",
+            "regex:\\b\\d{1,2}(?:er)?\\s+(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b|\\b\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4}\\b|\\b(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b",
+            "transports_gratuits"
+          ],
+          "section_title": "Les transports publics sont-ils vraiment gratuits ?",
+          "breadcrumb": "Questions et réponses › Mobilite › Les transports publics sont-ils vraiment gratuits ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers 'transports', 'publics' and 'gratuits' (coverage 1.00) and points to 'Transports publics gratuits' (Voir la fiche), which covers the question as well: supporting (also answered here).",
+          "score": 13.02,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "transports",
+            "publics",
+            "gratuits"
+          ],
+          "uncovered_words": [],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "lignes#l2-l4",
+          "anchor": {
+            "doc_id": "lignes",
+            "line_start": 2,
+            "line_end": 4,
+            "section_id": "lignes#s1"
+          },
+          "context": {
+            "doc_id": "lignes",
+            "line_start": 2,
+            "line_end": 4,
+            "section_id": "lignes#s1"
+          },
+          "snippet": "Un logement se juge mal à vol d'oiseau. Deux kilomètres avec une correspondance et dix minutes de marche coûtent plus cher qu'une demi-heure de bus direct. Ind…",
+          "text": "Un logement se juge mal à vol d'oiseau. Deux kilomètres avec une correspondance et dix minutes de marche coûtent plus cher qu'une demi-heure de bus direct. Indiquez le lieu où vous devez vous rendre chaque jour : la carte affiche tous les arrêts d'où l'on y arrive sans changer, colorés par temps de trajet. Cherchez ensuite autour des arrêts verts, même s'ils paraissent loin. Les adresses saisies dans l'onglet « Comparer des logements » se placent sur la même carte, avec pour chacune le temps de porte à porte sans changement.\nCliquer une ligne du tableau l'isole sur la carte, décocher sa case la masque, cliquer un arrêt y recentre la carte. L'adresse cherchée reste dans ce navigateur, elle n'est envoyée à aucun serveur du guide.\nCe que la carte ne dit pas : le temps d'attente, la correspondance, et le trafic réel. Un arrêt à 40 minutes desservi quatre fois par heure vaut mieux qu'un arrêt à 25 minutes desservi deux fois par jour, d'où la colonne des arrivées du matin. Pour l'horaire exact d'un jour donné, mobiliteit.lu fait foi. Comme l'onglet Comparer des logements, celui-ci demande un accès réseau : ouvert par double-clic sur le fichier, sans serveur, le navigateur bloque le fond de carte et la recherche d'adresse.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "bus",
+            "mobilitéit"
+          ],
+          "matched_concepts": [
+            "transports_gratuits"
+          ],
+          "section_title": "Chercher un logement sur une ligne de bus, de tram ou de train",
+          "breadcrumb": "Chercher un logement sur une ligne de bus, de tram ou de train",
+          "url_anchor": "https://lux-guide.github.io/#lignes#panel-lignes",
+          "role": "supporting",
+          "reason": "Covers 'transports' and 'publics' (coverage 0.67) but transport#l2-l5 covers more of the question (1.00): supporting.",
+          "score": 2.52,
+          "matched_share": 0.667,
+          "coverage": 0.667,
+          "covered_words": [
+            "transports",
+            "publics"
+          ],
+          "uncovered_words": [
+            "gratuits"
+          ],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "vehicle",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l3-l3",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 3,
+            "line_end": 3,
+            "section_id": "faq#s2"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 3,
+            "line_end": 3,
+            "section_id": "faq#s2"
+          },
+          "snippet": "Mobilite",
+          "text": "Mobilite",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "mobilité"
+          ],
+          "matched_concepts": [
+            "transports_gratuits"
+          ],
+          "section_title": "Mobilite",
+          "breadcrumb": "Questions et réponses › Mobilite",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers 'transports' and 'publics' (coverage 0.67) but transport#l2-l5 covers more of the question (1.00): supporting.",
+          "score": 0.84,
+          "matched_share": 0.667,
+          "coverage": 0.667,
+          "covered_words": [
+            "transports",
+            "publics"
+          ],
+          "uncovered_words": [
+            "gratuits"
+          ],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l175-l175",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 175,
+            "line_end": 175,
+            "section_id": "faq#s65"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 175,
+            "line_end": 175,
+            "section_id": "faq#s65"
+          },
+          "snippet": "315,04 euros par mois et par enfant, plus 23,81 euros au-delà de six ans et 59,44 euros au-delà de douze ans, montants au 1er juin 2026. Une allocation de rent…",
+          "text": "315,04 euros par mois et par enfant, plus 23,81 euros au-delà de six ans et 59,44 euros au-delà de douze ans, montants au 1er juin 2026. Une allocation de rentrée de 115 ou 235 euros est versée automatiquement en août.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "\\b\\d{1,2}(?:er)?\\s+(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b|\\b\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4}\\b|\\b(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b"
+          ],
+          "matched_concepts": [
+            "regex:\\b\\d{1,2}(?:er)?\\s+(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b|\\b\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4}\\b|\\b(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b"
+          ],
+          "section_title": "Quel est le montant des allocations familiales ?",
+          "breadcrumb": "Questions et réponses › Famille › Quel est le montant des allocations familiales ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only nothing (0.00 of the question's words); 'transports', 'publics' and 'gratuits' not covered: supporting.",
+          "score": 2.25,
+          "matched_share": 0.0,
+          "coverage": 0.0,
+          "covered_words": [],
+          "uncovered_words": [
+            "transports",
+            "publics",
+            "gratuits"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "date",
+              "raw": "1er juin 2026",
+              "pos": 122,
+              "iso": "2026-06-01",
+              "original": "1er juin 2026",
+              "line_num": 175
+            }
+          ]
+        },
+        {
+          "candidate_id": "faq#l45-l45",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 45,
+            "line_end": 45,
+            "section_id": "faq#s17"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 45,
+            "line_end": 45,
+            "section_id": "faq#s17"
+          },
+          "snippet": "Deux mois de loyer au maximum depuis la réforme du 1er août 2024, contre trois auparavant. Les frais d'agence sont par ailleurs partagés par moitié entre baill…",
+          "text": "Deux mois de loyer au maximum depuis la réforme du 1er août 2024, contre trois auparavant. Les frais d'agence sont par ailleurs partagés par moitié entre bailleur et locataire.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "\\b\\d{1,2}(?:er)?\\s+(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b|\\b\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4}\\b|\\b(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b"
+          ],
+          "matched_concepts": [
+            "regex:\\b\\d{1,2}(?:er)?\\s+(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b|\\b\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4}\\b|\\b(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b"
+          ],
+          "section_title": "Quelle garantie locative un bailleur peut-il demander ?",
+          "breadcrumb": "Questions et réponses › Logement › Quelle garantie locative un bailleur peut-il demander ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only nothing (0.00 of the question's words); 'transports', 'publics' and 'gratuits' not covered: supporting.",
+          "score": 2.25,
+          "matched_share": 0.0,
+          "coverage": 0.0,
+          "covered_words": [],
+          "uncovered_words": [
+            "transports",
+            "publics",
+            "gratuits"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "date",
+              "raw": "1er aout 2024",
+              "pos": 51,
+              "iso": "2024-08-01",
+              "original": "1er aout 2024",
+              "line_num": 45
+            }
+          ]
+        },
+        {
+          "candidate_id": "faq#l155-l155",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 155,
+            "line_end": 155,
+            "section_id": "faq#s57"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 155,
+            "line_end": 155,
+            "section_id": "faq#s57"
+          },
+          "snippet": "Pas légalement : un IBAN européen suffit pour le salaire et le loyer. En pratique, un compte local reste nécessaire pour émettre une garantie locative, et il r…",
+          "text": "Pas légalement : un IBAN européen suffit pour le salaire et le loyer. En pratique, un compte local reste nécessaire pour émettre une garantie locative, et il rend LuxTrust souvent gratuit.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "gratuits"
+          ],
+          "matched_concepts": [
+            "gratuits"
+          ],
+          "section_title": "Un compte bancaire luxembourgeois est-il obligatoire ?",
+          "breadcrumb": "Questions et réponses › Finances › Un compte bancaire luxembourgeois est-il obligatoire ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Un compte bancaire luxembourgeois est-il obligatoire ?' names 'compte bancaire', not 'transports gratuits'; its lines carry only 'gratuits'.",
+          "score": 1.0,
+          "matched_share": 0.333,
+          "coverage": 0.333,
+          "covered_words": [
+            "gratuits"
+          ],
+          "uncovered_words": [
+            "transports",
+            "publics"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l39-l39",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 39,
+            "line_end": 39,
+            "section_id": "faq#s15"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 39,
+            "line_end": 39,
+            "section_id": "faq#s15"
+          },
+          "snippet": "Pas sur la distance. En voiture, élargissez la zone et regardez le temps aux heures de pointe. En transports, vérifiez les horaires réels depuis l'arrêt le plu…",
+          "text": "Pas sur la distance. En voiture, élargissez la zone et regardez le temps aux heures de pointe. En transports, vérifiez les horaires réels depuis l'arrêt le plus proche, y compris le week-end. Et cherchez autour de l'école, pas autour du bureau.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "transports"
+          ],
+          "matched_concepts": [
+            "transports_gratuits"
+          ],
+          "section_title": "Sur quels critères choisir sa commune ?",
+          "breadcrumb": "Questions et réponses › Logement › Sur quels critères choisir sa commune ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Sur quels critères choisir sa commune ?' names 'commune', not 'transports gratuits'; its lines carry only 'transports'.",
+          "score": 1.0,
+          "matched_share": 0.333,
+          "coverage": 0.333,
+          "covered_words": [
+            "transports"
+          ],
+          "uncovered_words": [
+            "publics",
+            "gratuits"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l64-l64",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 64,
+            "line_end": 64,
+            "section_id": "faq#s24"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 64,
+            "line_end": 64,
+            "section_id": "faq#s24"
+          },
+          "snippet": "Pour les communications électroniques, la médiation relève de l'Institut luxembourgeois de régulation et elle est gratuite. Pour les autres litiges de consomma…",
+          "text": "Pour les communications électroniques, la médiation relève de l'Institut luxembourgeois de régulation et elle est gratuite. Pour les autres litiges de consommation, le service national du Médiateur de la consommation est compétent. Dans les deux cas, une réclamation écrite préalable au professionnel est une condition de recevabilité : un appel téléphonique ne suffit pas.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "gratuits"
+          ],
+          "matched_concepts": [
+            "gratuits"
+          ],
+          "section_title": "Vers qui se tourner en cas de litige avec un professionnel ?",
+          "breadcrumb": "Questions et réponses › Quotidien › Vers qui se tourner en cas de litige avec un professionnel ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Vers qui se tourner en cas de litige avec un professionnel ?' names 'reclamation', not 'transports gratuits'; its lines carry only 'gratuits'.",
+          "score": 1.0,
+          "matched_share": 0.333,
+          "coverage": 0.333,
+          "covered_words": [
+            "gratuits"
+          ],
+          "uncovered_words": [
+            "transports",
+            "publics"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l73-l73",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 73,
+            "line_end": 73,
+            "section_id": "faq#s27"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 73,
+            "line_end": 73,
+            "section_id": "faq#s27"
+          },
+          "snippet": "Pas pour travailler : l'anglais et le français suffisent dans beaucoup de secteurs. En revanche, oui pour la naturalisation et pour de nombreux emplois publics…",
+          "text": "Pas pour travailler : l'anglais et le français suffisent dans beaucoup de secteurs. En revanche, oui pour la naturalisation et pour de nombreux emplois publics. Des cours subventionnés existent.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "publics"
+          ],
+          "matched_concepts": [
+            "transports_gratuits"
+          ],
+          "section_title": "Faut-il apprendre le luxembourgeois ?",
+          "breadcrumb": "Questions et réponses › Quotidien › Faut-il apprendre le luxembourgeois ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Faut-il apprendre le luxembourgeois ?' names 'cours de langue', not 'transports gratuits'; its lines carry only 'publics'.",
+          "score": 1.0,
+          "matched_share": 0.333,
+          "coverage": 0.333,
+          "covered_words": [
+            "publics"
+          ],
+          "uncovered_words": [
+            "transports",
+            "gratuits"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l86-l86",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 86,
+            "line_end": 86,
+            "section_id": "faq#s32"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 86,
+            "line_end": 86,
+            "section_id": "faq#s32"
+          },
+          "snippet": "Le 112, gratuit et valable partout. Pour les soins courants, il n'existe ni médecin traitant obligatoire ni parcours de soins : vous consultez directement le s…",
+          "text": "Le 112, gratuit et valable partout. Pour les soins courants, il n'existe ni médecin traitant obligatoire ni parcours de soins : vous consultez directement le spécialiste de votre choix.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "gratuits"
+          ],
+          "matched_concepts": [
+            "gratuits"
+          ],
+          "section_title": "Quel numéro d'urgence appeler ?",
+          "breadcrumb": "Questions et réponses › Sante › Quel numéro d'urgence appeler ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Quel numéro d'urgence appeler ?' names 'urgences', not 'transports gratuits'; its lines carry only 'gratuits'.",
+          "score": 1.0,
+          "matched_share": 0.333,
+          "coverage": 0.333,
+          "covered_words": [
+            "gratuits"
+          ],
+          "uncovered_words": [
+            "transports",
+            "publics"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        }
+      ],
+      "methods_used": [
+        "keyword_lines",
+        "title_match",
+        "anchor_regex",
+        "row_match",
+        "arbiter_rules",
+        "sweep"
+      ],
+      "methods_skipped": {
+        "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+        "llm_arbiter": "no model key configured",
+        "current_page_boost": "no pages_hint: no page to boost"
+      },
+      "not_found": false,
+      "not_found_reason": null,
+      "confidence": 0.743,
+      "per_section_audit": [
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s1",
+          "title": "Questions et réponses",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s2",
+          "title": "Mobilite",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s3",
+          "title": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s4",
+          "title": "J'ai conduit la voiture d'un proche sans être inscrit au contrat, est-ce que ça compte ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s5",
+          "title": "La carte grise n'est pas au nom du vendeur, est-ce bloquant ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s6",
+          "title": "Faut-il repasser le contrôle technique en arrivant au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s7",
+          "title": "Dans quel délai immatriculer un véhicule qu'on amène avec soi ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s8",
+          "title": "Un permis de conduire européen reste-t-il valable ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s9",
+          "title": "Comment s'immatricule un véhicule importé ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s10",
+          "title": "Les transports publics sont-ils vraiment gratuits ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s11",
+          "title": "Logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s12",
+          "title": "Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s13",
+          "title": "Combien de jours de télétravail un frontalier peut-il faire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s14",
+          "title": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s15",
+          "title": "Sur quels critères choisir sa commune ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s16",
+          "title": "Comment comparer deux contrats d'assurance ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s17",
+          "title": "Quelle garantie locative un bailleur peut-il demander ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s18",
+          "title": "Comment se cherche un logement au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s19",
+          "title": "À quel moment souscrire l'assurance habitation ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s20",
+          "title": "Quelle part du prix une banque finance-t-elle ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s21",
+          "title": "La TVA sur un logement neuf est-elle toujours de 3 % ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s22",
+          "title": "Qui peut prétendre à un logement à coût modéré ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s23",
+          "title": "Quotidien",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s24",
+          "title": "Vers qui se tourner en cas de litige avec un professionnel ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s25",
+          "title": "Le luxembourgeois est-il nécessaire pour travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s26",
+          "title": "Combien de temps pour avoir internet ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s27",
+          "title": "Faut-il apprendre le luxembourgeois ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s28",
+          "title": "Comment fonctionne le tri des déchets ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s29",
+          "title": "Sante",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s30",
+          "title": "Une complémentaire santé est-elle utile ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s31",
+          "title": "Qui déclare l'entrée à la sécurité sociale ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s32",
+          "title": "Quel numéro d'urgence appeler ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s33",
+          "title": "Impots",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s34",
+          "title": "Comment l'impôt est-il prélevé quand on est deux à travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s35",
+          "title": "Pourquoi la déclaration se solde-t-elle souvent par un montant à payer ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s36",
+          "title": "Qu'est-ce que le régime des impatriés ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s37",
+          "title": "Existe-t-il une classe d'impôt 1b ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s38",
+          "title": "Qui relève de la classe 1a ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s39",
+          "title": "Un divorce ou un décès fait-il changer de classe d'impôt immédiatement ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s40",
+          "title": "Le régime des impatriés dépend-il de la classe d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s41",
+          "title": "Quelle différence entre classe 1 et classe 2 ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s42",
+          "title": "Qu'est-ce qui se déduit des impôts ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s43",
+          "title": "Comment faire corriger une classe d'impôt inexacte ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s44",
+          "title": "Comment obtient-on sa fiche de retenue d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s45",
+          "title": "Les intérêts d'un prêt immobilier sont-ils déductibles ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s46",
+          "title": "Administratif",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s47",
+          "title": "Les délais d'arrivée sont-ils les mêmes hors Union européenne ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s48",
+          "title": "La déclaration à la commune suffit-elle ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s49",
+          "title": "Combien de temps faut-il pour obtenir la nationalité ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s50",
+          "title": "Dans quel délai faut-il se déclarer à la commune ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s51",
+          "title": "Comment obtient-on le matricule ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s52",
+          "title": "Peut-on avoir la double nationalité ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s53",
+          "title": "Finances",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s54",
+          "title": "Un compte bancaire étranger peut-il servir à recevoir le salaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s55",
+          "title": "Que faut-il pour ouvrir un compte bancaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s56",
+          "title": "Le salaire luxembourgeois compense-t-il le coût de la vie ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s57",
+          "title": "Un compte bancaire luxembourgeois est-il obligatoire ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s58",
+          "title": "Qu'est-ce que l'indexation des salaires ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s59",
+          "title": "Travail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s60",
+          "title": "Peut-on exercer une activité indépendante en plus d'un emploi salarié ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s61",
+          "title": "Combien de jours de congé donne la loi ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s62",
+          "title": "Famille",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s63",
+          "title": "Comment se fait l'inscription à l'école ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s64",
+          "title": "Existe-t-il une aide pour la crèche ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s65",
+          "title": "Quel est le montant des allocations familiales ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "lignes",
+          "section_id": "lignes#s1",
+          "title": "Chercher un logement sur une ligne de bus, de tram ou de train",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "transport",
+          "section_id": "transport#s1",
+          "title": "Transports publics gratuits",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "transport",
+          "section_id": "transport#s2",
+          "title": "À retenir",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "transport",
+          "section_id": "transport#s3",
+          "title": "Sources officielles",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        }
+      ],
+      "route_pages": [
+        {
+          "doc_id": "transport",
+          "score": 12.06,
+          "reason": "kept: 8 term(s) in the summary line (transports, publics, gratuits, transports publics, bus, tram, train, mobilité); heading title match (Transports publics gratuits); concept(s) in tags (transports gratuits); document title 'Transports publics gratuits' covers 1.00 of the question's words; tally 12.06"
+        },
+        {
+          "doc_id": "lignes",
+          "score": 8.48,
+          "reason": "kept: 6 term(s) in the summary line (transports, publics, transports publics, bus, tram, train); heading title match (Chercher un logement sur une ligne de bus, de tram ou de train); concept(s) in tags (transports gratuits); document title 'Chercher un logement sur une ligne de bus, de tram ou de train' covers 1.00 of the question's words; tally 8.48"
+        },
+        {
+          "doc_id": "faq",
+          "score": 5.44,
+          "reason": "kept: 1 term(s) in the summary line (mobilité); heading title match (Les transports publics sont-ils vraiment gratuits ?, Mobilite); concept(s) in tags (transports gratuits); tally 5.44"
+        }
+      ],
+      "route_sections": [
+        {
+          "doc_id": "transport",
+          "section_id": "transport#s1",
+          "title": "Transports publics gratuits",
+          "score": 19.0,
+          "reason": "title 'Transports publics gratuits' matches transports, publics, gratuits, transports publics, hint:Transports publics gratuits; 9 term(s) in its lines (\\b\\d{1,2}(?:er)?\\s+(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b|\\b\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4}\\b|\\b(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b, bus, gratuits, mobilitéit, publics, train, tram, transports, transports publics); 11 lines, small enough to read whole"
+        },
+        {
+          "doc_id": "lignes",
+          "section_id": "lignes#s1",
+          "title": "Chercher un logement sur une ligne de bus, de tram ou de train",
+          "score": 10.0,
+          "reason": "title 'Chercher un logement sur une ligne de bus, de tram ou de train' matches bus, tram, train; 4 term(s) in its lines (bus, mobilitéit, train, tram); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s10",
+          "title": "Les transports publics sont-ils vraiment gratuits ?",
+          "score": 14.0,
+          "reason": "title 'Les transports publics sont-ils vraiment gratuits ?' matches transports, publics, gratuits, transports publics; 6 term(s) in its lines (\\b\\d{1,2}(?:er)?\\s+(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b|\\b\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4}\\b|\\b(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b, gratuits, publics, train, transports, transports publics); a leaf, stop here"
+        }
+      ],
+      "route_notes": [
+        "faq: no section of the outline carries a term; the page is read whole"
+      ],
+      "sweep_concepts": [
+        {
+          "concept": "transports_gratuits",
+          "variants": [
+            "transports gratuits",
+            "transports publics",
+            "transports en commun",
+            "bus",
+            "tram",
+            "train",
+            "free public transport",
+            "public transport",
+            "öffentlicher Verkehr",
+            "kostenloser Nahverkehr",
+            "Bus",
+            "Zug",
+            "gratuité des transports",
+            "mobilité",
+            "free transport",
+            "Mobilitéit",
+            "öffentlicher verkehr",
+            "kostenloser nahverkehr",
+            "zug",
+            "mobilitéit",
+            "transports",
+            "publics"
+          ],
+          "pages_with_hits": [
+            "accueil",
+            "admin",
+            "avantages",
+            "carte",
+            "choisir_commune",
+            "cout_vie",
+            "faq",
+            "fiches",
+            "frontalier",
+            "langues",
+            "lignes",
+            "logement_abordable",
+            "telecom",
+            "transport"
+          ],
+          "line_hits": 80
+        },
+        {
+          "concept": "gratuits",
+          "variants": [
+            "gratuits"
+          ],
+          "pages_with_hits": [
+            "avantages",
+            "cout_vie",
+            "faq",
+            "fiches",
+            "transport"
+          ],
+          "line_hits": 10
+        }
+      ],
+      "sweep_rows": [
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "accueil",
+          "line_num": 2,
+          "snippet": "Démarches, salaire, logement, transports : cherchez une fiche ou posez votre question. L'assistant répond depuis le guide, sources à l'appui."
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "accueil",
+          "line_num": 5,
+          "snippet": "Les démarches, le salaire net, le choix d'une commune, les transports : tout est expliqué ici avec sa source officielle, que vous arriviez ou que vous viviez a…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports publics",
+          "doc_id": "accueil",
+          "line_num": 13,
+          "snippet": "les transports publics"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "accueil",
+          "line_num": 13,
+          "snippet": "les transports publics"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "publics",
+          "doc_id": "accueil",
+          "line_num": 13,
+          "snippet": "les transports publics"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "publics",
+          "doc_id": "admin",
+          "line_num": 11,
+          "snippet": "Une exception, la carte. Pour placer une adresse et chercher ce qui l'entoure, l'onglet Comparer des logements interroge deux services publics extérieurs, Nomi…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "mobilité",
+          "doc_id": "avantages",
+          "line_num": 200,
+          "snippet": "Un étudiant qui remplit les conditions reçoit d'office une bourse de base de 1 289 euros par semestre. S'y ajoutent, selon la situation, une bourse sur critère…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports publics",
+          "doc_id": "avantages",
+          "line_num": 261,
+          "snippet": "Transports publics gratuits"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "avantages",
+          "line_num": 261,
+          "snippet": "Transports publics gratuits"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "publics",
+          "doc_id": "avantages",
+          "line_num": 261,
+          "snippet": "Transports publics gratuits"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "bus",
+          "doc_id": "avantages",
+          "line_num": 262,
+          "snippet": "0 € bus, tram et train en seconde classe, pour tous"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "tram",
+          "doc_id": "avantages",
+          "line_num": 262,
+          "snippet": "0 € bus, tram et train en seconde classe, pour tous"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "train",
+          "doc_id": "avantages",
+          "line_num": 262,
+          "snippet": "0 € bus, tram et train en seconde classe, pour tous"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "Bus",
+          "doc_id": "avantages",
+          "line_num": 262,
+          "snippet": "0 € bus, tram et train en seconde classe, pour tous"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports publics",
+          "doc_id": "avantages",
+          "line_num": 265,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits sur tout le territoire, bus, trams et trains en seconde classe, sans titre de transport. La gra…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "bus",
+          "doc_id": "avantages",
+          "line_num": 265,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits sur tout le territoire, bus, trams et trains en seconde classe, sans titre de transport. La gra…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "tram",
+          "doc_id": "avantages",
+          "line_num": 265,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits sur tout le territoire, bus, trams et trains en seconde classe, sans titre de transport. La gra…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "train",
+          "doc_id": "avantages",
+          "line_num": 265,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits sur tout le territoire, bus, trams et trains en seconde classe, sans titre de transport. La gra…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "Bus",
+          "doc_id": "avantages",
+          "line_num": 265,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits sur tout le territoire, bus, trams et trains en seconde classe, sans titre de transport. La gra…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "avantages",
+          "line_num": 265,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits sur tout le territoire, bus, trams et trains en seconde classe, sans titre de transport. La gra…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "publics",
+          "doc_id": "avantages",
+          "line_num": 265,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits sur tout le territoire, bus, trams et trains en seconde classe, sans titre de transport. La gra…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "Mobilitéit",
+          "doc_id": "avantages",
+          "line_num": 267,
+          "snippet": "Communauté des transports, mobiliteit.lu"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "mobilitéit",
+          "doc_id": "avantages",
+          "line_num": 267,
+          "snippet": "Communauté des transports, mobiliteit.lu"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "avantages",
+          "line_num": 267,
+          "snippet": "Communauté des transports, mobiliteit.lu"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "carte",
+          "line_num": 2,
+          "snippet": "Quand on hésite entre plusieurs logements, la question n'est pas « qu'y a-t-il autour » mais « lequel est le mieux placé ». Enregistrez ici les adresses que vo…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "Mobilitéit",
+          "doc_id": "carte",
+          "line_num": 7,
+          "snippet": "Arrêts, commerces et santé : données OpenStreetMap (© les contributeurs OpenStreetMap), chargées à la demande, l'exhaustivité n'est pas garantie. Les distances…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "mobilitéit",
+          "doc_id": "carte",
+          "line_num": 7,
+          "snippet": "Arrêts, commerces et santé : données OpenStreetMap (© les contributeurs OpenStreetMap), chargées à la demande, l'exhaustivité n'est pas garantie. Les distances…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "choisir_commune",
+          "line_num": 4,
+          "snippet": "Première question : voiture ou transports ?"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports publics",
+          "doc_id": "choisir_commune",
+          "line_num": 6,
+          "snippet": "Si vous comptez sur les transports publics, la logique s'inverse totalement. La gratuité ne sert à rien si aucune ligne ne passe. Ouvrez les horaires réels dep…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "bus",
+          "doc_id": "choisir_commune",
+          "line_num": 6,
+          "snippet": "Si vous comptez sur les transports publics, la logique s'inverse totalement. La gratuité ne sert à rien si aucune ligne ne passe. Ouvrez les horaires réels dep…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "Bus",
+          "doc_id": "choisir_commune",
+          "line_num": 6,
+          "snippet": "Si vous comptez sur les transports publics, la logique s'inverse totalement. La gratuité ne sert à rien si aucune ligne ne passe. Ouvrez les horaires réels dep…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "choisir_commune",
+          "line_num": 6,
+          "snippet": "Si vous comptez sur les transports publics, la logique s'inverse totalement. La gratuité ne sert à rien si aucune ligne ne passe. Ouvrez les horaires réels dep…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "publics",
+          "doc_id": "choisir_commune",
+          "line_num": 6,
+          "snippet": "Si vous comptez sur les transports publics, la logique s'inverse totalement. La gratuité ne sert à rien si aucune ligne ne passe. Ouvrez les horaires réels dep…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "bus",
+          "doc_id": "choisir_commune",
+          "line_num": 11,
+          "snippet": "Repérez la distance à pied jusqu'à l'arrêt de bus ou à la gare, et pas seulement leur existence : dix minutes de marche sous la pluie deux fois par jour change…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "train",
+          "doc_id": "choisir_commune",
+          "line_num": 11,
+          "snippet": "Repérez la distance à pied jusqu'à l'arrêt de bus ou à la gare, et pas seulement leur existence : dix minutes de marche sous la pluie deux fois par jour change…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "Bus",
+          "doc_id": "choisir_commune",
+          "line_num": 11,
+          "snippet": "Repérez la distance à pied jusqu'à l'arrêt de bus ou à la gare, et pas seulement leur existence : dix minutes de marche sous la pluie deux fois par jour change…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "choisir_commune",
+          "line_num": 15,
+          "snippet": "En transports, vérifier les horaires réels depuis l'arrêt le plus proche."
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "Mobilitéit",
+          "doc_id": "choisir_commune",
+          "line_num": 18,
+          "snippet": "mobiliteit.lu, horaires et itinéraires"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "mobilitéit",
+          "doc_id": "choisir_commune",
+          "line_num": 18,
+          "snippet": "mobiliteit.lu, horaires et itinéraires"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports publics",
+          "doc_id": "cout_vie",
+          "line_num": 6,
+          "snippet": "Le logement absorbe l'essentiel de l'écart de rémunération avec les régions voisines, ce qui explique qu'une part importante des salariés choisisse de résider…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "cout_vie",
+          "line_num": 6,
+          "snippet": "Le logement absorbe l'essentiel de l'écart de rémunération avec les régions voisines, ce qui explique qu'une part importante des salariés choisisse de résider…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "publics",
+          "doc_id": "cout_vie",
+          "line_num": 6,
+          "snippet": "Le logement absorbe l'essentiel de l'écart de rémunération avec les régions voisines, ce qui explique qu'une part importante des salariés choisisse de résider…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "mobilité",
+          "doc_id": "faq",
+          "line_num": 3,
+          "snippet": "Mobilite"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports publics",
+          "doc_id": "faq",
+          "line_num": 25,
+          "snippet": "Les transports publics sont-ils vraiment gratuits ?"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "faq",
+          "line_num": 25,
+          "snippet": "Les transports publics sont-ils vraiment gratuits ?"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "publics",
+          "doc_id": "faq",
+          "line_num": 25,
+          "snippet": "Les transports publics sont-ils vraiment gratuits ?"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "train",
+          "doc_id": "faq",
+          "line_num": 26,
+          "snippet": "Oui, depuis février 2020, sur tout le territoire et pour tous, y compris les frontaliers sur la portion luxembourgeoise. Seule la première classe des trains re…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports publics",
+          "doc_id": "faq",
+          "line_num": 27,
+          "snippet": "Voir la fiche : Transports publics gratuits"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "faq",
+          "line_num": 27,
+          "snippet": "Voir la fiche : Transports publics gratuits"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "publics",
+          "doc_id": "faq",
+          "line_num": 27,
+          "snippet": "Voir la fiche : Transports publics gratuits"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "faq",
+          "line_num": 39,
+          "snippet": "Pas sur la distance. En voiture, élargissez la zone et regardez le temps aux heures de pointe. En transports, vérifiez les horaires réels depuis l'arrêt le plu…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "publics",
+          "doc_id": "faq",
+          "line_num": 73,
+          "snippet": "Pas pour travailler : l'anglais et le français suffisent dans beaucoup de secteurs. En revanche, oui pour la naturalisation et pour de nombreux emplois publics…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports publics",
+          "doc_id": "fiches",
+          "line_num": 65,
+          "snippet": "Transports publics gratuits"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "fiches",
+          "line_num": 65,
+          "snippet": "Transports publics gratuits"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "publics",
+          "doc_id": "fiches",
+          "line_num": 65,
+          "snippet": "Transports publics gratuits"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "train",
+          "doc_id": "frontalier",
+          "line_num": 18,
+          "snippet": "Le trajet, enfin, se mesure en temps et non en kilomètres. Les axes vers la capitale saturent le matin, et une commune à quarante kilomètres sur une ligne de t…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "publics",
+          "doc_id": "langues",
+          "line_num": 4,
+          "snippet": "Cette souplesse a toutefois une limite nette : le luxembourgeois devient indispensable pour la naturalisation, ainsi que pour de nombreux emplois publics ou en…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "bus",
+          "doc_id": "lignes",
+          "line_num": 1,
+          "snippet": "Chercher un logement sur une ligne de bus, de tram ou de train"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "tram",
+          "doc_id": "lignes",
+          "line_num": 1,
+          "snippet": "Chercher un logement sur une ligne de bus, de tram ou de train"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "train",
+          "doc_id": "lignes",
+          "line_num": 1,
+          "snippet": "Chercher un logement sur une ligne de bus, de tram ou de train"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "Bus",
+          "doc_id": "lignes",
+          "line_num": 1,
+          "snippet": "Chercher un logement sur une ligne de bus, de tram ou de train"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "bus",
+          "doc_id": "lignes",
+          "line_num": 2,
+          "snippet": "Un logement se juge mal à vol d'oiseau. Deux kilomètres avec une correspondance et dix minutes de marche coûtent plus cher qu'une demi-heure de bus direct. Ind…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "Bus",
+          "doc_id": "lignes",
+          "line_num": 2,
+          "snippet": "Un logement se juge mal à vol d'oiseau. Deux kilomètres avec une correspondance et dix minutes de marche coûtent plus cher qu'une demi-heure de bus direct. Ind…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "Mobilitéit",
+          "doc_id": "lignes",
+          "line_num": 4,
+          "snippet": "Ce que la carte ne dit pas : le temps d'attente, la correspondance, et le trafic réel. Un arrêt à 40 minutes desservi quatre fois par heure vaut mieux qu'un ar…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "mobilitéit",
+          "doc_id": "lignes",
+          "line_num": 4,
+          "snippet": "Ce que la carte ne dit pas : le temps d'attente, la correspondance, et le trafic réel. Un arrêt à 40 minutes desservi quatre fois par heure vaut mieux qu'un ar…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "publics",
+          "doc_id": "logement_abordable",
+          "line_num": 3,
+          "snippet": "Des promoteurs publics commercialisent des logements à un prix inférieur au marché. L'accès suppose un certificat d'éligibilité délivré par le Guichet unique d…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "mobilité",
+          "doc_id": "telecom",
+          "line_num": 5,
+          "snippet": "Comptez deux à trois semaines entre la souscription et l'installation en période normale. Cette moyenne est trompeuse : les mois de forte mobilité, typiquement…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports publics",
+          "doc_id": "transport",
+          "line_num": 1,
+          "snippet": "Transports publics gratuits"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "transport",
+          "line_num": 1,
+          "snippet": "Transports publics gratuits"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "publics",
+          "doc_id": "transport",
+          "line_num": 1,
+          "snippet": "Transports publics gratuits"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports publics",
+          "doc_id": "transport",
+          "line_num": 3,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits pour tous sur l'ensemble du territoire : bus, trams et trains en seconde classe, sans titre de…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "bus",
+          "doc_id": "transport",
+          "line_num": 3,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits pour tous sur l'ensemble du territoire : bus, trams et trains en seconde classe, sans titre de…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "tram",
+          "doc_id": "transport",
+          "line_num": 3,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits pour tous sur l'ensemble du territoire : bus, trams et trains en seconde classe, sans titre de…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "train",
+          "doc_id": "transport",
+          "line_num": 3,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits pour tous sur l'ensemble du territoire : bus, trams et trains en seconde classe, sans titre de…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "Bus",
+          "doc_id": "transport",
+          "line_num": 3,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits pour tous sur l'ensemble du territoire : bus, trams et trains en seconde classe, sans titre de…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "transports",
+          "doc_id": "transport",
+          "line_num": 3,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits pour tous sur l'ensemble du territoire : bus, trams et trains en seconde classe, sans titre de…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "publics",
+          "doc_id": "transport",
+          "line_num": 3,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits pour tous sur l'ensemble du territoire : bus, trams et trains en seconde classe, sans titre de…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "train",
+          "doc_id": "transport",
+          "line_num": 5,
+          "snippet": "Avant de choisir une commune, vérifiez donc concrètement les horaires depuis l'arrêt le plus proche, aux heures qui vous concernent, et pas seulement l'existen…"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "Mobilitéit",
+          "doc_id": "transport",
+          "line_num": 11,
+          "snippet": "mobiliteit.lu"
+        },
+        {
+          "concept": "transports_gratuits",
+          "variant": "mobilitéit",
+          "doc_id": "transport",
+          "line_num": 11,
+          "snippet": "mobiliteit.lu"
+        },
+        {
+          "concept": "gratuits",
+          "variant": "gratuits",
+          "doc_id": "avantages",
+          "line_num": 170,
+          "snippet": "L'État prend en charge une part du coût de la garde chez les prestataires conventionnés. Entre un et quatre ans, un enfant a droit à vingt heures d'encadrement…"
+        },
+        {
+          "concept": "gratuits",
+          "variant": "gratuits",
+          "doc_id": "avantages",
+          "line_num": 261,
+          "snippet": "Transports publics gratuits"
+        },
+        {
+          "concept": "gratuits",
+          "variant": "gratuits",
+          "doc_id": "avantages",
+          "line_num": 265,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits sur tout le territoire, bus, trams et trains en seconde classe, sans titre de transport. La gra…"
+        },
+        {
+          "concept": "gratuits",
+          "variant": "gratuits",
+          "doc_id": "cout_vie",
+          "line_num": 6,
+          "snippet": "Le logement absorbe l'essentiel de l'écart de rémunération avec les régions voisines, ce qui explique qu'une part importante des salariés choisisse de résider…"
+        },
+        {
+          "concept": "gratuits",
+          "variant": "gratuits",
+          "doc_id": "faq",
+          "line_num": 25,
+          "snippet": "Les transports publics sont-ils vraiment gratuits ?"
+        },
+        {
+          "concept": "gratuits",
+          "variant": "gratuits",
+          "doc_id": "faq",
+          "line_num": 27,
+          "snippet": "Voir la fiche : Transports publics gratuits"
+        },
+        {
+          "concept": "gratuits",
+          "variant": "gratuits",
+          "doc_id": "fiches",
+          "line_num": 65,
+          "snippet": "Transports publics gratuits"
+        },
+        {
+          "concept": "gratuits",
+          "variant": "gratuits",
+          "doc_id": "transport",
+          "line_num": 1,
+          "snippet": "Transports publics gratuits"
+        },
+        {
+          "concept": "gratuits",
+          "variant": "gratuits",
+          "doc_id": "transport",
+          "line_num": 3,
+          "snippet": "Depuis le 29 février 2020, les transports publics sont gratuits pour tous sur l'ensemble du territoire : bus, trams et trains en seconde classe, sans titre de…"
+        },
+        {
+          "concept": "gratuits",
+          "variant": "gratuits",
+          "doc_id": "transport",
+          "line_num": 5,
+          "snippet": "Avant de choisir une commune, vérifiez donc concrètement les horaires depuis l'arrêt le plus proche, aux heures qui vous concernent, et pas seulement l'existen…"
+        }
+      ],
+      "question_concepts": [
+        "transports_gratuits",
+        "gratuits"
+      ],
+      "terms": [
+        {
+          "text": "transports",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "publics",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "gratuits",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "gratuits",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "transports gratuits",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "transports publics",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "transports en commun",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "bus",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "tram",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "train",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "free public transport",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "public transport",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "öffentlicher verkehr",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "kostenloser nahverkehr",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "zug",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "gratuité des transports",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "mobilité",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "free transport",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "mobilitéit",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "transports_gratuits",
+          "is_regex": false,
+          "concept_key": "transports_gratuits",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "\\b\\d{1,2}(?:er)?\\s+(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b|\\b\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4}\\b|\\b(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b",
+          "weight": 1.0,
+          "source": "anchor",
+          "concept": null,
+          "is_regex": true,
+          "concept_key": "regex:\\b\\d{1,2}(?:er)?\\s+(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b|\\b\\d{1,2}[./-]\\d{1,2}[./-]\\d{2,4}\\b|\\b(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre|january|february|march|april|may|june|july|august|september|october|november|december|januar|februar|m[aä]rz|juni|juli|oktober|dezember)\\s+\\d{4}\\b",
+          "weak": false,
+          "in_corpus": true
+        }
+      ],
+      "content_words": [
+        {
+          "text": "transports",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "publics",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "gratuits",
+          "weight": 1.0,
+          "weak": false
+        }
+      ],
+      "uncovered_words": [],
+      "answer_context_used": "line"
+    }
+  }
+}

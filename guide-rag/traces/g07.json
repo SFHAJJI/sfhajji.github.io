@@ -1,0 +1,3498 @@
+{
+  "answer": {
+    "extraction_method": "na",
+    "confidence": 0.6,
+    "caveats": [
+      "No amount on the primary lines assurance_sante#l6-l6; nothing typed could be extracted."
+    ],
+    "answer_found": false,
+    "complete_answer_found": false,
+    "context_structured": [
+      {
+        "candidate_id": "assurance_sante#l6-l6",
+        "doc_id": "assurance_sante",
+        "section_id": "assurance_sante#s2",
+        "section_title": "Le délai de carence, le point à vérifier en premier",
+        "breadcrumb": "La complémentaire santé › Le délai de carence, le point à vérifier en premier",
+        "line_start": 6,
+        "line_end": 6,
+        "url_anchor": "https://lux-guide.github.io/#fiche/assurance_sante#fiche-detail",
+        "role": "primary"
+      }
+    ],
+    "keywords_found": [
+      "carence",
+      "délai"
+    ],
+    "llm_discovered_keywords": [],
+    "conflicting_evidence": [],
+    "suggested_clarification": null,
+    "kind": "amount",
+    "items": []
+  },
+  "meta": {
+    "question_id": "38dc38e67dafc8cc",
+    "index_version": "1d1bbf848338f32798d0c92366bd740f0513f72b56bd4745e85a507a1645d9ca",
+    "pipeline_version": "guide-rag/0.1",
+    "methods_used": [
+      "keyword_lines",
+      "title_match",
+      "anchor_regex",
+      "arbiter_rules",
+      "sweep"
+    ],
+    "methods_skipped": {
+      "row_match": "answer_type=duration and no table column named",
+      "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+      "llm_arbiter": "no model key configured",
+      "current_page_boost": "no pages_hint: no page to boost"
+    },
+    "activations": {
+      "use_keywords": {
+        "on": true,
+        "reason": "always: keyword detectors are deterministic and prove absence"
+      },
+      "use_toc": {
+        "on": true,
+        "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+      },
+      "use_row_level": {
+        "on": false,
+        "reason": "answer_type=duration and no table column named"
+      },
+      "use_embeddings": {
+        "on": false,
+        "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+      },
+      "use_llm_arbiter": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "use_llm_generation": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "sweep_for_absence": {
+        "on": true,
+        "reason": "always: the exhaustive sweep is the evidence of absence"
+      },
+      "current_page_boost": {
+        "on": false,
+        "reason": "no pages_hint: no page to boost"
+      }
+    },
+    "chunk_strategy": "line as the unit; anchor = hit lines grouped by runs; context = the hit lines (answer_context=line)",
+    "model_used": "no model",
+    "prompt_version": null,
+    "fragments_applied": [],
+    "iterations": 1,
+    "validator_report": {
+      "iteration_1": []
+    },
+    "replay": null
+  },
+  "trace": {
+    "parsed": {
+      "question_id": "38dc38e67dafc8cc",
+      "original_question": "quel est le délai de carence de la complémentaire santé",
+      "corrected_question": "quel est le délai de carence de la complémentaire santé",
+      "language": "fr",
+      "keywords": [
+        {
+          "text": "délai",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "carence",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "complémentaire",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "santé",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "mutuelle",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "assurance complémentaire",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "complémentaire santé",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "assurance",
+          "weight": 0.3,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "complementary insurance",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "top-up insurance",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "insurance",
+          "weight": 0.3,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "zusatzversicherung",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "\\b\\d+\\s?(?:jours?|mois|ans?|annees?|semaines?|heures?|days?|months?|years?|weeks?|hours?|tagen?|monaten?|jahren?|wochen?)\\b",
+          "weight": 1.0,
+          "source": "anchor",
+          "concept": null,
+          "is_regex": true,
+          "weak": false,
+          "in_corpus": true
+        }
+      ],
+      "answer_shape": "single",
+      "answer_type": "duration",
+      "structural_hints": {
+        "pages_hint": null,
+        "toc_section_hint": "La complémentaire santé",
+        "answer_context": "line"
+      },
+      "decomposition": {
+        "pattern": "single",
+        "sub_questions": []
+      },
+      "suggested_clarification": null,
+      "ambiguity_reason": null,
+      "candidate_values": [],
+      "proposed_default": null,
+      "scope_filters": {
+        "topic": "health"
+      },
+      "parsing_notes": [
+        "language=fr: stop-word vote",
+        "answer_shape=single: no listing cue",
+        "answer_type=duration: cue 'delai'",
+        "concept 'mutuelle' (health) matched by 'complémentaire santé' [fr, secondary]",
+        "anchor regex for duration added",
+        "toc_section_hint='La complémentaire santé': every word of this heading is in the question",
+        "scope topic='health': the matched concepts vote {'health': 0.9}",
+        "decomposition=single: no 'et / and' between two clauses"
+      ]
+    },
+    "plan": {
+      "activations": {
+        "use_keywords": {
+          "on": true,
+          "reason": "always: keyword detectors are deterministic and prove absence"
+        },
+        "use_toc": {
+          "on": true,
+          "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+        },
+        "use_row_level": {
+          "on": false,
+          "reason": "answer_type=duration and no table column named"
+        },
+        "use_embeddings": {
+          "on": false,
+          "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+        },
+        "use_llm_arbiter": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "use_llm_generation": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "sweep_for_absence": {
+          "on": true,
+          "reason": "always: the exhaustive sweep is the evidence of absence"
+        },
+        "current_page_boost": {
+          "on": false,
+          "reason": "no pages_hint: no page to boost"
+        }
+      }
+    },
+    "retrieval": {
+      "question_id": "38dc38e67dafc8cc",
+      "question": "quel est le délai de carence de la complémentaire santé",
+      "candidates": [
+        {
+          "candidate_id": "assurance_sante#l6-l6",
+          "anchor": {
+            "doc_id": "assurance_sante",
+            "line_start": 6,
+            "line_end": 6,
+            "section_id": "assurance_sante#s2"
+          },
+          "context": {
+            "doc_id": "assurance_sante",
+            "line_start": 6,
+            "line_end": 6,
+            "section_id": "assurance_sante#s2"
+          },
+          "snippet": "La plupart des contrats prévoient un délai de carence, c'est-à-dire une période initiale pendant laquelle certaines garanties ne jouent pas encore, souvent plu…",
+          "text": "La plupart des contrats prévoient un délai de carence, c'est-à-dire une période initiale pendant laquelle certaines garanties ne jouent pas encore, souvent plusieurs mois pour le dentaire et parfois davantage pour l'orthodontie. Souscrire à l'arrivée, avant d'en avoir besoin, évite de découvrir cette clause au mauvais moment. Certains contrats prévoient également des questionnaires médicaux ou des exclusions pour les affections antérieures : lisez cette partie avant de signer.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "carence",
+            "délai"
+          ],
+          "matched_concepts": [
+            "carence",
+            "delai"
+          ],
+          "section_title": "Le délai de carence, le point à vérifier en premier",
+          "breadcrumb": "La complémentaire santé › Le délai de carence, le point à vérifier en premier",
+          "url_anchor": "https://lux-guide.github.io/#fiche/assurance_sante#fiche-detail",
+          "role": "primary",
+          "reason": "The document 'La complémentaire santé' title names 'délai', 'carence', 'complémentaire' and 'santé' (coverage 1.00); score 6.0: primary (no duration on the lines: the typed value is missing).",
+          "score": 6.0,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "délai",
+            "carence",
+            "complémentaire",
+            "santé"
+          ],
+          "uncovered_words": [],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "health",
+          "topic_match": true,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "assurance_sante#l13-l13",
+          "anchor": {
+            "doc_id": "assurance_sante",
+            "line_start": 13,
+            "line_end": 13,
+            "section_id": "assurance_sante#s5"
+          },
+          "context": {
+            "doc_id": "assurance_sante",
+            "line_start": 13,
+            "line_end": 13,
+            "section_id": "assurance_sante#s5"
+          },
+          "snippet": "Souscrire à l'arrivée, à cause des délais de carence.",
+          "text": "Souscrire à l'arrivée, à cause des délais de carence.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "carence",
+            "délai"
+          ],
+          "matched_concepts": [
+            "carence",
+            "delai"
+          ],
+          "section_title": "À retenir",
+          "breadcrumb": "La complémentaire santé › À retenir",
+          "url_anchor": "https://lux-guide.github.io/#fiche/assurance_sante#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'délai', 'carence', 'complémentaire' and 'santé' (coverage 1.00) but the score 3.0 is behind assurance_sante#l6-l6: supporting.",
+          "score": 3.0,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "délai",
+            "carence",
+            "complémentaire",
+            "santé"
+          ],
+          "uncovered_words": [],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "health",
+          "topic_match": true,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "assurance_sante#l3-l3",
+          "anchor": {
+            "doc_id": "assurance_sante",
+            "line_start": 3,
+            "line_end": 3,
+            "section_id": "assurance_sante#s1"
+          },
+          "context": {
+            "doc_id": "assurance_sante",
+            "line_start": 3,
+            "line_end": 3,
+            "section_id": "assurance_sante#s1"
+          },
+          "snippet": "L'assurance maladie obligatoire couvre l'essentiel des soins, mais laisse un reste à charge concentré sur trois postes : l'hospitalisation en chambre individue…",
+          "text": "L'assurance maladie obligatoire couvre l'essentiel des soins, mais laisse un reste à charge concentré sur trois postes : l'hospitalisation en chambre individuelle, les soins dentaires lourds et l'optique. C'est précisément ce que vient couvrir une complémentaire privée, proposée par les assureurs locaux comme par des mutuelles.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "assurance",
+            "complémentaire",
+            "mutuelle"
+          ],
+          "matched_concepts": [
+            "mutuelle"
+          ],
+          "section_title": "La complémentaire santé",
+          "breadcrumb": "La complémentaire santé",
+          "url_anchor": "https://lux-guide.github.io/#fiche/assurance_sante#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'complémentaire' and 'santé' (coverage 0.50) but assurance_sante#l6-l6 covers more of the question (1.00): supporting.",
+          "score": 4.44,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "complémentaire",
+            "santé"
+          ],
+          "uncovered_words": [
+            "délai",
+            "carence"
+          ],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "health",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "assurance_sante#l11-l11",
+          "anchor": {
+            "doc_id": "assurance_sante",
+            "line_start": 11,
+            "line_end": 11,
+            "section_id": "assurance_sante#s4"
+          },
+          "context": {
+            "doc_id": "assurance_sante",
+            "line_start": 11,
+            "line_end": 11,
+            "section_id": "assurance_sante#s4"
+          },
+          "snippet": "Contrairement aux assurances habitation ou automobile, les complémentaires santé ne sont pas couvertes par le document d'information standardisé européen. Vous…",
+          "text": "Contrairement aux assurances habitation ou automobile, les complémentaires santé ne sont pas couvertes par le document d'information standardisé européen. Vous ne disposerez donc pas de la fiche synthétique de deux pages qui facilite la comparaison ailleurs : il faut lire les conditions générales et le tableau de garanties.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "assurance",
+            "complémentaire",
+            "complémentaire santé",
+            "santé"
+          ],
+          "matched_concepts": [
+            "mutuelle"
+          ],
+          "section_title": "Une particularité à connaître",
+          "breadcrumb": "La complémentaire santé › Une particularité à connaître",
+          "url_anchor": "https://lux-guide.github.io/#fiche/assurance_sante#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'complémentaire' and 'santé' (coverage 0.50) but assurance_sante#l6-l6 covers more of the question (1.00): supporting.",
+          "score": 2.84,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "complémentaire",
+            "santé"
+          ],
+          "uncovered_words": [
+            "délai",
+            "carence"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "health",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "assurance_sante#l17-l18",
+          "anchor": {
+            "doc_id": "assurance_sante",
+            "line_start": 17,
+            "line_end": 18,
+            "section_id": "assurance_sante#s6"
+          },
+          "context": {
+            "doc_id": "assurance_sante",
+            "line_start": 17,
+            "line_end": 18,
+            "section_id": "assurance_sante#s6"
+          },
+          "snippet": "Caisse nationale de santé Commissariat aux assurances",
+          "text": "Caisse nationale de santé\nCommissariat aux assurances",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "assurance",
+            "santé"
+          ],
+          "matched_concepts": [
+            "mutuelle"
+          ],
+          "section_title": "Sources officielles",
+          "breadcrumb": "La complémentaire santé › Sources officielles",
+          "url_anchor": "https://lux-guide.github.io/#fiche/assurance_sante#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'complémentaire' and 'santé' (coverage 0.50) but assurance_sante#l6-l6 covers more of the question (1.00): supporting.",
+          "score": 1.3,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "complémentaire",
+            "santé"
+          ],
+          "uncovered_words": [
+            "délai",
+            "carence"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "health",
+          "topic_match": true,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l80-l81",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 80,
+            "line_end": 81,
+            "section_id": "faq#s30"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 80,
+            "line_end": 81,
+            "section_id": "faq#s30"
+          },
+          "snippet": "Elle est facultative et couvre surtout la chambre seule, le dentaire et l'optique. Si vous en prenez une, souscrivez dès l'arrivée : la plupart des contrats pr…",
+          "text": "Elle est facultative et couvre surtout la chambre seule, le dentaire et l'optique. Si vous en prenez une, souscrivez dès l'arrivée : la plupart des contrats prévoient des délais de carence de plusieurs mois sur ces postes.\nVoir la fiche : La complémentaire santé",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "carence",
+            "complémentaire",
+            "complémentaire santé",
+            "délai",
+            "santé"
+          ],
+          "matched_concepts": [
+            "carence",
+            "delai",
+            "mutuelle"
+          ],
+          "section_title": "Une complémentaire santé est-elle utile ?",
+          "breadcrumb": "Questions et réponses › Sante › Une complémentaire santé est-elle utile ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers 'délai', 'carence', 'complémentaire' and 'santé' (coverage 1.00) and points to 'La complémentaire santé' (Voir la fiche), which covers the question as well: supporting (also answered here).",
+          "score": 10.62,
+          "matched_share": 1.0,
+          "coverage": 1.0,
+          "covered_words": [
+            "délai",
+            "carence",
+            "complémentaire",
+            "santé"
+          ],
+          "uncovered_words": [],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "fiches#l7-l7",
+          "anchor": {
+            "doc_id": "fiches",
+            "line_start": 7,
+            "line_end": 7,
+            "section_id": "fiches#s4"
+          },
+          "context": {
+            "doc_id": "fiches",
+            "line_start": 7,
+            "line_end": 7,
+            "section_id": "fiches#s4"
+          },
+          "snippet": "La complémentaire santé",
+          "text": "La complémentaire santé",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "complémentaire",
+            "complémentaire santé",
+            "santé"
+          ],
+          "matched_concepts": [
+            "mutuelle"
+          ],
+          "section_title": "La complémentaire santé",
+          "breadcrumb": "Fiches pratiques › La complémentaire santé",
+          "url_anchor": "https://lux-guide.github.io/#fiches#fiches-grid",
+          "role": "supporting",
+          "reason": "Covers 'complémentaire' and 'santé' (coverage 0.50) and points to 'La complémentaire santé' (Voir la fiche), which covers the question as well: supporting (also answered here).",
+          "score": 5.08,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "complémentaire",
+            "santé"
+          ],
+          "uncovered_words": [
+            "délai",
+            "carence"
+          ],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l78-l78",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 78,
+            "line_end": 78,
+            "section_id": "faq#s29"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 78,
+            "line_end": 78,
+            "section_id": "faq#s29"
+          },
+          "snippet": "Sante",
+          "text": "Sante",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "santé"
+          ],
+          "matched_concepts": [
+            "mutuelle"
+          ],
+          "section_title": "Sante",
+          "breadcrumb": "Questions et réponses › Sante",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only 'santé' (0.25 of the question's words); 'délai', 'carence' and 'complémentaire' not covered: supporting.",
+          "score": 2.0,
+          "matched_share": 0.25,
+          "coverage": 0.25,
+          "covered_words": [
+            "santé"
+          ],
+          "uncovered_words": [
+            "délai",
+            "carence",
+            "complémentaire"
+          ],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l127-l127",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 127,
+            "line_end": 127,
+            "section_id": "faq#s47"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 127,
+            "line_end": 127,
+            "section_id": "faq#s47"
+          },
+          "snippet": "Non, le délai est plus court. La déclaration d'arrivée à la commune doit être faite dans les trois jours de votre entrée sur le territoire, et non dans les hui…",
+          "text": "Non, le délai est plus court. La déclaration d'arrivée à la commune doit être faite dans les trois jours de votre entrée sur le territoire, et non dans les huit jours. Vous devez ensuite introduire une demande de titre de séjour dans les trois mois de votre arrivée.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "délai"
+          ],
+          "matched_concepts": [
+            "delai"
+          ],
+          "section_title": "Les délais d'arrivée sont-ils les mêmes hors Union européenne ?",
+          "breadcrumb": "Questions et réponses › Administratif › Les délais d'arrivée sont-ils les mêmes hors Union européenne ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only 'délai' (0.25 of the question's words); 'carence', 'complémentaire' and 'santé' not covered: supporting.",
+          "score": 3.75,
+          "matched_share": 0.25,
+          "coverage": 0.25,
+          "covered_words": [
+            "délai"
+          ],
+          "uncovered_words": [
+            "carence",
+            "complémentaire",
+            "santé"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "duration",
+              "raw": "trois jours",
+              "pos": 93,
+              "value": 3.0,
+              "currency": null,
+              "unit": "jours",
+              "line_num": 127
+            },
+            {
+              "kind": "duration",
+              "raw": "huit jours",
+              "pos": 156,
+              "value": 8.0,
+              "currency": null,
+              "unit": "jours",
+              "line_num": 127
+            },
+            {
+              "kind": "duration",
+              "raw": "trois mois",
+              "pos": 238,
+              "value": 3.0,
+              "currency": null,
+              "unit": "mois",
+              "line_num": 127
+            }
+          ]
+        },
+        {
+          "candidate_id": "faq#l135-l136",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 135,
+            "line_end": 136,
+            "section_id": "faq#s50"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 135,
+            "line_end": 136,
+            "section_id": "faq#s50"
+          },
+          "snippet": "Dans quel délai faut-il se déclarer à la commune ? Dans les huit jours suivant l'emménagement. Cette déclaration produit le certificat de résidence et le matri…",
+          "text": "Dans quel délai faut-il se déclarer à la commune ?\nDans les huit jours suivant l'emménagement. Cette déclaration produit le certificat de résidence et le matricule, indispensables à toute la suite. Prenez rendez-vous en ligne avant même d'avoir les clés.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "délai"
+          ],
+          "matched_concepts": [
+            "delai"
+          ],
+          "section_title": "Dans quel délai faut-il se déclarer à la commune ?",
+          "breadcrumb": "Questions et réponses › Administratif › Dans quel délai faut-il se déclarer à la commune ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only 'délai' (0.25 of the question's words); 'carence', 'complémentaire' and 'santé' not covered: supporting.",
+          "score": 3.0,
+          "matched_share": 0.25,
+          "coverage": 0.25,
+          "covered_words": [
+            "délai"
+          ],
+          "uncovered_words": [
+            "carence",
+            "complémentaire",
+            "santé"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "section",
+          "captures": [
+            {
+              "kind": "duration",
+              "raw": "huit jours",
+              "pos": 9,
+              "value": 8.0,
+              "currency": null,
+              "unit": "jours",
+              "line_num": 136
+            }
+          ]
+        },
+        {
+          "candidate_id": "faq#l17-l17",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 17,
+            "line_end": 17,
+            "section_id": "faq#s7"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 17,
+            "line_end": 17,
+            "section_id": "faq#s7"
+          },
+          "snippet": "Dans les six mois de la déclaration d'arrivée à la commune. Avant la SNCA, il faut le numéro d'immatriculation, l'assurance luxembourgeoise et la vignette 705…",
+          "text": "Dans les six mois de la déclaration d'arrivée à la commune. Avant la SNCA, il faut le numéro d'immatriculation, l'assurance luxembourgeoise et la vignette 705 des douanes, cette dernière étant exigée même quand aucune TVA n'est due.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "assurance"
+          ],
+          "matched_concepts": [
+            "mutuelle"
+          ],
+          "section_title": "Dans quel délai immatriculer un véhicule qu'on amène avec soi ?",
+          "breadcrumb": "Questions et réponses › Mobilite › Dans quel délai immatriculer un véhicule qu'on amène avec soi ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only 'délai' (0.25 of the question's words); 'carence', 'complémentaire' and 'santé' not covered: supporting.",
+          "score": 2.7,
+          "matched_share": 0.25,
+          "coverage": 0.25,
+          "covered_words": [
+            "délai"
+          ],
+          "uncovered_words": [
+            "carence",
+            "complémentaire",
+            "santé"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "duration",
+              "raw": "six mois",
+              "pos": 9,
+              "value": 6.0,
+              "currency": null,
+              "unit": "mois",
+              "line_num": 17
+            }
+          ]
+        },
+        {
+          "candidate_id": "faq#l5-l6",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 5,
+            "line_end": 6,
+            "section_id": "faq#s3"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 5,
+            "line_end": 6,
+            "section_id": "faq#s3"
+          },
+          "snippet": "Il n'est pas exigé, ni pour assurer ni pour immatriculer : il ne joue que sur le prix. Si vous avez eu un contrat à votre nom, réclamez-le, c'est un droit : vo…",
+          "text": "Il n'est pas exigé, ni pour assurer ni pour immatriculer : il ne joue que sur le prix. Si vous avez eu un contrat à votre nom, réclamez-le, c'est un droit : votre assureur doit le fournir dans les quinze jours et il couvre au moins cinq ans. Sans contrat à votre nom, il n'y a rien à demander, et vous entrez au degré neutre de l'échelle luxembourgeoise, le degré 11 sur une échelle qui va de -3 à 22.\nVoir la fiche : Assurer son véhicule",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "assurance"
+          ],
+          "matched_concepts": [
+            "mutuelle"
+          ],
+          "section_title": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "breadcrumb": "Questions et réponses › Mobilite › Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only nothing (0.00 of the question's words); 'délai', 'carence', 'complémentaire' and 'santé' not covered: supporting.",
+          "score": 1.65,
+          "matched_share": 0.0,
+          "coverage": 0.0,
+          "covered_words": [],
+          "uncovered_words": [
+            "délai",
+            "carence",
+            "complémentaire",
+            "santé"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "duration",
+              "raw": "quinze jours",
+              "pos": 197,
+              "value": 15.0,
+              "currency": null,
+              "unit": "jours",
+              "line_num": 5
+            },
+            {
+              "kind": "duration",
+              "raw": "cinq ans",
+              "pos": 232,
+              "value": 5.0,
+              "currency": null,
+              "unit": "ans",
+              "line_num": 5
+            }
+          ]
+        },
+        {
+          "candidate_id": "faq#l43-l43",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 43,
+            "line_end": 43,
+            "section_id": "faq#s16"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 43,
+            "line_end": 43,
+            "section_id": "faq#s16"
+          },
+          "snippet": "Voir la fiche : Assurer son logement",
+          "text": "Voir la fiche : Assurer son logement",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "assurance"
+          ],
+          "matched_concepts": [
+            "mutuelle"
+          ],
+          "section_title": "Comment comparer deux contrats d'assurance ?",
+          "breadcrumb": "Questions et réponses › Logement › Comment comparer deux contrats d'assurance ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only nothing (0.00 of the question's words); 'délai', 'carence', 'complémentaire' and 'santé' not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 0.0,
+          "coverage": 0.0,
+          "covered_words": [],
+          "uncovered_words": [
+            "délai",
+            "carence",
+            "complémentaire",
+            "santé"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l52-l52",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 52,
+            "line_end": 52,
+            "section_id": "faq#s19"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 52,
+            "line_end": 52,
+            "section_id": "faq#s19"
+          },
+          "snippet": "Voir la fiche : Assurer son logement",
+          "text": "Voir la fiche : Assurer son logement",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "assurance"
+          ],
+          "matched_concepts": [
+            "mutuelle"
+          ],
+          "section_title": "À quel moment souscrire l'assurance habitation ?",
+          "breadcrumb": "Questions et réponses › Logement › À quel moment souscrire l'assurance habitation ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only nothing (0.00 of the question's words); 'délai', 'carence', 'complémentaire' and 'santé' not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 0.0,
+          "coverage": 0.0,
+          "covered_words": [],
+          "uncovered_words": [
+            "délai",
+            "carence",
+            "complémentaire",
+            "santé"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "fiches#l25-l25",
+          "anchor": {
+            "doc_id": "fiches",
+            "line_start": 25,
+            "line_end": 25,
+            "section_id": "fiches#s13"
+          },
+          "context": {
+            "doc_id": "fiches",
+            "line_start": 25,
+            "line_end": 25,
+            "section_id": "fiches#s13"
+          },
+          "snippet": "Assurer son logement",
+          "text": "Assurer son logement",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "assurance"
+          ],
+          "matched_concepts": [
+            "mutuelle"
+          ],
+          "section_title": "Assurer son logement",
+          "breadcrumb": "Fiches pratiques › Assurer son logement",
+          "url_anchor": "https://lux-guide.github.io/#fiches#fiches-grid",
+          "role": "supporting",
+          "reason": "Covers only nothing (0.00 of the question's words); 'délai', 'carence', 'complémentaire' and 'santé' not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 0.0,
+          "coverage": 0.0,
+          "covered_words": [],
+          "uncovered_words": [
+            "délai",
+            "carence",
+            "complémentaire",
+            "santé"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "fiches#l63-l63",
+          "anchor": {
+            "doc_id": "fiches",
+            "line_start": 63,
+            "line_end": 63,
+            "section_id": "fiches#s32"
+          },
+          "context": {
+            "doc_id": "fiches",
+            "line_start": 63,
+            "line_end": 63,
+            "section_id": "fiches#s32"
+          },
+          "snippet": "Assurer son véhicule",
+          "text": "Assurer son véhicule",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "assurance"
+          ],
+          "matched_concepts": [
+            "mutuelle"
+          ],
+          "section_title": "Assurer son véhicule",
+          "breadcrumb": "Fiches pratiques › Assurer son véhicule",
+          "url_anchor": "https://lux-guide.github.io/#fiches#fiches-grid",
+          "role": "supporting",
+          "reason": "Covers only nothing (0.00 of the question's words); 'délai', 'carence', 'complémentaire' and 'santé' not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 0.0,
+          "coverage": 0.0,
+          "covered_words": [],
+          "uncovered_words": [
+            "délai",
+            "carence",
+            "complémentaire",
+            "santé"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l83-l83",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 83,
+            "line_end": 83,
+            "section_id": "faq#s31"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 83,
+            "line_end": 83,
+            "section_id": "faq#s31"
+          },
+          "snippet": "Non si vous êtes salarié : c'est l'employeur qui déclare votre entrée au Centre commun de la sécurité sociale, sans démarche de votre part. Votre carte arrive…",
+          "text": "Non si vous êtes salarié : c'est l'employeur qui déclare votre entrée au Centre commun de la sécurité sociale, sans démarche de votre part. Votre carte arrive ensuite par courrier. Les travailleurs indépendants, eux, déclarent leur activité eux-mêmes, dans un délai de huit jours.",
+          "methods": [
+            "anchor_regex",
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "délai"
+          ],
+          "matched_concepts": [
+            "delai"
+          ],
+          "section_title": "Qui déclare l'entrée à la sécurité sociale ?",
+          "breadcrumb": "Questions et réponses › Sante › Qui déclare l'entrée à la sécurité sociale ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Qui déclare l'entrée à la sécurité sociale ?' names 'cns', not 'mutuelle': its page's topic 'other' is not the question's 'health', and assurance_sante#l3-l3 answers on a 'health' page.",
+          "score": 2.25,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "délai",
+            "santé"
+          ],
+          "uncovered_words": [
+            "carence",
+            "complémentaire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": [
+            {
+              "kind": "duration",
+              "raw": "huit jours",
+              "pos": 269,
+              "value": 8.0,
+              "currency": null,
+              "unit": "jours",
+              "line_num": 83
+            }
+          ]
+        },
+        {
+          "candidate_id": "faq#l30-l30",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 30,
+            "line_end": 30,
+            "section_id": "faq#s12"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 30,
+            "line_end": 30,
+            "section_id": "faq#s12"
+          },
+          "snippet": "Oui, et près d'un salarié sur deux le fait. Le salaire reste imposé au Luxembourg, là où le travail est exercé, mais il doit aussi être déclaré dans le pays de…",
+          "text": "Oui, et près d'un salarié sur deux le fait. Le salaire reste imposé au Luxembourg, là où le travail est exercé, mais il doit aussi être déclaré dans le pays de résidence, où il sert à calculer le taux appliqué à vos autres revenus. La santé, les allocations et l'école suivent des règles de coordination entre les deux pays.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "santé"
+          ],
+          "matched_concepts": [
+            "mutuelle"
+          ],
+          "section_title": "Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?",
+          "breadcrumb": "Questions et réponses › Logement › Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?' names 'logement', not 'mutuelle'; its lines carry only 'santé'.",
+          "score": 1.0,
+          "matched_share": 0.25,
+          "coverage": 0.25,
+          "covered_words": [
+            "santé"
+          ],
+          "uncovered_words": [
+            "délai",
+            "carence",
+            "complémentaire"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "fiches#l68-l68",
+          "anchor": {
+            "doc_id": "fiches",
+            "line_start": 68,
+            "line_end": 68,
+            "section_id": "fiches#s34"
+          },
+          "context": {
+            "doc_id": "fiches",
+            "line_start": 68,
+            "line_end": 68,
+            "section_id": "fiches#s34"
+          },
+          "snippet": "Des délais très variables selon la saison, une solution provisoire à réclamer, et une médiation gratuite.",
+          "text": "Des délais très variables selon la saison, une solution provisoire à réclamer, et une médiation gratuite.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "délai"
+          ],
+          "matched_concepts": [
+            "delai"
+          ],
+          "section_title": "Internet et téléphonie",
+          "breadcrumb": "Fiches pratiques › Internet et téléphonie",
+          "url_anchor": "https://lux-guide.github.io/#fiches#fiches-grid",
+          "role": "discarded",
+          "reason": "The section 'Internet et téléphonie' names 'internet', not 'mutuelle'; its lines carry only 'délai'.",
+          "score": 1.0,
+          "matched_share": 0.25,
+          "coverage": 0.25,
+          "covered_words": [
+            "délai"
+          ],
+          "uncovered_words": [
+            "carence",
+            "complémentaire",
+            "santé"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l114-l114",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 114,
+            "line_end": 114,
+            "section_id": "faq#s42"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 114,
+            "line_end": 114,
+            "section_id": "faq#s42"
+          },
+          "snippet": "Au-delà des forfaits appliqués d'office : les frais de déplacement, les cotisations de prévoyance, les primes d'assurance, l'épargne-logement, les frais de gar…",
+          "text": "Au-delà des forfaits appliqués d'office : les frais de déplacement, les cotisations de prévoyance, les primes d'assurance, l'épargne-logement, les frais de garde et, sous conditions, les pensions alimentaires versées.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "assurance"
+          ],
+          "matched_concepts": [
+            "mutuelle"
+          ],
+          "section_title": "Qu'est-ce qui se déduit des impôts ?",
+          "breadcrumb": "Questions et réponses › Impots › Qu'est-ce qui se déduit des impôts ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Qu'est-ce qui se déduit des impôts ?' names 'impots', not 'mutuelle'; its lines carry only 'assurance'.",
+          "score": 0.3,
+          "matched_share": 0.0,
+          "coverage": 0.0,
+          "covered_words": [],
+          "uncovered_words": [
+            "délai",
+            "carence",
+            "complémentaire",
+            "santé"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l23-l23",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 23,
+            "line_end": 23,
+            "section_id": "faq#s9"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 23,
+            "line_end": 23,
+            "section_id": "faq#s9"
+          },
+          "snippet": "Cela dépend de votre cas. Import : contrôle technique, assurance, puis immatriculation. Achat chez un professionnel : il s'en charge. Achat entre particuliers…",
+          "text": "Cela dépend de votre cas. Import : contrôle technique, assurance, puis immatriculation. Achat chez un professionnel : il s'en charge. Achat entre particuliers : la démarche vous incombe, avec les deux parties du certificat.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "assurance"
+          ],
+          "matched_concepts": [
+            "mutuelle"
+          ],
+          "section_title": "Comment s'immatricule un véhicule importé ?",
+          "breadcrumb": "Questions et réponses › Mobilite › Comment s'immatricule un véhicule importé ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Comment s'immatricule un véhicule importé ?' names 'voiture', not 'mutuelle'; its lines carry only 'assurance'.",
+          "score": 0.3,
+          "matched_share": 0.0,
+          "coverage": 0.0,
+          "covered_words": [],
+          "uncovered_words": [
+            "délai",
+            "carence",
+            "complémentaire",
+            "santé"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l8-l9",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 8,
+            "line_end": 9,
+            "section_id": "faq#s4"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 8,
+            "line_end": 9,
+            "section_id": "faq#s4"
+          },
+          "snippet": "Pas automatiquement. Le relevé appartient au preneur d'assurance et ne nomme que les conducteurs désignés au contrat : celui de votre proche ne vous mentionne…",
+          "text": "Pas automatiquement. Le relevé appartient au preneur d'assurance et ne nomme que les conducteurs désignés au contrat : celui de votre proche ne vous mentionne pas. Vous pouvez demander à son assureur une attestation écrite disant que vous conduisiez sans sinistre, mais aucun assureur luxembourgeois n'est tenu de l'accepter. Se faire inscrire comme conducteur désigné évite le problème pour la suite.\nVoir la fiche : Assurer son véhicule",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "assurance"
+          ],
+          "matched_concepts": [
+            "mutuelle"
+          ],
+          "section_title": "J'ai conduit la voiture d'un proche sans être inscrit au contrat, est-ce que ça compte ?",
+          "breadcrumb": "Questions et réponses › Mobilite › J'ai conduit la voiture d'un proche sans être inscrit au contrat, est-ce que ça compte ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'J'ai conduit la voiture d'un proche sans être inscrit au contrat, est-ce que ça compte ?' names 'voiture', not 'mutuelle'; its lines carry only 'assurance'.",
+          "score": 0.3,
+          "matched_share": 0.0,
+          "coverage": 0.0,
+          "covered_words": [],
+          "uncovered_words": [
+            "délai",
+            "carence",
+            "complémentaire",
+            "santé"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        }
+      ],
+      "methods_used": [
+        "keyword_lines",
+        "title_match",
+        "anchor_regex",
+        "arbiter_rules",
+        "sweep"
+      ],
+      "methods_skipped": {
+        "row_match": "answer_type=duration and no table column named",
+        "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+        "llm_arbiter": "no model key configured",
+        "current_page_boost": "no pages_hint: no page to boost"
+      },
+      "not_found": false,
+      "not_found_reason": null,
+      "confidence": 0.7,
+      "per_section_audit": [
+        {
+          "doc_id": "assurance_sante",
+          "section_id": "assurance_sante#s1",
+          "title": "La complémentaire santé",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "assurance_sante",
+          "section_id": "assurance_sante#s2",
+          "title": "Le délai de carence, le point à vérifier en premier",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "assurance_sante",
+          "section_id": "assurance_sante#s3",
+          "title": "Comparer sur les plafonds, pas sur la cotisation",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_sante",
+          "section_id": "assurance_sante#s4",
+          "title": "Une particularité à connaître",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "assurance_sante",
+          "section_id": "assurance_sante#s5",
+          "title": "À retenir",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "assurance_sante",
+          "section_id": "assurance_sante#s6",
+          "title": "Sources officielles",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s1",
+          "title": "Questions et réponses",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s2",
+          "title": "Mobilite",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s3",
+          "title": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s4",
+          "title": "J'ai conduit la voiture d'un proche sans être inscrit au contrat, est-ce que ça compte ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s5",
+          "title": "La carte grise n'est pas au nom du vendeur, est-ce bloquant ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s6",
+          "title": "Faut-il repasser le contrôle technique en arrivant au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s7",
+          "title": "Dans quel délai immatriculer un véhicule qu'on amène avec soi ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s8",
+          "title": "Un permis de conduire européen reste-t-il valable ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s9",
+          "title": "Comment s'immatricule un véhicule importé ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s10",
+          "title": "Les transports publics sont-ils vraiment gratuits ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s11",
+          "title": "Logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s12",
+          "title": "Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s13",
+          "title": "Combien de jours de télétravail un frontalier peut-il faire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s14",
+          "title": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s15",
+          "title": "Sur quels critères choisir sa commune ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s16",
+          "title": "Comment comparer deux contrats d'assurance ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s17",
+          "title": "Quelle garantie locative un bailleur peut-il demander ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s18",
+          "title": "Comment se cherche un logement au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s19",
+          "title": "À quel moment souscrire l'assurance habitation ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s20",
+          "title": "Quelle part du prix une banque finance-t-elle ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s21",
+          "title": "La TVA sur un logement neuf est-elle toujours de 3 % ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s22",
+          "title": "Qui peut prétendre à un logement à coût modéré ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s23",
+          "title": "Quotidien",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s24",
+          "title": "Vers qui se tourner en cas de litige avec un professionnel ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s25",
+          "title": "Le luxembourgeois est-il nécessaire pour travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s26",
+          "title": "Combien de temps pour avoir internet ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s27",
+          "title": "Faut-il apprendre le luxembourgeois ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s28",
+          "title": "Comment fonctionne le tri des déchets ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s29",
+          "title": "Sante",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s30",
+          "title": "Une complémentaire santé est-elle utile ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s31",
+          "title": "Qui déclare l'entrée à la sécurité sociale ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s32",
+          "title": "Quel numéro d'urgence appeler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s33",
+          "title": "Impots",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s34",
+          "title": "Comment l'impôt est-il prélevé quand on est deux à travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s35",
+          "title": "Pourquoi la déclaration se solde-t-elle souvent par un montant à payer ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s36",
+          "title": "Qu'est-ce que le régime des impatriés ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s37",
+          "title": "Existe-t-il une classe d'impôt 1b ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s38",
+          "title": "Qui relève de la classe 1a ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s39",
+          "title": "Un divorce ou un décès fait-il changer de classe d'impôt immédiatement ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s40",
+          "title": "Le régime des impatriés dépend-il de la classe d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s41",
+          "title": "Quelle différence entre classe 1 et classe 2 ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s42",
+          "title": "Qu'est-ce qui se déduit des impôts ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s43",
+          "title": "Comment faire corriger une classe d'impôt inexacte ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s44",
+          "title": "Comment obtient-on sa fiche de retenue d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s45",
+          "title": "Les intérêts d'un prêt immobilier sont-ils déductibles ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s46",
+          "title": "Administratif",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s47",
+          "title": "Les délais d'arrivée sont-ils les mêmes hors Union européenne ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s48",
+          "title": "La déclaration à la commune suffit-elle ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s49",
+          "title": "Combien de temps faut-il pour obtenir la nationalité ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s50",
+          "title": "Dans quel délai faut-il se déclarer à la commune ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s51",
+          "title": "Comment obtient-on le matricule ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s52",
+          "title": "Peut-on avoir la double nationalité ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s53",
+          "title": "Finances",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s54",
+          "title": "Un compte bancaire étranger peut-il servir à recevoir le salaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s55",
+          "title": "Que faut-il pour ouvrir un compte bancaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s56",
+          "title": "Le salaire luxembourgeois compense-t-il le coût de la vie ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s57",
+          "title": "Un compte bancaire luxembourgeois est-il obligatoire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s58",
+          "title": "Qu'est-ce que l'indexation des salaires ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s59",
+          "title": "Travail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s60",
+          "title": "Peut-on exercer une activité indépendante en plus d'un emploi salarié ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s61",
+          "title": "Combien de jours de congé donne la loi ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s62",
+          "title": "Famille",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s63",
+          "title": "Comment se fait l'inscription à l'école ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s64",
+          "title": "Existe-t-il une aide pour la crèche ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s65",
+          "title": "Quel est le montant des allocations familiales ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s1",
+          "title": "Fiches pratiques",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s2",
+          "title": "Les huit premiers jours",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s3",
+          "title": "Sécurité sociale et remboursements",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s4",
+          "title": "La complémentaire santé",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s5",
+          "title": "Comment fonctionne l'administration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s6",
+          "title": "LuxTrust et MyGuichet",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s7",
+          "title": "Trouver un logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s8",
+          "title": "Choisir sa commune",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s9",
+          "title": "Habiter en France, en Belgique ou en Allemagne",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s10",
+          "title": "Contester une facture ou un service",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s11",
+          "title": "Emménager et meubler",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s12",
+          "title": "Signer un bail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s13",
+          "title": "Assurer son logement",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s14",
+          "title": "Acheter un logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s15",
+          "title": "Logement abordable et à coût modéré",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s16",
+          "title": "Classes d'impôt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s17",
+          "title": "Ce qui réduit votre impôt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s18",
+          "title": "Conseil fiscal : les leviers de la première année",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s19",
+          "title": "Régime des impatriés",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s20",
+          "title": "Déduire les intérêts d'emprunt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s21",
+          "title": "Exercer en indépendant",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s22",
+          "title": "Allocations familiales",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s23",
+          "title": "Congés et jours fériés",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s24",
+          "title": "Chercher un emploi",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s25",
+          "title": "Banque et moyens de paiement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s26",
+          "title": "Salaire, coût de la vie et indexation",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s27",
+          "title": "Scolariser ses enfants",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s28",
+          "title": "Garde d'enfants et chèque-service",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s29",
+          "title": "Se soigner au quotidien",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s30",
+          "title": "Permis de conduire",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s31",
+          "title": "Immatriculer son véhicule",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s32",
+          "title": "Assurer son véhicule",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s33",
+          "title": "Transports publics gratuits",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s34",
+          "title": "Internet et téléphonie",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s35",
+          "title": "Langues et intégration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s36",
+          "title": "Nationalité luxembourgeoise",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s37",
+          "title": "Déchets et vie communale",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        }
+      ],
+      "route_pages": [
+        {
+          "doc_id": "assurance_sante",
+          "score": 11.68,
+          "reason": "kept: 6 term(s) in the summary line (délai, carence, complémentaire, santé, mutuelle, complémentaire santé); heading title match (La complémentaire santé, Le délai de carence, le point à vérifier en premier); document title 'La complémentaire santé' covers 1.00 of the question's words; tally 11.68"
+        },
+        {
+          "doc_id": "fiches",
+          "score": 5.38,
+          "reason": "kept: 3 term(s) in the summary line (complémentaire, santé, complémentaire santé); heading title match (Assurer son logement, Assurer son véhicule, La complémentaire santé); tally 5.38"
+        },
+        {
+          "doc_id": "faq",
+          "score": 4.14,
+          "reason": "kept: 1 term(s) in the summary line (assurance); heading title match (Comment comparer deux contrats d'assurance ?, Dans quel délai faut-il se déclarer à la commune ?, Dans quel délai immatriculer un véhicule qu'on amène avec soi ?, Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?, Les délais d'arrivée sont-ils les mêmes hors Union européenne ?, Sante, Une complémentaire santé est-elle utile ?, À quel moment souscrire l'assurance habitation ?); tally 4.14"
+        }
+      ],
+      "route_sections": [
+        {
+          "doc_id": "assurance_sante",
+          "section_id": "assurance_sante#s2",
+          "title": "Le délai de carence, le point à vérifier en premier",
+          "score": 6.0,
+          "reason": "title 'Le délai de carence, le point à vérifier en premier' matches délai, carence; 2 term(s) in its lines (carence, délai); a leaf, stop here"
+        },
+        {
+          "doc_id": "assurance_sante",
+          "section_id": "assurance_sante#s4",
+          "title": "Une particularité à connaître",
+          "score": 4.0,
+          "reason": "4 term(s) in its lines (assurance, complémentaire, complémentaire santé, santé); a leaf, stop here"
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s4",
+          "title": "La complémentaire santé",
+          "score": 11.0,
+          "reason": "title 'La complémentaire santé' matches complémentaire, santé, complémentaire santé, hint:La complémentaire santé; 3 term(s) in its lines (complémentaire, complémentaire santé, santé); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s30",
+          "title": "Une complémentaire santé est-elle utile ?",
+          "score": 11.0,
+          "reason": "title 'Une complémentaire santé est-elle utile ?' matches complémentaire, santé, complémentaire santé; 5 term(s) in its lines (carence, complémentaire, complémentaire santé, délai, santé); a leaf, stop here"
+        }
+      ],
+      "route_notes": [
+        "fiches: no section of the outline carries a term; the page is read whole",
+        "faq: no section of the outline carries a term; the page is read whole"
+      ],
+      "sweep_concepts": [
+        {
+          "concept": "delai",
+          "variants": [
+            "délai"
+          ],
+          "pages_with_hits": [
+            "administration",
+            "arrivee",
+            "assurance_sante",
+            "avantages",
+            "faq",
+            "fiches",
+            "garde",
+            "matricule",
+            "parcours",
+            "recherche_logement",
+            "telecom",
+            "vehicule"
+          ],
+          "line_hits": 38
+        },
+        {
+          "concept": "carence",
+          "variants": [
+            "carence"
+          ],
+          "pages_with_hits": [
+            "assurance_sante",
+            "faq",
+            "parcours"
+          ],
+          "line_hits": 5
+        },
+        {
+          "concept": "mutuelle",
+          "variants": [
+            "mutuelle",
+            "assurance complémentaire",
+            "complémentaire santé",
+            "assurance",
+            "complementary insurance",
+            "top-up insurance",
+            "insurance",
+            "Zusatzversicherung",
+            "zusatzversicherung",
+            "complémentaire",
+            "santé"
+          ],
+          "pages_with_hits": [
+            "assurance_auto",
+            "assurance_habitation",
+            "assurance_sante",
+            "avantages",
+            "carte",
+            "comparateur",
+            "conseil_fiscal",
+            "deductions",
+            "emploi",
+            "faq",
+            "fiches",
+            "frontalier",
+            "matricule",
+            "parcours",
+            "prevoyance",
+            "sante_pratique",
+            "vehicule"
+          ],
+          "line_hits": 83
+        }
+      ],
+      "sweep_rows": [
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "administration",
+          "line_num": 6,
+          "snippet": "Les délais de traitement des dossiers plus lourds restent raisonnables, et surtout, les administrations sont joignables. Un appel ou un courriel obtient généra…"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "administration",
+          "line_num": 14,
+          "snippet": "Ce sont les enchaînements de démarches qui allongent l'installation, pas les délais."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "arrivee",
+          "line_num": 5,
+          "snippet": "Trois délais, pas un seul"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "arrivee",
+          "line_num": 6,
+          "snippet": "Le délai de huit jours vaut pour la déclaration d'arrivée au bureau de la population. Deux autres délais s'y ajoutent, et les manquer coûte plus cher que le pr…"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "arrivee",
+          "line_num": 7,
+          "snippet": "Un ressortissant de pays tiers dispose non pas de huit jours mais de trois jours à compter de son arrivée sur le territoire pour cette même déclaration. Le dél…"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "arrivee",
+          "line_num": 13,
+          "snippet": "La plupart des communes fonctionnent désormais sur rendez-vous, à prendre en ligne. En période de rentrée, les créneaux partent vite, ce qui peut suffire à fai…"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "assurance_sante",
+          "line_num": 5,
+          "snippet": "Le délai de carence, le point à vérifier en premier"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "assurance_sante",
+          "line_num": 6,
+          "snippet": "La plupart des contrats prévoient un délai de carence, c'est-à-dire une période initiale pendant laquelle certaines garanties ne jouent pas encore, souvent plu…"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "assurance_sante",
+          "line_num": 13,
+          "snippet": "Souscrire à l'arrivée, à cause des délais de carence."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "avantages",
+          "line_num": 87,
+          "snippet": "Un formulaire ou un guichet, souvent avec un délai."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "avantages",
+          "line_num": 98,
+          "snippet": "Un formulaire ou un guichet, souvent avec un délai."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "avantages",
+          "line_num": 118,
+          "snippet": "Un formulaire ou un guichet, souvent avec un délai."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "avantages",
+          "line_num": 120,
+          "snippet": "La demande se fait dans l'année qui suit l'acte notarié ou le début des travaux, au Guichet unique des aides au logement. Passé ce délai, la prime est perdue."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "avantages",
+          "line_num": 128,
+          "snippet": "Un formulaire ou un guichet, souvent avec un délai."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "avantages",
+          "line_num": 138,
+          "snippet": "Un formulaire ou un guichet, souvent avec un délai."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "avantages",
+          "line_num": 148,
+          "snippet": "Un formulaire ou un guichet, souvent avec un délai."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "avantages",
+          "line_num": 159,
+          "snippet": "Un formulaire ou un guichet, souvent avec un délai."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "avantages",
+          "line_num": 169,
+          "snippet": "Un formulaire ou un guichet, souvent avec un délai."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "avantages",
+          "line_num": 179,
+          "snippet": "Un formulaire ou un guichet, souvent avec un délai."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "avantages",
+          "line_num": 181,
+          "snippet": "Le congé se demande à l'employeur puis à la caisse, avec des délais qui dépendent du moment choisi. Le calculateur officiel donne le montant sur votre revenu."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "avantages",
+          "line_num": 189,
+          "snippet": "Un formulaire ou un guichet, souvent avec un délai."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "avantages",
+          "line_num": 199,
+          "snippet": "Un formulaire ou un guichet, souvent avec un délai."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "avantages",
+          "line_num": 285,
+          "snippet": "Un formulaire ou un guichet, souvent avec un délai."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "faq",
+          "line_num": 16,
+          "snippet": "Dans quel délai immatriculer un véhicule qu'on amène avec soi ?"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "faq",
+          "line_num": 80,
+          "snippet": "Elle est facultative et couvre surtout la chambre seule, le dentaire et l'optique. Si vous en prenez une, souscrivez dès l'arrivée : la plupart des contrats pr…"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "faq",
+          "line_num": 83,
+          "snippet": "Non si vous êtes salarié : c'est l'employeur qui déclare votre entrée au Centre commun de la sécurité sociale, sans démarche de votre part. Votre carte arrive…"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "faq",
+          "line_num": 126,
+          "snippet": "Les délais d'arrivée sont-ils les mêmes hors Union européenne ?"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "faq",
+          "line_num": 127,
+          "snippet": "Non, le délai est plus court. La déclaration d'arrivée à la commune doit être faite dans les trois jours de votre entrée sur le territoire, et non dans les hui…"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "faq",
+          "line_num": 135,
+          "snippet": "Dans quel délai faut-il se déclarer à la commune ?"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "fiches",
+          "line_num": 68,
+          "snippet": "Des délais très variables selon la saison, une solution provisoire à réclamer, et une médiation gratuite."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "garde",
+          "line_num": 5,
+          "snippet": "Enfin, inscrivez-vous sur les listes d'attente très tôt, sans attendre d'avoir un logement définitif ni une date d'arrivée certaine. Dans les communes les plus…"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "matricule",
+          "line_num": 3,
+          "snippet": "Une fois le matricule attribué, l'affiliation à la sécurité sociale se fait sans démarche de votre part si vous êtes salarié : c'est l'employeur qui déclare vo…"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "parcours",
+          "line_num": 30,
+          "snippet": "Étudier une complémentaire santé, à souscrire tôt à cause des délais de carence."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "recherche_logement",
+          "line_num": 10,
+          "snippet": "Anticipez enfin l'enchaînement des délais : ouverture du compte bancaire, puis garantie, puis signature, puis état des lieux. Entre la première visite et la re…"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "telecom",
+          "line_num": 2,
+          "snippet": "Des délais très variables selon la saison, une solution provisoire à réclamer, et une médiation gratuite."
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "telecom",
+          "line_num": 4,
+          "snippet": "Des délais qui dépendent de la saison"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "telecom",
+          "line_num": 5,
+          "snippet": "Comptez deux à trois semaines entre la souscription et l'installation en période normale. Cette moyenne est trompeuse : les mois de forte mobilité, typiquement…"
+        },
+        {
+          "concept": "delai",
+          "variant": "délai",
+          "doc_id": "vehicule",
+          "line_num": 3,
+          "snippet": "Délai : 6 mois, après la déclaration d'arrivée à la commune."
+        },
+        {
+          "concept": "carence",
+          "variant": "carence",
+          "doc_id": "assurance_sante",
+          "line_num": 5,
+          "snippet": "Le délai de carence, le point à vérifier en premier"
+        },
+        {
+          "concept": "carence",
+          "variant": "carence",
+          "doc_id": "assurance_sante",
+          "line_num": 6,
+          "snippet": "La plupart des contrats prévoient un délai de carence, c'est-à-dire une période initiale pendant laquelle certaines garanties ne jouent pas encore, souvent plu…"
+        },
+        {
+          "concept": "carence",
+          "variant": "carence",
+          "doc_id": "assurance_sante",
+          "line_num": 13,
+          "snippet": "Souscrire à l'arrivée, à cause des délais de carence."
+        },
+        {
+          "concept": "carence",
+          "variant": "carence",
+          "doc_id": "faq",
+          "line_num": 80,
+          "snippet": "Elle est facultative et couvre surtout la chambre seule, le dentaire et l'optique. Si vous en prenez une, souscrivez dès l'arrivée : la plupart des contrats pr…"
+        },
+        {
+          "concept": "carence",
+          "variant": "carence",
+          "doc_id": "parcours",
+          "line_num": 30,
+          "snippet": "Étudier une complémentaire santé, à souscrire tôt à cause des délais de carence."
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "assurance_auto",
+          "line_num": 3,
+          "snippet": "L'assurance en responsabilité civile est obligatoire pour tout véhicule immatriculé, et l'attestation est exigée au moment de l'immatriculation. Elle doit donc…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "assurance_auto",
+          "line_num": 5,
+          "snippet": "Le point qui pèse le plus sur la prime est votre historique de sinistres, et le document qui le porte s'appelle relevé d'information en France, attestation de…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "assurance_auto",
+          "line_num": 8,
+          "snippet": "C'est le cas de qui conduisait la voiture d'un parent, d'un conjoint ou d'un beau-parent sans être inscrit au contrat. Le relevé appartient au preneur d'assura…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "assurance_auto",
+          "line_num": 14,
+          "snippet": "Assurance obligatoire avant l'immatriculation."
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "assurance_auto",
+          "line_num": 19,
+          "snippet": "Commissariat aux assurances"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "assurance_habitation",
+          "line_num": 3,
+          "snippet": "L'attestation d'assurance est demandée avant la remise des clés, aussi bien par un bailleur que par une banque en cas d'achat. Ce n'est donc pas une formalité…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "assurance_habitation",
+          "line_num": 9,
+          "snippet": "Trois documents décrivent réellement le contrat, et le devis commercial n'en fait pas partie. Le premier est le document d'information standardisé sur le produ…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "assurance_habitation",
+          "line_num": 12,
+          "snippet": "Le prêteur exigera en plus une assurance solde restant dû, qui rembourse le crédit en cas de décès. Elle n'est pas obligatoirement souscrite auprès de la banqu…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "assurance_habitation",
+          "line_num": 18,
+          "snippet": "Commissariat aux assurances"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire santé",
+          "doc_id": "assurance_sante",
+          "line_num": 1,
+          "snippet": "La complémentaire santé"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire",
+          "doc_id": "assurance_sante",
+          "line_num": 1,
+          "snippet": "La complémentaire santé"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "assurance_sante",
+          "line_num": 1,
+          "snippet": "La complémentaire santé"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "mutuelle",
+          "doc_id": "assurance_sante",
+          "line_num": 3,
+          "snippet": "L'assurance maladie obligatoire couvre l'essentiel des soins, mais laisse un reste à charge concentré sur trois postes : l'hospitalisation en chambre individue…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "assurance_sante",
+          "line_num": 3,
+          "snippet": "L'assurance maladie obligatoire couvre l'essentiel des soins, mais laisse un reste à charge concentré sur trois postes : l'hospitalisation en chambre individue…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire",
+          "doc_id": "assurance_sante",
+          "line_num": 3,
+          "snippet": "L'assurance maladie obligatoire couvre l'essentiel des soins, mais laisse un reste à charge concentré sur trois postes : l'hospitalisation en chambre individue…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire santé",
+          "doc_id": "assurance_sante",
+          "line_num": 11,
+          "snippet": "Contrairement aux assurances habitation ou automobile, les complémentaires santé ne sont pas couvertes par le document d'information standardisé européen. Vous…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "assurance_sante",
+          "line_num": 11,
+          "snippet": "Contrairement aux assurances habitation ou automobile, les complémentaires santé ne sont pas couvertes par le document d'information standardisé européen. Vous…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire",
+          "doc_id": "assurance_sante",
+          "line_num": 11,
+          "snippet": "Contrairement aux assurances habitation ou automobile, les complémentaires santé ne sont pas couvertes par le document d'information standardisé européen. Vous…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "assurance_sante",
+          "line_num": 11,
+          "snippet": "Contrairement aux assurances habitation ou automobile, les complémentaires santé ne sont pas couvertes par le document d'information standardisé européen. Vous…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "assurance_sante",
+          "line_num": 17,
+          "snippet": "Caisse nationale de santé"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "assurance_sante",
+          "line_num": 18,
+          "snippet": "Commissariat aux assurances"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "avantages",
+          "line_num": 212,
+          "snippet": "Le site voisin chiffre l'économie d'impôt sur votre situation, et détaille les autres postes : primes d'assurance, épargne-logement, régime complémentaire."
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire",
+          "doc_id": "avantages",
+          "line_num": 212,
+          "snippet": "Le site voisin chiffre l'économie d'impôt sur votre situation, et détaille les autres postes : primes d'assurance, épargne-logement, régime complémentaire."
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "avantages",
+          "line_num": 228,
+          "snippet": "Primes d'assurance et intérêts débiteurs"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "avantages",
+          "line_num": 232,
+          "snippet": "Les primes d'assurance vie, décès, accident, invalidité, maladie et responsabilité civile, ainsi que les intérêts débiteurs de prêts à la consommation, se dédu…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "avantages",
+          "line_num": 233,
+          "snippet": "Une prime unique d'assurance solde restant dû, souscrite avec un prêt immobilier, a un plafond à part, qui dépend de l'âge et du nombre d'enfants."
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "avantages",
+          "line_num": 234,
+          "snippet": "Administration des contributions directes, cotisations et primes d'assurance"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "carte",
+          "line_num": 2,
+          "snippet": "Quand on hésite entre plusieurs logements, la question n'est pas « qu'y a-t-il autour » mais « lequel est le mieux placé ». Enregistrez ici les adresses que vo…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "carte",
+          "line_num": 7,
+          "snippet": "Arrêts, commerces et santé : données OpenStreetMap (© les contributeurs OpenStreetMap), chargées à la demande, l'exhaustivité n'est pas garantie. Les distances…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "comparateur",
+          "line_num": 2,
+          "snippet": "En arrivant au Luxembourg, quatre contrats se signent presque en même temps : l'assurance habitation, l'assurance auto, le forfait mobile et le contrat d'élect…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "comparateur",
+          "line_num": 3,
+          "snippet": "Deux registres, indiqués sur chaque carte. L'assurance habitation repose sur des documents réels : quatre contrats du marché luxembourgeois lus intégralement,…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "comparateur",
+          "line_num": 4,
+          "snippet": "Assurance habitation : la comparaison complète"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "conseil_fiscal",
+          "line_num": 12,
+          "snippet": "Les frais réels au-delà des forfaits, les primes d'assurance et les frais de garde sont détaillés dans la fiche « Ce qui réduit votre impôt ». Les intérêts d'u…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "deductions",
+          "line_num": 8,
+          "snippet": "Viennent ensuite les cotisations de prévoyance vieillesse individuelle, les primes d'assurance vie et de responsabilité civile, les cotisations d'épargne-logem…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "emploi",
+          "line_num": 4,
+          "snippet": "Le marché est profondément international. Une part considérable des salariés vient chaque jour de France, de Belgique et d'Allemagne, ce qui élargit d'autant l…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "faq",
+          "line_num": 8,
+          "snippet": "Pas automatiquement. Le relevé appartient au preneur d'assurance et ne nomme que les conducteurs désignés au contrat : celui de votre proche ne vous mentionne…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "faq",
+          "line_num": 17,
+          "snippet": "Dans les six mois de la déclaration d'arrivée à la commune. Avant la SNCA, il faut le numéro d'immatriculation, l'assurance luxembourgeoise et la vignette 705…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "faq",
+          "line_num": 23,
+          "snippet": "Cela dépend de votre cas. Import : contrôle technique, assurance, puis immatriculation. Achat chez un professionnel : il s'en charge. Achat entre particuliers…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "faq",
+          "line_num": 30,
+          "snippet": "Oui, et près d'un salarié sur deux le fait. Le salaire reste imposé au Luxembourg, là où le travail est exercé, mais il doit aussi être déclaré dans le pays de…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "faq",
+          "line_num": 41,
+          "snippet": "Comment comparer deux contrats d'assurance ?"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "faq",
+          "line_num": 50,
+          "snippet": "À quel moment souscrire l'assurance habitation ?"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "faq",
+          "line_num": 78,
+          "snippet": "Sante"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire santé",
+          "doc_id": "faq",
+          "line_num": 79,
+          "snippet": "Une complémentaire santé est-elle utile ?"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire",
+          "doc_id": "faq",
+          "line_num": 79,
+          "snippet": "Une complémentaire santé est-elle utile ?"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "faq",
+          "line_num": 79,
+          "snippet": "Une complémentaire santé est-elle utile ?"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire santé",
+          "doc_id": "faq",
+          "line_num": 81,
+          "snippet": "Voir la fiche : La complémentaire santé"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire",
+          "doc_id": "faq",
+          "line_num": 81,
+          "snippet": "Voir la fiche : La complémentaire santé"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "faq",
+          "line_num": 81,
+          "snippet": "Voir la fiche : La complémentaire santé"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "faq",
+          "line_num": 114,
+          "snippet": "Au-delà des forfaits appliqués d'office : les frais de déplacement, les cotisations de prévoyance, les primes d'assurance, l'épargne-logement, les frais de gar…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire santé",
+          "doc_id": "fiches",
+          "line_num": 7,
+          "snippet": "La complémentaire santé"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire",
+          "doc_id": "fiches",
+          "line_num": 7,
+          "snippet": "La complémentaire santé"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "fiches",
+          "line_num": 7,
+          "snippet": "La complémentaire santé"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "frontalier",
+          "line_num": 12,
+          "snippet": "Santé, allocations, école : le quotidien suit la résidence"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "frontalier",
+          "line_num": 13,
+          "snippet": "Vous cotisez à la sécurité sociale luxembourgeoise et vous êtes affilié à la Caisse nationale de santé. Pour vous soigner près de chez vous, vous demandez le d…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "frontalier",
+          "line_num": 29,
+          "snippet": "Caisse nationale de santé"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "matricule",
+          "line_num": 5,
+          "snippet": "Le principe surprend souvent les nouveaux arrivants : vous réglez la consultation intégralement, puis la Caisse nationale de santé vous rembourse, généralement…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire",
+          "doc_id": "matricule",
+          "line_num": 7,
+          "snippet": "Faut-il une complémentaire ?"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "mutuelle",
+          "doc_id": "matricule",
+          "line_num": 8,
+          "snippet": "La couverture obligatoire laisse un reste à charge sur l'hospitalisation en chambre individuelle, les soins dentaires lourds et l'optique. Une assurance complé…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance complémentaire",
+          "doc_id": "matricule",
+          "line_num": 8,
+          "snippet": "La couverture obligatoire laisse un reste à charge sur l'hospitalisation en chambre individuelle, les soins dentaires lourds et l'optique. Une assurance complé…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "matricule",
+          "line_num": 8,
+          "snippet": "La couverture obligatoire laisse un reste à charge sur l'hospitalisation en chambre individuelle, les soins dentaires lourds et l'optique. Une assurance complé…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire",
+          "doc_id": "matricule",
+          "line_num": 8,
+          "snippet": "La couverture obligatoire laisse un reste à charge sur l'hospitalisation en chambre individuelle, les soins dentaires lourds et l'optique. Une assurance complé…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "matricule",
+          "line_num": 15,
+          "snippet": "Caisse nationale de santé"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "parcours",
+          "line_num": 20,
+          "snippet": "Souscrire l'assurance habitation, exigée avant la remise des clés."
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire santé",
+          "doc_id": "parcours",
+          "line_num": 30,
+          "snippet": "Étudier une complémentaire santé, à souscrire tôt à cause des délais de carence."
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire",
+          "doc_id": "parcours",
+          "line_num": 30,
+          "snippet": "Étudier une complémentaire santé, à souscrire tôt à cause des délais de carence."
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "parcours",
+          "line_num": 30,
+          "snippet": "Étudier une complémentaire santé, à souscrire tôt à cause des délais de carence."
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "parcours",
+          "line_num": 43,
+          "snippet": "Réévaluer les contrats souscrits dans l'urgence : télécoms, assurances, banque."
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "prevoyance",
+          "line_num": 12,
+          "snippet": "Primes d'assurance (art. 111)"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire",
+          "doc_id": "prevoyance",
+          "line_num": 21,
+          "snippet": "Régime complémentaire de pension"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "complémentaire",
+          "doc_id": "prevoyance",
+          "line_num": 23,
+          "snippet": "Cotisations personnelles à un régime complémentaire d'entreprise."
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "prevoyance",
+          "line_num": 26,
+          "snippet": "Prime unique d'une assurance solde restant dû, à la souscription d'un prêt."
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "prevoyance",
+          "line_num": 47,
+          "snippet": "Est-ce une assurance vie ?"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "prevoyance",
+          "line_num": 48,
+          "snippet": "Pas nécessairement, et c'est une confusion fréquente. La prévoyance-vieillesse est un régime fiscal, pas un produit : il désigne tout contrat conçu spécialemen…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "prevoyance",
+          "line_num": 49,
+          "snippet": "La conséquence est pratique : la clause bénéficiaire et les réflexes de l'assurance vie ne valent que si vous avez souscrit chez un assureur. Un contrat bancai…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "prevoyance",
+          "line_num": 130,
+          "snippet": "Oui, un seul, et il est facile à oublier au moment de comparer. Toutes les prestations de prévoyance-vieillesse sont soumises à l'assurance dépendance : le cap…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "prevoyance",
+          "line_num": 164,
+          "snippet": "Administration des contributions directes, cotisations et primes d'assurance"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "santé",
+          "doc_id": "sante_pratique",
+          "line_num": 11,
+          "snippet": "Portail Santé"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "vehicule",
+          "line_num": 12,
+          "snippet": "Il immatricule pour vous. Il vous reste l'assurance."
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "vehicule",
+          "line_num": 25,
+          "snippet": "Responsabilité civile, auprès d'une compagnie agréée au Luxembourg. L'attestation fait partie du dossier : l'assurance vient avant le dépôt."
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "vehicule",
+          "line_num": 27,
+          "snippet": "L'attestation d'assurance"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "vehicule",
+          "line_num": 63,
+          "snippet": "Attestation d'assurance en cours de validité"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "vehicule",
+          "line_num": 129,
+          "snippet": "Avec les plaques qui portent votre futur numéro et une assurance responsabilité civile, vous pouvez conduire le véhicule jusqu'au lieu d'immatriculation, et ju…"
+        },
+        {
+          "concept": "mutuelle",
+          "variant": "assurance",
+          "doc_id": "vehicule",
+          "line_num": 131,
+          "snippet": "Ordre : numéro et plaques, assurance, droit de chancellerie, vignette 705, SNCA."
+        }
+      ],
+      "question_concepts": [
+        "delai",
+        "carence",
+        "mutuelle"
+      ],
+      "terms": [
+        {
+          "text": "délai",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "delai",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "carence",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "carence",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "complémentaire",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "concept_key": "mutuelle",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "santé",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "concept_key": "mutuelle",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "mutuelle",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "concept_key": "mutuelle",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "assurance complémentaire",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "concept_key": "mutuelle",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "complémentaire santé",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "concept_key": "mutuelle",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "assurance",
+          "weight": 0.3,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "concept_key": "mutuelle",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "complementary insurance",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "concept_key": "mutuelle",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "top-up insurance",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "concept_key": "mutuelle",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "insurance",
+          "weight": 0.3,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "concept_key": "mutuelle",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "zusatzversicherung",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "mutuelle",
+          "is_regex": false,
+          "concept_key": "mutuelle",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "\\b\\d+\\s?(?:jours?|mois|ans?|annees?|semaines?|heures?|days?|months?|years?|weeks?|hours?|tagen?|monaten?|jahren?|wochen?)\\b",
+          "weight": 1.0,
+          "source": "anchor",
+          "concept": null,
+          "is_regex": true,
+          "concept_key": "regex:\\b\\d+\\s?(?:jours?|mois|ans?|annees?|semaines?|heures?|days?|months?|years?|weeks?|hours?|tagen?|monaten?|jahren?|wochen?)\\b",
+          "weak": false,
+          "in_corpus": true
+        }
+      ],
+      "content_words": [
+        {
+          "text": "délai",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "carence",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "complémentaire",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "santé",
+          "weight": 1.0,
+          "weak": false
+        }
+      ],
+      "uncovered_words": [],
+      "answer_context_used": "line"
+    }
+  }
+}

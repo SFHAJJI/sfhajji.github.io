@@ -1,0 +1,3067 @@
+{
+  "answer": {
+    "extraction_method": "verbatim",
+    "confidence": 0.636,
+    "caveats": [],
+    "answer_found": true,
+    "complete_answer_found": true,
+    "context_structured": [
+      {
+        "candidate_id": "luxtrust#l9-l9",
+        "doc_id": "luxtrust",
+        "section_id": "luxtrust#s4",
+        "section_title": "À retenir",
+        "breadcrumb": "LuxTrust et MyGuichet › À retenir",
+        "line_start": 8,
+        "line_end": 11,
+        "url_anchor": "https://lux-guide.github.io/#fiche/luxtrust#fiche-detail",
+        "role": "primary"
+      }
+    ],
+    "keywords_found": [
+      "cher",
+      "luxtrust",
+      "moins"
+    ],
+    "llm_discovered_keywords": [],
+    "conflicting_evidence": [],
+    "suggested_clarification": null,
+    "kind": "text",
+    "items": [
+      {
+        "text": "Ouvrir le compte bancaire d'abord, LuxTrust suit et coûte moins cher. Le portail permet de suivre l'état d'un dossier. Certaines démarches restent papier, dont le permis de conduire.",
+        "spans": [
+          {
+            "doc_id": "luxtrust",
+            "line_start": 9,
+            "line_end": 11,
+            "quote": "Ouvrir le compte bancaire d'abord, LuxTrust suit et coûte moins cher. Le portail permet de suivre l'état d'un dossier. Certaines démarches restent papier, dont le permis de conduire."
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "question_id": "aeac4cf6e3ccb5df",
+    "index_version": "1d1bbf848338f32798d0c92366bd740f0513f72b56bd4745e85a507a1645d9ca",
+    "pipeline_version": "guide-rag/0.1",
+    "methods_used": [
+      "keyword_lines",
+      "title_match",
+      "arbiter_rules",
+      "sweep"
+    ],
+    "methods_skipped": {
+      "anchor_regex": "answer type text asks for no typed anchor",
+      "row_match": "answer_type=text and no table column named",
+      "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+      "llm_arbiter": "no model key configured",
+      "current_page_boost": "no pages_hint: no page to boost"
+    },
+    "activations": {
+      "use_keywords": {
+        "on": true,
+        "reason": "always: keyword detectors are deterministic and prove absence"
+      },
+      "use_toc": {
+        "on": true,
+        "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+      },
+      "use_row_level": {
+        "on": false,
+        "reason": "answer_type=text and no table column named"
+      },
+      "use_embeddings": {
+        "on": false,
+        "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+      },
+      "use_llm_arbiter": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "use_llm_generation": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "sweep_for_absence": {
+        "on": true,
+        "reason": "always: the exhaustive sweep is the evidence of absence"
+      },
+      "current_page_boost": {
+        "on": false,
+        "reason": "no pages_hint: no page to boost"
+      }
+    },
+    "chunk_strategy": "line as the unit; anchor = hit lines grouped by runs; context = ±3 lines within the section (answer_context=paragraph)",
+    "model_used": "no model",
+    "prompt_version": null,
+    "fragments_applied": [],
+    "iterations": 1,
+    "validator_report": {
+      "iteration_1": []
+    },
+    "replay": null
+  },
+  "trace": {
+    "parsed": {
+      "question_id": "aeac4cf6e3ccb5df",
+      "original_question": "comment obtenir luxtrust moins cher",
+      "corrected_question": "comment obtenir luxtrust moins cher",
+      "language": "fr",
+      "keywords": [
+        {
+          "text": "obtenir",
+          "weight": 0.3,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": true,
+          "in_corpus": true
+        },
+        {
+          "text": "luxtrust",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "moins",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "cher",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "certificat luxtrust",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "luxtrust",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "token",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "luxtrust",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "identité électronique",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "luxtrust",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "electronic identity",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "luxtrust",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "eid",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "luxtrust",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "coût de la vie",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "indexation",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "index",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "inflation",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "budget mensuel",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "cost of living",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "expensive",
+          "weight": 0.36,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "lebenshaltungskosten",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "indexierung",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        }
+      ],
+      "answer_shape": "single",
+      "answer_type": "text",
+      "structural_hints": {
+        "pages_hint": null,
+        "toc_section_hint": null,
+        "answer_context": "paragraph"
+      },
+      "decomposition": {
+        "pattern": "single",
+        "sub_questions": []
+      },
+      "suggested_clarification": null,
+      "ambiguity_reason": null,
+      "candidate_values": [],
+      "proposed_default": null,
+      "scope_filters": {
+        "topic": "money"
+      },
+      "parsing_notes": [
+        "language=fr: stop-word vote",
+        "answer_shape=single: no listing cue",
+        "answer_type=text: no typed cue",
+        "weak words (weight 0.3): obtenir",
+        "concept 'luxtrust' (money) matched by 'luxtrust' [fr, primary]",
+        "concept 'cout_de_la_vie' (money) matched by 'cher' [fr, secondary]",
+        "scope topic='money': the matched concepts vote {'money': 1.6}",
+        "decomposition=single: no 'et / and' between two clauses"
+      ]
+    },
+    "plan": {
+      "activations": {
+        "use_keywords": {
+          "on": true,
+          "reason": "always: keyword detectors are deterministic and prove absence"
+        },
+        "use_toc": {
+          "on": true,
+          "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+        },
+        "use_row_level": {
+          "on": false,
+          "reason": "answer_type=text and no table column named"
+        },
+        "use_embeddings": {
+          "on": false,
+          "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+        },
+        "use_llm_arbiter": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "use_llm_generation": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "sweep_for_absence": {
+          "on": true,
+          "reason": "always: the exhaustive sweep is the evidence of absence"
+        },
+        "current_page_boost": {
+          "on": false,
+          "reason": "no pages_hint: no page to boost"
+        }
+      }
+    },
+    "retrieval": {
+      "question_id": "aeac4cf6e3ccb5df",
+      "question": "comment obtenir luxtrust moins cher",
+      "candidates": [
+        {
+          "candidate_id": "luxtrust#l9-l9",
+          "anchor": {
+            "doc_id": "luxtrust",
+            "line_start": 9,
+            "line_end": 9,
+            "section_id": "luxtrust#s4"
+          },
+          "context": {
+            "doc_id": "luxtrust",
+            "line_start": 8,
+            "line_end": 11,
+            "section_id": "luxtrust#s4"
+          },
+          "snippet": "Ouvrir le compte bancaire d'abord, LuxTrust suit et coûte moins cher.",
+          "text": "À retenir\nOuvrir le compte bancaire d'abord, LuxTrust suit et coûte moins cher.\nLe portail permet de suivre l'état d'un dossier.\nCertaines démarches restent papier, dont le permis de conduire.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "cher",
+            "luxtrust",
+            "moins"
+          ],
+          "matched_concepts": [
+            "cout_de_la_vie",
+            "luxtrust",
+            "moins"
+          ],
+          "section_title": "À retenir",
+          "breadcrumb": "LuxTrust et MyGuichet › À retenir",
+          "url_anchor": "https://lux-guide.github.io/#fiche/luxtrust#fiche-detail",
+          "role": "primary",
+          "reason": "The document 'LuxTrust et MyGuichet' title names 'luxtrust', 'moins' and 'cher' (coverage 0.91); score 4.5: primary.",
+          "score": 4.5,
+          "matched_share": 0.909,
+          "coverage": 0.909,
+          "covered_words": [
+            "luxtrust",
+            "moins",
+            "cher"
+          ],
+          "uncovered_words": [
+            "obtenir"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "administration",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "luxtrust#l5-l5",
+          "anchor": {
+            "doc_id": "luxtrust",
+            "line_start": 5,
+            "line_end": 5,
+            "section_id": "luxtrust#s2"
+          },
+          "context": {
+            "doc_id": "luxtrust",
+            "line_start": 4,
+            "line_end": 5,
+            "section_id": "luxtrust#s2"
+          },
+          "snippet": "Le chemin le moins coûteux passe par une banque luxembourgeoise, qui la fournit souvent gratuitement à ses clients. Sans compte local, il faut la commander en…",
+          "text": "L'obtenir au meilleur prix\nLe chemin le moins coûteux passe par une banque luxembourgeoise, qui la fournit souvent gratuitement à ses clients. Sans compte local, il faut la commander en direct, et elle devient payante. C'est une raison de plus pour ouvrir le compte bancaire tôt : LuxTrust suit naturellement. La carte d'identité luxembourgeoise permet aussi de s'authentifier, à condition d'avoir activé ses certificats au moment de la demande de carte.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "luxtrust",
+            "moins"
+          ],
+          "matched_concepts": [
+            "luxtrust",
+            "moins"
+          ],
+          "section_title": "L'obtenir au meilleur prix",
+          "breadcrumb": "LuxTrust et MyGuichet › L'obtenir au meilleur prix",
+          "url_anchor": "https://lux-guide.github.io/#fiche/luxtrust#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'obtenir', 'luxtrust' and 'moins' (coverage 0.70) but luxtrust#l9-l9 covers more of the question (0.91): supporting.",
+          "score": 3.45,
+          "matched_share": 0.697,
+          "coverage": 0.697,
+          "covered_words": [
+            "obtenir",
+            "luxtrust",
+            "moins"
+          ],
+          "uncovered_words": [
+            "cher"
+          ],
+          "title_tier": 2,
+          "title_exact": false,
+          "page_topic": "administration",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "luxtrust#l2-l3",
+          "anchor": {
+            "doc_id": "luxtrust",
+            "line_start": 2,
+            "line_end": 3,
+            "section_id": "luxtrust#s1"
+          },
+          "context": {
+            "doc_id": "luxtrust",
+            "line_start": 1,
+            "line_end": 3,
+            "section_id": "luxtrust#s1"
+          },
+          "snippet": "L'identité numérique qui ouvre les démarches en ligne. Bien moins chère si vous passez par votre banque. LuxTrust est l'identité numérique luxembourgeoise, l'é…",
+          "text": "LuxTrust et MyGuichet\nL'identité numérique qui ouvre les démarches en ligne. Bien moins chère si vous passez par votre banque.\nLuxTrust est l'identité numérique luxembourgeoise, l'équivalent fonctionnel d'une identité électronique nationale. Elle donne accès à MyGuichet.lu, où se traitent la plupart des démarches administratives, et sert également à valider les opérations bancaires en ligne. Sans elle, vous restez cantonné aux formulaires papier et aux guichets physiques.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "identité électronique",
+            "luxtrust",
+            "moins"
+          ],
+          "matched_concepts": [
+            "luxtrust",
+            "moins"
+          ],
+          "section_title": "LuxTrust et MyGuichet",
+          "breadcrumb": "LuxTrust et MyGuichet",
+          "url_anchor": "https://lux-guide.github.io/#fiche/luxtrust#fiche-detail",
+          "role": "supporting",
+          "reason": "Covers 'luxtrust' and 'moins' (coverage 0.61) but luxtrust#l9-l9 covers more of the question (0.91): supporting.",
+          "score": 4.176,
+          "matched_share": 0.606,
+          "coverage": 0.606,
+          "covered_words": [
+            "luxtrust",
+            "moins"
+          ],
+          "uncovered_words": [
+            "obtenir",
+            "cher"
+          ],
+          "title_tier": 3,
+          "title_exact": false,
+          "page_topic": "administration",
+          "topic_match": false,
+          "co_occurrence": "section",
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l36-l36",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 36,
+            "line_end": 36,
+            "section_id": "faq#s14"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 35,
+            "line_end": 37,
+            "section_id": "faq#s14"
+          },
+          "snippet": "D'après les indices de niveau des prix d'Eurostat, l'alimentation, l'habillement et les télécommunications reviennent moins cher chez les trois voisins, tandis…",
+          "text": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?\nD'après les indices de niveau des prix d'Eurostat, l'alimentation, l'habillement et les télécommunications reviennent moins cher chez les trois voisins, tandis que l'énergie, les carburants et le tabac sont moins chers au Luxembourg. L'onglet Les communes publie le détail par catégorie, en passant de l'autre côté de la frontière.\nVoir la fiche : Habiter en France, en Belgique ou en Allemagne",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "cher",
+            "moins"
+          ],
+          "matched_concepts": [
+            "cout_de_la_vie",
+            "moins"
+          ],
+          "section_title": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "breadcrumb": "Questions et réponses › Logement › Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers 'moins' and 'cher' (coverage 0.61) but luxtrust#l9-l9 covers more of the question (0.91): supporting.",
+          "score": 6.0,
+          "matched_share": 0.606,
+          "coverage": 0.606,
+          "covered_words": [
+            "moins",
+            "cher"
+          ],
+          "uncovered_words": [
+            "obtenir",
+            "luxtrust"
+          ],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "line",
+          "captures": []
+        },
+        {
+          "candidate_id": "fiches#l12-l12",
+          "anchor": {
+            "doc_id": "fiches",
+            "line_start": 12,
+            "line_end": 12,
+            "section_id": "fiches#s6"
+          },
+          "context": {
+            "doc_id": "fiches",
+            "line_start": 11,
+            "line_end": 12,
+            "section_id": "fiches#s6"
+          },
+          "snippet": "L'identité numérique qui ouvre les démarches en ligne. Bien moins chère si vous passez par votre banque.",
+          "text": "LuxTrust et MyGuichet\nL'identité numérique qui ouvre les démarches en ligne. Bien moins chère si vous passez par votre banque.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "moins"
+          ],
+          "matched_concepts": [
+            "moins"
+          ],
+          "section_title": "LuxTrust et MyGuichet",
+          "breadcrumb": "Fiches pratiques › LuxTrust et MyGuichet",
+          "url_anchor": "https://lux-guide.github.io/#fiches#fiches-grid",
+          "role": "supporting",
+          "reason": "Covers 'luxtrust' and 'moins' (coverage 0.61) and points to 'LuxTrust et MyGuichet' (Voir la fiche), which covers the question as well: supporting (also answered here).",
+          "score": 2.4,
+          "matched_share": 0.606,
+          "coverage": 0.606,
+          "covered_words": [
+            "luxtrust",
+            "moins"
+          ],
+          "uncovered_words": [
+            "obtenir",
+            "cher"
+          ],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": "section",
+          "captures": []
+        },
+        {
+          "candidate_id": "fiches#l52-l52",
+          "anchor": {
+            "doc_id": "fiches",
+            "line_start": 52,
+            "line_end": 52,
+            "section_id": "fiches#s26"
+          },
+          "context": {
+            "doc_id": "fiches",
+            "line_start": 51,
+            "line_end": 52,
+            "section_id": "fiches#s26"
+          },
+          "snippet": "Des salaires élevés, un logement cher, et une indexation automatique qui n'existe pas ailleurs.",
+          "text": "Salaire, coût de la vie et indexation\nDes salaires élevés, un logement cher, et une indexation automatique qui n'existe pas ailleurs.",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "cher",
+            "indexation"
+          ],
+          "matched_concepts": [
+            "cout_de_la_vie"
+          ],
+          "section_title": "Salaire, coût de la vie et indexation",
+          "breadcrumb": "Fiches pratiques › Salaire, coût de la vie et indexation",
+          "url_anchor": "https://lux-guide.github.io/#fiches#fiches-grid",
+          "role": "supporting",
+          "reason": "Covers only 'cher' (0.30 of the question's words); 'obtenir', 'luxtrust' and 'moins' not covered: supporting.",
+          "score": 2.8,
+          "matched_share": 0.303,
+          "coverage": 0.303,
+          "covered_words": [
+            "cher"
+          ],
+          "uncovered_words": [
+            "obtenir",
+            "luxtrust",
+            "moins"
+          ],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l153-l153",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 153,
+            "line_end": 153,
+            "section_id": "faq#s56"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 151,
+            "line_end": 153,
+            "section_id": "faq#s56"
+          },
+          "snippet": "Voir la fiche : Salaire, coût de la vie et indexation",
+          "text": "Le salaire luxembourgeois compense-t-il le coût de la vie ?\nComparez sur le brut annuel, treizième mois compris, et intégrez le logement dès le début du calcul : c'est lui qui absorbe l'essentiel de l'écart de salaire avec les régions voisines. Le salaire social minimum figure parmi les plus élevés d'Europe et sert de référence à de nombreux plafonds sociaux et fiscaux.\nVoir la fiche : Salaire, coût de la vie et indexation",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "coût de la vie",
+            "indexation"
+          ],
+          "matched_concepts": [
+            "cout_de_la_vie"
+          ],
+          "section_title": "Le salaire luxembourgeois compense-t-il le coût de la vie ?",
+          "breadcrumb": "Questions et réponses › Finances › Le salaire luxembourgeois compense-t-il le coût de la vie ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only 'cher' (0.30 of the question's words); 'obtenir', 'luxtrust' and 'moins' not covered: supporting.",
+          "score": 1.8,
+          "matched_share": 0.303,
+          "coverage": 0.303,
+          "covered_words": [
+            "cher"
+          ],
+          "uncovered_words": [
+            "obtenir",
+            "luxtrust",
+            "moins"
+          ],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l159-l159",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 159,
+            "line_end": 159,
+            "section_id": "faq#s58"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 157,
+            "line_end": 159,
+            "section_id": "faq#s58"
+          },
+          "snippet": "Voir la fiche : Salaire, coût de la vie et indexation",
+          "text": "Qu'est-ce que l'indexation des salaires ?\nUn mécanisme automatique : dès que l'indice des prix progresse de 2,5 %, une tranche indiciaire est déclenchée et les salaires, pensions et minima sont revalorisés d'autant.\nVoir la fiche : Salaire, coût de la vie et indexation",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "coût de la vie",
+            "indexation"
+          ],
+          "matched_concepts": [
+            "cout_de_la_vie"
+          ],
+          "section_title": "Qu'est-ce que l'indexation des salaires ?",
+          "breadcrumb": "Questions et réponses › Finances › Qu'est-ce que l'indexation des salaires ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only 'cher' (0.30 of the question's words); 'obtenir', 'luxtrust' and 'moins' not covered: supporting.",
+          "score": 1.8,
+          "matched_share": 0.303,
+          "coverage": 0.303,
+          "covered_words": [
+            "cher"
+          ],
+          "uncovered_words": [
+            "obtenir",
+            "luxtrust",
+            "moins"
+          ],
+          "title_tier": 1,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l132-l132",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 132,
+            "line_end": 132,
+            "section_id": "faq#s49"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 132,
+            "line_end": 134,
+            "section_id": "faq#s49"
+          },
+          "snippet": "Combien de temps faut-il pour obtenir la nationalité ?",
+          "text": "Combien de temps faut-il pour obtenir la nationalité ?\nLa naturalisation suppose une résidence durable et une épreuve de langue. Le volet linguistique est le plus long à préparer, ce qui vaut de commencer les cours dès la première année si la naturalisation vous intéresse, sans attendre d'y être contraint.\nVoir la fiche : Nationalité luxembourgeoise",
+          "methods": [
+            "keyword_lines",
+            "title_match"
+          ],
+          "matched_keywords": [
+            "obtenir"
+          ],
+          "matched_concepts": [
+            "obtenir"
+          ],
+          "section_title": "Combien de temps faut-il pour obtenir la nationalité ?",
+          "breadcrumb": "Questions et réponses › Administratif › Combien de temps faut-il pour obtenir la nationalité ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "supporting",
+          "reason": "Covers only generic words (0.09 of the question's words); 'luxtrust', 'moins' and 'cher' not covered: supporting.",
+          "score": 0.6,
+          "matched_share": 0.091,
+          "coverage": 0.091,
+          "covered_words": [
+            "obtenir"
+          ],
+          "uncovered_words": [
+            "luxtrust",
+            "moins",
+            "cher"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l146-l146",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 146,
+            "line_end": 146,
+            "section_id": "faq#s54"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 145,
+            "line_end": 147,
+            "section_id": "faq#s54"
+          },
+          "snippet": "Oui, un IBAN de la zone SEPA ne peut pas être refusé pour le versement d'un salaire ou le paiement d'un loyer. En pratique, deux choses poussent quand même à o…",
+          "text": "Un compte bancaire étranger peut-il servir à recevoir le salaire ?\nOui, un IBAN de la zone SEPA ne peut pas être refusé pour le versement d'un salaire ou le paiement d'un loyer. En pratique, deux choses poussent quand même à ouvrir un compte local : la garantie locative, que les banques étrangères n'émettent généralement pas, et LuxTrust, souvent offert aux clients d'une banque luxembourgeoise.\nVoir la fiche : Banque et moyens de paiement",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "luxtrust"
+          ],
+          "matched_concepts": [
+            "luxtrust"
+          ],
+          "section_title": "Un compte bancaire étranger peut-il servir à recevoir le salaire ?",
+          "breadcrumb": "Questions et réponses › Finances › Un compte bancaire étranger peut-il servir à recevoir le salaire ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Un compte bancaire étranger peut-il servir à recevoir le salaire ?' names 'salaire', not 'luxtrust / cout de la vie'; its lines carry only 'luxtrust'.",
+          "score": 1.0,
+          "matched_share": 0.303,
+          "coverage": 0.303,
+          "covered_words": [
+            "luxtrust"
+          ],
+          "uncovered_words": [
+            "obtenir",
+            "moins",
+            "cher"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l155-l155",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 155,
+            "line_end": 155,
+            "section_id": "faq#s57"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 154,
+            "line_end": 156,
+            "section_id": "faq#s57"
+          },
+          "snippet": "Pas légalement : un IBAN européen suffit pour le salaire et le loyer. En pratique, un compte local reste nécessaire pour émettre une garantie locative, et il r…",
+          "text": "Un compte bancaire luxembourgeois est-il obligatoire ?\nPas légalement : un IBAN européen suffit pour le salaire et le loyer. En pratique, un compte local reste nécessaire pour émettre une garantie locative, et il rend LuxTrust souvent gratuit.\nVoir la fiche : Banque et moyens de paiement",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "luxtrust"
+          ],
+          "matched_concepts": [
+            "luxtrust"
+          ],
+          "section_title": "Un compte bancaire luxembourgeois est-il obligatoire ?",
+          "breadcrumb": "Questions et réponses › Finances › Un compte bancaire luxembourgeois est-il obligatoire ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Un compte bancaire luxembourgeois est-il obligatoire ?' names 'compte bancaire', not 'luxtrust / cout de la vie'; its lines carry only 'luxtrust'.",
+          "score": 1.0,
+          "matched_share": 0.303,
+          "coverage": 0.303,
+          "covered_words": [
+            "luxtrust"
+          ],
+          "uncovered_words": [
+            "obtenir",
+            "moins",
+            "cher"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l5-l5",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 5,
+            "line_end": 5,
+            "section_id": "faq#s3"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 4,
+            "line_end": 6,
+            "section_id": "faq#s3"
+          },
+          "snippet": "Il n'est pas exigé, ni pour assurer ni pour immatriculer : il ne joue que sur le prix. Si vous avez eu un contrat à votre nom, réclamez-le, c'est un droit : vo…",
+          "text": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?\nIl n'est pas exigé, ni pour assurer ni pour immatriculer : il ne joue que sur le prix. Si vous avez eu un contrat à votre nom, réclamez-le, c'est un droit : votre assureur doit le fournir dans les quinze jours et il couvre au moins cinq ans. Sans contrat à votre nom, il n'y a rien à demander, et vous entrez au degré neutre de l'échelle luxembourgeoise, le degré 11 sur une échelle qui va de -3 à 22.\nVoir la fiche : Assurer son véhicule",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "moins"
+          ],
+          "matched_concepts": [
+            "moins"
+          ],
+          "section_title": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "breadcrumb": "Questions et réponses › Mobilite › Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?' names 'voiture', not 'luxtrust / cout de la vie'; its lines carry only 'moins'.",
+          "score": 1.0,
+          "matched_share": 0.303,
+          "coverage": 0.303,
+          "covered_words": [
+            "moins"
+          ],
+          "uncovered_words": [
+            "obtenir",
+            "luxtrust",
+            "cher"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l96-l96",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 96,
+            "line_end": 96,
+            "section_id": "faq#s36"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 95,
+            "line_end": 97,
+            "section_id": "faq#s36"
+          },
+          "snippet": "Une exonération portant sur la moitié de la rémunération brute, pendant neuf années au maximum. Attention, les conditions sont strictes : il faut notamment ne…",
+          "text": "Qu'est-ce que le régime des impatriés ?\nUne exonération portant sur la moitié de la rémunération brute, pendant neuf années au maximum. Attention, les conditions sont strictes : il faut notamment ne pas avoir résidé à moins de 150 km de la frontière durant les cinq années précédentes.\nVoir la fiche : Régime des impatriés",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "moins"
+          ],
+          "matched_concepts": [
+            "moins"
+          ],
+          "section_title": "Qu'est-ce que le régime des impatriés ?",
+          "breadcrumb": "Questions et réponses › Impots › Qu'est-ce que le régime des impatriés ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Qu'est-ce que le régime des impatriés ?' names 'impatries', not 'luxtrust / cout de la vie'; its lines carry only 'moins'.",
+          "score": 1.0,
+          "matched_share": 0.303,
+          "coverage": 0.303,
+          "covered_words": [
+            "moins"
+          ],
+          "uncovered_words": [
+            "obtenir",
+            "luxtrust",
+            "cher"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "faq#l20-l20",
+          "anchor": {
+            "doc_id": "faq",
+            "line_start": 20,
+            "line_end": 20,
+            "section_id": "faq#s8"
+          },
+          "context": {
+            "doc_id": "faq",
+            "line_start": 19,
+            "line_end": 21,
+            "section_id": "faq#s8"
+          },
+          "snippet": "Oui, sans limite de durée et sans obligation d'échange ni d'enregistrement. L'enregistrement reste utile pour obtenir rapidement un duplicata en cas de perte o…",
+          "text": "Un permis de conduire européen reste-t-il valable ?\nOui, sans limite de durée et sans obligation d'échange ni d'enregistrement. L'enregistrement reste utile pour obtenir rapidement un duplicata en cas de perte ou de vol.\nVoir la fiche : Permis de conduire",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "obtenir"
+          ],
+          "matched_concepts": [
+            "obtenir"
+          ],
+          "section_title": "Un permis de conduire européen reste-t-il valable ?",
+          "breadcrumb": "Questions et réponses › Mobilite › Un permis de conduire européen reste-t-il valable ?",
+          "url_anchor": "https://lux-guide.github.io/#faq#faq-liste",
+          "role": "discarded",
+          "reason": "The section 'Un permis de conduire européen reste-t-il valable ?' names 'permis de conduire', not 'luxtrust / cout de la vie'; its lines carry only 'obtenir'.",
+          "score": 0.3,
+          "matched_share": 0.091,
+          "coverage": 0.091,
+          "covered_words": [
+            "obtenir"
+          ],
+          "uncovered_words": [
+            "luxtrust",
+            "moins",
+            "cher"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        },
+        {
+          "candidate_id": "fiches#l62-l62",
+          "anchor": {
+            "doc_id": "fiches",
+            "line_start": 62,
+            "line_end": 62,
+            "section_id": "fiches#s31"
+          },
+          "context": {
+            "doc_id": "fiches",
+            "line_start": 61,
+            "line_end": 62,
+            "section_id": "fiches#s31"
+          },
+          "snippet": "Un ordre imposé, une pièce à obtenir à chaque étape, et six mois après la déclaration d'arrivée pour tout boucler.",
+          "text": "Immatriculer son véhicule\nUn ordre imposé, une pièce à obtenir à chaque étape, et six mois après la déclaration d'arrivée pour tout boucler.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "obtenir"
+          ],
+          "matched_concepts": [
+            "obtenir"
+          ],
+          "section_title": "Immatriculer son véhicule",
+          "breadcrumb": "Fiches pratiques › Immatriculer son véhicule",
+          "url_anchor": "https://lux-guide.github.io/#fiches#fiches-grid",
+          "role": "discarded",
+          "reason": "The section 'Immatriculer son véhicule' names 'voiture', not 'luxtrust / cout de la vie'; its lines carry only 'obtenir'.",
+          "score": 0.3,
+          "matched_share": 0.091,
+          "coverage": 0.091,
+          "covered_words": [
+            "obtenir"
+          ],
+          "uncovered_words": [
+            "luxtrust",
+            "moins",
+            "cher"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "other",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        }
+      ],
+      "methods_used": [
+        "keyword_lines",
+        "title_match",
+        "arbiter_rules",
+        "sweep"
+      ],
+      "methods_skipped": {
+        "anchor_regex": "answer type text asks for no typed anchor",
+        "row_match": "answer_type=text and no table column named",
+        "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+        "llm_arbiter": "no model key configured",
+        "current_page_boost": "no pages_hint: no page to boost"
+      },
+      "not_found": false,
+      "not_found_reason": null,
+      "confidence": 0.636,
+      "per_section_audit": [
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s1",
+          "title": "Questions et réponses",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s2",
+          "title": "Mobilite",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s3",
+          "title": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s4",
+          "title": "J'ai conduit la voiture d'un proche sans être inscrit au contrat, est-ce que ça compte ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s5",
+          "title": "La carte grise n'est pas au nom du vendeur, est-ce bloquant ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s6",
+          "title": "Faut-il repasser le contrôle technique en arrivant au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s7",
+          "title": "Dans quel délai immatriculer un véhicule qu'on amène avec soi ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s8",
+          "title": "Un permis de conduire européen reste-t-il valable ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s9",
+          "title": "Comment s'immatricule un véhicule importé ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s10",
+          "title": "Les transports publics sont-ils vraiment gratuits ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s11",
+          "title": "Logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s12",
+          "title": "Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s13",
+          "title": "Combien de jours de télétravail un frontalier peut-il faire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s14",
+          "title": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s15",
+          "title": "Sur quels critères choisir sa commune ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s16",
+          "title": "Comment comparer deux contrats d'assurance ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s17",
+          "title": "Quelle garantie locative un bailleur peut-il demander ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s18",
+          "title": "Comment se cherche un logement au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s19",
+          "title": "À quel moment souscrire l'assurance habitation ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s20",
+          "title": "Quelle part du prix une banque finance-t-elle ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s21",
+          "title": "La TVA sur un logement neuf est-elle toujours de 3 % ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s22",
+          "title": "Qui peut prétendre à un logement à coût modéré ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s23",
+          "title": "Quotidien",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s24",
+          "title": "Vers qui se tourner en cas de litige avec un professionnel ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s25",
+          "title": "Le luxembourgeois est-il nécessaire pour travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s26",
+          "title": "Combien de temps pour avoir internet ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s27",
+          "title": "Faut-il apprendre le luxembourgeois ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s28",
+          "title": "Comment fonctionne le tri des déchets ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s29",
+          "title": "Sante",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s30",
+          "title": "Une complémentaire santé est-elle utile ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s31",
+          "title": "Qui déclare l'entrée à la sécurité sociale ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s32",
+          "title": "Quel numéro d'urgence appeler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s33",
+          "title": "Impots",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s34",
+          "title": "Comment l'impôt est-il prélevé quand on est deux à travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s35",
+          "title": "Pourquoi la déclaration se solde-t-elle souvent par un montant à payer ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s36",
+          "title": "Qu'est-ce que le régime des impatriés ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s37",
+          "title": "Existe-t-il une classe d'impôt 1b ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s38",
+          "title": "Qui relève de la classe 1a ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s39",
+          "title": "Un divorce ou un décès fait-il changer de classe d'impôt immédiatement ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s40",
+          "title": "Le régime des impatriés dépend-il de la classe d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s41",
+          "title": "Quelle différence entre classe 1 et classe 2 ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s42",
+          "title": "Qu'est-ce qui se déduit des impôts ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s43",
+          "title": "Comment faire corriger une classe d'impôt inexacte ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s44",
+          "title": "Comment obtient-on sa fiche de retenue d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s45",
+          "title": "Les intérêts d'un prêt immobilier sont-ils déductibles ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s46",
+          "title": "Administratif",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s47",
+          "title": "Les délais d'arrivée sont-ils les mêmes hors Union européenne ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s48",
+          "title": "La déclaration à la commune suffit-elle ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s49",
+          "title": "Combien de temps faut-il pour obtenir la nationalité ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s50",
+          "title": "Dans quel délai faut-il se déclarer à la commune ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s51",
+          "title": "Comment obtient-on le matricule ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s52",
+          "title": "Peut-on avoir la double nationalité ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s53",
+          "title": "Finances",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s54",
+          "title": "Un compte bancaire étranger peut-il servir à recevoir le salaire ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s55",
+          "title": "Que faut-il pour ouvrir un compte bancaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s56",
+          "title": "Le salaire luxembourgeois compense-t-il le coût de la vie ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s57",
+          "title": "Un compte bancaire luxembourgeois est-il obligatoire ?",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s58",
+          "title": "Qu'est-ce que l'indexation des salaires ?",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s59",
+          "title": "Travail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s60",
+          "title": "Peut-on exercer une activité indépendante en plus d'un emploi salarié ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s61",
+          "title": "Combien de jours de congé donne la loi ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s62",
+          "title": "Famille",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s63",
+          "title": "Comment se fait l'inscription à l'école ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s64",
+          "title": "Existe-t-il une aide pour la crèche ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s65",
+          "title": "Quel est le montant des allocations familiales ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s1",
+          "title": "Fiches pratiques",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s2",
+          "title": "Les huit premiers jours",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s3",
+          "title": "Sécurité sociale et remboursements",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s4",
+          "title": "La complémentaire santé",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s5",
+          "title": "Comment fonctionne l'administration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s6",
+          "title": "LuxTrust et MyGuichet",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s7",
+          "title": "Trouver un logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s8",
+          "title": "Choisir sa commune",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s9",
+          "title": "Habiter en France, en Belgique ou en Allemagne",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s10",
+          "title": "Contester une facture ou un service",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s11",
+          "title": "Emménager et meubler",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s12",
+          "title": "Signer un bail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s13",
+          "title": "Assurer son logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s14",
+          "title": "Acheter un logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s15",
+          "title": "Logement abordable et à coût modéré",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s16",
+          "title": "Classes d'impôt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s17",
+          "title": "Ce qui réduit votre impôt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s18",
+          "title": "Conseil fiscal : les leviers de la première année",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s19",
+          "title": "Régime des impatriés",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s20",
+          "title": "Déduire les intérêts d'emprunt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s21",
+          "title": "Exercer en indépendant",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s22",
+          "title": "Allocations familiales",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s23",
+          "title": "Congés et jours fériés",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s24",
+          "title": "Chercher un emploi",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s25",
+          "title": "Banque et moyens de paiement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s26",
+          "title": "Salaire, coût de la vie et indexation",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s27",
+          "title": "Scolariser ses enfants",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s28",
+          "title": "Garde d'enfants et chèque-service",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s29",
+          "title": "Se soigner au quotidien",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s30",
+          "title": "Permis de conduire",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s31",
+          "title": "Immatriculer son véhicule",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s32",
+          "title": "Assurer son véhicule",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s33",
+          "title": "Transports publics gratuits",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s34",
+          "title": "Internet et téléphonie",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s35",
+          "title": "Langues et intégration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s36",
+          "title": "Nationalité luxembourgeoise",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s37",
+          "title": "Déchets et vie communale",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "luxtrust",
+          "section_id": "luxtrust#s1",
+          "title": "LuxTrust et MyGuichet",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "luxtrust",
+          "section_id": "luxtrust#s2",
+          "title": "L'obtenir au meilleur prix",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "luxtrust",
+          "section_id": "luxtrust#s3",
+          "title": "Ce qui ne se fait pas en ligne",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "luxtrust",
+          "section_id": "luxtrust#s4",
+          "title": "À retenir",
+          "keyword": "Y",
+          "toc": "Y",
+          "kept": "Y"
+        },
+        {
+          "doc_id": "luxtrust",
+          "section_id": "luxtrust#s5",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        }
+      ],
+      "route_pages": [
+        {
+          "doc_id": "luxtrust",
+          "score": 6.1,
+          "reason": "kept: 5 term(s) in the summary line (obtenir, luxtrust, certificat luxtrust, token, eid); heading title match (L'obtenir au meilleur prix, LuxTrust et MyGuichet); concept(s) in tags (luxtrust); document title 'LuxTrust et MyGuichet' covers 0.50 of the question's words; tally 6.1"
+        },
+        {
+          "doc_id": "faq",
+          "score": 5.5,
+          "reason": "kept: heading title match (Combien de temps faut-il pour obtenir la nationalité ?, Le salaire luxembourgeois compense-t-il le coût de la vie ?, Qu'est-ce que l'indexation des salaires ?, Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?); concept(s) in tags (cout de la vie, luxtrust); tally 5.5"
+        },
+        {
+          "doc_id": "fiches",
+          "score": 5.2,
+          "reason": "kept: 1 term(s) in the summary line (luxtrust); heading title match (LuxTrust et MyGuichet, Salaire, coût de la vie et indexation); concept(s) in tags (cout de la vie, luxtrust); tally 5.2"
+        }
+      ],
+      "route_sections": [
+        {
+          "doc_id": "luxtrust",
+          "section_id": "luxtrust#s2",
+          "title": "L'obtenir au meilleur prix",
+          "score": 5.0,
+          "reason": "title 'L'obtenir au meilleur prix' matches obtenir; 3 term(s) in its lines (luxtrust, moins, obtenir); a leaf, stop here"
+        },
+        {
+          "doc_id": "luxtrust",
+          "section_id": "luxtrust#s4",
+          "title": "À retenir",
+          "score": 3.0,
+          "reason": "3 term(s) in its lines (cher, luxtrust, moins); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s14",
+          "title": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "score": 6.0,
+          "reason": "title 'Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?' matches moins, cher; 2 term(s) in its lines (cher, moins); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s56",
+          "title": "Le salaire luxembourgeois compense-t-il le coût de la vie ?",
+          "score": 4.0,
+          "reason": "title 'Le salaire luxembourgeois compense-t-il le coût de la vie ?' matches coût de la vie; 2 term(s) in its lines (coût de la vie, indexation); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s58",
+          "title": "Qu'est-ce que l'indexation des salaires ?",
+          "score": 4.0,
+          "reason": "title 'Qu'est-ce que l'indexation des salaires ?' matches indexation; 2 term(s) in its lines (coût de la vie, indexation); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s3",
+          "title": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "score": 1.0,
+          "reason": "1 term(s) in its lines (moins); a leaf, stop here"
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s8",
+          "title": "Un permis de conduire européen reste-t-il valable ?",
+          "score": 1.0,
+          "reason": "1 term(s) in its lines (obtenir); a leaf, stop here"
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s26",
+          "title": "Salaire, coût de la vie et indexation",
+          "score": 7.0,
+          "reason": "title 'Salaire, coût de la vie et indexation' matches coût de la vie, indexation; 3 term(s) in its lines (cher, coût de la vie, indexation); a leaf, stop here"
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s6",
+          "title": "LuxTrust et MyGuichet",
+          "score": 4.0,
+          "reason": "title 'LuxTrust et MyGuichet' matches luxtrust; 2 term(s) in its lines (luxtrust, moins); a leaf, stop here"
+        }
+      ],
+      "route_notes": [
+        "faq: no section of the outline carries a term; the page is read whole",
+        "fiches: no section of the outline carries a term; the page is read whole",
+        "answer_context=section: a procedure question ('comment', 'how do I') is answered by a section's steps (plan said paragraph)"
+      ],
+      "sweep_concepts": [
+        {
+          "concept": "obtenir",
+          "variants": [
+            "obtenir"
+          ],
+          "pages_with_hits": [
+            "administration",
+            "allocations",
+            "bail",
+            "conseil_fiscal",
+            "ecole",
+            "faq",
+            "fiches",
+            "luxtrust",
+            "permis",
+            "vehicule"
+          ],
+          "line_hits": 12
+        },
+        {
+          "concept": "luxtrust",
+          "variants": [
+            "luxtrust",
+            "certificat luxtrust",
+            "token",
+            "identité électronique",
+            "electronic identity",
+            "eID",
+            "eid"
+          ],
+          "pages_with_hits": [
+            "banque",
+            "faq",
+            "fiches",
+            "luxtrust",
+            "parcours"
+          ],
+          "line_hits": 10
+        },
+        {
+          "concept": "moins",
+          "variants": [
+            "moins"
+          ],
+          "pages_with_hits": [
+            "achat",
+            "assurance_auto",
+            "avantages",
+            "conseil_fiscal",
+            "faq",
+            "fiches",
+            "frontalier",
+            "impatries",
+            "impots_classes",
+            "langues",
+            "logement_abordable",
+            "luxtrust",
+            "prevoyance",
+            "recherche_logement",
+            "simulateur",
+            "vehicule"
+          ],
+          "line_hits": 36
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variants": [
+            "coût de la vie",
+            "indexation",
+            "index",
+            "inflation",
+            "budget mensuel",
+            "cher",
+            "cost of living",
+            "expensive",
+            "Lebenshaltungskosten",
+            "Indexierung",
+            "Inflation",
+            "lebenshaltungskosten",
+            "indexierung"
+          ],
+          "pages_with_hits": [
+            "admin",
+            "allocations",
+            "arrivee",
+            "avantages",
+            "cartes",
+            "choisir_commune",
+            "cout_vie",
+            "deductions",
+            "faq",
+            "fiches",
+            "frontalier",
+            "langues",
+            "lignes",
+            "luxtrust",
+            "prevoyance",
+            "transport"
+          ],
+          "line_hits": 42
+        }
+      ],
+      "sweep_rows": [
+        {
+          "concept": "obtenir",
+          "variant": "obtenir",
+          "doc_id": "administration",
+          "line_num": 3,
+          "snippet": "L'administration luxembourgeoise surprend agréablement la plupart des nouveaux arrivants, en particulier ceux venus de grands pays. Le pays est petit, les circ…"
+        },
+        {
+          "concept": "obtenir",
+          "variant": "obtenir",
+          "doc_id": "allocations",
+          "line_num": 3,
+          "snippet": "Les prestations familiales sont versées par la Caisse pour l'avenir des enfants, et elles sont dues pour tout enfant résidant au Luxembourg, sans condition de…"
+        },
+        {
+          "concept": "obtenir",
+          "variant": "obtenir",
+          "doc_id": "bail",
+          "line_num": 9,
+          "snippet": "Beaucoup de baux interdisent, sans accord écrit du bailleur, les percements et modifications, la sous-location et la présence d'animaux. Vous éviterez d'achete…"
+        },
+        {
+          "concept": "obtenir",
+          "variant": "obtenir",
+          "doc_id": "conseil_fiscal",
+          "line_num": 5,
+          "snippet": "La retenue mensuelle repose sur la fiche de retenue d'impôt. Pour un salarié qui commence à travailler au Luxembourg, elle est émise automatiquement par l'admi…"
+        },
+        {
+          "concept": "obtenir",
+          "variant": "obtenir",
+          "doc_id": "ecole",
+          "line_num": 9,
+          "snippet": "L'inscription à la commune précède généralement l'inscription scolaire, et les places dans les sections les plus recherchées partent parfois un an à l'avance.…"
+        },
+        {
+          "concept": "obtenir",
+          "variant": "obtenir",
+          "doc_id": "faq",
+          "line_num": 20,
+          "snippet": "Oui, sans limite de durée et sans obligation d'échange ni d'enregistrement. L'enregistrement reste utile pour obtenir rapidement un duplicata en cas de perte o…"
+        },
+        {
+          "concept": "obtenir",
+          "variant": "obtenir",
+          "doc_id": "faq",
+          "line_num": 132,
+          "snippet": "Combien de temps faut-il pour obtenir la nationalité ?"
+        },
+        {
+          "concept": "obtenir",
+          "variant": "obtenir",
+          "doc_id": "fiches",
+          "line_num": 62,
+          "snippet": "Un ordre imposé, une pièce à obtenir à chaque étape, et six mois après la déclaration d'arrivée pour tout boucler."
+        },
+        {
+          "concept": "obtenir",
+          "variant": "obtenir",
+          "doc_id": "luxtrust",
+          "line_num": 4,
+          "snippet": "L'obtenir au meilleur prix"
+        },
+        {
+          "concept": "obtenir",
+          "variant": "obtenir",
+          "doc_id": "permis",
+          "line_num": 9,
+          "snippet": "Utile surtout pour obtenir vite un duplicata."
+        },
+        {
+          "concept": "obtenir",
+          "variant": "obtenir",
+          "doc_id": "vehicule",
+          "line_num": 2,
+          "snippet": "Un ordre imposé, une pièce à obtenir à chaque étape, et six mois après la déclaration d'arrivée pour tout boucler."
+        },
+        {
+          "concept": "obtenir",
+          "variant": "obtenir",
+          "doc_id": "vehicule",
+          "line_num": 38,
+          "snippet": "Obtenir la vignette 705 aux douanes"
+        },
+        {
+          "concept": "luxtrust",
+          "variant": "luxtrust",
+          "doc_id": "banque",
+          "line_num": 3,
+          "snippet": "Un IBAN européen suffit légalement pour recevoir un salaire et payer un loyer : refuser un compte d'un autre pays de la zone SEPA est interdit. En pratique, de…"
+        },
+        {
+          "concept": "luxtrust",
+          "variant": "luxtrust",
+          "doc_id": "faq",
+          "line_num": 146,
+          "snippet": "Oui, un IBAN de la zone SEPA ne peut pas être refusé pour le versement d'un salaire ou le paiement d'un loyer. En pratique, deux choses poussent quand même à o…"
+        },
+        {
+          "concept": "luxtrust",
+          "variant": "luxtrust",
+          "doc_id": "faq",
+          "line_num": 155,
+          "snippet": "Pas légalement : un IBAN européen suffit pour le salaire et le loyer. En pratique, un compte local reste nécessaire pour émettre une garantie locative, et il r…"
+        },
+        {
+          "concept": "luxtrust",
+          "variant": "luxtrust",
+          "doc_id": "fiches",
+          "line_num": 11,
+          "snippet": "LuxTrust et MyGuichet"
+        },
+        {
+          "concept": "luxtrust",
+          "variant": "luxtrust",
+          "doc_id": "luxtrust",
+          "line_num": 1,
+          "snippet": "LuxTrust et MyGuichet"
+        },
+        {
+          "concept": "luxtrust",
+          "variant": "luxtrust",
+          "doc_id": "luxtrust",
+          "line_num": 3,
+          "snippet": "LuxTrust est l'identité numérique luxembourgeoise, l'équivalent fonctionnel d'une identité électronique nationale. Elle donne accès à MyGuichet.lu, où se trait…"
+        },
+        {
+          "concept": "luxtrust",
+          "variant": "identité électronique",
+          "doc_id": "luxtrust",
+          "line_num": 3,
+          "snippet": "LuxTrust est l'identité numérique luxembourgeoise, l'équivalent fonctionnel d'une identité électronique nationale. Elle donne accès à MyGuichet.lu, où se trait…"
+        },
+        {
+          "concept": "luxtrust",
+          "variant": "luxtrust",
+          "doc_id": "luxtrust",
+          "line_num": 5,
+          "snippet": "Le chemin le moins coûteux passe par une banque luxembourgeoise, qui la fournit souvent gratuitement à ses clients. Sans compte local, il faut la commander en…"
+        },
+        {
+          "concept": "luxtrust",
+          "variant": "luxtrust",
+          "doc_id": "luxtrust",
+          "line_num": 9,
+          "snippet": "Ouvrir le compte bancaire d'abord, LuxTrust suit et coûte moins cher."
+        },
+        {
+          "concept": "luxtrust",
+          "variant": "luxtrust",
+          "doc_id": "parcours",
+          "line_num": 19,
+          "snippet": "Ouvrir un compte bancaire local et demander LuxTrust dans la foulée."
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "achat",
+          "line_num": 5,
+          "snippet": "Le taux super-réduit de 3 %, au lieu de 17 %, est l'un des avantages les plus commentés du marché luxembourgeois. Il est aussi le plus mal compris. Il suppose…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "assurance_auto",
+          "line_num": 5,
+          "snippet": "Le point qui pèse le plus sur la prime est votre historique de sinistres, et le document qui le porte s'appelle relevé d'information en France, attestation de…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "avantages",
+          "line_num": 54,
+          "snippet": "75 % exemptés, moins de 30 ans, premier CDI"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "avantages",
+          "line_num": 57,
+          "snippet": "Depuis l'année d'imposition 2025, un employeur peut verser une prime dont 75 % est exemptée d'impôt, à trois conditions cumulatives : avoir moins de 30 ans au…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "avantages",
+          "line_num": 67,
+          "snippet": "Un salarié recruté à l'étranger pour un poste au Luxembourg peut voir la moitié de sa rémunération brute annuelle exonérée d'impôt, dans la limite de 400 000 e…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "avantages",
+          "line_num": 89,
+          "snippet": "C'est le notaire qui fait la demande à la signature de l'acte. Le logement doit être occupé dans les deux ans, quatre pour un terrain ou un logement en constru…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "avantages",
+          "line_num": 119,
+          "snippet": "Qui contracte un prêt hypothécaire pour acheter ou construire son habitation principale peut recevoir une prime en capital, entre 500 et 10 000 euros selon le…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "avantages",
+          "line_num": 140,
+          "snippet": "Il faut des revenus réguliers depuis au moins trois mois, un droit de séjour de plus de trois mois, et ne posséder aucun logement."
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "avantages",
+          "line_num": 190,
+          "snippet": "Un parent en classe d'impôt 1a qui élève seul au moins un enfant ouvrant droit à la modération d'impôt reçoit, sur demande, un crédit d'impôt de 3 504 euros pa…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "avantages",
+          "line_num": 211,
+          "snippet": "Les primes versées à un contrat de prévoyance-vieillesse se déduisent du revenu imposable jusqu'à 4 500 euros par an et par contribuable depuis le 1er janvier…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "conseil_fiscal",
+          "line_num": 8,
+          "snippet": "Les primes versées à un contrat de prévoyance-vieillesse se déduisent jusqu'à 4 500 euros par an et par contribuable depuis le 1er janvier 2026, contre 3 200 e…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "faq",
+          "line_num": 5,
+          "snippet": "Il n'est pas exigé, ni pour assurer ni pour immatriculer : il ne joue que sur le prix. Si vous avez eu un contrat à votre nom, réclamez-le, c'est un droit : vo…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "faq",
+          "line_num": 35,
+          "snippet": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "faq",
+          "line_num": 36,
+          "snippet": "D'après les indices de niveau des prix d'Eurostat, l'alimentation, l'habillement et les télécommunications reviennent moins cher chez les trois voisins, tandis…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "faq",
+          "line_num": 96,
+          "snippet": "Une exonération portant sur la moitié de la rémunération brute, pendant neuf années au maximum. Attention, les conditions sont strictes : il faut notamment ne…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "fiches",
+          "line_num": 12,
+          "snippet": "L'identité numérique qui ouvre les démarches en ligne. Bien moins chère si vous passez par votre banque."
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "frontalier",
+          "line_num": 17,
+          "snippet": "Les niveaux de prix ne sont pas les mêmes des quatre côtés, et l'écart ne va pas toujours dans le même sens. Les indices d'Eurostat, publiés dans l'onglet Les…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "impatries",
+          "line_num": 5,
+          "snippet": "Le régime s'adresse aux personnes réellement venues de l'étranger pour occuper le poste. Il faut n'avoir été ni résident fiscal luxembourgeois, ni avoir exercé…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "impots_classes",
+          "line_num": 15,
+          "snippet": "Un couple dont l'un des membres réside encore à l'étranger relève par défaut de la classe 1, nettement moins favorable. L'option pour l'imposition collective e…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "langues",
+          "line_num": 5,
+          "snippet": "L'Institut national des langues propose des cours à tarif réduit dans les quatre langues, avec des sessions du soir adaptées aux salariés. Les communes et le s…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "logement_abordable",
+          "line_num": 3,
+          "snippet": "Des promoteurs publics commercialisent des logements à un prix inférieur au marché. L'accès suppose un certificat d'éligibilité délivré par le Guichet unique d…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "luxtrust",
+          "line_num": 2,
+          "snippet": "L'identité numérique qui ouvre les démarches en ligne. Bien moins chère si vous passez par votre banque."
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "luxtrust",
+          "line_num": 5,
+          "snippet": "Le chemin le moins coûteux passe par une banque luxembourgeoise, qui la fournit souvent gratuitement à ses clients. Sans compte local, il faut la commander en…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "luxtrust",
+          "line_num": 9,
+          "snippet": "Ouvrir le compte bancaire d'abord, LuxTrust suit et coûte moins cher."
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "prevoyance",
+          "line_num": 11,
+          "snippet": "Souscrire avant 65 ans, contrat d'au moins 10 ans, épargne récupérable entre 60 et 75 ans."
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "prevoyance",
+          "line_num": 38,
+          "snippet": "C'est une épargne retraite individuelle que l'État encourage par une déduction fiscale. Ce que vous versez sur un contrat de prévoyance-vieillesse sort de votr…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "prevoyance",
+          "line_num": 43,
+          "snippet": "Non, et la nuance change tout. Ce n'est pas l'argent qui est immobilisé 10 ans, c'est le contrat qui doit durer au moins 10 ans. La différence est concrète : q…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "prevoyance",
+          "line_num": 78,
+          "snippet": "La souscription doit intervenir avant 65 ans. Le contrat doit ensuite durer au moins 10 ans, ce qui suppose de le tenir jusqu'à 60 ans au minimum."
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "prevoyance",
+          "line_num": 91,
+          "snippet": "Entre 60 et 75 ans, et à condition que le contrat ait duré au moins 10 ans. Avant 60 ans, l'épargne n'est pas disponible."
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "prevoyance",
+          "line_num": 111,
+          "snippet": "Oui, mécaniquement. La sortie est imposée à la moitié de votre taux moyen, et ce taux moyen dépend de l'ensemble de vos revenus de l'année. Récupérer une gross…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "recherche_logement",
+          "line_num": 10,
+          "snippet": "Anticipez enfin l'enchaînement des délais : ouverture du compte bancaire, puis garantie, puis signature, puis état des lieux. Entre la première visite et la re…"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "simulateur",
+          "line_num": 18,
+          "snippet": "Pour l'âge en fin de prêt et les aides aux 35 ans ou moins."
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "simulateur",
+          "line_num": 23,
+          "snippet": "Pour l'âge en fin de prêt et les aides aux 35 ans ou moins."
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "simulateur",
+          "line_num": 32,
+          "snippet": "Moins de 12 mois : beaucoup de banques ne le comptent plus. Le plan chiffre aussi un remboursement anticipé."
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "vehicule",
+          "line_num": 78,
+          "snippet": "Un certificat de situation administrative de moins de 15 jours"
+        },
+        {
+          "concept": "moins",
+          "variant": "moins",
+          "doc_id": "vehicule",
+          "line_num": 79,
+          "snippet": "Le contrôle technique de moins de 6 mois, si le véhicule a plus de 4 ans"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "admin",
+          "line_num": 17,
+          "snippet": "Les valeurs sociales et fiscales qui entrent dans le calcul du salaire net. Elles suivent l'indexation et changent à chaque tranche indiciaire : les modifier i…"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "allocations",
+          "line_num": 5,
+          "snippet": "Seule la demande initiale nécessite une démarche, auprès de la caisse, en ligne via MyGuichet ou par formulaire. Ces montants suivent l'indexation générale : i…"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "cher",
+          "doc_id": "arrivee",
+          "line_num": 6,
+          "snippet": "Le délai de huit jours vaut pour la déclaration d'arrivée au bureau de la population. Deux autres délais s'y ajoutent, et les manquer coûte plus cher que le pr…"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "coût de la vie",
+          "doc_id": "avantages",
+          "line_num": 33,
+          "snippet": "Fiche « Salaire, coût de la vie et indexation »"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "avantages",
+          "line_num": 33,
+          "snippet": "Fiche « Salaire, coût de la vie et indexation »"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "coût de la vie",
+          "doc_id": "avantages",
+          "line_num": 43,
+          "snippet": "Fiche « Salaire, coût de la vie et indexation »"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "avantages",
+          "line_num": 43,
+          "snippet": "Fiche « Salaire, coût de la vie et indexation »"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "avantages",
+          "line_num": 161,
+          "snippet": "Seule la première demande est à faire, auprès de la Caisse pour l'avenir des enfants. Les montants suivent l'indexation, ils sont revalorisés à chaque tranche…"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "index",
+          "doc_id": "avantages",
+          "line_num": 271,
+          "snippet": "Salaires indexés automatiquement"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "coût de la vie",
+          "doc_id": "avantages",
+          "line_num": 281,
+          "snippet": "Fiche « Salaire, coût de la vie et indexation »"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "avantages",
+          "line_num": 281,
+          "snippet": "Fiche « Salaire, coût de la vie et indexation »"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "coût de la vie",
+          "doc_id": "avantages",
+          "line_num": 291,
+          "snippet": "Fiche « Salaire, coût de la vie et indexation »"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "avantages",
+          "line_num": 291,
+          "snippet": "Fiche « Salaire, coût de la vie et indexation »"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "coût de la vie",
+          "doc_id": "cartes",
+          "line_num": 3,
+          "snippet": "Une carte de ce genre montre où se situe une commune, pas pourquoi. Un salaire médian élevé décrit les gens qui habitent là, pas le coût de la vie sur place. U…"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "cher",
+          "doc_id": "choisir_commune",
+          "line_num": 5,
+          "snippet": "Si vous vous déplacez en voiture, la distance pèse peu et vous pouvez élargir largement la zone de recherche, ce qui fait baisser le loyer de façon significati…"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "coût de la vie",
+          "doc_id": "cout_vie",
+          "line_num": 1,
+          "snippet": "Salaire, coût de la vie et indexation"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "cout_vie",
+          "line_num": 1,
+          "snippet": "Salaire, coût de la vie et indexation"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "cout_vie",
+          "line_num": 2,
+          "snippet": "Des salaires élevés, un logement cher, et une indexation automatique qui n'existe pas ailleurs."
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "cher",
+          "doc_id": "cout_vie",
+          "line_num": 2,
+          "snippet": "Des salaires élevés, un logement cher, et une indexation automatique qui n'existe pas ailleurs."
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "cout_vie",
+          "line_num": 3,
+          "snippet": "Le Luxembourg applique une indexation automatique des salaires : dès que l'indice des prix progresse de 2,5 %, une tranche indiciaire est déclenchée et l'ensem…"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "cout_vie",
+          "line_num": 9,
+          "snippet": "Indexation automatique à chaque 2,5 % d'inflation."
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "inflation",
+          "doc_id": "cout_vie",
+          "line_num": 9,
+          "snippet": "Indexation automatique à chaque 2,5 % d'inflation."
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "Inflation",
+          "doc_id": "cout_vie",
+          "line_num": 9,
+          "snippet": "Indexation automatique à chaque 2,5 % d'inflation."
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "index",
+          "doc_id": "deductions",
+          "line_num": 17,
+          "snippet": "ACD, index des matières"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "cher",
+          "doc_id": "faq",
+          "line_num": 35,
+          "snippet": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "cher",
+          "doc_id": "faq",
+          "line_num": 36,
+          "snippet": "D'après les indices de niveau des prix d'Eurostat, l'alimentation, l'habillement et les télécommunications reviennent moins cher chez les trois voisins, tandis…"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "coût de la vie",
+          "doc_id": "faq",
+          "line_num": 151,
+          "snippet": "Le salaire luxembourgeois compense-t-il le coût de la vie ?"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "coût de la vie",
+          "doc_id": "faq",
+          "line_num": 153,
+          "snippet": "Voir la fiche : Salaire, coût de la vie et indexation"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "faq",
+          "line_num": 153,
+          "snippet": "Voir la fiche : Salaire, coût de la vie et indexation"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "faq",
+          "line_num": 157,
+          "snippet": "Qu'est-ce que l'indexation des salaires ?"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "coût de la vie",
+          "doc_id": "faq",
+          "line_num": 159,
+          "snippet": "Voir la fiche : Salaire, coût de la vie et indexation"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "faq",
+          "line_num": 159,
+          "snippet": "Voir la fiche : Salaire, coût de la vie et indexation"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "coût de la vie",
+          "doc_id": "fiches",
+          "line_num": 51,
+          "snippet": "Salaire, coût de la vie et indexation"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "fiches",
+          "line_num": 51,
+          "snippet": "Salaire, coût de la vie et indexation"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "indexation",
+          "doc_id": "fiches",
+          "line_num": 52,
+          "snippet": "Des salaires élevés, un logement cher, et une indexation automatique qui n'existe pas ailleurs."
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "cher",
+          "doc_id": "fiches",
+          "line_num": 52,
+          "snippet": "Des salaires élevés, un logement cher, et une indexation automatique qui n'existe pas ailleurs."
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "cher",
+          "doc_id": "frontalier",
+          "line_num": 17,
+          "snippet": "Les niveaux de prix ne sont pas les mêmes des quatre côtés, et l'écart ne va pas toujours dans le même sens. Les indices d'Eurostat, publiés dans l'onglet Les…"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "cher",
+          "doc_id": "langues",
+          "line_num": 5,
+          "snippet": "L'Institut national des langues propose des cours à tarif réduit dans les quatre langues, avec des sessions du soir adaptées aux salariés. Les communes et le s…"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "cher",
+          "doc_id": "lignes",
+          "line_num": 2,
+          "snippet": "Un logement se juge mal à vol d'oiseau. Deux kilomètres avec une correspondance et dix minutes de marche coûtent plus cher qu'une demi-heure de bus direct. Ind…"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "cher",
+          "doc_id": "luxtrust",
+          "line_num": 9,
+          "snippet": "Ouvrir le compte bancaire d'abord, LuxTrust suit et coûte moins cher."
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "cher",
+          "doc_id": "prevoyance",
+          "line_num": 99,
+          "snippet": "Oui, et c'est souvent mal compris. La circulaire d'application prévoit expressément le remboursement anticipé, intégral ou partiel, avant 60 ans ou avant la fi…"
+        },
+        {
+          "concept": "cout_de_la_vie",
+          "variant": "cher",
+          "doc_id": "transport",
+          "line_num": 5,
+          "snippet": "Avant de choisir une commune, vérifiez donc concrètement les horaires depuis l'arrêt le plus proche, aux heures qui vous concernent, et pas seulement l'existen…"
+        }
+      ],
+      "question_concepts": [
+        "obtenir",
+        "luxtrust",
+        "moins",
+        "cout_de_la_vie"
+      ],
+      "terms": [
+        {
+          "text": "obtenir",
+          "weight": 0.3,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "obtenir",
+          "weak": true,
+          "in_corpus": true
+        },
+        {
+          "text": "luxtrust",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "luxtrust",
+          "is_regex": false,
+          "concept_key": "luxtrust",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "moins",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "moins",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "cher",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "concept_key": "cout_de_la_vie",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "certificat luxtrust",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "luxtrust",
+          "is_regex": false,
+          "concept_key": "luxtrust",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "token",
+          "weight": 0.42,
+          "source": "expert_dictionary",
+          "concept": "luxtrust",
+          "is_regex": false,
+          "concept_key": "luxtrust",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "identité électronique",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "luxtrust",
+          "is_regex": false,
+          "concept_key": "luxtrust",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "electronic identity",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "luxtrust",
+          "is_regex": false,
+          "concept_key": "luxtrust",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "eid",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "luxtrust",
+          "is_regex": false,
+          "concept_key": "luxtrust",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "coût de la vie",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "concept_key": "cout_de_la_vie",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "indexation",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "concept_key": "cout_de_la_vie",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "index",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "concept_key": "cout_de_la_vie",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "inflation",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "concept_key": "cout_de_la_vie",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "budget mensuel",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "concept_key": "cout_de_la_vie",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "cost of living",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "concept_key": "cout_de_la_vie",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "expensive",
+          "weight": 0.36,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "concept_key": "cout_de_la_vie",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "lebenshaltungskosten",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "concept_key": "cout_de_la_vie",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "indexierung",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "cout_de_la_vie",
+          "is_regex": false,
+          "concept_key": "cout_de_la_vie",
+          "weak": false,
+          "in_corpus": false
+        }
+      ],
+      "content_words": [
+        {
+          "text": "obtenir",
+          "weight": 0.3,
+          "weak": true
+        },
+        {
+          "text": "luxtrust",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "moins",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "cher",
+          "weight": 1.0,
+          "weak": false
+        }
+      ],
+      "uncovered_words": [],
+      "answer_context_used": "section"
+    }
+  }
+}

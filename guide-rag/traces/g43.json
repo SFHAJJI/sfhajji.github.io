@@ -1,0 +1,3992 @@
+{
+  "answer": {
+    "kind": "absence",
+    "answer": null,
+    "reason": "concept_not_found",
+    "searched_concepts": [
+      {
+        "concept": "adopter",
+        "variants": [
+          "adopter"
+        ],
+        "pages_with_hits": [],
+        "line_hits": 0
+      },
+      {
+        "concept": "animaux",
+        "variants": [
+          "animaux",
+          "chien",
+          "chat",
+          "taxe sur les chiens",
+          "pets",
+          "dog",
+          "cat",
+          "dog tax",
+          "Haustiere",
+          "Hund",
+          "Hundesteuer",
+          "haustiere",
+          "hund",
+          "hundesteuer"
+        ],
+        "pages_with_hits": [
+          "bail"
+        ],
+        "line_hits": 1
+      }
+    ],
+    "closest_mentions": [
+      {
+        "doc_id": "bail",
+        "line_num": 9,
+        "snippet": "Beaucoup de baux interdisent, sans accord écrit du bailleur, les percements et modifications, la sous-location et la présence d'animaux. Vous éviterez d'achete…",
+        "why_not_an_answer": "names animaux in the 'Lire les interdictions avant d'acheter des meubles' section, which is about emmenagement"
+      }
+    ],
+    "parse_coverage": {
+      "pages_total": 50,
+      "pages_with_text": 49,
+      "lines_total": 1615,
+      "sections_total": 426,
+      "tables_total": 6,
+      "cross_refs": 158,
+      "fetched_at": "2026-10-31T10:23:00Z",
+      "index_version": "1d1bbf848338f32798d0c92366bd740f0513f72b56bd4745e85a507a1645d9ca",
+      "pipeline_version": "guide-rag/0.1.0",
+      "data_scripts": [
+        "/app/avantages.js: AVANTAGES with 28 cards in 5 moments",
+        "/app/fiches/vehicule.js: guided fiche(s) vehicule",
+        "/app/kb.js: window.KB with 36 fiches, 55 faq, 5 timeline phases",
+        "/prevoyance/app/prevoyance.js: TABLE with 6 deductible items",
+        "/prevoyance/app/questions.js: ENTREES with 29 questions in 8 themes"
+      ],
+      "documents": {
+        "fiche": 36,
+        "page": 1,
+        "panel": 13
+      },
+      "parsing_methods": [
+        "html_blocks/1",
+        "js_data+html_blocks/1"
+      ],
+      "raw_drift": {},
+      "summary_lines_reviewed": 12,
+      "table_rows_total": 30
+    },
+    "suggestion": "The guide never mentions adopter; it does cover animaux: ask about that.",
+    "suggested_clarification": null,
+    "answer_found": false,
+    "complete_answer_found": false
+  },
+  "meta": {
+    "question_id": "5cef87a36a751f6d",
+    "index_version": "1d1bbf848338f32798d0c92366bd740f0513f72b56bd4745e85a507a1645d9ca",
+    "pipeline_version": "guide-rag/0.1",
+    "methods_used": [
+      "keyword_lines",
+      "title_match",
+      "arbiter_rules",
+      "sweep"
+    ],
+    "methods_skipped": {
+      "anchor_regex": "answer type text asks for no typed anchor",
+      "row_match": "answer_type=text and no table column named",
+      "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+      "llm_arbiter": "no model key configured",
+      "current_page_boost": "no pages_hint: no page to boost"
+    },
+    "activations": {
+      "use_keywords": {
+        "on": true,
+        "reason": "always: keyword detectors are deterministic and prove absence"
+      },
+      "use_toc": {
+        "on": true,
+        "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+      },
+      "use_row_level": {
+        "on": false,
+        "reason": "answer_type=text and no table column named"
+      },
+      "use_embeddings": {
+        "on": false,
+        "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+      },
+      "use_llm_arbiter": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "use_llm_generation": {
+        "on": false,
+        "reason": "no model key configured"
+      },
+      "sweep_for_absence": {
+        "on": true,
+        "reason": "always: the exhaustive sweep is the evidence of absence"
+      },
+      "current_page_boost": {
+        "on": false,
+        "reason": "no pages_hint: no page to boost"
+      }
+    },
+    "chunk_strategy": "line as the unit; anchor = hit lines grouped by runs; context = ±3 lines within the section (answer_context=paragraph)",
+    "model_used": "no model",
+    "prompt_version": null,
+    "fragments_applied": [],
+    "iterations": 1,
+    "validator_report": {
+      "iteration_1": []
+    },
+    "replay": null
+  },
+  "trace": {
+    "parsed": {
+      "question_id": "5cef87a36a751f6d",
+      "original_question": "comment adopter un chien",
+      "corrected_question": "comment adopter un chien",
+      "language": "fr",
+      "keywords": [
+        {
+          "text": "adopter",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "chien",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "animaux",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "chat",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "taxe sur les chiens",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "pets",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "dog",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "cat",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "dog tax",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "haustiere",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "hund",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "hundesteuer",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "weak": false,
+          "in_corpus": false
+        }
+      ],
+      "answer_shape": "single",
+      "answer_type": "text",
+      "structural_hints": {
+        "pages_hint": null,
+        "toc_section_hint": null,
+        "answer_context": "paragraph"
+      },
+      "decomposition": {
+        "pattern": "single",
+        "sub_questions": []
+      },
+      "suggested_clarification": null,
+      "ambiguity_reason": null,
+      "candidate_values": [],
+      "proposed_default": null,
+      "scope_filters": {
+        "topic": "other"
+      },
+      "parsing_notes": [
+        "language=fr: stop-word vote",
+        "answer_shape=single: no listing cue",
+        "answer_type=text: no typed cue",
+        "'adopter' is in no line of the corpus (kept, in_corpus=false)",
+        "'chien' is in no line of the corpus (kept, in_corpus=false)",
+        "concept 'animaux' (other) matched by 'chien' [fr, secondary]",
+        "scope topic='other': the matched concepts vote {'other': 0.9}",
+        "decomposition=single: no 'et / and' between two clauses"
+      ]
+    },
+    "plan": {
+      "activations": {
+        "use_keywords": {
+          "on": true,
+          "reason": "always: keyword detectors are deterministic and prove absence"
+        },
+        "use_toc": {
+          "on": true,
+          "reason": "toc_df has 426 sections (>= 3): headings are a first-class signal"
+        },
+        "use_row_level": {
+          "on": false,
+          "reason": "answer_type=text and no table column named"
+        },
+        "use_embeddings": {
+          "on": false,
+          "reason": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence"
+        },
+        "use_llm_arbiter": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "use_llm_generation": {
+          "on": false,
+          "reason": "no model key configured"
+        },
+        "sweep_for_absence": {
+          "on": true,
+          "reason": "always: the exhaustive sweep is the evidence of absence"
+        },
+        "current_page_boost": {
+          "on": false,
+          "reason": "no pages_hint: no page to boost"
+        }
+      }
+    },
+    "retrieval": {
+      "question_id": "5cef87a36a751f6d",
+      "question": "comment adopter un chien",
+      "candidates": [
+        {
+          "candidate_id": "bail#l9-l9",
+          "anchor": {
+            "doc_id": "bail",
+            "line_start": 9,
+            "line_end": 9,
+            "section_id": "bail#s4"
+          },
+          "context": {
+            "doc_id": "bail",
+            "line_start": 8,
+            "line_end": 9,
+            "section_id": "bail#s4"
+          },
+          "snippet": "Beaucoup de baux interdisent, sans accord écrit du bailleur, les percements et modifications, la sous-location et la présence d'animaux. Vous éviterez d'achete…",
+          "text": "Lire les interdictions avant d'acheter des meubles\nBeaucoup de baux interdisent, sans accord écrit du bailleur, les percements et modifications, la sous-location et la présence d'animaux. Vous éviterez d'acheter des meubles à fixer au mur que vous ne pourrez pas installer. Notez que ces clauses interdisent rarement de percer en soi : elles exigent un accord écrit, qu'un courriel suffit souvent à obtenir. En cas de désaccord persistant, la commission des loyers de la commune constitue le premier recours, avant toute action judiciaire.",
+          "methods": [
+            "keyword_lines"
+          ],
+          "matched_keywords": [
+            "animaux"
+          ],
+          "matched_concepts": [
+            "animaux"
+          ],
+          "section_title": "Lire les interdictions avant d'acheter des meubles",
+          "breadcrumb": "Signer un bail › Lire les interdictions avant d'acheter des meubles",
+          "url_anchor": "https://lux-guide.github.io/#fiche/bail#fiche-detail",
+          "role": "discarded",
+          "reason": "The section 'Lire les interdictions avant d'acheter des meubles' names 'emmenagement', not 'animaux'; its lines carry only 'animaux'.",
+          "score": 0.6,
+          "matched_share": 0.5,
+          "coverage": 0.5,
+          "covered_words": [
+            "chien"
+          ],
+          "uncovered_words": [
+            "adopter"
+          ],
+          "title_tier": 0,
+          "title_exact": false,
+          "page_topic": "housing",
+          "topic_match": false,
+          "co_occurrence": null,
+          "captures": []
+        }
+      ],
+      "methods_used": [
+        "keyword_lines",
+        "title_match",
+        "arbiter_rules",
+        "sweep"
+      ],
+      "methods_skipped": {
+        "anchor_regex": "answer type text asks for no typed anchor",
+        "row_match": "answer_type=text and no table column named",
+        "embeddings": "no vocabulary mismatch expected beyond the dictionary; keywords prove absence",
+        "llm_arbiter": "no model key configured",
+        "current_page_boost": "no pages_hint: no page to boost"
+      },
+      "not_found": true,
+      "not_found_reason": "1 candidate(s) hit (adopter, chien, animaux, chat, taxe sur les chiens, pets, dog, cat, dog tax, haustiere, hund, hundesteuer) but none qualifies as primary: 0 supporting, 0 tangential (one keyword only), 1 discarded (a section naming another concept).",
+      "confidence": 0.0,
+      "per_section_audit": [
+        {
+          "doc_id": "accueil",
+          "section_id": "accueil#s1",
+          "title": "Une question sur la vie au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "accueil",
+          "section_id": "accueil#s2",
+          "title": "Vivre au Luxembourg, chaque réponse avec sa source",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "accueil",
+          "section_id": "accueil#s3",
+          "title": "Ce que contient le site",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "achat",
+          "section_id": "achat#s1",
+          "title": "Acheter un logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "achat",
+          "section_id": "achat#s2",
+          "title": "La TVA à 3 % : conditionnelle et plafonnée",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "achat",
+          "section_id": "achat#s3",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "achat",
+          "section_id": "achat#s4",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "admin",
+          "section_id": "admin#s1",
+          "title": "Paramètres",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "admin",
+          "section_id": "admin#s2",
+          "title": "Thème",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "admin",
+          "section_id": "admin#s3",
+          "title": "Ce que le guide sait de vous",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "admin",
+          "section_id": "admin#s4",
+          "title": "Tout afficher",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "admin",
+          "section_id": "admin#s5",
+          "title": "Ce qui est enregistré, et où",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "admin",
+          "section_id": "admin#s6",
+          "title": "Fiches",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "admin",
+          "section_id": "admin#s7",
+          "title": "Sauvegarde du contenu",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "admin",
+          "section_id": "admin#s8",
+          "title": "Paramètres du simulateur",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "administration",
+          "section_id": "administration#s1",
+          "title": "Comment fonctionne l'administration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "administration",
+          "section_id": "administration#s2",
+          "title": "Ce qui va vite",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "administration",
+          "section_id": "administration#s3",
+          "title": "Ce qui reste lent, ou papier",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "administration",
+          "section_id": "administration#s4",
+          "title": "Trois réflexes utiles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "administration",
+          "section_id": "administration#s5",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "administration",
+          "section_id": "administration#s6",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "allocations",
+          "section_id": "allocations#s1",
+          "title": "Allocations familiales",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "allocations",
+          "section_id": "allocations#s2",
+          "title": "Montants mensuels par enfant au 1er juin 2026",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "allocations",
+          "section_id": "allocations#s3",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "allocations",
+          "section_id": "allocations#s4",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "arrivee",
+          "section_id": "arrivee#s1",
+          "title": "Les huit premiers jours",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "arrivee",
+          "section_id": "arrivee#s2",
+          "title": "Trois délais, pas un seul",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "arrivee",
+          "section_id": "arrivee#s3",
+          "title": "Le matricule, clé de tout le reste",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "arrivee",
+          "section_id": "arrivee#s4",
+          "title": "Ce qu'il faut apporter",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "arrivee",
+          "section_id": "arrivee#s5",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "arrivee",
+          "section_id": "arrivee#s6",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assistant",
+          "section_id": "assistant#s1",
+          "title": "Assistant",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_auto",
+          "section_id": "assurance_auto#s1",
+          "title": "Assurer son véhicule",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_auto",
+          "section_id": "assurance_auto#s2",
+          "title": "Le relevé d'information est un droit, pas une faveur",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_auto",
+          "section_id": "assurance_auto#s3",
+          "title": "Si vous n'avez jamais eu de contrat à votre nom",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_auto",
+          "section_id": "assurance_auto#s4",
+          "title": "Ce qui distingue les contrats",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_auto",
+          "section_id": "assurance_auto#s5",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_auto",
+          "section_id": "assurance_auto#s6",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "section_id": "assurance_habitation#s1",
+          "title": "Assurer son logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "section_id": "assurance_habitation#s2",
+          "title": "Ce que couvre réellement un contrat",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "section_id": "assurance_habitation#s3",
+          "title": "Les quatre points à comparer",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "section_id": "assurance_habitation#s4",
+          "title": "Les documents à réclamer avant de signer",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "section_id": "assurance_habitation#s5",
+          "title": "En cas d'achat",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "section_id": "assurance_habitation#s6",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_habitation",
+          "section_id": "assurance_habitation#s7",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_sante",
+          "section_id": "assurance_sante#s1",
+          "title": "La complémentaire santé",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_sante",
+          "section_id": "assurance_sante#s2",
+          "title": "Le délai de carence, le point à vérifier en premier",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_sante",
+          "section_id": "assurance_sante#s3",
+          "title": "Comparer sur les plafonds, pas sur la cotisation",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_sante",
+          "section_id": "assurance_sante#s4",
+          "title": "Une particularité à connaître",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_sante",
+          "section_id": "assurance_sante#s5",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "assurance_sante",
+          "section_id": "assurance_sante#s6",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s1",
+          "title": "Économies et avantages fiscaux",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s2",
+          "title": "Salaire et travail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s3",
+          "title": "Crédit d'impôt pour salariés",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s4",
+          "title": "Frais de déplacement forfaitaires",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s5",
+          "title": "Heures supplémentaires exemptées",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s6",
+          "title": "Chèques-repas",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s7",
+          "title": "Prime participative",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s8",
+          "title": "Prime jeune salarié",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s9",
+          "title": "Régime des impatriés",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s10",
+          "title": "Abattement extra-professionnel",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s11",
+          "title": "Logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s12",
+          "title": "Crédit d'impôt sur l'acte notarié, le Bëllegen Akt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s13",
+          "title": "TVA à 3 % sur la construction et la rénovation",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s14",
+          "title": "Intérêts du prêt de l'habitation principale",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s15",
+          "title": "Prime d'accession à la propriété",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s16",
+          "title": "Subvention de loyer",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s17",
+          "title": "Garantie locative financée par l'État",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s18",
+          "title": "Klimabonus, la rénovation énergétique",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s19",
+          "title": "Famille et études",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s20",
+          "title": "Allocations familiales",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s21",
+          "title": "Chèque-service accueil",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s22",
+          "title": "Congé parental indemnisé",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s23",
+          "title": "Crédit d'impôt monoparental",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s24",
+          "title": "Aide financière pour études supérieures",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s25",
+          "title": "Épargne et déclaration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s26",
+          "title": "Prévoyance-vieillesse, le contrat 111bis",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s27",
+          "title": "Épargne-logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s28",
+          "title": "Primes d'assurance et intérêts débiteurs",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s29",
+          "title": "Intérêts et dividendes",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s30",
+          "title": "Dons déductibles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s31",
+          "title": "Quotidien et revenus modestes",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s32",
+          "title": "Transports publics gratuits",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s33",
+          "title": "Salaires indexés automatiquement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "avantages",
+          "section_id": "avantages#s34",
+          "title": "Allocation de vie chère et prime énergie",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "bail",
+          "section_id": "bail#s1",
+          "title": "Signer un bail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "bail",
+          "section_id": "bail#s2",
+          "title": "La garantie bancaire, un piège de calendrier",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "bail",
+          "section_id": "bail#s3",
+          "title": "L'état des lieux décide de votre caution",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "bail",
+          "section_id": "bail#s4",
+          "title": "Lire les interdictions avant d'acheter des meubles",
+          "keyword": "Y",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "bail",
+          "section_id": "bail#s5",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "bail",
+          "section_id": "bail#s6",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "banque",
+          "section_id": "banque#s1",
+          "title": "Banque et moyens de paiement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "banque",
+          "section_id": "banque#s2",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "banque",
+          "section_id": "banque#s3",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "carte",
+          "section_id": "carte#s1",
+          "title": "Comparer des logements",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "carte",
+          "section_id": "carte#s2",
+          "title": "Vos logements",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "carte",
+          "section_id": "carte#s3",
+          "title": "Les outils officiels, pour aller plus loin",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "cartes",
+          "section_id": "cartes#s1",
+          "title": "Les communes, chiffre par chiffre",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "choisir_commune",
+          "section_id": "choisir_commune#s1",
+          "title": "Choisir sa commune",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "choisir_commune",
+          "section_id": "choisir_commune#s2",
+          "title": "Première question : voiture ou transports ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "choisir_commune",
+          "section_id": "choisir_commune#s3",
+          "title": "Deuxième question : les trajets contraints",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "choisir_commune",
+          "section_id": "choisir_commune#s4",
+          "title": "Les critères qu'on oublie",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "choisir_commune",
+          "section_id": "choisir_commune#s5",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "choisir_commune",
+          "section_id": "choisir_commune#s6",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "comparateur",
+          "section_id": "comparateur#s1",
+          "title": "Comparateur",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "comparateur",
+          "section_id": "comparateur#s2",
+          "title": "Assurance habitation : la comparaison complète",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "comparateur",
+          "section_id": "comparateur#s3",
+          "title": "La démarche",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "comparateur",
+          "section_id": "comparateur#s4",
+          "title": "Pourquoi des sinistres et pas des garanties",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "comparateur",
+          "section_id": "comparateur#s5",
+          "title": "Ce que cette comparaison ne dit pas",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "comparateur",
+          "section_id": "comparateur#s6",
+          "title": "Vérifier soi-même",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "conges",
+          "section_id": "conges#s1",
+          "title": "Congés et jours fériés",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "conges",
+          "section_id": "conges#s2",
+          "title": "Essai et préavis",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "conges",
+          "section_id": "conges#s3",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "conges",
+          "section_id": "conges#s4",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "conseil_fiscal",
+          "section_id": "conseil_fiscal#s1",
+          "title": "Conseil fiscal : les leviers de la première année",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "conseil_fiscal",
+          "section_id": "conseil_fiscal#s2",
+          "title": "D'abord, vérifier la classe d'impôt, et la faire corriger si elle est fausse",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "conseil_fiscal",
+          "section_id": "conseil_fiscal#s3",
+          "title": "Le contrat de prévoyance-vieillesse, dit 111bis",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "conseil_fiscal",
+          "section_id": "conseil_fiscal#s4",
+          "title": "L'épargne-logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "conseil_fiscal",
+          "section_id": "conseil_fiscal#s5",
+          "title": "Les autres leviers, déjà détaillés dans le guide",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "conseil_fiscal",
+          "section_id": "conseil_fiscal#s6",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "conseil_fiscal",
+          "section_id": "conseil_fiscal#s7",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "cout_vie",
+          "section_id": "cout_vie#s1",
+          "title": "Salaire, coût de la vie et indexation",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "cout_vie",
+          "section_id": "cout_vie#s2",
+          "title": "Où part l'avantage salarial",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "cout_vie",
+          "section_id": "cout_vie#s3",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "cout_vie",
+          "section_id": "cout_vie#s4",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "dechets",
+          "section_id": "dechets#s1",
+          "title": "Déchets et vie communale",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "dechets",
+          "section_id": "dechets#s2",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "dechets",
+          "section_id": "dechets#s3",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "deductions",
+          "section_id": "deductions#s1",
+          "title": "Ce qui réduit votre impôt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "deductions",
+          "section_id": "deductions#s2",
+          "title": "Les forfaits appliqués d'office",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "deductions",
+          "section_id": "deductions#s3",
+          "title": "Les principaux postes déductibles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "deductions",
+          "section_id": "deductions#s4",
+          "title": "Les rentes versées",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "deductions",
+          "section_id": "deductions#s5",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "deductions",
+          "section_id": "deductions#s6",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "ecole",
+          "section_id": "ecole#s1",
+          "title": "Scolariser ses enfants",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "ecole",
+          "section_id": "ecole#s2",
+          "title": "L'école publique, gratuite et multilingue",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "ecole",
+          "section_id": "ecole#s3",
+          "title": "Les écoles européennes et internationales",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "ecole",
+          "section_id": "ecole#s4",
+          "title": "Anticiper, et emporter les bons papiers",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "ecole",
+          "section_id": "ecole#s5",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "ecole",
+          "section_id": "ecole#s6",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "emmenagement",
+          "section_id": "emmenagement#s1",
+          "title": "Emménager et meubler",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "emmenagement",
+          "section_id": "emmenagement#s2",
+          "title": "Le logement se loue souvent sans luminaires",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "emmenagement",
+          "section_id": "emmenagement#s3",
+          "title": "Acheter de part et d'autre de la frontière",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "emmenagement",
+          "section_id": "emmenagement#s4",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "emmenagement",
+          "section_id": "emmenagement#s5",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "emploi",
+          "section_id": "emploi#s1",
+          "title": "Chercher un emploi",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "emploi",
+          "section_id": "emploi#s2",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "emploi",
+          "section_id": "emploi#s3",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s1",
+          "title": "Questions et réponses",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s2",
+          "title": "Mobilite",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s3",
+          "title": "Faut-il un relevé d'information pour assurer sa voiture au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s4",
+          "title": "J'ai conduit la voiture d'un proche sans être inscrit au contrat, est-ce que ça compte ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s5",
+          "title": "La carte grise n'est pas au nom du vendeur, est-ce bloquant ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s6",
+          "title": "Faut-il repasser le contrôle technique en arrivant au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s7",
+          "title": "Dans quel délai immatriculer un véhicule qu'on amène avec soi ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s8",
+          "title": "Un permis de conduire européen reste-t-il valable ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s9",
+          "title": "Comment s'immatricule un véhicule importé ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s10",
+          "title": "Les transports publics sont-ils vraiment gratuits ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s11",
+          "title": "Logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s12",
+          "title": "Puis-je travailler au Luxembourg et habiter en France, en Belgique ou en Allemagne ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s13",
+          "title": "Combien de jours de télétravail un frontalier peut-il faire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s14",
+          "title": "Qu'est-ce qui coûte moins cher de l'autre côté de la frontière ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s15",
+          "title": "Sur quels critères choisir sa commune ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s16",
+          "title": "Comment comparer deux contrats d'assurance ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s17",
+          "title": "Quelle garantie locative un bailleur peut-il demander ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s18",
+          "title": "Comment se cherche un logement au Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s19",
+          "title": "À quel moment souscrire l'assurance habitation ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s20",
+          "title": "Quelle part du prix une banque finance-t-elle ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s21",
+          "title": "La TVA sur un logement neuf est-elle toujours de 3 % ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s22",
+          "title": "Qui peut prétendre à un logement à coût modéré ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s23",
+          "title": "Quotidien",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s24",
+          "title": "Vers qui se tourner en cas de litige avec un professionnel ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s25",
+          "title": "Le luxembourgeois est-il nécessaire pour travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s26",
+          "title": "Combien de temps pour avoir internet ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s27",
+          "title": "Faut-il apprendre le luxembourgeois ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s28",
+          "title": "Comment fonctionne le tri des déchets ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s29",
+          "title": "Sante",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s30",
+          "title": "Une complémentaire santé est-elle utile ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s31",
+          "title": "Qui déclare l'entrée à la sécurité sociale ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s32",
+          "title": "Quel numéro d'urgence appeler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s33",
+          "title": "Impots",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s34",
+          "title": "Comment l'impôt est-il prélevé quand on est deux à travailler ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s35",
+          "title": "Pourquoi la déclaration se solde-t-elle souvent par un montant à payer ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s36",
+          "title": "Qu'est-ce que le régime des impatriés ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s37",
+          "title": "Existe-t-il une classe d'impôt 1b ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s38",
+          "title": "Qui relève de la classe 1a ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s39",
+          "title": "Un divorce ou un décès fait-il changer de classe d'impôt immédiatement ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s40",
+          "title": "Le régime des impatriés dépend-il de la classe d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s41",
+          "title": "Quelle différence entre classe 1 et classe 2 ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s42",
+          "title": "Qu'est-ce qui se déduit des impôts ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s43",
+          "title": "Comment faire corriger une classe d'impôt inexacte ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s44",
+          "title": "Comment obtient-on sa fiche de retenue d'impôt ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s45",
+          "title": "Les intérêts d'un prêt immobilier sont-ils déductibles ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s46",
+          "title": "Administratif",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s47",
+          "title": "Les délais d'arrivée sont-ils les mêmes hors Union européenne ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s48",
+          "title": "La déclaration à la commune suffit-elle ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s49",
+          "title": "Combien de temps faut-il pour obtenir la nationalité ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s50",
+          "title": "Dans quel délai faut-il se déclarer à la commune ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s51",
+          "title": "Comment obtient-on le matricule ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s52",
+          "title": "Peut-on avoir la double nationalité ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s53",
+          "title": "Finances",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s54",
+          "title": "Un compte bancaire étranger peut-il servir à recevoir le salaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s55",
+          "title": "Que faut-il pour ouvrir un compte bancaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s56",
+          "title": "Le salaire luxembourgeois compense-t-il le coût de la vie ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s57",
+          "title": "Un compte bancaire luxembourgeois est-il obligatoire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s58",
+          "title": "Qu'est-ce que l'indexation des salaires ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s59",
+          "title": "Travail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s60",
+          "title": "Peut-on exercer une activité indépendante en plus d'un emploi salarié ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s61",
+          "title": "Combien de jours de congé donne la loi ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s62",
+          "title": "Famille",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s63",
+          "title": "Comment se fait l'inscription à l'école ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s64",
+          "title": "Existe-t-il une aide pour la crèche ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "faq",
+          "section_id": "faq#s65",
+          "title": "Quel est le montant des allocations familiales ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s1",
+          "title": "Fiches pratiques",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s2",
+          "title": "Les huit premiers jours",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s3",
+          "title": "Sécurité sociale et remboursements",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s4",
+          "title": "La complémentaire santé",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s5",
+          "title": "Comment fonctionne l'administration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s6",
+          "title": "LuxTrust et MyGuichet",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s7",
+          "title": "Trouver un logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s8",
+          "title": "Choisir sa commune",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s9",
+          "title": "Habiter en France, en Belgique ou en Allemagne",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s10",
+          "title": "Contester une facture ou un service",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s11",
+          "title": "Emménager et meubler",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s12",
+          "title": "Signer un bail",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s13",
+          "title": "Assurer son logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s14",
+          "title": "Acheter un logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s15",
+          "title": "Logement abordable et à coût modéré",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s16",
+          "title": "Classes d'impôt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s17",
+          "title": "Ce qui réduit votre impôt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s18",
+          "title": "Conseil fiscal : les leviers de la première année",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s19",
+          "title": "Régime des impatriés",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s20",
+          "title": "Déduire les intérêts d'emprunt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s21",
+          "title": "Exercer en indépendant",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s22",
+          "title": "Allocations familiales",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s23",
+          "title": "Congés et jours fériés",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s24",
+          "title": "Chercher un emploi",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s25",
+          "title": "Banque et moyens de paiement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s26",
+          "title": "Salaire, coût de la vie et indexation",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s27",
+          "title": "Scolariser ses enfants",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s28",
+          "title": "Garde d'enfants et chèque-service",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s29",
+          "title": "Se soigner au quotidien",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s30",
+          "title": "Permis de conduire",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s31",
+          "title": "Immatriculer son véhicule",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s32",
+          "title": "Assurer son véhicule",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s33",
+          "title": "Transports publics gratuits",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s34",
+          "title": "Internet et téléphonie",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s35",
+          "title": "Langues et intégration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s36",
+          "title": "Nationalité luxembourgeoise",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "fiches",
+          "section_id": "fiches#s37",
+          "title": "Déchets et vie communale",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "frontalier",
+          "section_id": "frontalier#s1",
+          "title": "Habiter en France, en Belgique ou en Allemagne",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "frontalier",
+          "section_id": "frontalier#s2",
+          "title": "Votre salaire reste imposé au Luxembourg",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "frontalier",
+          "section_id": "frontalier#s3",
+          "title": "Le télétravail a deux plafonds, et ce ne sont pas les mêmes",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "frontalier",
+          "section_id": "frontalier#s4",
+          "title": "Santé, allocations, école : le quotidien suit la résidence",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "frontalier",
+          "section_id": "frontalier#s5",
+          "title": "Ce que la frontière change dans le budget",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "frontalier",
+          "section_id": "frontalier#s6",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "frontalier",
+          "section_id": "frontalier#s7",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "garde",
+          "section_id": "garde#s1",
+          "title": "Garde d'enfants et chèque-service",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "garde",
+          "section_id": "garde#s2",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "garde",
+          "section_id": "garde#s3",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "impatries",
+          "section_id": "impatries#s1",
+          "title": "Régime des impatriés",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "impatries",
+          "section_id": "impatries#s2",
+          "title": "Qui peut en bénéficier",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "impatries",
+          "section_id": "impatries#s3",
+          "title": "Deux effets que l'on oublie souvent",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "impatries",
+          "section_id": "impatries#s4",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "impatries",
+          "section_id": "impatries#s5",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "impots_classes",
+          "section_id": "impots_classes#s1",
+          "title": "Classes d'impôt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "impots_classes",
+          "section_id": "impots_classes#s2",
+          "title": "Quand les deux conjoints travaillent",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "impots_classes",
+          "section_id": "impots_classes#s3",
+          "title": "Ne pas tout laisser à la régularisation",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "impots_classes",
+          "section_id": "impots_classes#s4",
+          "title": "Le cas fréquent du conjoint non résident",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "impots_classes",
+          "section_id": "impots_classes#s5",
+          "title": "Deux mécanismes qui surprennent",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "impots_classes",
+          "section_id": "impots_classes#s6",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "impots_classes",
+          "section_id": "impots_classes#s7",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "independant",
+          "section_id": "independant#s1",
+          "title": "Exercer en indépendant",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "independant",
+          "section_id": "independant#s2",
+          "title": "La dispense pour revenu insignifiant",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "independant",
+          "section_id": "independant#s3",
+          "title": "L'autorisation d'établissement, l'oubli classique",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "independant",
+          "section_id": "independant#s4",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "independant",
+          "section_id": "independant#s5",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "interets",
+          "section_id": "interets#s1",
+          "title": "Déduire les intérêts d'emprunt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "interets",
+          "section_id": "interets#s2",
+          "title": "L'élément décisif : la composition du ménage",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "interets",
+          "section_id": "interets#s3",
+          "title": "Plafond annuel selon la composition du ménage",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "interets",
+          "section_id": "interets#s4",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "interets",
+          "section_id": "interets#s5",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "langues",
+          "section_id": "langues#s1",
+          "title": "Langues et intégration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "langues",
+          "section_id": "langues#s2",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "langues",
+          "section_id": "langues#s3",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "lignes",
+          "section_id": "lignes#s1",
+          "title": "Chercher un logement sur une ligne de bus, de tram ou de train",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "logement_abordable",
+          "section_id": "logement_abordable#s1",
+          "title": "Logement abordable et à coût modéré",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "logement_abordable",
+          "section_id": "logement_abordable#s2",
+          "title": "Ne posséder aucun autre logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "logement_abordable",
+          "section_id": "logement_abordable#s3",
+          "title": "Rester sous le plafond de revenus",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "logement_abordable",
+          "section_id": "logement_abordable#s4",
+          "title": "Une revente à prix encadré",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "logement_abordable",
+          "section_id": "logement_abordable#s5",
+          "title": "Plafonds de revenu annuel net du ménage",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "logement_abordable",
+          "section_id": "logement_abordable#s6",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "logement_abordable",
+          "section_id": "logement_abordable#s7",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "luxtrust",
+          "section_id": "luxtrust#s1",
+          "title": "LuxTrust et MyGuichet",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "luxtrust",
+          "section_id": "luxtrust#s2",
+          "title": "L'obtenir au meilleur prix",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "luxtrust",
+          "section_id": "luxtrust#s3",
+          "title": "Ce qui ne se fait pas en ligne",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "luxtrust",
+          "section_id": "luxtrust#s4",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "luxtrust",
+          "section_id": "luxtrust#s5",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "matricule",
+          "section_id": "matricule#s1",
+          "title": "Sécurité sociale et remboursements",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "matricule",
+          "section_id": "matricule#s2",
+          "title": "Payer d'abord, être remboursé ensuite",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "matricule",
+          "section_id": "matricule#s3",
+          "title": "Faut-il une complémentaire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "matricule",
+          "section_id": "matricule#s4",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "matricule",
+          "section_id": "matricule#s5",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "nationalite",
+          "section_id": "nationalite#s1",
+          "title": "Nationalité luxembourgeoise",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "nationalite",
+          "section_id": "nationalite#s2",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "nationalite",
+          "section_id": "nationalite#s3",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "parcours",
+          "section_id": "parcours#s1",
+          "title": "Parcours d'installation",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "parcours",
+          "section_id": "parcours#s2",
+          "title": "Avant le départ",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "parcours",
+          "section_id": "parcours#s3",
+          "title": "Semaine 1",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "parcours",
+          "section_id": "parcours#s4",
+          "title": "Mois 1",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "parcours",
+          "section_id": "parcours#s5",
+          "title": "Mois 2 et 3",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "parcours",
+          "section_id": "parcours#s6",
+          "title": "Première année",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "permis",
+          "section_id": "permis#s1",
+          "title": "Permis de conduire",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "permis",
+          "section_id": "permis#s2",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "permis",
+          "section_id": "permis#s3",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s1",
+          "title": "Ce que l'État vous rend quand vous préparez votre retraite",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s2",
+          "title": "Ce que la loi ouvre à tout le monde",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s3",
+          "title": "Comment ça marche",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s4",
+          "title": "Est-ce que cela me concerne",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s5",
+          "title": "Six questions pour commencer",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s6",
+          "title": "Ce que cela rapporte",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s7",
+          "title": "Questions fréquentes",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s8",
+          "title": "Le principe",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s9",
+          "title": "Qu'est-ce que la prévoyance-vieillesse, ou 111bis ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s10",
+          "title": "L'argent est-il bloqué pendant dix ans ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s11",
+          "title": "Est-ce une assurance vie ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s12",
+          "title": "Combien déduire",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s13",
+          "title": "Combien puis-je déduire par an ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s14",
+          "title": "Le plafond est-il doublé pour un couple ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s15",
+          "title": "Puis-je reporter ce que je n'ai pas versé sur l'année suivante ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s16",
+          "title": "Mon conjoint qui travaille à l'étranger peut-il en ouvrir un ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s17",
+          "title": "Qui y a droit",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s18",
+          "title": "Qui peut en bénéficier ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s19",
+          "title": "Un frontalier y a-t-il droit ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s20",
+          "title": "Y a-t-il un âge limite pour souscrire ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s21",
+          "title": "Verser",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s22",
+          "title": "Quand faut-il verser ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s23",
+          "title": "Puis-je arrêter ou réduire mes versements ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s24",
+          "title": "Récupérer l'épargne",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s25",
+          "title": "Quand puis-je récupérer mon épargne ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s26",
+          "title": "Sous quelle forme l'épargne est-elle versée ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s27",
+          "title": "Puis-je sortir avant soixante ans ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s28",
+          "title": "Comment la sortie est-elle imposée ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s29",
+          "title": "Puis-je récupérer seulement une partie de mon épargne ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s30",
+          "title": "Y a-t-il un intérêt à étaler la sortie sur plusieurs années ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s31",
+          "title": "La déclaration",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s32",
+          "title": "Comment déclarer les versements ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s33",
+          "title": "Combien cela me rapporte-t-il vraiment ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s34",
+          "title": "À quel taux la déduction est-elle valorisée ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s35",
+          "title": "Quand l'argent de la déduction revient-il ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s36",
+          "title": "Y a-t-il d'autres prélèvements que l'impôt à la sortie ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s37",
+          "title": "Le placement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s38",
+          "title": "Sur quoi l'argent est-il placé ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s39",
+          "title": "Vaut-il mieux que l'épargne-logement ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s40",
+          "title": "Quand la vie change",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s41",
+          "title": "Que se passe-t-il si je quitte le Luxembourg ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s42",
+          "title": "Que devient l'épargne en cas de décès ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s43",
+          "title": "Comment est imposé ce qui revient à mes proches si je meurs avant l'échéance ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s44",
+          "title": "Et en cas de divorce ou de séparation ?",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s45",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s46",
+          "title": "Voir aussi",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "prevoyance",
+          "section_id": "prevoyance#s47",
+          "title": "Poser une question",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s1",
+          "title": "Trouver un logement",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s2",
+          "title": "Préparer le dossier avant de visiter",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s3",
+          "title": "Où chercher",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s4",
+          "title": "Élargir au-delà de la capitale",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s5",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "recherche_logement",
+          "section_id": "recherche_logement#s6",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "reclamation",
+          "section_id": "reclamation#s1",
+          "title": "Contester une facture ou un service",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "reclamation",
+          "section_id": "reclamation#s2",
+          "title": "Écrire d'abord, toujours",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "reclamation",
+          "section_id": "reclamation#s3",
+          "title": "Vers qui se tourner ensuite",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "reclamation",
+          "section_id": "reclamation#s4",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "reclamation",
+          "section_id": "reclamation#s5",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "sante_pratique",
+          "section_id": "sante_pratique#s1",
+          "title": "Se soigner au quotidien",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "sante_pratique",
+          "section_id": "sante_pratique#s2",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "sante_pratique",
+          "section_id": "sante_pratique#s3",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "simulateur",
+          "section_id": "simulateur#s1",
+          "title": "Simulateurs",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "simulateur",
+          "section_id": "simulateur#s2",
+          "title": "Du brut au net",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "simulateur",
+          "section_id": "simulateur#s3",
+          "title": "Comparaison des situations",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "simulateur",
+          "section_id": "simulateur#s4",
+          "title": "Du salaire net au prix d'achat",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "simulateur",
+          "section_id": "simulateur#s5",
+          "title": "Qui achète",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "simulateur",
+          "section_id": "simulateur#s6",
+          "title": "Ce que le ménage gagne, et ce qu'il rembourse déjà",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "simulateur",
+          "section_id": "simulateur#s7",
+          "title": "Vous",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "simulateur",
+          "section_id": "simulateur#s8",
+          "title": "La seconde personne",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "simulateur",
+          "section_id": "simulateur#s9",
+          "title": "Les autres revenus du ménage, par mois",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "simulateur",
+          "section_id": "simulateur#s10",
+          "title": "Ce que le ménage rembourse déjà, par mois",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "simulateur",
+          "section_id": "simulateur#s11",
+          "title": "Le prêt et l'achat",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "simulateur",
+          "section_id": "simulateur#s12",
+          "title": "Les aides de l'État, et les papiers à demander",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "simulateur",
+          "section_id": "simulateur#s13",
+          "title": "Quelle classe d'impôt",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "simulateur",
+          "section_id": "simulateur#s14",
+          "title": "Les calculateurs des administrations",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "telecom",
+          "section_id": "telecom#s1",
+          "title": "Internet et téléphonie",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "telecom",
+          "section_id": "telecom#s2",
+          "title": "Des délais qui dépendent de la saison",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "telecom",
+          "section_id": "telecom#s3",
+          "title": "Ne pas rester sans connexion",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "telecom",
+          "section_id": "telecom#s4",
+          "title": "Choisir son offre",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "telecom",
+          "section_id": "telecom#s5",
+          "title": "En cas de litige",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "telecom",
+          "section_id": "telecom#s6",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "telecom",
+          "section_id": "telecom#s7",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "transport",
+          "section_id": "transport#s1",
+          "title": "Transports publics gratuits",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "transport",
+          "section_id": "transport#s2",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "transport",
+          "section_id": "transport#s3",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s1",
+          "title": "Immatriculer son véhicule",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s2",
+          "title": "Votre cas",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s3",
+          "title": "Étapes",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s4",
+          "title": "Réserver un numéro, puis faire les plaques",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s5",
+          "title": "Assurer le véhicule",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s6",
+          "title": "Payer le droit de chancellerie",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s7",
+          "title": "Obtenir la vignette 705 aux douanes",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s8",
+          "title": "Déposer le dossier à la SNCA",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s9",
+          "title": "Dossier",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s10",
+          "title": "Vendeur",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s11",
+          "title": "France",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s12",
+          "title": "Il vous remet",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s13",
+          "title": "Il fait chez lui",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s14",
+          "title": "Belgique",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s15",
+          "title": "Il vous remet",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s16",
+          "title": "Il fait chez lui",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s17",
+          "title": "Allemagne",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s18",
+          "title": "Il vous remet",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s19",
+          "title": "Il fait chez lui",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s20",
+          "title": "Coûts",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s21",
+          "title": "Cas particuliers",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s22",
+          "title": "Le certificat n'est pas au nom du vendeur",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s23",
+          "title": "Le contrôle technique passé à l'étranger",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s24",
+          "title": "Rouler avant l'immatriculation",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s25",
+          "title": "À retenir",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        },
+        {
+          "doc_id": "vehicule",
+          "section_id": "vehicule#s26",
+          "title": "Sources officielles",
+          "keyword": ".",
+          "toc": ".",
+          "kept": "."
+        }
+      ],
+      "route_pages": [],
+      "route_sections": [],
+      "route_notes": [
+        "level 0 kept no page: no term of the question in any summary line, heading or tag",
+        "detectors ran over every page because level 0 kept none",
+        "answer_context=section: a procedure question ('comment', 'how do I') is answered by a section's steps (plan said paragraph)"
+      ],
+      "sweep_concepts": [
+        {
+          "concept": "adopter",
+          "variants": [
+            "adopter"
+          ],
+          "pages_with_hits": [],
+          "line_hits": 0
+        },
+        {
+          "concept": "animaux",
+          "variants": [
+            "animaux",
+            "chien",
+            "chat",
+            "taxe sur les chiens",
+            "pets",
+            "dog",
+            "cat",
+            "dog tax",
+            "Haustiere",
+            "Hund",
+            "Hundesteuer",
+            "haustiere",
+            "hund",
+            "hundesteuer"
+          ],
+          "pages_with_hits": [
+            "bail"
+          ],
+          "line_hits": 1
+        }
+      ],
+      "sweep_rows": [
+        {
+          "concept": "animaux",
+          "variant": "animaux",
+          "doc_id": "bail",
+          "line_num": 9,
+          "snippet": "Beaucoup de baux interdisent, sans accord écrit du bailleur, les percements et modifications, la sous-location et la présence d'animaux. Vous éviterez d'achete…"
+        }
+      ],
+      "question_concepts": [
+        "adopter",
+        "animaux"
+      ],
+      "terms": [
+        {
+          "text": "adopter",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": null,
+          "is_regex": false,
+          "concept_key": "adopter",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "chien",
+          "weight": 1.0,
+          "source": "direct",
+          "concept": "animaux",
+          "is_regex": false,
+          "concept_key": "animaux",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "animaux",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "concept_key": "animaux",
+          "weak": false,
+          "in_corpus": true
+        },
+        {
+          "text": "chat",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "concept_key": "animaux",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "taxe sur les chiens",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "concept_key": "animaux",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "pets",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "concept_key": "animaux",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "dog",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "concept_key": "animaux",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "cat",
+          "weight": 0.48,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "concept_key": "animaux",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "dog tax",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "concept_key": "animaux",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "haustiere",
+          "weight": 0.6,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "concept_key": "animaux",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "hund",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "concept_key": "animaux",
+          "weak": false,
+          "in_corpus": false
+        },
+        {
+          "text": "hundesteuer",
+          "weight": 0.54,
+          "source": "expert_dictionary",
+          "concept": "animaux",
+          "is_regex": false,
+          "concept_key": "animaux",
+          "weak": false,
+          "in_corpus": false
+        }
+      ],
+      "content_words": [
+        {
+          "text": "adopter",
+          "weight": 1.0,
+          "weak": false
+        },
+        {
+          "text": "chien",
+          "weight": 1.0,
+          "weak": false
+        }
+      ],
+      "uncovered_words": [],
+      "answer_context_used": "section"
+    }
+  }
+}
