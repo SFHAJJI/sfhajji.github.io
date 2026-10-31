@@ -26,7 +26,7 @@
     <a class="brand" href="../">Portfolio</a>
     <nav aria-label="Pages">
       <a href="./" aria-current="page">Lex</a>
-      <a href="../guide/">Démo guide</a>
+      <a href="https://sfhajji.github.io/lux-guide-assistant/" rel="external">Assistant du guide</a>
       <a href="../energy/">Energy Copilot</a>
       <a href="../cv/">CV</a>
       <button type="button" class="ghost" data-theme-toggle data-aria="Changer de thème" data-label-auto="Thème : auto" data-label-dark="Thème : sombre" data-label-light="Thème : clair">Thème : auto</button>
@@ -176,7 +176,7 @@
       <li><span class="pill no">Hors de ce que fait ce service</span> la question demande d’appliquer le droit à une situation : la limite, en une phrase, puis le droit cité, puis vers qui se tourner.</li>
     </ul>
     <p>Trois contrôles machine sont dans le chemin du code et ont chacun un contrôle d’échec délibéré : la <strong>fidélité des citations</strong> (un vérificateur indépendant relit chaque article et recalcule l’empreinte : la citation doit être la sous-chaîne exacte à son offset, seuil 1,0) ; <strong>zéro phrase hors gabarit</strong> (chaque texte visible est re-rendu depuis son gabarit, ou égal au span, ou une citation vérifiée) ; le <strong>rejeu octet pour octet</strong> de la trace sur le même instantané. Rien n’est stocké côté serveur : la trace part chez le lecteur, qui peut la rejouer. Avant l’allumage restent des choses que seules des personnes peuvent faire : une lecture juridique écrite (RGPD, règlement IA art. 50), un modèle hébergé dans l’UE sans rétention, la relecture des gabarits et du jeu d’or par un avocat luxembourgeois, un jeu de 320 questions écrites par des personnes avec un second annotateur, et la signature du propriétaire. Jusque-là : éteint, et dit comme tel.</p>
-    <p class="small muted">La <a href="../guide/">démonstration du guide nouveaux arrivants</a> sur ce site applique ce même contrat sans aucun modèle : verdict calculé, passage cité, lien, et rien d’inventé.</p>
+    <p class="small muted">L’<a href="https://sfhajji.github.io/lux-guide-assistant/" rel="external">assistant du guide « Vivre au Luxembourg »</a> applique ce même contrat : réponse typée vérifiée contre le guide, passage surligné, lien, et rien d’inventé ; le modèle y est facultatif.</p>
   </section>
 
   <!-- 4 -->
@@ -266,7 +266,7 @@
     </div>
     <div class="card brick">
       <h3>Un assistant pour les nouveaux arrivants, à partir d’un site statique</h3>
-      <p>C’est la <a href="../guide/">démonstration qui tourne sur ce site</a> : le guide est lu dans le navigateur et découpé par ses titres (<code>h1</code> à <code>h3</code>) en sections portant leur page, leur ancre et leur chemin de titres ; la question est pliée et étendue par un dictionnaire FR/EN du domaine (logement, véhicule, responsabilité civile, immatriculation, assurance…) ; BM25 cherche, la page où se trouve le lecteur (<code>?page=</code>) est favorisée ; et une carte typée répond : <em>Trouvé dans le guide</em> avec la marge, <em>Deux pages possibles</em> quand les deux premières sont proches, <em>Précisez</em>, ou <em>Pas dans ce guide</em> en disant ce qui a été cherché. Le passage est cité et surligné sur ses caractères d’origine, avec le lien qui ouvre la page à son ancre. Rien n’est inventé : les phrases sont celles du guide. Pour aller plus loin, la brique de génération de Lex s’ajouterait telle quelle : un modèle qui ne fait que proposer un plan sur des références opaques, et des gabarits relus.</p>
+      <p>C’est l’<a href="https://sfhajji.github.io/lux-guide-assistant/" rel="external">assistant du guide « Vivre au Luxembourg »</a> (<a href="https://github.com/SFHAJJI/lux-guide-assistant" rel="external">code</a>) : intégré au guide public pour les nouveaux arrivants, il reconnaît la fiche que le lecteur lit, ouvre la bonne fiche quand la réponse est ailleurs, et surligne le passage qui la porte. Quatre briques : les tables du guide (fiche, section, bloc, FAQ) ; la question typée par un dictionnaire expert ; la recherche comme filtrage, avec un arbitre ; une réponse typée vérifiée contre le guide avant affichage, l’absence justifiée. Pas de base vectorielle ; le modèle est facultatif sur chaque chemin.</p>
     </div>
     <div class="grid">
       <div class="card"><h3>Excel, ligne par ligne</h3><p>Une feuille est un document structuré : on l’analyse relationnellement (feuille, en-têtes typés, ligne, cellule, formule) et chaque réponse cite la cellule par sa coordonnée et sa valeur telle quelle, une ligne vide ou une colonne manquante étant une absence enregistrée plutôt qu’une valeur devinée.</p></div>
@@ -279,7 +279,7 @@
 
 <footer class="site">
   <div class="bar">
-    <p><a href="../">Portfolio</a> · <a href="./">Lex</a> · <a href="../guide/">Démo guide</a> · <a href="../energy/">Energy Copilot</a> · <a href="../cv/">CV</a>. Site statique, sans suivi, sans cookie. Code sous licence MIT.</p>
+    <p><a href="../">Portfolio</a> · <a href="./">Lex</a> · <a href="https://sfhajji.github.io/lux-guide-assistant/" rel="external">Assistant du guide</a> · <a href="../energy/">Energy Copilot</a> · <a href="../cv/">CV</a>. Site statique, sans suivi, sans cookie. Code sous licence MIT.</p>
   </div>
 </footer>
 <script src="../assets/theme.js"></script>

@@ -1,9 +1,0 @@
-.venv/
-__pycache__/
-*.pyc
-.pytest_cache/
-*.egg-info/
-raw/*.html
-raw/*.js
-!raw/manifest.json
-!raw/.gitkeep
